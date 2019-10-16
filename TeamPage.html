@@ -1,19 +1,20 @@
 <!DOCTYPE html>
- <html lang="en" class="no-js"> 
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Docufix | Team Page</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans|Ubuntu|Pacifico&display=swap" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    </head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:500,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Ubuntu|Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+    <title>Res Nav-Bar</title>
     <style>
         *{
-        box-sizing: border-box;
-        }
-        html{
+    box-sizing: border-box;
+    } 
+    html{
             scroll-behavior: smooth;
         }
         body{
@@ -24,16 +25,300 @@
             padding: 0;
             background-color: #DDE8E8;
         }
-        /*Header*/
-        /*Main Body*/
-        /*Footer*/
+
+.logo{
+    flex: 1;
+    font-weight: bold;
+    cursor: pointer;
+    }
+    
+
+body{
+    font-family: ubuntu;
+}
+
+nav{
+    background: #222;
+    padding: 5px 50px;
+}
+
+ul{
+    list-style-type: none;
+}
+a{
+    color: white;
+    text-decoration:none; 
+}
+a:hover{
+    text-decoration: none;
+    color: white !important;
+    
+}
+
+.menu li{
+    font-size: 25px;
+    padding: 15px 5px;
+    
+}
+
+.menu li a{
+    display: block;
+}
+
+.logo a{
+    font-size: 40px;
+}
+.logo a:hover{
+    text-decoration: none;
+}
+
+.button.secondary{
+    border-bottom: 1px #444 solid;
+}
+.item{
+    /* justify-content: space-around; */
+}
+.item:hover {
+   background-color: #444;
+}
+
+/* Mobile Menu */
+.menu{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toggle{
+    order: 1;
+}
+
+.item.button{
+    order: 2;
+}
+
+.item{
+    width: 100%;
+    text-align: center;
+    order: 3;
+    display: none;
+}
+
+.item.active{
+    display: block;
+}
+
+.toggle {
+    cursor: pointer;
+}
+
+.bars{
+    background: #999;
+    display: inline-block;
+    height: 2px;
+    position: relative;
+    width: 19px;
+}
+
+.bars::before,.bars::after{
+    background: #999;
+    content: "";
+    display: inline-block;
+    height: 2px;
+    position: absolute;
+    width: 19px;
+}
+
+.bars::before{
+    top: 5px;
+}
+
+.bars::after{
+    top: -5px;
+}
+
+/* Tablet Menu */
+@media all and (min-width:458px){
+    .menu{
+        justify-content: center;
+    }
+
+    .logo{
+        flex: 1;
+        font-weight: bold;
+        cursor: pointer;
+        }
+        .logo:hover{
+            text-decoration: none;
+
+        }
+
+ 
+    .toggle{
+        order: 2;
+        display: block;
+    }
+
+
+    
+}
+
+@media all and (min-width:768px){
+    .item{
+        display: block;
+        width: auto;
+    }
+
+    .toggle{
+        display: none;
+    }
+
+    .toggle:active {
+        transition: all .25s ease;
+    }
+
+    .logo{
+        order: 0;
+    }
+
+    .item{
+        order: 1;
+    }
+
+   
+
+    .menu li{
+       padding: 15px 10px; 
+    }
+
+    .menu li button{
+        padding-right: 0;
+    }
+}
+/*Footer*/
+    footer {
+            height: auto;
+            font-family: 'Ubuntu', sans-serif;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+
+        }
+        .top-footer {
+            height: 55px;
+            background-color: #000000;
+        }
+   .bottom-footer {
+        height: auto;
+        background-color:#C4C4C4;
+        color: #fff;
+        display: flex;
+        flex-direction: row;
+        }
+          .bottom-footer a {
+            text-decoration: none;
+            color: #fff;
+          }
+        .bottom-footer .name {
+            font-style: normal;
+            font-weight: bold;
+            font-size: 25px;
+            padding:15px 20px 10px 20px;
+            width: 20%;
+            
+        
+        }
+        .bottom-footer .copyright {
+            font-weight: 400;
+            font-size: 25px;
+                padding-top:15px; 
+                padding-right: 40px;
+            width: 63%;
+        text-align: right;
+         word-spacing: 0.3rem;
+    
+        }
+        .bottom-footer .icon{
+            font-weight: 500;
+            font-size: 36px;
+            width: 18%;
+            padding-top:8px; 
+            padding-left: 80px;
+             word-spacing: 1rem;
+        
+        }
+
+            @media (max-width: 800px) {
+                  .bottom-footer {
+        flex-direction: column;
+        }
+    .bottom-footer .icon{
+            width: 100%;
+            text-align: center;
+            padding: 3px;
+            }
+            .bottom-footer .copyright {
+                width: 100%;
+                font-size: 20px;
+                text-align: center;
+                padding:8px;
+        
+            }
+            .bottom-footer .name {
+                width: 100%;
+                text-align: center;
+                font-size: 22px;
+                padding: 8px;
+            }
+        
+        }
     </style>
-    <body>
-        <!--Header-->
-        <!--Main-->
-        <!--Footer-->
-        
-        
-        <script src="" async defer></script>
-    </body>
+   
+
+
+</head>
+<body>
+
+    <nav>
+        <ul class="menu">
+                <li class="logo"><a href="#">DOCUFIX</a></li>
+                <li class="item"><a href="#">About Us</a></li>
+                <li class="item"><a href="#">Team</a></li>
+                <li class="item"><a href="#">Sponsors</a></li>
+                <li class="toggle"><span class="bars"></span></a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <a href="#" style="position: fixed; bottom:0;">WORK IN PROGRESS</a>
+    </main>
+    <footer>
+        <div class="top-footer">
+            
+        </div>
+        <div class="bottom-footer">
+            <span class="name"><p> DOCUFIX</p></span>
+            <span class="copyright"><p class="text-center"> &copy Copyright 2019 Docufix.io and HNG6 affiliates</p></span>
+            <span class="icon mr-5">
+                <a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            </span>
+        </div>
+    </footer>
+    <script>
+            
+        $(function() {
+            $(".toggle").on("click", function(){
+                if($(".item").hasClass("active")){
+                    $(".item").removeClass("active");
+                } else{
+                    $(".item").addClass("active");
+                }
+            })
+        });
+
+        </script>
+</body>
 </html>

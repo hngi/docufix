@@ -30,14 +30,7 @@
                 width: 100%;
                 height: 100%;
                 font-family: 'Open Sans';
-                overflow: hidden;
             }
-
-            .main {
-                height: 918px;
-                width: 100%;
-            }
-
             .main h2 {
                 font-style: normal;
                 font-weight: bold;
@@ -85,13 +78,7 @@
                 line-height: 28px;
                 color: #000;
             }
-
-            .analysis {
-                border-style: 2px solid black;
-                display: flex;
-                width: 90%;
-                justify-content: space-between;
-            }
+            
             .innerdiv {
                 height: 300px;
                 border-color: black;
@@ -100,7 +87,6 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-                /*text-align: center;*/
                 margin-left: 120px;
             }
             .text {
@@ -108,7 +94,7 @@
                 text-align: left;
                 color: black;
                 margin-top: 15px;
-                font-size: 200%;
+                font-size: 180%;
                 font-family: Helvetica;
             }
             .circle {
@@ -169,7 +155,8 @@
                 </div>
             </nav>
         </header>
-         <div class="main">
+        <div class="container">
+            <div class="main">
             <h2>Document Analysis</h2>
             <div class="head-text">
                 <p class="words">Words in Document: <span>250</span></p>
@@ -180,21 +167,63 @@
                 </div>
             </div>
 
-            <div class="analysis">
-                <div class="innerdiv">
+            <!-- <div class="analysis">
+                -->
+            <div style="background-color: #fff">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 mb-5">
+                    <div class="innerdiv">
                     <p class="text">Identical</p>
                     <div class='circle col1'>100%</div>
                 </div>
-                <div class="innerdiv">
+                </div>
+                    <div class="col-md-4 mb-5">
+                        <div class="innerdiv">
                     <p class="text">Related</p>
                     <div class='circle col2' >100%</div>
                 </div>
-                <div class="innerdiv">
+                </div>
+                    <div class="col-md-4 mb-5">
+                         <div class="innerdiv">
                     <p class="text">Minor Changes</p>
                 <div class='circle col3'>100%</div>
                 </div>
+                    </div>
+                </div>
             </div>
         </div>
+        </div>
+        </div>
+        <footer style="background-color: rgba(153, 157, 158, 0.808); color: white">
+            <div></div>
+            <div class="container pt-4">
+                <div class="row">
+                    <div class="col-sm-2 text-center font-weight-bold"><p>DOCUFIX</p></div>
+                    <div class="col-sm-8 text-center font-weight-bold">
+                        <p>Copyright 2019 Docufix.io and HNG6 Affiliates</p>
+                    </div>
+                    <div class="col-sm-2 text-center">
+                        <a href="#" class="p-2"
+                            ><img
+                                src="./images/facebook.svg"
+                                alt=""
+                                style="height: 16px; width:16px;"/></a
+                        ><a href="#" class="p-2"
+                            ><img
+                                src="./images/twitter.svg"
+                                alt=""
+                                style="height: 16px; width:16px;"/></a
+                        ><a href="#" class="p-2"
+                            ><img
+                                src="./images/instagram.svg"
+                                alt=""
+                                style="height: 16px; width:16px;"
+                        /></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
         <script src="" async defer></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>

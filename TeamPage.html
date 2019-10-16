@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Ubuntu|Pacifico&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		<script src="https://kit.fontawesome.com/8ceaeffdc7.js" crossorigin="anonymous"></script>
+    
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
     <title>Res Nav-Bar</title>
     <style>
@@ -60,7 +60,7 @@ a{
 }
 a:hover{
     text-decoration: none;
-    color: white !important;
+    color: lightgrey !important;
     background-color: none !important,
     
 }
@@ -150,7 +150,7 @@ a:hover{
 
 /* Tablet Menu */
 @media all and (min-width:458px){
-    .menu{
+    .menu a{
         justify-content: center;
     }
 
@@ -255,8 +255,11 @@ a:hover{
             padding-top:8px; 
             padding-left: 80px;
              word-spacing: 1rem;
-        
         }
+        #icon{
+            color: #000000;
+        }
+        
 
             @media (max-width: 800px) {
                   .bottom-footer {
@@ -306,15 +309,18 @@ a:hover{
 				font-size:24px;
 				}
                 .v-primary:hover{
-                    background-color: #060541;
+                    background-color: blue;
                     opacity: 50%;
+                    border: none;
                 }
 				h5{
 					font-size:36px;
 				}
+
 			.card-text	p{
 					font-size:18px;
 					text-align: center;
+                    line-height: 25px;
 				}
 				.card-foot{
 					background: rgba(199, 195, 195, 0.1);
@@ -333,9 +339,7 @@ a:hover{
                 .fa-linkedin{
                     color: #0D5C77;
                 }
-                .fab .fa-instagram{
-                    background: linear-gradient(0deg, #E09B3D 0.29%, #C74C4D 29.97%, #C21975 59.65%, #7024C4 99.22%);
-                }
+                
                 .fa-google-plus-square{
                     color: #DD4B39;
                 }
@@ -361,9 +365,9 @@ a:hover{
     <nav>
         <ul class="menu">
                 <li class="logo"><a href="#">DOCUFIX</a></li>
-                <li class="item"><a href="#">About Us</a></li>
-                <li class="item"><a href="#">Team</a></li>
-                <li class="item"><a href="#">Sponsors</a></li>
+                <li class="item"><a href="#" class="text-center">About Us</a></li>
+                <li class="item"><a href="#" class="text-center">Team</a></li>
+                <li class="item"><a href="#" class="text-center">Sponsors</a></li>
                 <li class="toggle"><span class="bars"></span></a></li>
         </ul>
     </nav>
@@ -508,6 +512,7 @@ a:hover{
 				</div>
 			</div>
     </main>
+    
     <footer>
         <div class="top-footer">
             
@@ -516,9 +521,9 @@ a:hover{
             <span class="name"><p> DOCUFIX</p></span>
             <span class="copyright"><p class="text-center"> &copy Copyright 2019 Docufix.io and HNG6 affiliates</p></span>
             <span class="icon mr-4">
-                <a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
-                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                <a href="#"><i class="fab fa-facebook-square" style="color:  #F5F5F5;;"></i></a>
+                <a href="#"><i class="fab fa-twitter-square" style="color: #F5F5F5;"></i></a>
+                <a href="#"><i class="fab fa-instagram" style="color:  #F5F5F5;;background-color: none;"></i></a>
             </span>
         </div>
     </footer>

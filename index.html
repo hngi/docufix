@@ -39,14 +39,14 @@ a{
 	flex-direction:center;
 }
 .compare{
-	margin-top:10px;
-	margin-left: 50px;
+	margin-top:40px;
+	margin-left: 100px;
 }
 /* Styling the upload */
 .upload{
 	display:flex;
 	flex-direction:center;
-	margin-top:30px;
+	margin-top:40px;
 	padding:10px;
 	justify-content:center;
 }
@@ -62,18 +62,21 @@ a{
 /* Styling the document */
 .document{
 justify-content: center;
+font-size: 25px;
+
 
 }
 .first{
 	display:flex;
 	flex-direction:row;
-	padding:50px;
+	padding:40px;
 }
 .firstInput{
 	margin-left:150px;
+	align-items: center;
 }
 .firstImage{
-	margin-left:200px;
+	margin-left:100px;
 	background-color: #0FC789;
 	border-radius:5px;
 
@@ -81,13 +84,13 @@ justify-content: center;
 .second{
 	display:flex;
 	flex-direction:row;
-	padding:50px;
+	padding:40px;
 }
 .secondInput{
-	margin-left:200px;
+	margin-left:120px;
 }
 .secondImage{
-	margin-left:200px;
+	margin-left:100px;
 	margin-bottom:30px;
 	background-color: #0FC789;
 	border-radius:5px;
@@ -98,7 +101,6 @@ justify-content: center;
 	display:flex;
 	flex-direction:row;
 	width:20%;
-	float:center;
 	background-color: #000000;
 	border-radius: 5px;
 	color:#FCF9F9;
@@ -115,42 +117,45 @@ justify-content: center;
 	font-size:16px;
 }
 
+
 /* Styling the input button */
 input[type=file] {
     border-bottom: 2px solid #000000;
-	 }
-/* Styling the footer */
-footer{
-    position: relative;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    background-color: #C4C4C4;
-    height:30px;
+    display: none;
+     }
+.firstInput>label {
+  display: block;
+  color:#8D8D8D;
+  align-items: center;
+  cursor: pointer;
+  border-bottom: 2px solid #000000;
+  padding-right: 300px;
+}
+.secondInput>label {
+  display: block;
+  color:#8D8D8D;
+  align-items: center;
+  cursor: pointer;
+  border-bottom: 2px solid #000000;
+  padding-right: 300px;
 }
 
-#docfoot{
-    float:left;
-    padding:5px;
+.footer{
+	display: flex;
+	flex-direction:row;
+	justify-content:flex-end;
+	background-color: #C4C4C4;
 }
-#copyright{
-    padding:5px;
-    color:white;
+.footer>div:nth-child(1){
+	margin-right: auto;
+	padding-left:30px;
 }
-.facebook{
-    float:right;
-    padding-bottom:10px;
-}
-.twitter{
-    float:right;
-    padding-bottom:25px;
-}
-.instagram{
-    float:right;
-    padding-bottom:13px;
+.footer>div:nth-child(3){
+	margin-left: auto;
+	padding-right:30px;
 }
 	</style>
+
 </head>
 
 <body>
@@ -166,10 +171,10 @@ footer{
 
 <!---- Text and File compare starts here---->
 
-			<div class="compare"><b>Compare two documents</b></div>
+			<div class="compare"><b>Compare Two Documents</b></div>
 			<div class="upload">
-				<div class="uploadFile"><img src="https://res.cloudinary.com/kai123/image/upload/v1571214840/HNG/Docfix/text_uu5kgu.png">File</div>
-				<div class="uploadText"><img src="https://res.cloudinary.com/kai123/image/upload/v1571214841/HNG/Docfix/Group_1_wiuwlq.png">Text</div>
+				<div class="uploadFile"><img src="https://res.cloudinary.com/kai123/image/upload/v1571214840/HNG/Docfix/text_uu5kgu.png"><b>File</b></div>
+				<div class="uploadText"><img src="https://res.cloudinary.com/kai123/image/upload/v1571214841/HNG/Docfix/Group_1_wiuwlq.png"><b>Text</b></div>
 		</div>
 <!---- Text and File compare ends here---->
 
@@ -177,13 +182,12 @@ footer{
 
 		<div class="document">
 			<div class="first"><b>First Document:</b>
-			<div class="firstInput"> <input type="file" name="first-doc"accept=".doc, .txt, .pdf, .docx" placeholder="Docufix.txt"></div>
+			<div class="firstInput"><label for="fileInput">Docufix.txt</label><input type="file" id="fileInput" name="first-doc"accept=".doc, .txt, .pdf, .docx"></div>
 			<div class="firstImage"><label class="btn custom-input-btn"><input type="file" name="photo" style="display:none" accept="*" multiple><i class="fa fa-cloud-upload"></i> Upload</label></div>
 			</div>
 
 			<div class="second"><b>Second Document:</b>
-			 <div class="secondInput"><input type="file" name="second-doc"accept=".doc, .txt, .pdf, .docx" placeholder="Docufix.txt"></div>
-			 <div class="secondImage"><label class="btn custom-input-btn"><input type="file" name="photo" style="display:none" accept="*" multiple><i class="fa fa-cloud-upload"></i> Upload</label></div>
+			 <div class="secondInput"><label for="fileInput">Docufix.txt</label><input type="file" id="fileInput" name="first-doc"accept=".doc, .txt, .pdf, .docx"></div>			 <div class="secondImage"><label class="btn custom-input-btn"><input type="file" name="photo" style="display:none" accept="*" multiple><i class="fa fa-cloud-upload"></i> Upload</label></div>
 			</div>
 
 <!---- Uploading of Documents ends here---->
@@ -197,15 +201,6 @@ footer{
 			</div>
 		</div>
 	</div>
-	</div>
-</div>
-	<!---- Footer starts here---->
-	<footer>
-        <span id="docfoot">DOCUFIX</span>
-          <span id="copyright">&copy;2019 copyright Docufix.io and HNG i6</span> 
-          <div class="facebook"><img src= "https://res.cloudinary.com/abolarinwaabiodun/image/upload/v1571218310/faceb_gtmifb.png" width="30px" height="30px"></div>
-       <div class="twitter"><img src= "https://res.cloudinary.com/abolarinwaabiodun/image/upload/v1571218310/twitter_kfwhrb.png" width="45px" height="45px"></div>
-       <div class="instagram"><img src = "https://res.cloudinary.com/abolarinwaabiodun/image/upload/v1571218309/insta_yvevmu.png" width="30px" height="30px"></div>
-    </footer>
+	
 </body>
 </html>

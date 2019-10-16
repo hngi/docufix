@@ -7,12 +7,21 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>%title%</title>
     <style>
+        
+        @media (max-height:800px){
+	footer { position: static; }
+	header { padding-top:40px; }
+}
+ 
    footer{
     background-color: grey;
     font-family: Ubuntu;
     font-style: normal;
     font-weight: bold;
     padding-top: 5px;
+    position: fixed;
+	bottom: 0;
+}
    }
    footer .social {
     display: inline-flex;
@@ -30,7 +39,7 @@
    .social_media {
     list-style: none;
     display: inline-flex;
-    padding-left: 340px;
+    padding-left: 200px;
 
    }
    .fa {
@@ -44,7 +53,7 @@
     <footer>
         <div class="social">
             <h1>DOCUFIX</h1>
-            <p>Copyright 2019 Docufix.io and HNG6 affiliates</p>
+            <p>Copyright ©2019 Docufix.io and HNG6 affiliates</p>
             <div>
                 <ul class="social_media">
                     <li><a href="#"><i class="fa fa-facebook"></i></a></li>

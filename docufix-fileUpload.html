@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>docufix-fileUpload</title>
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+	<style>
+
+body{
+	font-family:ubuntu;
+		
+}
+a{
+	text-decoration:none;
+	color:#FFFEFE;
+}
+/* Styling the navbar */
+.navbar{
+	background-color: #000000;
+	display:flex;
+	flex-direction:row;
+	justify-content:flex-end;
+}
+.navbar>div{
+	font-size:25px;
+	color: #FFFEFE;
+	padding:40px; 
+}
+.navbar>div:nth-child(1){
+	margin-right:auto;
+}
+
+/* Styling the main page */	
+.wrapper{
+	background-color: rgba(221, 232, 232, 0.5);
+	display:flex;
+	flex-direction:center;
+}
+.compare{
+	margin-top:10px;
+	margin-left: 50px;
+}
+/* Styling the upload */
+.upload{
+	display:flex;
+	flex-direction:center;
+	margin-top:30px;
+	padding:10px;
+	justify-content:center;
+}
+.uploadFile{
+	border-right:2px solid #000000;
+	padding-right:10px;
+
+}
+.uploadText{
+	padding-left:10px;
+
+}
+/* Styling the document */
+.document{
+justify-content: center;
+
+}
+.first{
+	display:flex;
+	flex-direction:row;
+	padding:50px;
+}
+.firstInput{
+	margin-left:200px;
+}
+.firstImage{
+	margin-left:200px;
+	background-color: #0FC789;
+	border-radius:5px;
+
+}
+.second{
+	display:flex;
+	flex-direction:row;
+	padding:50px;
+}
+.secondInput{
+	margin-left:200px;
+}
+.secondImage{
+	margin-left:200px;
+	margin-bottom:30px;
+	background-color: #0FC789;
+	border-radius:5px;
+}
+
+/* Styling the compare submit */
+.check{
+	display:flex;
+	flex-direction:row;
+	width:20%;
+	float:center;
+	background-color: #000000;
+	border-radius: 5px;
+	color:#FCF9F9;
+	font-size: 24px;
+	line-height:28px;
+	margin:30px 0;
+	margin-left:500px;
+	}
+.checkImage{
+	padding:10px 20px;
+}
+.checkText{
+	padding:20px 0;
+	font-size:16px;
+}
+
+/* Styling the input button */
+input[type=file] {
+    border-bottom: 2px solid #000000;
+     }
+	</style>
+</head>
+
+<body>
+	<nav class="navbar">
+				<div><a href="#">DOCUFIX</a></div>
+				<div><a href="#">About Us</a></div>
+				<div><a href="#">Team</a></div>
+				<div><a href="#">Sponsors</a></div>
+	</nav>
+
+	<div class="wrapper">	
+		<div class="fileUpload">
+
+<!---- Text and File compare starts here---->
+
+			<div class="compare"><b>Compare two documents</b></div>
+			<div class="upload">
+				<div class="uploadFile"><img src="image/text.png">File</div>
+				<div class="uploadText"><img src="image/Group (1).png">Text</div>
+		</div>
+<!---- Text and File compare ends here---->
+
+<!---- Uploading of Documents starts here---->
+
+		<div class="document">
+			<div class="first"><b>First Document:</b>
+			<div class="firstInput"> <input type="file" name="first-doc"accept=".doc, .txt, .pdf, .docx" placeholder="Docufix.txt"></div>
+			<div class="firstImage"><label class="btn custom-input-btn"><input type="file" name="photo" style="display:none" accept="*" multiple><i class="fa fa-cloud-upload"></i> Upload</label></div>
+			</div>
+
+			<div class="second"><b>Second Document:</b>
+			 <div class="secondInput"><input type="file" name="second-doc"accept=".doc, .txt, .pdf, .docx" placeholder="Docufix.txt"></div>
+			 <div class="secondImage"><label class="btn custom-input-btn"><input type="file" name="photo" style="display:none" accept="*" multiple><i class="fa fa-cloud-upload"></i> Upload</label></div>
+			</div>
+
+<!---- Uploading of Documents ends here---->
+
+<!---- Check for compare starts here---->
+			<div class="check">
+				<div class="checkImage"> <img src="image/Group (2).png"></div>
+				<div class="checkText">COMPARE</div>
+<!---- Check for compare starts here---->
+
+			</div>
+		</div>
+	</div>
+</body>
+</html>

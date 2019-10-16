@@ -7,12 +7,21 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>%title%</title>
     <style>
+        
+        @media (max-height:800px){
+	footer { position: static; }
+	header { padding-top:40px; }
+}
+ 
    footer{
     background-color: grey;
     font-family: Ubuntu;
     font-style: normal;
     font-weight: bold;
     padding-top: 5px;
+    position: fixed;
+	bottom: 0;
+}
    }
    footer .social {
     display: inline-flex;
@@ -41,7 +50,7 @@
     </style>
 </head>
 <body>
-    <footer>
+    <footer class="footer-distributed">
         <div class="social">
             <h1>DOCUFIX</h1>
             <p>Copyright 2019 Docufix.io and HNG6 affiliates</p>

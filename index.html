@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 	<title>docufix-fileUpload</title>
 	<link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -157,34 +160,24 @@ input[type=file] {
 		
 /* Styling the footer */
 footer{
-    position: relative;
+    position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
     text-align: center;
     background-color: #C4C4C4;
-    height:30px;
+	height:50px;
+	
 }
 
 #docfoot{
     float:left;
-    padding:5px;
 }
 #copyright{
-    padding:5px;
     color:white;
 }
-.facebook{
-    float:right;
-    padding-bottom:10px;
-}
-.twitter{
-    float:right;
-    padding-bottom:25px;
-}
-.instagram{
-    float:right;
-    padding-bottom:13px;
+.icons{
+	align-self: center
 }
 
 	</style>
@@ -234,16 +227,16 @@ footer{
 				
 <!---- Footer starts here---->
 	<footer>
-        <span id="docfoot">DOCUFIX</span>
+		<div>
+			<div id="icons">
+			<img src= "https://res.cloudinary.com/abolarinwaabiodun/image/upload/v1571218310/faceb_gtmifb.png" width="30px" height="30px">
+			<img src= "https://res.cloudinary.com/abolarinwaabiodun/image/upload/v1571218310/twitter_kfwhrb.png" width="30px" height="30px">
+			<img src = "https://res.cloudinary.com/abolarinwaabiodun/image/upload/v1571218309/insta_yvevmu.png" width="30px" height="30px">
+			</div>	
+			<span id="docfoot">DOCUFIX</span>
           <span id="copyright">&copy;2019 copyright Docufix.io and HNG i6</span> 
-          <div class="facebook"><img src= "https://res.cloudinary.com/abolarinwaabiodun/image/upload/v1571218310/faceb_gtmifb.png" width="30px" height="30px"></div>
-       <div class="twitter"><img src= "https://res.cloudinary.com/abolarinwaabiodun/image/upload/v1571218310/twitter_kfwhrb.png" width="45px" height="45px"></div>
-       <div class="instagram"><img src = "https://res.cloudinary.com/abolarinwaabiodun/image/upload/v1571218309/insta_yvevmu.png" width="30px" height="30px"></div>
+		</div>
     </footer>
 
-			</div>
-		</div>
-	</div>
-	
 </body>
 </html>

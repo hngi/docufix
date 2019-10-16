@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Team Page</title>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+        <style>
+            *, *:before, *:after {
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: 'Open Sans', sans-serif;
+                background-color: #DDE8E8;
+            }
+
+            .meet {
+                position: relative;
+                font-size: 64px;
+                line-height: 87px;
+                text-align: center;
+            }
+
+            .meet:after {
+              content: "";
+              position: absolute;
+              border-top: 10px solid black;
+              left: 46%;
+              bottom: -10px;
+              margin-left: -15px;
+              width: 150px;
+              height: 0px;
+              border-radius: 5px;
+            }
+
+            .row {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .column {
+                flex-grow: 1;
+                width: 25%;
+                margin: 20px 2%;
+                padding: 0 10px;
+            }
+
+            .card {
+                box-shadow: 5px 5px 20px rgb(0, 0, 0, 0.3);
+            }
+
+            .container {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 40px 10px;
+                overflow: hidden;
+            }
+
+            .container::after, 
+            .row::after {
+                content: "";
+                clear: both;
+                display: table;
+            }
+
+            .user-img {
+                border-radius: 100%;
+            }
+
+            .text {
+                text-align: center;
+            }
+
+            .name {
+                font-size: 36px;
+                line-height: 49px;
+            }
+
+            .title {
+                color: rgba(0,0,0,0.85);
+            }
+
+            p {
+                font-size: 18px;
+                line-height: 25px;
+            }
+
+            .button {
+                border: none;
+                border-radius: 30px;
+                outline: 0;
+                display: inline-block;
+                padding: 10px 20px;
+                color: white;
+                background-color: #060541;
+                text-align: center;
+                cursor: pointer;
+                text-transform: uppercase;
+                font-weight: 600;
+                font-size: 20px;
+            }
+
+            .button:hover {
+                background-color: blue;
+            }
+
+
+            .slant:after {
+              content: '';
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 50%;
+              background:  #CAC9D9;
+              transform-origin: 100% 0;
+              transform: skew(-65deg);
+              z-index: -1;
+            }
+
+            .icon {
+                width: 40px;
+                height: 40px;
+                padding: 5px;
+            }
+
+
+            .socials {
+                display: flex;
+                justify-content: space-between;
+                border-top: 1px solid rgba(0, 0, 0, 0.1);
+                background-color: rgba(199, 195, 195, 0.1);
+                padding: 5px 50px;
+            }
+            
+            @media screen and (max-width: 620px) {
+              .column {
+                width: 100%;
+                display: block;
+              }
+
+                  .slant:after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 70%;
+                    background:  #CAC9D9;
+                    transform-origin: 100% 0;
+                    transform: skew(-65deg);
+                    z-index: -1;
+                }
+
+                  .meet {
+                    font-size: 50px;
+                }
+
+                  .meet:after {
+                     left: 38%;
+                }
+            }
+
+            @media (min-width: 620px) and (max-width: 960px) {
+
+                .column {
+                    width: 45%;
+                }
+
+                 .meet:after {
+                     left: 42.5%;
+                }
+
+                .socials {
+                    padding: 5px 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+    
+        <h2 class="meet">MEET OUR TEAM</h2>
+        <br>
+        
+        <div class="row">
+          <div class="column">
+            <div class="card">
+              
+              <div class="container">
+                <div class="slant"></div>
+                <img class="user-img" src="img/1.jpg" alt="Member" style="width:150px; height:150px">
+                <div class="text">
+                    <h2 class="name">Steven Kobe</h2>
+                    <p class="title">Creative Director</p>
+                    <p>lorem ipsum ipsum lorem lorem ipsum ipsum lorem lorem ipsum ipsum lorem lorem ipsum ipsum lorem lorem ipsum ipsum lorem.</p>
+                </div>
+                <button class="button">Contact</button>
+              </div>
+              <div class="socials">
+                  <a href="https://twitter.com"><img class="icon" src="img/icons/twitter.png" alt="Twitter"></a>
+                  <a href="https://www.instagram.com"><img class="icon" src="img/icons/instagram.png" alt="Twitter"></a>
+                  <a href="https://www.linkedin.com"><img class="icon" src="img/icons/linked.png" alt="Twitter"></a>
+                  <a href="https://mail.google.com"><img class="icon" src="img/icons/google-plus.png" alt="Twitter"></a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="column">
+            <div class="card">
+              
+              <div class="container">
+                <div class="slant"></div>
+                <img class="user-img" src="img/2.jpg" alt="Member" style="width:150px; height:150px">
+                <div class="text">
+                    <h2 class="name">Samad Hamid</h2>
+                    <p class="title">Backend Engineer</p>
+                    <p>lorem ipsum ipsum lorem lorem ipsum ipsum lorem lorem ipsum ipsum lorem lorem ipsum ipsum lorem lorem ipsum ipsum lorem.</p>
+                </div>
+                <button class="button">Contact</button>
+              </div>
+              <div class="socials">
+                  <a href="https://twitter.com"><img class="icon" src="img/icons/twitter.png" alt="Twitter"></a>
+                  <a href="https://www.instagram.com"><img class="icon" src="img/icons/instagram.png" alt="Twitter"></a>
+                  <a href="https://www.linkedin.com"><img class="icon" src="img/icons/linked.png" alt="Twitter"></a>
+                  <a href="https://mail.google.com"><img class="icon" src="img/icons/google-plus.png" alt="Twitter"></a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="column">
+            <div class="card">
+              
+              <div class="container">
+                <div class="slant"></div>
+                <img class="user-img" src="img/3.jpg" alt="Member" style="width:150px; height:150px">
+                <div class="text">
+                    <h2 class="name">Paula White</h2>
+                    <p class="title">Lead Designer</p>
+                    <p>lorem ipsum ipsum lorem lorem ipsum ipsum lorem lorem ipsum ipsum lorem lorem ipsum ipsum lorem lorem ipsum ipsum lorem.</p>
+                </div>
+                <button class="button">Contact</button>
+              </div>
+              <div class="socials">
+                  <a href="https://twitter.com"><img class="icon" src="img/icons/twitter.png" alt="Twitter"></a>
+                  <a href="https://www.instagram.com"><img class="icon" src="img/icons/instagram.png" alt="Twitter"></a>
+                  <a href="https://www.linkedin.com"><img class="icon" src="img/icons/linked.png" alt="Twitter"></a>
+                  <a href="https://mail.google.com"><img class="icon" src="img/icons/google-plus.png" alt="Twitter"></a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="column">
+            <div class="card">
+              
+              <div class="container">
+                <div class="slant"></div>
+                <img class="user-img" src="img/4.jpg" alt="Member" style="width:150px; height:150px">
+                <div class="text">
+                    <h2 class="name">Steven Kobe</h2>
+                    <p class="title">Creative Director</p>
+                    <p>lorem ipsum ipsum lorem lorem ipsum ipsum lorem lorem ipsum ipsum lorem lorem ipsum ipsum lorem lorem ipsum ipsum lorem.</p>
+                </div>
+                <button class="button">Contact</button>
+              </div>
+              <div class="socials">
+                  <a href="https://twitter.com"><img class="icon" src="img/icons/twitter.png" alt="Twitter"></a>
+                  <a href="https://www.instagram.com"><img class="icon" src="img/icons/instagram.png" alt="Twitter"></a>
+                  <a href="https://www.linkedin.com"><img class="icon" src="img/icons/linked.png" alt="Twitter"></a>
+                  <a href="https://mail.google.com"><img class="icon" src="img/icons/google-plus.png" alt="Twitter"></a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="column">
+            <div class="card">
+              
+              <div class="container">
+                <div class="slant"></div>
+                <img class="user-img" src="img/5.jpg" alt="Member" style="width:150px; height:150px">
+                <div class="text">
+                    <h2 class="name">Samad Hamid</h2>
+                    <p class="title">Backend Engineer</p>
+                    <p>lorem ipsum ipsum lorem lorem ipsum ipsum lorem lorem ipsum ipsum lorem lorem ipsum ipsum lorem lorem ipsum ipsum lorem.</p>
+                </div>
+                <button class="button">Contact</button>
+              </div>
+              <div class="socials">
+                  <a href="https://twitter.com"><img class="icon" src="img/icons/twitter.png" alt="Twitter"></a>
+                  <a href="https://www.instagram.com"><img class="icon" src="img/icons/instagram.png" alt="Twitter"></a>
+                  <a href="https://www.linkedin.com"><img class="icon" src="img/icons/linked.png" alt="Twitter"></a>
+                  <a href="https://mail.google.com"><img class="icon" src="img/icons/google-plus.png" alt="Twitter"></a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="column">
+            <div class="card">
+              
+              <div class="container">
+                <div class="slant"></div>
+                <img class="user-img" src="img/1.jpg" alt="Member" style="width:150px; height:150px">
+                <div class="text">
+                    <h2 class="name">Paula White</h2>
+                    <p class="title">Lead Designer</p>
+                    <p>lorem ipsum ipsum lorem lorem ipsum ipsum lorem lorem ipsum ipsum lorem lorem ipsum ipsum lorem lorem ipsum ipsum lorem.</p>
+                </div>
+                <button class="button">Contact</button>
+              </div>
+              <div class="socials">
+                  <a href="https://twitter.com"><img class="icon" src="img/icons/twitter.png" alt="Twitter"></a>
+                  <a href="https://www.instagram.com"><img class="icon" src="img/icons/instagram.png" alt="Twitter"></a>
+                  <a href="https://www.linkedin.com"><img class="icon" src="img/icons/linked.png" alt="Twitter"></a>
+                  <a href="https://mail.google.com"><img class="icon" src="img/icons/google-plus.png" alt="Twitter"></a>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+    
+    </body>
+</html>

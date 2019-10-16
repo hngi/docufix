@@ -87,22 +87,42 @@
                 justify-content: space-between;
             }
             .innerdiv {
-                height: 360px;
+                height: 300px;
                 border-color: black;
-                background-color: gray;
+                background-color: #fff;
                 width: 30%;  
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-                text-align: center;
+                /*text-align: center;*/
                 margin-left: 120px;
             }
+            .text {
+                padding: 20px;
+                text-align: left;
+                color: black;
+                margin-top: 15px;
+                font-size: 200%;
+                font-family: Helvetica;
+            }
             .circle {
-                width: 100px;
-                height: 100px;
+                width: 220px;
+                height: 220px;
                 border-radius: 50%;
+                border: solid 2px red;
                 align-self: center;
                 background: white;
+                font-size: 200%;
+                padding: 73px;
+            }
+            .col1 {
+                color: red;
+            }
+            .col2 {
+                border: solid 2px brown;
+            }
+            .col3 {
+                 border: solid 2px pink;
             }
         </style>
     </head>
@@ -120,16 +140,16 @@
 
             <div class="analysis">
                 <div class="innerdiv">
-                    <p>Identical</p>
-                    <div class='circle'></div>
+                    <p class="text">Identical</p>
+                    <div class='circle col1'>100%</div>
                 </div>
                 <div class="innerdiv">
-                    <p>Related</p>
-                    <div class='circle'></div>
+                    <p class="text">Related</p>
+                    <div class='circle col2' >100%</div>
                 </div>
                 <div class="innerdiv">
-                    <p>Minor Changes</p>
-                <div class='circle'></div>
+                    <p class="text">Minor Changes</p>
+                <div class='circle col3'>100%</div>
                 </div>
             </div>
 

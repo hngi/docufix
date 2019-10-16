@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css" integrity="sha384-rtJEYb85SiYWgfpCr0jn174XgJTn4rptSOQsMroFBPQSGLdOC5IbubP6lJ35qoM9" crossorigin="anonymous">
+    <title>Navbar 2</title>
+	<style type="text/css">
+		nav {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			color: white;
+			background-color: #fff;
+			padding: 10px;
+			height: 70px;
+		}
+
+		.logo {
+			margin-left: 100px;
+		}
+
+		.nav-container {
+			margin-right: 100px;
+		}
+
+		.nav-container .nav-items {
+			display: flex;
+			justify-content: space-between;
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+
+		.nav-container .nav-items li {
+			margin: 0 10px;
+			padding: 10px;
+		}
+
+		.nav-container .nav-items li a {
+			text-decoration: none;
+			color: white;
+		}
+
+		div.active {
+			display: block;
+			width: 100%;
+			text-align: center;
+		}
+	
+		div.active div {
+			padding: 10px 0;
+		}
+
+		div.active div a {
+			text-decoration: none;
+			color: white;
+		}
+	
+		.dropdown {
+			display: none;
+		}
+
+		.ham {
+			display: none;
+		}
+
+		@media screen and (max-width: 992px) {
+			.logo {
+				margin-left: 50px;
+			}
+
+			.nav-container {
+				margin-right: 50px;
+			}
+		}
+
+		@media screen and (max-width: 768px) {
+			.logo {
+				margin-left: 50px;
+			}
+
+			.nav-container .nav-items {
+				display: none;
+			}
+
+			.nav-container {
+				margin-right: 25px;
+			}
+
+			.ham {
+				display: block;	
+				cursor: pointer;			
+			}
+		}
+
+		@media screen and (max-width: 768px) {
+			.logo {
+				margin-left: 20px;
+			}
+
+			.nav-container .nav-items {
+				display: none;
+			}
+
+			.nav-container {
+				margin-right: 20px;
+			}
+
+			.ham {
+				display: block;	
+				cursor: pointer;			
+			}
+		}
+
+		@media screen and (max-width: 375px) {
+			.logo {
+				margin-left: 10px;
+			}
+
+			.nav-container .nav-items {
+				display: none;
+			}
+
+			.nav-container {
+				margin-right: 10px;
+			}
+
+			.ham {
+				display: block;	
+				cursor: pointer;	
+			}
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<nav>
+			<div class="logo">Docufix</div>
+			<div class="nav-container">
+				<ul class="nav-items">
+				    <li><a href="">About Us</a></li>
+				    <li><a href="">How it Works</a></li>
+				    <li><a href="">Team</a></li>
+				</ul>
+				<span class="ham">A<!-- <i class="fas fa-bars"> --></i></span>
+			</div>	
+		</nav>
+		<div class="dropdown">
+			<div><a href="">About Us</a></div>
+			<div><a href="">How it Works</a></div>
+			<div><a href="">Team</a></div>
+		</div>
+	</header>
+
+	<script>
+		document.querySelector('.ham').addEventListener('click', () => {
+				document.querySelector('.dropdown').classList.toggle('active')				
+		})
+	</script>
+</body>
+</html>

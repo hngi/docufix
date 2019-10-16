@@ -4,120 +4,163 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="text-comparison.css">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico|Ubuntu&display=swap" rel="stylesheet">
     <title>Docufix | Compare Text</title>
 
     <style>
-        .compare {
-            font-weight: bold;
-        }
-        .doc-compare {
-            text-align: center;
-            font-size: 24px;
-            margin-left: -15px;
-            margin-bottom: 10px;
-        }
-        .top-icons {
-            width: 15px;
-            height: 15px;
-        }
-        .doc-text {
+  *{
+    margin:0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    padding: 60px 60px 90px 30px;
+    border: 2px solid black;
+    background-color: #EEF3F3;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+#file-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    #file{
+        display: flex;;
+        border-right: 2px solid black;
+        padding: 20px 30px 20px 0px;
+        align-items: center;
+    }
+    #text{
+        display: flex;
+        padding: 20px 0 20px 30px;
+        align-items: center;;
+    }
+
+#text-compare{
+    display: flex;
+    padding: 30px 60px;
+    justify-content: space-between;
+}
+    #text-1{
+        width: 44%;
+    }
+        .labels{
             display: flex;
-            flex-direction: row;
-            text-align: center;
-            margin-left: 270px;
+            padding: 10px 0px 10px 30px;
+            width: 100%;
+            background-color: #000000;
+            color: white;
+            margin-bottom: -7px
             
         }
-        .add-text {
-           width: 350px; 
-           
-        }
-        .add-text2 {
-            margin-left: 40px;
-        }
-        .labels {
-            width: 300px;
-            height: 30px;
-            background-color: #000000;
-            color: #ffffff;
-            text-align: left;
-            margin-top: 25px;
-            margin-left: 15px;
-            margin-bottom: 0px;
-        }
-        #compare-txt {
-            width: 30px;
-            height: 30px;
-            position: absolute;
-            top: 40%;
-        }
-        .input-txt {
-            width: 295px;
-            height: 320px;
-            margin-top: -19px;
-            margin-left: -17px;
-        }
-        .white-txt {
-            margin-left: 25px;
-            vertical-align: middle;
-            padding-top: 6px;
-        }
-        #white-txt {
-            vertical-align: middle;
-            padding-top: 10px;
-        }
-        .compare-btn {
-            text-align: center;
-            width: 150px;
-            height: 40px;
-            margin-left: 600px;
-            margin-top: 35px;
+            .labels img{
+                margin-right: 10px;
+            }
+    #arrow{
+        align-self: center;
+        
+    }
+    #text-2{
+        width: 44%;
+    }
+
+    .input-txt{
+        margin-top: -15px;
+        width: 100%;
+        height: 400px;
+        padding: 15px 30px;
+        color: white;;
+    }
+
+    #button{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        margin-top: 30px;
+    }
+
+        button{
             border-radius: 20px;
             background-color: #000000;
             color: #ffffff;
-            
-
+            padding: 15px 30px;
         }
-        .compare-img {
+            button img{
             width: 16.5px;
             height: 16.5px;
             vertical-align: middle;
-        }
-        .compare-btn-txt {
-            margin-left: 6px;
-        }
+            margin-right: 10px;
+            }
+
+
+
+@media screen and (max-width: 600px){
+
+    body{
+        padding: 60px 30px;
+        text-align: center;
+    }
+
+    #main-text{
+        margin-bottom: 25px;
+        font-size: 24px;
+    }
+    #file-text{
+        font-size: 18px;
+    }
+
+    #text-compare{
+        flex-direction: column;
+        padding: 30px 10px 10px 10px ;
+    }
+    #text-2, #text-1{
+        width: 100%;
+    }
+
+    button{
+        width: 50%;
+        font-size: 18px;
+    }
+
+}
 
     </style>
 </head>
 <body>
-    <h1 class="compare">Compare two documents</h1>
+    <h1 id="main-text">Compare two documents</h1>
 
-    <div class="doc-compare">
-        <img class="top-icons" src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571193844/samples/figma%20career-list/lario/xisa8mltboqmepbzjqks.png">
-        <span class="compare">File</span>
+    <div id="file-text">
+        <div id="file">
+            <img class="top-icons" src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571193844/samples/figma%20career-list/lario/xisa8mltboqmepbzjqks.png">
+            <span class="compare">File</span>
+        </div>
 
-        <img src="https://res.cloudinary.com/praiseey/image/upload/v1571196135/vertical-line_byrc4y.png">
-
-        <img class="top-icons" src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571193193/samples/figma%20career-list/lario/slpij76xxh4f7bpixbr5.png">
-        <span class="compare">Text</span>
+        <div id="text">
+            <img class="top-icons" src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571193193/samples/figma%20career-list/lario/slpij76xxh4f7bpixbr5.png">
+            <span class="compare">Text</span>
+        </div>
+        
     </div>
     
-    <section class="doc-text">
-        <div class="add-text">
-            <label for="text">
-                <div class="labels">
+    <section id="text-compare">
+        <div id="text-1">
+            <label for="text" class="two-text">
+                <div class="labels" >
                     <img class="white-txt" src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571194266/samples/figma%20career-list/lario/ct8pi1qsjgonxsa7zdyn.png">
                     <span id="white-txt" class="compare">Text</span>
                 </div>
             </label> <br>
             <textarea placeholder="Write your text here" class="input-txt"></textarea>
         </div>
-        <div >
+        <div id="arrow">
             <img id="compare-txt" src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571193103/samples/figma%20career-list/lario/hyu5pvtsmqxymfx5ohwi.png">
         </div>
 
-        <div class="add-text add-text2">
-            <label for="text">
+        <div class="add-text add-text2" id="text-2">
+            <label for="text" class="two-text">
                 <div class="labels">
                     <img class="white-txt" src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571194266/samples/figma%20career-list/lario/ct8pi1qsjgonxsa7zdyn.png">
                     <span id="white-txt" class="compare">Text</span>
@@ -126,18 +169,13 @@
             <textarea placeholder="Write your text here" class="input-txt"></textarea>
         </div>
     </section>
-    <button type="submit" class="compare compare-btn">
-        <img class="compare-img" src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571193103/samples/figma%20career-list/lario/butfaguuckar9dl0i1ug.png">
-        <span class="compare-btn-txt">COMPARE</span>
-    </button>
-
-    <!--<footer>
-        <img src="">
-        <p>Copyright 2019 Docufix.io and HNG6 affiliates</p>
-        <i class="fa fa-facebook"></i>
-        <i class="fa fa-twitter"></i>
-        <i class="fa fa-instagram"></i>
-    </footer>-->
+    <div id="button">
+        <button type="submit">
+            <img class="compare-img" src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571193103/samples/figma%20career-list/lario/butfaguuckar9dl0i1ug.png">
+            <span class="compare-btn-txt">COMPARE</span>
+        </button>
+    </div>
+    
 
 </body>
 </html>

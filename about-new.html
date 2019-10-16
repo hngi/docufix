@@ -25,12 +25,19 @@
             padding: 0
         }
 
+        html {
+            height: 100%;
+        }
+
         body {
-            background: #bdc3c7;
+            background: #E5FAFA;
             line-height: 1.5;
             font-family: "Ubuntu", 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
             font-size: 16px;
-            color: #fff
+            color: #fff;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
         }
 
         a {
@@ -276,6 +283,62 @@
                 width: 100%
             }
         }
+
+        .main {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            height: 100%;
+        }
+
+        .content {
+            flex: 1 0 auto;
+        }
+
+        .main>div {
+            background: #C4C4C4;
+            padding: 20px;
+            flex: 1 1 40%;
+            padding: 20px;
+            margin: 2%;
+            color: #000;
+        }
+
+        footer {
+            box-sizing: border-box;
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            align-items: center;
+            background: #C4C4C4;
+            flex-shrink: 0;
+
+        }
+
+        .footer {
+            flex-shrink: 0;
+        }
+
+        .footer-div {
+            margin: 5px;
+        }
+
+        .footer-image {
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        @media only screen and (max-width: 776px) {
+            .main {
+                flex-direction: column;
+            }
+        }
+
+        @media only screen and (max-width: 696px) {
+            footer {
+                flex-direction: column;
+            }
+        }
     </style>
 </head>
 
@@ -283,26 +346,81 @@
     <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-    <div id="header">
-        <div class="logo">
-            <a href="#">DOCUFIX</a>
+    <div class="content">
+        <div id="header">
+            <div class="logo">
+                <a href="#">DOCUFIX</a>
+            </div>
+            <nav>
+                <ul>
+
+                    <li>
+                        <a href="#">About Us</a>
+
+                    </li>
+                    <li>
+                        <a href="">Team</a>
+                    </li>
+                    <li>
+                        <a href="">Sponsor</a>
+                    </li>
+                </ul>
+            </nav>
         </div>
-        <nav>
-            <ul>
+        <main>
+            <h1 style="text-align: center; color: #000; margin-top: 25px;">About Us</h1>
+            <div class="main">
 
-                <li>
-                    <a href="#">About Us</a>
-
-                </li>
-                <li>
-                    <a href="">Team</a>
-                </li>
-                <li>
-                    <a href="">Sponsor</a>
-                </li>
-            </ul>
-        </nav>
+                <div class="main-content">Compare Documents You now have the ability to compare two text documents that
+                    can
+                    be
+                    in different formats and see the highlighted difference in results. Know exactly what has been
+                    changed,
+                    paraphrased, or copied between two textual documents. This diff tool allows you to see the
+                    similarity in
+                    files quickly and easily.</div>
+                <div class="main-content">Compare online content by submitting urls Compare raw text – simply type in
+                    your
+                    text
+                    in a text box Compare text types: Compare text file types: html , txt , pdf , doc , docx , rtf , xml
+                    ,
+                    ppt ,
+                    pptx , odt , chm , epub , odp , ppsx Compare images with textual content using OCR: jpg , jpeg , png
+                    ,
+                    bmp ,
+                    gif</div>
+                <div class="main-content">We offer many features and options for you to compare almost any type of
+                    textual
+                    content from files to live text, and URLs for free. Upload files from outside platforms like
+                    GoogleDocs,
+                    Dropbox, and OneDrive. Simply choose the text to compare and receive a full report with the text
+                    similarities immediately, plus the similarity percentage rate and similar word count.</div>
+                <div class="main-content">Dropbox Google Drive One Drive If you’re looking to see how similar a document
+                    is,
+                    don’t waste time going through comparing files manually. The comparison tool will highlight the
+                    similar
+                    results from files, URLs, and raw text in a few seconds.</div>
+                <div class="main-content">With the Copyleaks compare documents tool, you can compare documents of these
+                    types:
+                </div>
+                <div class="main-content">compare documents tool. Know in a minute how similar your content is to other
+                    files,
+                    URLs, and raw text. Compare your files and urls for free with the Copyleaks Comparison tool today.
+                </div>
+            </div>
+        </main>
     </div>
+    <footer class="footer">
+        <div class="footer-div">DOCUFIX</div>
+        <div class="footer-div">Copyright © 2019 Docufix.io and HNG6 affiliates</div>
+        <div class="footer-div"><a href="#"><img
+                    src="https://res.cloudinary.com/cortehz/image/upload/v1571239899/Vector_encznj.png"
+                    alt="facebook-icon" class="footer-image"></a>
+            <a href="#"> <img src="https://res.cloudinary.com/cortehz/image/upload/v1571239899/Vector_1_tsgyqt.png"
+                    alt="twitter-icon" class="footer-image"></a>
+            <a href="#"><img src="https://res.cloudinary.com/cortehz/image/upload/v1571239899/Vector_5_wfxjwb.png"
+                    alt="instagram-icon" class="footer-image"></a></div>
+    </footer>
     <script src="" async defer></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>

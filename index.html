@@ -11,45 +11,166 @@
             crossorigin="anonymous"
         />
         <link
-            href="https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap"
-            rel="stylesheet"
-        />
+       href="https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap"
+            rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
         <title>Docufix</title>
+
     </head>
-    <body style="background-color:  #DDE8E8; font-family: Ubuntu;">
+    <body>
+        <style>
+            * {
+  box-sizing: border-box;
+}
+body {
+  margin: 0px;
+  font-family: 'segoe ui';
+}
+.nav {
+  height: 50px;
+  width: 100%;
+  background-color: black;
+  position: relative;
+}
+.nav > .nav-header {
+  display: inline;
+}
+.nav > .nav-header > .nav-title {
+  display: inline-block;
+  font-size: 22px;
+  color: #fff;
+  padding: 10px 10px 10px 10px;
+}
+.nav > .nav-btn {
+  display: none;
+}
+.nav > .nav-links {
+  display: in-line;
+  float: right;
+  font-size: 18px;
+margin-left: 1000px;
+}
+.nav > .nav-links > a {
+  display: inline-block;
+  padding: 13px 10px 13px 10px;
+  text-decoration: none;
+  color: #efefef;
+}
+.nav > .nav-links > a:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.nav > #nav-check {
+  display: none;
+}
+@media (max-width:600px) {
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+  .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #eee;
+  }
+  .nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: #333;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+  }
+  .nav > .nav-links > a {
+    display: block;
+    width: 100%;
+  }
+  .nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+  .nav > #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
+}
+       
+
+
+footer{
+    background-color: grey;
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: bold;
+    padding-top: 5px;
+   }
+   footer .social {
+    display: inline-flex;
+    margin-left: 28px;
+   }
+   h1 {
+    font-size: 24px;
+    color: white;
+   }
+   p#copyright {
+    font-size: 18px;
+    color: white !important;
+    padding-left: 370px;
+   }
+   .social_media {
+    list-style: none;
+    display: inline-flex;
+    padding-left: 340px;
+    color: white !important;
+   }
+   .fa {
+    font-size: 25px;
+    margin: 10px;
+    color: white !important;
+   }
+
+}
+
+</style>
+
+        <body style="background-color:  #DDE8E8; font-family: Ubuntu;">
         <header>
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                <div class="container">
-                    <a class="navbar-brand" href="index.html" style="font-weight: bold;"
-                        >DOCUFIX</a
-                    >
-                    <button
-                        class="navbar-toggler border-0"
-                        type="button"
-                        data-toggle="collapse"
-                        data-target="#navbarNav"
-                        aria-controls="navbarNav"
-                        aria-expanded="false"
-                        aria-label="Toggle navigation"
-                    >
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul
-                            class="navbar-nav ml-auto"
-                            style="font-weight: bold;"
-                        >
-                            <li class="nav-item">
-                                <a class="nav-link text-light" href="#">About Us</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-light" href="#">Team</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-light" href="#">Sponsors</a>
-                            </li>
-                        </ul>
-                    </div>
+            
+  <div class="nav">
+  <input type="checkbox" id="nav-check">
+  <div class="nav-header">
+    <div class="nav-title">
+      DOCUFIX
+    </div>
+ </div>
+  <div class="nav-btn">
+    <label for="nav-check">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+  </div>
+  
+  <div class="nav-links">
+<!--    <a href="DOCUFIX.png" target="_blank"></a>-->
+    <a href="#" target="_blank">About Us</a>
+    <a href="#" target="_blank">Team</a>
+    <a href="#" target="_blank">Sponsors</a>
+
+  </div>
                 </div>
             </nav>
         </header>
@@ -182,36 +303,21 @@
                 </div>
             </div>
         </div>
-        <footer style="background-color: rgba(153, 157, 158, 0.808); color: white">
-            <div class="bg-dark p-4"></div>
-            <div class="container pt-4">
-                <div class="row">
-                    <div class="col-sm-2 text-center font-weight-bold"><p>DOCUFIX</p></div>
-                    <div class="col-sm-8 text-center font-weight-bold">
-                        <p>Copyright 2019 Docufix.io and HNG6 Affiliates</p>
-                    </div>
-                    <div class="col-sm-2 text-center">
-                        <a href="#" class="p-2"
-                            ><img
-                                src="./images/facebook.svg"
-                                alt=""
-                                style="height: 16px; width:16px;"/></a
-                        ><a href="#" class="p-2"
-                            ><img
-                                src="./images/twitter.svg"
-                                alt=""
-                                style="height: 16px; width:16px;"/></a
-                        ><a href="#" class="p-2"
-                            ><img
-                                src="./images/instagram.svg"
-                                alt=""
-                                style="height: 16px; width:16px;"
-                        /></a>
-                    </div>
-                </div>
+        <footer>
+        <div class="social">
+            <h1>DOCUFIX</h1>
+            <p id="copyright">Copyright 2019 Docufix.io and HNG6 affiliates</p>
+            <div>
+                <ul class="social_media">
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                </ul>
             </div>
-        </footer>
+        </div> 
+    </footer>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <script src="https://kit.fontawesome.com/7967e81f77.js" crossorigin="anonymous"></script>
     </body>
 </html>

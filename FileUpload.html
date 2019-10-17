@@ -10,7 +10,6 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<style>
-
 * {
 	box-sizing: border-box;
   }
@@ -35,91 +34,272 @@ a{
   .nav > .nav-header {
 	display: inline;
   }
-  
-  .nav > .nav-header > .nav-title {
-	display: inline-block;
-	font-size: 25px;
-	color: #fff;
-	padding: 10px 10px 10px 10px;
-  }
-  
-  .nav > .nav-btn {
-	display: none;
-  }
-  
-  .nav > .nav-links {
-	display: inline;
-	font-size: 18px;
-	margin-left: 50em;
-  }
-  
-  .nav > .nav-links > a {
-	display: inline-block;
-	padding: 13px 10px 13px 10px;
-	text-decoration: none;
-	color: #efefef;
 	
-  }
-  
-  .nav > .nav-links > a:hover {
-	background-color: rgba(0, 0, 0, 0.3);
-  }
-  
-  .nav > #nav-check {
-	display: none;
-  }
-  
-  @media (max-width:600px) {
+	.nav > .nav-header > .nav-title {
+		display: inline-block;
+		font-size: 22px;
+		color: #fff;
+		padding: 10px 10px 10px 10px;
+	}
+	
 	.nav > .nav-btn {
-	  display: inline-block;
-	  position: absolute;
-	  right: 0px;
-	  top: 0px;
+		display: none;
 	}
-	.nav > .nav-btn > label {
-	  display: inline-block;
-	  width: 50px;
-	  height: 50px;
-	  padding: 13px;
-	}
-	.nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
-	  background-color: rgba(0, 0, 0, 0.3);
-	}
-	.nav > .nav-btn > label > span {
-	  display: block;
-	  width: 25px;
-	  height: 10px;
-	  border-top: 2px solid #eee;
-	}
+	
 	.nav > .nav-links {
-	  position: absolute;
-	  display: block;
-	  width: 100%;
-	  background-color: #333;
-	  height: 0px;
-	  transition: all 0.3s ease-in;
-	  overflow-y: hidden;
-	  top: 50px;
-	  left: 3px;
+		display: inline;
+		font-size: 18px;
+		margin-left: 50em;
 	}
+	
 	.nav > .nav-links > a {
-	  display: block;
-	  width: 100%;
+		display: inline-block;
+		padding: 13px 10px 13px 10px;
+		text-decoration: none;
+		color: #efefef;
+
 	}
-	.nav > #nav-check:not(:checked) ~ .nav-links {
-	  height: 0px;
+	
+	.nav > .nav-links > a:hover {
+		background-color: rgba(0, 0, 0, 0.3);
 	}
-	.nav > #nav-check:checked ~ .nav-links {
-	  height: calc(100vh - 50px);
-	  overflow-y: auto;
+	
+	.nav > #nav-check {
+		display: none;
 	}
-  }
+
+@media only screen and (max-width:600px) {
+
+body{
+font-family:ubuntu;
+		
+}
+a{
+	text-decoration:none;
+	color:#FFFEFE;
+}
+/* Styling the navbar */
+.nav > .nav-btn {
+	display: inline-block;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+}
+.nav > .nav-btn > label {
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	padding: 13px;
+}
+.nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+	background-color: rgba(0, 0, 0, 0.3);
+}
+.nav > .nav-btn > label > span {
+	display: block;
+	width: 25px;
+	height: 10px;
+	border-top: 2px solid #eee;
+}
+.nav > .nav-links {
+	position: absolute;
+	display: block;
+	width: 100%;
+	background-color: #333;
+	height: 0px;
+	transition: all 0.3s ease-in;
+	overflow-y: hidden;
+	top: 50px;
+	left: 0px;
+	margin-left: 0;
+}
+.nav > .nav-links > a {
+	display: block;
+	width: 100%;
+}
+.nav > #nav-check:not(:checked) ~ .nav-links {
+	height: 0px;
+}
+.nav > #nav-check:checked ~ .nav-links {
+	height: calc(30vh - 20px);
+	overflow-y: auto;
+}
+/* Styling the main page */	
+.wrapper{
+	background-color: rgba(221, 232, 232, 0.5);
+	display: inline-block;
+}
+.compare{
+	display: inline-block;
+	justify-content: center;
+	align-items:center;
+	width: 300px;
+	padding: 10px;
+}
+/* Styling the upload */
+.upload{
+	margin-top:10px;
+	justify-content: center;
+	align-items: center;
+}
+.uploadFile{
+	border-right:2px solid #000000;
+	text-align: center;
+
+}
+.uploadText{
+	text-align: center;
+
+}
+/* Styling the document */
+.document{
+	display: inline-block;
+	justify-content:center;
+	font-size: 16px;
+	width: 80%;
+	height: 20%;
+	margin-bottom:20px;
+}
+.first{
+	text-align: center;
+	flex-direction: column;
+	justify-content:center;
+	display: none;
+	padding: 0;
+}
+.firstInput{
+	max-width:100px;
+	display:none;
+	padding: 0;
+}
+.firstImage{
+	max-width:100%;
+	background-color: #0FC789;
+	border-radius:5px;
+	padding: 0;
+
+}
+.second{
+	text-align: center;
+	flex-direction: column;
+	justify-content:center;
+	
+}
+.secondInput{
+	max-width: 100px;
+	display:none;
+	
+}
+.secondImage{
+	max-width:100%;
+	background-color: #0FC789;
+	border-radius:5px;
+}
+.secondImage>b{
+	margin-right:5px;
+}
+button{
+	line-height:28px;
+	padding-top: 25px;
+	margin: -40px;
+	border-radius: 5px;
+}
+
+/* Styling the compare submit */
+button.button-add{
+	color:#FCF9F9;
+	font-size: 8px;
+	font-weight: bold;
+	background-color: rgb(0, 0, 0);
+	position: relative;
+	}
+
+
+/* Styling the input button */
+input[type=file] {
+    border-bottom: 2px solid #000000;
+    display: none;
+     }
+.firstInput>label {
+  color:#8D8D8D;
+  align-items: center;
+  cursor: pointer;
+  border-bottom: 2px solid #000000;
+  padding-right:5px;
+}
+.secondInput>label {
+  color:#8D8D8D;
+  align-items: center;
+  cursor: pointer;
+  border-bottom: 2px solid #000000;
+  padding-right: 5px;
+}
+.footer>div:nth-child(1){
+	margin-right: auto;
+	padding-left:30px;
+}
+.footer>div:nth-child(3){
+	margin-left: auto;
+	padding-right:30px;
+}
+		
+/* Styling the footer */
+footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #C4C4C4;
+	height:50px;
+	
+}
+#docfoot{
+    float:left;
+}
+#copyright{
+    color:white;
+}
+.icons{
+	align-self: center
+}
+}
+	@keyframes moveInLeft {
+    0% {
+     opacity: 0;
+     transform: translateX(-100px);
+    }
+
+    80%{
+     transform: translateX(10px);
+    }
+
+    100%{
+     opacity: 1;
+     transform: translate(0);
+    }
+}
+@keyframes moveInRight {
+    0% {
+     opacity: 0;
+     transform: translateX(100px);
+    }
+
+    80%{
+     transform: translateX(-10px);
+    }
+
+    100%{
+     opacity: 1;
+     transform: translate(0);
+    }
+}
 
 /* Styling the main page */	
 .wrapper{
 	
 	display:flex;
 	flex-direction:center;
+	padding: 0;
 }
 .compare{
 	margin-top:40px;
@@ -174,9 +354,15 @@ font-size: 25px;
 	background-color: #0FC789;
 	border-radius:5px;
 }
-
-
 /* Styling the compare submit */
+button{
+	float: left;
+	border-radius: 5px;
+	font-size: 24px;
+	line-height:28px;
+	padding-right: 80%;
+	
+}
 button.button-add{
 	background-image: url("https://res.cloudinary.com/kai123/image/upload/v1571214841/HNG/Docfix/Group_2_ullosf.png");
 	background-color: #000000;
@@ -184,23 +370,13 @@ button.button-add{
 	background-position: 0px 0px;
 	color:#FCF9F9;
 	cursor: pointer;
-	border-radius: 5px;
+	width: 15%;
 	height: 40px;
-	margin-left: 16px;
-	vertical-align: middle;
-	display:flex;
-	flex-direction:row;
-	width:32%;
-	padding:5px 42px 20px;
+	margin-left: 50%;
+	padding:5px 40px 5px;
+	position: relative;
 	
 }
-.check{
-	border-radius: 5px;
-	font-size: 24px;
-	line-height:28px;
-	margin-left:500px;
-	}
-
 /* Styling the footer */
 /* Styling the input button */
 input[type=file] {
@@ -240,11 +416,12 @@ footer{
     width: 100%;
     text-align: center;
     background-color: #C4C4C4;
-	height:50px;
-	
+		height:50px;
+		font-size: 14px;
 }
 #docfoot{
-    float:left;
+		font-weight: bold;
+		float: left;
 }
 #copyright{
     color:white;
@@ -310,9 +487,7 @@ footer{
 			
 
 <!---- Check for compare starts here---->
-			<div class="check">
 				<button type="submit" class="button-add">COMPARE</button>
-			</div>
 <!---- Check for compare ends here---->
 				
 				

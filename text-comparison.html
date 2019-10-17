@@ -15,7 +15,7 @@
 }
 
 body{
-    padding: 60px 60px 90px 30px;
+    /*padding: 60px 60px 90px 30px;*/
     background-color: #EEF3F3;
     font-family: 'Ubuntu', sans-serif;
 }
@@ -101,6 +101,49 @@ body{
             vertical-align: middle;
             margin-right: 10px;
             }
+            
+            .nav {
+              height: 50px;
+              width: 100%;
+              background-color: black;
+              position: relative;
+            }
+
+            .nav > .nav-header {
+              display: inline;
+            }
+
+            .nav > .nav-header > .nav-title {
+              display: inline-block;
+              font-size: 22px;
+              color: #fff;
+              padding: 10px 10px 10px 10px;
+            }
+
+            .nav > .nav-btn {
+              display: none;
+            }
+
+            .nav > .nav-links {
+              display: inline;
+              float: right;
+              font-size: 18px;
+            }
+
+            .nav > .nav-links > a {
+              display: inline-block;
+              padding: 13px 10px 13px 10px;
+              text-decoration: none;
+              color: #efefef;
+            }
+
+            .nav > .nav-links > a:hover {
+              background-color: rgba(0, 0, 0, 0.3);
+            }
+
+            .nav > #nav-check {
+              display: none;
+            }
 
 
 
@@ -137,6 +180,29 @@ body{
     </style>
 </head>
 <body>
+ <div class="nav">
+  <input type="checkbox" id="nav-check">
+  <div class="nav-header">
+    <div class="nav-title">
+      DOCUFIX
+    </div>
+  </div>
+  <div class="nav-btn">
+    <label for="nav-check">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+  </div>
+  
+  <div class="nav-links">
+<!--    <a href="DOCUFIX.png" target="_blank"></a>-->
+    <a href="#" target="_blank">About Us</a>
+    <a href="#" target="_blank">Team</a>
+    <a href="#" target="_blank">Sponsors</a>
+
+  </div>
+</div>
     <h1 id="main-text">Compare two documents</h1>
 
     <div id="file-text">

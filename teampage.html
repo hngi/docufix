@@ -8,6 +8,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:500&display=swap&subset=greek" rel="stylesheet">
         <style>
             *, *:before, *:after {
                 box-sizing: border-box;
@@ -53,7 +55,7 @@
                 box-shadow: 5px 5px 20px rgb(0, 0, 0, 0.3);
             }
 
-            .container {
+            .container1 {
                 position: relative;
                 display: flex;
                 flex-direction: column;
@@ -62,7 +64,7 @@
                 overflow: hidden;
             }
 
-            .container::after, 
+            .container1::after, 
             .row::after {
                 content: "";
                 clear: both;
@@ -86,7 +88,7 @@
                 color: rgba(0,0,0,0.85);
             }
 
-            p {
+            .container1 p {
                 font-size: 18px;
                 line-height: 25px;
             }
@@ -108,6 +110,10 @@
 
             .button:hover {
                 background-color: blue;
+            }
+
+            footer {
+              font-size: 15px;
             }
 
 
@@ -140,29 +146,7 @@
             }
 
 
-            footer{
-              background-color: grey;
-              font-family: Ubuntu;
-              font-style: normal;
-              font-weight: bold;
-              padding-top: 5px;
-             }
-             footer .social {
-              display: inline-flex;
-              margin-left: 28px;
-             }
-          
-             .social_media {
-              list-style: none;
-              display: inline-flex;
-              padding-left: 340px;
-
-             }
-             .fa {
-              font-size: 25px;
-              margin: 10px;
-              color: white;
-             }
+            
       
             
             @media screen and (max-width: 620px) {
@@ -207,9 +191,125 @@
                     padding: 5px 20px;
                 }
             }
+
+            body {
+  margin: 0px;
+  font-family: 'segoe ui';
+}
+
+.nav {
+  height: 50px;
+  width: 100%;
+  background-color: black;
+  position: relative;
+}
+
+.nav > .nav-header {
+  display: inline;
+}
+
+.nav > .nav-header > .nav-title {
+  display: inline-block;
+  font-size: 22px;
+  color: #fff;
+  padding: 10px 10px 10px 10px;
+}
+
+.nav > .nav-btn {
+  display: none;
+}
+
+.nav > .nav-links {
+  display: inline;
+  float: right;
+  font-size: 18px;
+}
+
+.nav > .nav-links > a {
+  display: inline-block;
+  padding: 13px 10px 13px 10px;
+  text-decoration: none;
+  color: #efefef;
+}
+
+.nav > .nav-links > a:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.nav > #nav-check {
+  display: none;
+}
+
+@media (max-width:600px) {
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+  .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #eee;
+  }
+  .nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: #333;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+  }
+  .nav > .nav-links > a {
+    display: block;
+    width: 100%;
+  }
+  .nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+  .nav > #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
+}
         </style>
     </head>
     <body>
+      <header>
+          <div class="nav">
+            <input type="checkbox" id="nav-check">
+            <div class="nav-header">
+              <div class="nav-title">
+                DOCUFIX
+              </div>
+            </div>
+            <div class="nav-btn">
+              <label for="nav-check" style="color: white;">
+                ☰
+              </label>
+            </div>
+
+            <div class="nav-links" align="right">
+              <!--    <a href="DOCUFIX.png" target="_blank"></a>-->
+              <a href="#" target="_blank">About Us</a>
+              <a href="#" target="_blank">Team</a>
+              <a href="#" target="_blank">Sponsors</a>
+            </div>
+          </div>
+        </header>
       
     
         <h2 class="meet">MEET OUR TEAM</h2>
@@ -219,7 +319,7 @@
           <div class="column">
             <div class="card">
               
-              <div class="container">
+              <div class="container1">
                 <div class="slant"></div>
                 <img class="user-img" src="img/1.jpg" alt="Member" style="width:150px; height:150px">
                 <div class="text">
@@ -241,7 +341,7 @@
           <div class="column">
             <div class="card">
               
-              <div class="container">
+              <div class="container1">
                 <div class="slant"></div>
                 <img class="user-img" src="img/2.jpg" alt="Member" style="width:150px; height:150px">
                 <div class="text">
@@ -263,7 +363,7 @@
           <div class="column">
             <div class="card">
               
-              <div class="container">
+              <div class="container1">
                 <div class="slant"></div>
                 <img class="user-img" src="img/3.jpg" alt="Member" style="width:150px; height:150px">
                 <div class="text">
@@ -285,7 +385,7 @@
           <div class="column">
             <div class="card">
               
-              <div class="container">
+              <div class="container1">
                 <div class="slant"></div>
                 <img class="user-img" src="img/4.jpg" alt="Member" style="width:150px; height:150px">
                 <div class="text">
@@ -307,7 +407,7 @@
           <div class="column">
             <div class="card">
               
-              <div class="container">
+              <div class="container1">
                 <div class="slant"></div>
                 <img class="user-img" src="img/5.jpg" alt="Member" style="width:150px; height:150px">
                 <div class="text">
@@ -329,7 +429,7 @@
           <div class="column">
             <div class="card">
               
-              <div class="container">
+              <div class="container1">
                 <div class="slant"></div>
                 <img class="user-img" src="img/1.jpg" alt="Member" style="width:150px; height:150px">
                 <div class="text">
@@ -350,19 +450,94 @@
           
         </div>
 
-         <footer>
-        <div class="social">
-            <h1 style="font-size: 24px; color: white;"> DOCUFIX</h1>
-            <p style="font-size: 18px; color: white; padding-left: 370px;">Copyright 2019 Docufix.io and HNG6 affiliates</p>
-            <div>
-                <ul class="social_media">
-                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                </ul>
+         <footer class="page-footer font-small mdb-color pt-4" style="background: #C4C4C4;">
+
+        <div class="container text-center text-md-left">
+
+          <div class="row text-center text-md-left mt-3 pb-3">
+
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+              <h6 class="text-uppercase mb-4 font-weight-bold">Docufix</h6>
+              <p>We help you arrange, sort and put your files and data in other for easy management</p>
             </div>
-        </div> 
-    </footer>
-    
+
+            <hr class="w-100 clearfix d-md-none">
+
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+              <p>
+                <a href="about.html">How it works</a>
+              </p>
+              <p>
+                <a href="teams.html">Our Team</a>
+              </p>
+            </div>
+            <!-- Grid column -->
+
+            <hr class="w-100 clearfix d-md-none">
+
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+              <p>
+                <a href="index.html">Home Page</a>
+              </p>
+              <p>
+                <a href="#!">Privacy Policy</a>
+              </p>
+            </div>
+
+          </div>
+
+          <hr>
+
+          <div class="row d-flex align-items-center">
+
+            <div class="col-md-7 col-lg-8">
+
+              <p class="text-center text-md-left">© 2019 Copyright:
+                <a href="https://hng/internship">
+                  <strong> Docufix</strong>
+                </a>
+              </p>
+
+            </div>
+
+            <div class="col-md-5 col-lg-4 ml-lg-0">
+
+              <div class="text-center text-md-right">
+                <ul class="list-unstyled list-inline">
+                  <li class="list-inline-item">
+                    <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                      <i class="fab fa-facebook-f"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                      <i class="fab fa-twitter"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                      <i class="fab fa-google-plus-g"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                      <i class="fab fa-linkedin-in"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    <div>
+        <script type="text/javascript">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/7967e81f77.js" crossorigin="anonymous"></script>
+        </script>
+    </div>
     </body>
 </html>

@@ -182,87 +182,16 @@ span {
 
 }
 
-.nav {
-  height: 50px;
-  width: 100%;
-  background-color: black;
-  position: relative;
-  font-family: 'Ubuntu', sans-serif;
-}
-.nav > .nav-header {
-  display: inline;
-}
-.nav > .nav-header > .nav-title {
-  display: inline-block;
-  font-size: 22px;
-  color: #fff;
-  padding: 10px 10px 10px 10px;
-}
-.nav > .nav-btn {
-  display: none;
-}
-.nav > .nav-links {
-  display: inline;
-  float: right;
-  font-size: 18px;
-}
-.nav > .nav-links > a {
-  display: inline-block;
-  padding: 13px 10px 13px 10px;
-  text-decoration: none;
-  color: #efefef;
-}
-.nav > .nav-links > a:hover {
-  background-color: rgba(0, 0, 0, 0.3);
-}
-.nav > #nav-check {
-  display: none;
-}
 
-@media (max-width:600px) {
-  .nav > .nav-btn {
-    display: inline-block;
-    position: absolute;
-    right: 0px;
-    top: 0px;
-  }
-  .nav > .nav-btn > label {
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    padding: 13px;
-  }
-  .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
-    background-color: rgba(0, 0, 0, 0.3);
-  }
-  .nav > .nav-btn > label > span {
-    display: block;
-    width: 25px;
-    height: 10px;
-    border-top: 2px solid #eee;
-  }
-  .nav > .nav-links {
-    position: absolute;
-    display: block;
-    width: 100%;
-    background-color: #333;
-    height: 0px;
-    transition: all 0.3s ease-in;
-    overflow-y: hidden;
-    top: 50px;
-    left: 0px;
-  }
-  .nav > .nav-links > a {
-    display: block;
-    width: 100%;
-  }
-  .nav > #nav-check:not(:checked) ~ .nav-links {
-    height: 0px;
-  }
-  .nav > #nav-check:checked ~ .nav-links {
-    height: calc(100vh - 50px);
-    overflow-y: auto;
-  }
+.fileContents {
+  width: 500px;
+  height: 300px;
+  box-shadow: 0px 0px 4px 1px grey;
+  position: relative;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  border-top: 0px;
+
 }
 
 @media screen and (max-width: 700px) {
@@ -271,6 +200,13 @@ h3 {
   font-size: 15px;
   font-weight: bold;
   font-family: 'Ubuntu', sans-serif;
+}
+
+.fileContents {
+  width: 400px;
+  height: 300px;
+  margin-left: 18px; 
+
 }
 
 .firstimg, .secondimg {
@@ -360,7 +296,35 @@ span {
 
 }
 
+@media screen and (min-width: 470px) and (max-width: 680px) {
+
+.fileContents {
+  width: 445px;
+  height: 300px;
+  margin-left: 10px; 
+
+}
+}
+
+@media screen and (min-width: 380px) and (max-width: 470px) {
+
+.fileContents {
+  width: 350px;
+  height: 300px;
+  margin-left: 10px; 
+
+}
+}
+
+
 @media screen and (max-width: 380px) {
+
+.fileContents {
+  width: 300px;
+  height: 300px;
+  margin-left: 15px; 
+
+}
 
 span {
   font-family: 'Ubuntu', sans-serif;
@@ -384,26 +348,33 @@ span {
 </style>
 <body>
   <header>
-      <div class="nav">
-        <input type="checkbox" id="nav-check">
-        <div class="nav-header">
-          <div class="nav-title">
-            DOCUFIX
-          </div>
-        </div>
-        <div class="nav-btn">
-          <label for="nav-check" style="color: white;">
-            ☰
-          </label>
-        </div>
-
-        <div class="nav-links" align="right">
-          <!--    <a href="DOCUFIX.png" target="_blank"></a>-->
-          <a href="about_us.html" target="_blank">About Us</a>
-          <a href="teampage.html" target="_blank">Team</a>
-          <a href="https://hng.tech/" target="_blank">Sponsors</a>
-        </div>
-      </div>
+      <nav class="navbar navbar-expand-lg navbar-dark pt-2" style="background-color:#121610;">
+            <a class="navbar-brand" href="index.html">
+               <h1 class="m-0 ml-5 text-white" style="font-family: 'Ubuntu';">DOCUFIX</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+               aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="navbarNavDropdown" class="navbar-collapse collapse">
+               <ul class="navbar-nav mr-auto">
+      
+               </ul>
+               <ul class="navbar-nav mr-5 ">
+      
+                  <li class="nav-item mr-5 ">
+                     <a class="nav-link font-weight-bold text-light " href="about_us.html">About Us</a>
+                  </li>
+                  <li class="nav-item mr-5">
+                     <a class="nav-link font-weight-bold text-light " href="teampage.html">Team</a>
+                  </li>
+                  <li class="nav-item mr-5">
+                     <a class="nav-link font-weight-bold text-light" href="https://hng.tech/" target="_blank">Sponsors</a>
+                  </li>
+                  
+               </ul>
+            </div>
+         </nav>
     </header>
     <div class="">
       <div>
@@ -447,6 +418,20 @@ span {
         <button class="compar1"><img src="https://res.cloudinary.com/ros4eva/image/upload/v1571283299/Group3_gcpy1q.png">Compare</button>
       </div>
     </div>
+    <div class="container">
+        <div class="row">
+          <div class="col">
+           <div class="fileContents" align="center">
+
+          </div>
+          </div>
+          <div class="col">
+              <div class="fileContents" align="center">
+
+              </div>
+          </div>
+        </div>
+      </div>
     <div>
       
       <footer class="page-footer font-small mdb-color pt-4" style="background: #C4C4C4;">
@@ -548,10 +533,13 @@ span {
         });
     </script>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/7967e81f77.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/7967e81f77.js" crossorigin="anonymous"></script>
     
 
 </body>

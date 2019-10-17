@@ -547,3 +547,465 @@ a:hover{
   
 </body>
 </html>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Team Page</title>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:500&display=swap&subset=greek" rel="stylesheet">
+        <style>
+            *, *:before, *:after {
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: 'Open Sans', sans-serif;
+                background-color: #DDE8E8;
+            }
+
+            .meet {
+                position: relative;
+                font-size: 64px;
+                line-height: 87px;
+                text-align: center;
+            }
+
+            .meet:after {
+              content: "";
+              position: absolute;
+              border-top: 10px solid black;
+              left: 46%;
+              bottom: -10px;
+              margin-left: -15px;
+              width: 150px;
+              height: 0px;
+              border-radius: 5px;
+            }
+
+            .row {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .column {
+                flex-grow: 1;
+                width: 25%;
+                margin: 20px 2%;
+                padding: 0 10px;
+            }
+
+            .card {
+                box-shadow: 5px 5px 20px rgb(0, 0, 0, 0.3);
+            }
+
+            .container1 {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 40px 10px;
+                overflow: hidden;
+            }
+
+            .container1::after, 
+            .row::after {
+                content: "";
+                clear: both;
+                display: table;
+            }
+
+            .user-img {
+                border-radius: 100%;
+            }
+
+            .text {
+                text-align: center;
+            }
+
+            .name {
+                font-size: 36px;
+                line-height: 49px;
+            }
+
+            .title {
+                color: rgba(0,0,0,0.85);
+            }
+
+            .container1 p {
+                font-size: 18px;
+                line-height: 25px;
+            }
+
+            .button {
+                border: none;
+                border-radius: 30px;
+                outline: 0;
+                display: inline-block;
+                padding: 10px 20px;
+                color: white;
+                background-color: #060541;
+                text-align: center;
+                cursor: pointer;
+                text-transform: uppercase;
+                font-weight: 600;
+                font-size: 20px;
+            }
+
+            .button:hover {
+                background-color: blue;
+            }
+
+            footer {
+              font-size: 15px;
+            }
+
+
+            .slant:after {
+              content: '';
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 50%;
+              background:  #CAC9D9;
+              transform-origin: 100% 0;
+              transform: skew(-65deg);
+              z-index: -1;
+            }
+
+            .icon {
+                width: 40px;
+                height: 40px;
+                padding: 5px;
+            }
+
+
+            .socials {
+                display: flex;
+                justify-content: space-between;
+                border-top: 1px solid rgba(0, 0, 0, 0.1);
+                background-color: rgba(199, 195, 195, 0.1);
+                padding: 5px 50px;
+            }
+
+
+            
+      
+            
+            @media screen and (max-width: 620px) {
+              .column {
+                width: 100%;
+                display: block;
+              }
+
+                  .slant:after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 70%;
+                    background:  #CAC9D9;
+                    transform-origin: 100% 0;
+                    transform: skew(-65deg);
+                    z-index: -1;
+                }
+
+                  .meet {
+                    font-size: 50px;
+                }
+
+                  .meet:after {
+                     left: 38%;
+                }
+            }
+
+            @media (min-width: 620px) and (max-width: 960px) {
+
+                .column {
+                    width: 45%;
+                }
+
+                 .meet:after {
+                     left: 42.5%;
+                }
+
+                .socials {
+                    padding: 5px 20px;
+                }
+            }
+
+            body {
+  margin: 0px;
+  font-family: 'segoe ui';
+}
+
+        </style>
+    </head>
+    <body>
+      <header>
+          <nav class="navbar navbar-expand-lg navbar-dark pt-2" style="background-color:#121610;">
+            <a class="navbar-brand" href="index.html">
+               <h1 class="m-0 ml-5 text-white" style="font-family: 'Ubuntu';">DOCUFIX</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+               aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="navbarNavDropdown" class="navbar-collapse collapse">
+               <ul class="navbar-nav mr-auto">
+      
+               </ul>
+               <ul class="navbar-nav mr-5 ">
+      
+                  <li class="nav-item mr-5 ">
+                     <a class="nav-link font-weight-bold text-light " href="about_us.html">About Us</a>
+                  </li>
+                  <li class="nav-item mr-5">
+                     <a class="nav-link font-weight-bold text-light " href="teampage.html">Team</a>
+                  </li>
+                  <li class="nav-item mr-5">
+                     <a class="nav-link font-weight-bold text-light" href="https://hng.tech/" target="_blank">Sponsors</a>
+                  </li>
+                  
+               </ul>
+            </div>
+         </nav>
+        </header>
+      
+    
+        <h2 class="meet">MEET OUR TEAM</h2>
+        <br>
+        
+        <div class="row">
+          <div class="column">
+            <div class="card">
+              
+              <div class="container1">
+                <div class="slant"></div>
+                <img class="user-img" src="img/1.jpg" alt="Member" style="width:150px; height:150px">
+                <div class="text">
+                    <h2 class="name">Steven Kobe</h2>
+                    <p class="title">Creative Director</p>
+                    <p>lorem ipsum ipsum lorem lorem ipsum ipsum lorem lorem ipsum ipsum lorem lorem ipsum ipsum lorem lorem ipsum ipsum lorem.</p>
+                </div>
+                <button class="button">Contact</button>
+              </div>
+              <div class="socials">
+                  <a href="https://twitter.com"><img class="icon" src="img/icons/twitter.png" alt="Twitter"></a>
+                  <a href="https://www.instagram.com"><img class="icon" src="img/icons/instagram.png" alt="Twitter"></a>
+                  <a href="https://www.linkedin.com"><img class="icon" src="img/icons/linked.png" alt="Twitter"></a>
+                  <a href="https://mail.google.com"><img class="icon" src="img/icons/google-plus.png" alt="Twitter"></a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="column">
+            <div class="card">
+              
+              <div class="container1">
+                <div class="slant"></div>
+                <img class="user-img" src="img/2.jpg" alt="Member" style="width:150px; height:150px">
+                <div class="text">
+                    <h2 class="name">Samad Hamid</h2>
+                    <p class="title">Backend Engineer</p>
+                    <p>lorem ipsum ipsum lorem lorem ipsum ipsum lorem lorem ipsum ipsum lorem lorem ipsum ipsum lorem lorem ipsum ipsum lorem.</p>
+                </div>
+                <button class="button">Contact</button>
+              </div>
+              <div class="socials">
+                  <a href="https://twitter.com"><img class="icon" src="img/icons/twitter.png" alt="Twitter"></a>
+                  <a href="https://www.instagram.com"><img class="icon" src="img/icons/instagram.png" alt="Twitter"></a>
+                  <a href="https://www.linkedin.com"><img class="icon" src="img/icons/linked.png" alt="Twitter"></a>
+                  <a href="https://mail.google.com"><img class="icon" src="img/icons/google-plus.png" alt="Twitter"></a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="column">
+            <div class="card">
+              
+              <div class="container1">
+                <div class="slant"></div>
+                <img class="user-img" src="img/3.jpg" alt="Member" style="width:150px; height:150px">
+                <div class="text">
+                    <h2 class="name">Paula White</h2>
+                    <p class="title">Lead Designer</p>
+                    <p>lorem ipsum ipsum lorem lorem ipsum ipsum lorem lorem ipsum ipsum lorem lorem ipsum ipsum lorem lorem ipsum ipsum lorem.</p>
+                </div>
+                <button class="button">Contact</button>
+              </div>
+              <div class="socials">
+                  <a href="https://twitter.com"><img class="icon" src="img/icons/twitter.png" alt="Twitter"></a>
+                  <a href="https://www.instagram.com"><img class="icon" src="img/icons/instagram.png" alt="Twitter"></a>
+                  <a href="https://www.linkedin.com"><img class="icon" src="img/icons/linked.png" alt="Twitter"></a>
+                  <a href="https://mail.google.com"><img class="icon" src="img/icons/google-plus.png" alt="Twitter"></a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="column">
+            <div class="card">
+              
+              <div class="container1">
+                <div class="slant"></div>
+                <img class="user-img" src="img/4.jpg" alt="Member" style="width:150px; height:150px">
+                <div class="text">
+                    <h2 class="name">Steven Kobe</h2>
+                    <p class="title">Creative Director</p>
+                    <p>lorem ipsum ipsum lorem lorem ipsum ipsum lorem lorem ipsum ipsum lorem lorem ipsum ipsum lorem lorem ipsum ipsum lorem.</p>
+                </div>
+                <button class="button">Contact</button>
+              </div>
+              <div class="socials">
+                  <a href="https://twitter.com"><img class="icon" src="img/icons/twitter.png" alt="Twitter"></a>
+                  <a href="https://www.instagram.com"><img class="icon" src="img/icons/instagram.png" alt="Twitter"></a>
+                  <a href="https://www.linkedin.com"><img class="icon" src="img/icons/linked.png" alt="Twitter"></a>
+                  <a href="https://mail.google.com"><img class="icon" src="img/icons/google-plus.png" alt="Twitter"></a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="column">
+            <div class="card">
+              
+              <div class="container1">
+                <div class="slant"></div>
+                <img class="user-img" src="img/5.jpg" alt="Member" style="width:150px; height:150px">
+                <div class="text">
+                    <h2 class="name">Samad Hamid</h2>
+                    <p class="title">Backend Engineer</p>
+                    <p>lorem ipsum ipsum lorem lorem ipsum ipsum lorem lorem ipsum ipsum lorem lorem ipsum ipsum lorem lorem ipsum ipsum lorem.</p>
+                </div>
+                <button class="button">Contact</button>
+              </div>
+              <div class="socials">
+                  <a href="https://twitter.com"><img class="icon" src="img/icons/twitter.png" alt="Twitter"></a>
+                  <a href="https://www.instagram.com"><img class="icon" src="img/icons/instagram.png" alt="Twitter"></a>
+                  <a href="https://www.linkedin.com"><img class="icon" src="img/icons/linked.png" alt="Twitter"></a>
+                  <a href="https://mail.google.com"><img class="icon" src="img/icons/google-plus.png" alt="Twitter"></a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="column">
+            <div class="card">
+              
+              <div class="container1">
+                <div class="slant"></div>
+                <img class="user-img" src="img/1.jpg" alt="Member" style="width:150px; height:150px">
+                <div class="text">
+                    <h2 class="name">Paula White</h2>
+                    <p class="title">Lead Designer</p>
+                    <p>lorem ipsum ipsum lorem lorem ipsum ipsum lorem lorem ipsum ipsum lorem lorem ipsum ipsum lorem lorem ipsum ipsum lorem.</p>
+                </div>
+                <button class="button">Contact</button>
+              </div>
+              <div class="socials">
+                  <a href="https://twitter.com"><img class="icon" src="img/icons/twitter.png" alt="Twitter"></a>
+                  <a href="https://www.instagram.com"><img class="icon" src="img/icons/instagram.png" alt="Twitter"></a>
+                  <a href="https://www.linkedin.com"><img class="icon" src="img/icons/linked.png" alt="Twitter"></a>
+                  <a href="https://mail.google.com"><img class="icon" src="img/icons/google-plus.png" alt="Twitter"></a>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+
+         <footer class="page-footer font-small mdb-color pt-4" style="background: #C4C4C4;">
+
+        <div class="container text-center text-md-left">
+
+          <div class="row text-center text-md-left mt-3 pb-3">
+
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+              <h6 class="text-uppercase mb-4 font-weight-bold">Docufix</h6>
+              <p>We help you arrange, sort and put your files and data in other for easy management</p>
+            </div>
+
+            <hr class="w-100 clearfix d-md-none">
+
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+              <p>
+                <a href="about_us.html">How it works</a>
+              </p>
+              <p>
+                <a href="teampage.html">Our Team</a>
+              </p>
+            </div>
+            <!-- Grid column -->
+
+            <hr class="w-100 clearfix d-md-none">
+
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+              <p>
+                <a href="index.html">Home Page</a>
+              </p>
+              <p>
+                <a href="#!">Privacy Policy</a>
+              </p>
+            </div>
+
+          </div>
+
+          <hr>
+
+          <div class="row d-flex align-items-center">
+
+            <div class="col-md-7 col-lg-8">
+
+              <p class="text-center text-md-left">© 2019 Copyright:
+                <a href="https://hng/internship">
+                  <strong> Docufix</strong>
+                </a>
+              </p>
+
+            </div>
+
+            <div class="col-md-5 col-lg-4 ml-lg-0">
+
+              <div class="text-center text-md-right">
+                <ul class="list-unstyled list-inline">
+                  <li class="list-inline-item">
+                    <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                      <i class="fab fa-facebook-f"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                      <i class="fab fa-twitter"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                      <i class="fab fa-google-plus-g"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                      <i class="fab fa-linkedin-in"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    <div>
+        
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/7967e81f77.js" crossorigin="anonymous"></script>
+        
+    </div>
+    </body>
+</html>

@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto|Ubuntu&display=swap" rel="stylesheet"> 
+	<title>Plagiarism checker</title>
+	<link rel="stylesheet" type="text/css" href="docufixx.css">
+	<style type="text/css">
+		* {
+ 	            margin: 0;
+ 	            padding: 0;
+ 	            box-sizing: border-box;
+            }
+
+        body {
+ 	        font-family: ubuntu;
+ 	        height: 100vh;
+ 	        transition: background 0.5s ease;
+ 	        position: relative;
+ 	        background-color: rgba(221, 232, 232, 0.5);
+        }
+
+        header {
+	        width: 100%;
+	        height: 131px;
+	        font-size: 48px;
+	        font-style: normal;
+	        font-weight: bold;
+	        line-height: 55px;
+	        color: #ffffff;
+ 	        background-color: #000000;
+ 	        padding-left: 55px;
+ 	        padding-top: 46px;
+        }
+
+        h5 {
+	        font-size: 34px;
+	        font-weight: bold;
+	        line-height: 41px;
+	        font-family: ubuntu;
+	        margin: auto 15px;
+	        margin-top: 73px;
+        }
+
+        #more {
+	        width: 90%;
+	        margin: 45px auto;
+	        text-align: center;
+	        font-size: 32px;
+	        font-style: normal;
+	        font-weight: bold;
+	        line-height: 41px;
+        }
+
+        #more i {
+	        margin-right: 5px;
+        }
+
+        #more a {
+        	color: black;
+        	text-decoration: none;
+        }
+
+        #more a:hover {
+        	transform: scale(1.3);
+        }
+
+        hr {
+	        display: inline;
+	        border-color: #000000;
+	        margin: 0 10px;
+        }
+
+
+        #forms {
+	        margin: 30px auto;
+	        width: 60%;
+        }
+
+        label {
+	        display: inline-block;
+        }
+
+        #first {
+	        width: 90%;
+	        display: flex;
+	        justify-content: space-around;
+	        align-self: center;
+	        margin: 30px auto;
+        }
+
+#first label {
+	width: 30%;
+	font-size: 18px;
+	display: flex;
+	align-items: center;
+}
+
+#firstUpload {
+	background-color: #0fc789;
+	height: 42px;
+	width: 30%;
+	font-size: 18px;
+	border-radius: 20px;
+	line-height: 20px;
+	padding: 3px;
+	cursor: pointer;
+}
+
+#firstSelect {
+	width: 30%;
+	font-size: 18px;
+	background-color: inherit;
+	border: none;
+	cursor: pointer;
+	overflow: scroll;
+}
+
+#first i {
+	margin-right: 10px;
+}
+
+#second {
+	width: 90%;
+	display: flex;
+	justify-content: space-around;
+	align-self: center;
+	margin: 30px auto;
+}
+
+#second label {
+	width: 30%;
+	font-size: 18px;
+	display: flex;
+	align-items: center;
+}
+
+#secondUpload {
+	background-color: #0fc789;
+	height: 42px;
+	width: 30%;
+	font-size: 18px;
+	border-radius: 20px;
+	border: none;
+	padding: 3px;
+	cursor: pointer;
+}
+
+#secondSelect {
+	width: 30%;
+	font-size: 18px;
+	background-color: inherit;
+	border: none;
+	cursor: pointer;
+	overflow: scroll;
+}
+
+#second i {
+	margin-right: 10px;
+}
+
+#compare {
+	display: flex;
+	justify-content: space-around;
+	align-self: center;
+	margin: 60px auto;
+	width: 90%;
+}
+
+#compare button {
+	        background-color: #302828;
+        	color: #fcf9f9;
+        	width: 250px;
+	        height: 50px;
+	        font-size: 24px;
+	        line-height: 28px;
+	        font-weight: bold;
+         	font-style: normal;
+	        border-radius: 20px;
+        }
+
+        #compare button:hover {
+	        color: #302828;
+	        background-color: #fcf9f9;
+        }
+
+        footer {
+        	padding-left: 45px;
+	        padding-right: 45px;
+	        height: 74px;
+	        margin: 30px 0;
+	        margin-bottom: 0; 
+	        display: flex;
+	        justify-content: space-between;
+	        align-items: center;
+	        background-color: #c4c4c4;
+	        color: #ffffff;
+	        font-size: 24px;
+	        font-weight: bold;
+	        line-height: 28px;
+        }
+
+        footer i {
+	        margin-right: 10px;
+        	color: #000000;
+        }
+
+        footer i:hover {
+        	transform: scale(1.3);
+        }
+
+        @media screen and (max-width: 1000px) {
+            #forms {
+            	width: 80%;
+            }
+
+            .form {
+	            width: 80%;
+	            margin: auto;
+            }
+
+            .form span {
+            	width: 80%;
+            	margin: auto;
+            }
+
+            #hide {
+              	display: none;
+            }
+
+            #first label, #firstUpload, #firstSelect,
+            #second label, #secondUpload, #secondSelect
+            {
+        	font-size: 20px;
+        	height: 42px;
+            }
+
+            footer {
+            	justify-content: space-between;
+            	padding-left: 25px;
+	            padding-right: 25px;
+	            font-size: 20px;
+            }
+
+            footer i {
+	            margin-right: 5px;
+            }
+
+            h5, #more {
+    	        font-size: 24px;
+            }
+            #compare button {
+	            width: 180px;
+	            height: 49px;
+	            font-size: 20px;
+            }
+        }
+
+        @media screen and (max-width: 700px) {
+	         #more, h5 {
+	        	font-size: 26px;
+	        }
+
+	        #compare button {
+	           width: 150px;
+	           height: 49px;
+	            font-size: 16px;
+            }
+
+            #forms {
+            	width: 100%;
+            }
+
+            .form {
+	            width: 100%;
+	            margin: auto;
+            }
+
+            .form span {
+            	width: 90%;
+            	margin: auto;
+            }
+
+            #first label, #firstUpload, #firstSelect,
+            #second label, #secondUpload, #secondSelect {
+        	    font-size: 16px;
+        	    height: 32px;
+            }
+
+            #secondUpload, #firstUpload {
+            	width: 25%;
+            }
+
+        }
+
+        @media screen and (max-width: 450px) {
+        	#first label, #firstUpload, #firstSelect,
+            #second label, #secondUpload, #secondSelect {
+        	    font-size: 14px;
+            }
+
+            #compare button {
+	           width: 150px;
+	           height: 49px;
+	            font-size: 14px;
+            }
+        }
+	</style>
+</head>
+<body>
+	<header>DOCUFIX</header>
+	<h5>Compare Two Documents</h5>
+	<div id="more">
+		<span><i class="fa fa-file"></i><a class="fileLinks" href="#">File</a></span><hr style="width: 1px; height: 70px"><span><i class="fa fa-clone"></i><a class="fileLinks" href="index.html">Text</a></span>
+	</div>
+	<form id="forms">
+		<div id="first">
+			<label>FIRST DOCUMENT:</label>
+			<button id="firstSelect" type="button" >Click to select file</button>
+			<button id="firstUpload" type="button"><i class="fa fa-cloud-upload"></i><span>upload</span></button>
+		</div>
+		<div id="second">
+			<label>SECOND DOCUMENT:</label>
+			<button id="secondSelect" type="button" >Click to select file</button>
+		    <button id="secondUpload" type="button"><i class="fa fa-cloud-upload"></i><span>upload</span></button>
+		</div>
+	    <div id="compare"><button><i class=""></i>COMPARE</button></div>
+    </form>
+	<footer>
+		<span id="hide">DOCUFIX</span>
+		<span>&copy; copyright Docufix</span>
+		<span>
+			<a href="#"><i class="fa fa-facebook"></i></a>
+			<a href="#"><i class="fa fa-instagram"></i></a>
+			<a href="#"><i class="fa fa-twitter"></i></a>
+		</span>
+	</footer>
+</body>
+</html>

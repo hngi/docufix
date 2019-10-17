@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <meta charset="utf-8" />
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <title>Document Analysis</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+            <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+            <!-- bootstrap css -->
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+            <!--google-font-->
+            <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+            <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <style>
+            body{
+                font-family: Ubuntu;
+                background-color: #F8FAFA;
+                font-style: normal;
+                font-weight: bold;
+            } 
+            
+             * {
+              box-sizing: border-box;
+            }
+                                 
+            body {
+              margin: 0px;
+              font-family: 'Ubuntu', Sans-Serif;
+            }
+
+            
+            @media (max-width:600px) {
+                  .nav > .nav-btn {
+                    display: inline-block;
+                    position: absolute;
+                    right: 0px;
+                    top: 0px;
+                  }
+                  .nav > .nav-btn > label {
+                    display: inline-block;
+                    width: 50px;
+                    height: 50px;
+                    padding: 13px;
+                  }
+                  .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+                    background-color: rgba(0, 0, 0, 0.3);
+                  }
+                  .nav > .nav-btn > label > span {
+                    display: block;
+                    width: 25px;
+                    height: 10px;
+                    border-top: 2px solid #eee;
+                  }
+                  .nav > .nav-links {
+                    position: absolute;
+                    display: block;
+                    width: 100%;
+                    background-color: #333;
+                    height: 0px;
+                    transition: all 0.3s ease-in;
+                    overflow-y: hidden;
+                    top: 50px;
+                    left: 0px;
+                  }
+                  .nav > .nav-links > a {
+                    display: block;
+                    width: 100%;
+                  }
+                  .nav > #nav-check:not(:checked) ~ .nav-links {
+                    height: 0px;
+                  }
+                  .nav > #nav-check:checked ~ .nav-links {
+                    height: calc(100vh - 50px);
+                    overflow-y: auto;
+                  }
+            }
+            
+            h2{
+                margin-top: 106px;
+                margin-left: 108px;
+                font-weight: bolder;
+                text-align: center;
+            }
+            
+            h3{
+                font-weight: bolder;
+            }
+            
+            .word{
+                margin-top: 86px;
+                margin-left: 108px;
+            }
+            
+            .container {
+               margin-top: 74px;
+            }
+            
+            
+            .icon-style{
+                color: #000;
+                padding-left: 10px;
+                width: 35px;
+                height: 35px;
+            }
+            
+            svg{
+                margin-top: 14px;
+            }
+            
+            footer{
+       background-color: grey;
+       font-style: normal;
+       padding-top: 5px;
+       font-weight: bold;
+   }
+   
+   .socials{
+    list-style: none;
+    display: inline-flex;
+   }
+   
+   .fa {
+    font-size: 25px;
+    margin: 10px;
+    color: black;
+   }
+   
+   .foot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px;
+   }
+   
+   .title {
+    font-size: 28px;
+    color: white;
+   }
+   
+   .copy {
+    color: white;
+    font-size: 18px;
+   }
+   
+   @media (max-width: 700px) {
+       .foot {
+            flex-direction: column;
+       }
+   }
+            
+            /* Responsiveness */
+            @media (min-device-width: 768px) and (max-device-width: 1200px){
+                #topnav a.active{
+                   margin-right: 42%;
+               }
+              
+
+  
+               ellipse {
+                   cx: 110;
+               } 
+            }
+            
+            @media (max-device-width: 767px) {
+               ellipse {
+                   cx: 160;
+               } 
+               .word{
+                   margin-left: 10px;
+               }
+               h2{
+                   margin-left: 10px;
+               }
+               #topnav{
+                   height: 82px;
+               }
+            }
+            
+        </style>
+    </head>
+    <body>
+      
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
+          <a class="navbar-brand" href="#">DOCUFIX</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav" >
+            <ul class="navbar-nav">
+              <li class="nav-item active" style="font-size: 24px;">
+                <a class="nav-link" href="#">About Us<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item" style="font-size: 24px;">
+                <a class="nav-link" href="#">Team</a>
+              </li>
+              <li class="nav-item" style="font-size: 24px;">
+                <a class="nav-link" href="#">Sponsors</a>
+              </li>
+              
+            </ul>
+          </div>
+        </nav>
+        <h2>Document Analysis</h2>
+        <div>
+            <p class="word">Words in document: 250</p>
+            <p class="text-right" style="margin-bottom:0px;padding-right:70px;">Suspected words</p>
+            <p  class="text-right"style="margin-bottom:0px;padding-right:70px;color:#FF0505;">100%</p>
+            <p  class="text-right"style="margin-bottom:0px;padding-right:70px;">50 words copied</p>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h4>Identical</h4>
+                    <svg height="314" width="314">
+                        <ellipse cx="200" cy="130" rx="110" ry="100"
+                        style="fill:transparent;stroke:black;stroke-width:2" content="100%"/>
+                    </svg>
+                </div>
+                <div class="col-md-4">
+                    <h4>Related</h4>
+                    <svg height="314" width="314">
+                        <ellipse cx="200" cy="130" rx="110" ry="100"
+                        style="fill:transparent;stroke:black;stroke-width:2" content= />
+                    </svg>
+                </div>
+                <div class="col-md-4">
+                    <h4>Minor Changes</h4>
+                    <svg height="314" width="314" >
+                            
+                        <ellipse cx="200" cy="130" rx="110" ry="100"
+                         style="fill:transparent;stroke:black;stroke-width:2" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <footer>
+        <div class="foot">
+            <h1 class="title">DOCUFIX</h1>
+            <p class="copy">Copyright 2019 Docufix.io and HNG6 affiliates</p>
+            <div>
+                <ul class="socials">
+                    <li><a href="https://www.facebook.com"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="https://twitter.com"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="https://www.instagram.com"><i class="fa fa-instagram"></i></a></li>
+                </ul>
+            </div>
+        </div> 
+    </footer>
+        <!-- bootstrap js -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    </body>
+</html>

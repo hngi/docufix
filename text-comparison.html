@@ -14,7 +14,8 @@
     box-sizing: border-box;
 }
 
-body{
+.body{
+    margin:0;
     padding: 60px 60px 90px 30px;
     background-color: #EEF3F3;
     font-family: 'Ubuntu', sans-serif;
@@ -106,7 +107,8 @@ body{
 
 @media screen and (max-width: 600px){
 
-    body{
+    .body{
+        margin:0;
         padding: 60px 30px;
         text-align: center;
     }
@@ -137,7 +139,8 @@ body{
     </style>
 </head>
 <body>
-    <h1 id="main-text">Compare two documents</h1>
+    <div class="body">
+        <h1 id="main-text">Compare two documents</h1>
 
     <div id="file-text">
         <div id="file">
@@ -184,5 +187,6 @@ body{
     </div>
     
 
+    </div>
 </body>
 </html>

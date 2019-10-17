@@ -4,7 +4,7 @@
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Docufix | About Us</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
         <!-- bootstrap css -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <!--google-font-->
@@ -21,6 +21,8 @@
             font-style: normal;
             font-weight: bold;
             overflow-x: hidden;
+            height: 100vh;
+	position: relative;
         }
         #topnav {
             background-color: #000;
@@ -43,21 +45,35 @@
         .navigation{
             text-align: right;
         }
-
         .container {
             margin-top: 74px;
         }
         
-        footer{
+        footer{ position: relative;
+            bottom: 0;
+            left: 0;
+            margin: 0 auto !important;
+    text-align: center !important;
+    width: 100% !important;
+    height: 40px;
+    position: relative;
+            
+        }
+        footer .social {
+            display: inline-flex;
             background-color: grey;
             font-family: Ubuntu;
             font-style: normal;
             font-weight: bold;
             padding-top: 5px;
+            width: 100%;
+  height: auto;
+            bottom: 0;
+    
         }
-        footer .social {
-            display: inline-flex;
-            margin-left: 28px;
+        
+        footer h1 {
+            margin-left: 26px;
         }
     
         .social_media {
@@ -76,10 +92,15 @@
             #topnav a.active{
                 margin-right: 42%;
             }
+            
+            footer {
+                position: static;
+            }
         }
         @media (max-device-width: 767px) {
             footer{
                 height: 141px;
+        
             }
             #topnav{
                 height: 82px;
@@ -140,9 +161,9 @@
     </main>  
     <footer>
         <div class="social">
-            <h1 style="font-size: 24px; color: white;"> DOCUFIX</h1>
-            <p style="font-size: 18px; color: white; padding-left: 370px;">Copyright 2019 Docufix.io and HNG6 affiliates</p>
-            <div>
+            <div class="col-xs-3"> <h1 style="font-size: 24px; color: white;"> DOCUFIX</h1> </div>
+            <div class="col-xs-3"> <p style="font-size: 18px; color: white; padding-left: 370px;">Copyright 2019 Docufix.io and HNG6 affiliates</p> </div>
+            <div class="col-xs-3">
                 <ul class="social_media">
                     <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                     <li><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -157,4 +178,3 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     </body>
 </html>
-    

@@ -341,10 +341,58 @@
                     >
                 </div>
                 <div>
-                    <div id="percentageD">DIFFERENCE :</div>
-                    <div id="percentageS">SIMILARITY: </div>
-                    <br>
-                    <br>
+                        <table class="table table-striped">
+                                <thead>
+                                  <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col" >RESULT</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <th scope="col">DIFFERENCE</th>
+                                    <td id="percentageD"></td>
+                                  </tr>
+                                </tbody>
+                                <tbody>
+                                    <tr>
+                                        <th scope="col">SIMILARITY</th>
+                                      <td  id="percentageS"></td>
+                                    </tr>
+                                  </tbody>
+                                  <tbody>
+                                    <tr>
+                                        <th scope="col">CHARACTER ADDED</th>
+                                      <td id="added"></td>
+                                    </tr>
+                                  </tbody>
+                                  <tbody>
+                                    <tr>
+                                        <th scope="col">CHARACTER DELETED</th>
+                                      <td id="deleted"></td>
+                                    </tr>
+                                  </tbody>
+                              </table>
+                    <!-- <table class="table table-striped">
+                        <thead>
+                          <tr>
+                                <th scope="col">#</th>
+                            <th scope="col" class="text-center">DIFFERENCE %</th>
+                            <th scope="col" class="text-center">SIMILARITY %</th>
+                            <th scope="col" class="text-center">CHARACTER ADDED </th>
+                            <th scope="col" class="text-center">CHARACTER DELETED </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">RESULT</th>
+                            <td id="percentageD" class="text-center"></td>
+                            <td  id="percentageS" class="text-center"></td>
+                            <td id="added" class="text-center"></td>
+                            <td id="deleted" class="text-center"></td>
+                          </tr>
+                        </tbody>
+                      </table> -->
                     <label>Result:</label>
                     <br />
                     <div contenteditable="true" id="textareaDifferences" style="border:none;height:200px; width: 100%; min-height:25%;overflow: scroll; box-shadow: 0px 0px 4px 1px grey;"></div>
@@ -1018,23 +1066,31 @@
                     if(difference <= 0){
                         difference = "No difference";
                         similarity = similarity;
-                    document.getElementById('percentageD').textContent = `DIFFERENCE: ${difference }`;
-                    document.getElementById('percentageS').textContent = ` SIMILARITY:${similarity}% `;
+                    document.getElementById('percentageD').textContent = `${difference }`;
+                    document.getElementById('percentageS').textContent = ` ${similarity}`;
+                    document.getElementById('added').textContent = `${added} `;
+                    document.getElementById('deleted').textContent = `${removed} `;
                     console.log(difference, similarity);
                     } else if( similarity <= 0){
                         difference = difference;
                         similarity = "No similarity";
-                        document.getElementById('percentageD').textContent = `DIFFERENCE: ${difference }%`;
-                    document.getElementById('percentageS').textContent = ` SIMILARITY:${similarity} `;
+                        document.getElementById('percentageD').textContent = ` ${difference }`;
+                    document.getElementById('percentageS').textContent = ` ${similarity} `;
+                    document.getElementById('added').textContent = `${added} `;
+                    document.getElementById('deleted').textContent = `${removed} `;
                     } else{
                         difference = difference;
                         similarity = similarity;
-                        document.getElementById('percentageD').textContent = `DIFFERENCE: ${difference }%`;
-                    document.getElementById('percentageS').textContent = ` SIMILARITY:${similarity}% `;
+                        document.getElementById('percentageD').textContent = `${difference }`;
+                    document.getElementById('percentageS').textContent = `${similarity}`;
+                    document.getElementById('added').textContent = `${added} `;
+                    document.getElementById('deleted').textContent = `${removed} `;
                     }
         
-                    document.getElementById('percentageD').textContent = `DIFFERENCE: ${difference }%`;
-                    document.getElementById('percentageS').textContent = ` SIMILARITY:${similarity}% `;
+                    document.getElementById('percentageD').textContent = ` ${difference }`;
+                    document.getElementById('percentageS').textContent = `${similarity}`;
+                    document.getElementById('added').textContent = `${added} `;
+                    document.getElementById('deleted').textContent = `${removed} `;
                     console.log(difference, similarity);
                     }
                     return returnValue;

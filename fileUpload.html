@@ -122,7 +122,7 @@
             width: 100% !important;
         } */
         .active1 {
-            border-bottom: 2px solid black;
+            border-bottom: 3px solid black;
         }
         textarea{
             width: 100% !important;
@@ -131,7 +131,13 @@
             label{
                 display: block;
             }
+            img{
+                padding-top: 0 !important;
+            }
         }
+        .active a{
+   color: grey !important;
+ }
     </style>
    <!-- <body style="background-color:  white; font-family: Ubuntu;">-->
         
@@ -162,9 +168,9 @@
   </div>
 </div>
         <header>
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: black">
                 <div class="container">
-                    <a class="navbar-brand" href="#" style="font-weight: bold;"
+                    <a class="navbar-brand" href="index.html" style="font-weight: bold;font-size: 1.5em;"
                         >DOCUFIX</a
                     >
                     <button
@@ -183,14 +189,14 @@
                             class="navbar-nav ml-auto"
                             style="font-weight: bold;"
                         >
-                            <li class="nav-item active">
-                                <a class="nav-link" href="#">About Us</a>
+                            <li class="nav-item ">
+                                <a class="nav-link text-light" href="about_us.html">About Us</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Team</a>
+                                <a class="nav-link  text-light" href="teampage.html">Team</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Sponsors</a>
+                                <a class="nav-link  text-light" href="https://hng.tech/" target="_blank">Sponsors</a>
                             </li>
                         </ul>
                     </div>
@@ -204,7 +210,7 @@
                     ><a
                         href="#"
                         id="fileBtn"
-                        class="active1"
+                        class="active1 pb-1"
                         style="text-decoration: none; color:black;"
                         ><img class="top-icons" src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571193844/samples/figma%20career-list/lario/xisa8mltboqmepbzjqks.png">File</a
                     ></span
@@ -240,7 +246,7 @@
                             />
                         </div>
                         <div class="form-group mt-5">
-                                <input id="uploadBtn" type="submit" value="submit" class="btn btn-success ml-md-5 mt-3"
+                                <input id="uploadBtn" type="submit" value="submit" class="btn btn-dark font-weight-bold ml-md-5 mt-3"
                                     />
                             </div>
                     </form>
@@ -261,7 +267,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-2 text-center"> <img id="compare-txt" src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571193103/samples/figma%20career-list/lario/hyu5pvtsmqxymfx5ohwi.png"></div>
+                    <div class="col-md-2 text-center " > <img style="padding-top: 50%;" id="compare-txt" class="align-middle" src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571193103/samples/figma%20career-list/lario/hyu5pvtsmqxymfx5ohwi.png"></div>
                     <div class="col-md-5">
                         <div class="card">
                             <div class="card-header bg-dark text-light">
@@ -292,7 +298,7 @@
                     <div contenteditable="true" id="textareaDifferences" style="border:1px solid;height:200px; width: 100%; min-height:25%;overflow: scroll;"></div>
                 </div>
             
-                <button id="btn-export" onclick="exportHTML();">Export to word
+                <button id="btn-export" onclick="exportHTML();" class="btn-dark mt-2 mb-5">Export to word
                     doc</button>
             </div>
 

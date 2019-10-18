@@ -10,7 +10,7 @@
         <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
         <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
-    <title>Navbar</title>
+    <title>About Docufix</title>
 
     <style>
         * {
@@ -21,127 +21,59 @@
     margin: 0px;
     font-family: 'segoe ui';
     }
-
-    /* .navv {
-    height: 50px;
-    width: 100%;
-    background-color: black;
-    position: relative;
-    }
-
-    .navv > .navv-header {
-    display: inline;
-    }
-
-    .navv > .navv-header > .navv-title {
-    display: inline-block;
-    font-size: 22px;
-    color: #fff;
-    padding: 10px 10px 10px 10px;
-    }
-
-    .navv > .navv-btn {
-    display: none;
-    }
-
-    .navv > .navv-links {
-    display: inline;
-    float: right;
-    font-size: 18px;
-    }
-
-    .navv > .navv-links > a {
-    display: inline-block;
-    padding: 13px 10px 13px 10px;
-    text-decoration: none;
-    color: #efefef;
-    }
-
-    .navv > .navv-links > a:hover {
-    background-color: rgba(0, 0, 0, 0.3);
-    }
-
-    .navv > #nav-check {
-    display: none;
-    } */
-
-    /* #topnav {
-            background-color: #000;
-            overflow: hidden;
-            height: 70px;
-            padding-top: 20px;
-        }
-        #topnav a {
-            color: #f2f2f2;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-            font-size: 17px;
-        }
-        #topnav a.active {
-            font-size: 20px;
-            color: #ffff;
-            margin-right: 63%;
-        }
-        .navigation{
-            text-align: right;
-        }
-        .container {
-            margin-top: 74px;
-        } */
         
+    .main-content {
+        background-image: url('https://res.cloudinary.com/dex5cbv1n/image/upload/v1571312350/Group_15_vjpzvv.png');
+        background-size: 45%;
+        background-position: right;
+        background-repeat: no-repeat;
+        background-position-y: 0;
+        margin-top: 5%;
+    }
+
+    footer{ position: relative;
+        bottom: 0;
+        left: 0;
+        margin: 0 auto !important;
+        text-align: center !important;
+        width: 100% !important;
+        height: 40px;
+        position: relative;
+        
+    }
+    footer .social {
+        display: inline-flex;
+        background-color: grey;
+        font-family: Ubuntu;
+        font-style: normal;
+        font-weight: bold;
+        padding-top: 5px;
+        width: 100%;
+        height: auto;
+        bottom: 0;
+
+    }
+    
+    footer h1 {
+        margin-left: 26px;
+    }
+    
+    .social_media {
+        list-style: none;
+        display: inline-flex;
+        padding-left: 340px;
+    }
+    .fa {
+        font-size: 25px;
+        margin: 10px;
+        color: white;
+    }
+
+    @media (max-width:900px) {
         .main-content {
-            background-image: url('https://res.cloudinary.com/dex5cbv1n/image/upload/v1571312350/Group_15_vjpzvv.png');
-            background-size: 45%;
-            background-position: right;
-            background-repeat: no-repeat;
-            background-position-y: 0;
-            margin-top: 5%;
-        }
-
-        footer{ position: relative;
-            bottom: 0;
-            left: 0;
-            margin: 0 auto !important;
-            text-align: center !important;
-            width: 100% !important;
-            height: 40px;
-            position: relative;
-            
-        }
-        footer .social {
-            display: inline-flex;
-            background-color: grey;
-            font-family: Ubuntu;
-            font-style: normal;
-            font-weight: bold;
-            padding-top: 5px;
-            width: 100%;
-            height: auto;
-            bottom: 0;
-    
-        }
-        
-        footer h1 {
-            margin-left: 26px;
-        }
-    
-        .social_media {
-            list-style: none;
-            display: inline-flex;
-            padding-left: 340px;
-        }
-        .fa {
-            font-size: 25px;
-            margin: 10px;
-            color: white;
-        }
-
-        @media (max-width:900px) {
-            .main-content {
-            background-image: none;
-        } 
-        }
+        background-image: none;
+    } 
+    }
 
     @media (max-width:600px) {
         .main-content {

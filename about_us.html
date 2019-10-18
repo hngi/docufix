@@ -68,14 +68,35 @@
         margin: 10px;
         color: white;
     }
+    .img-responsive {
+        display: none;
+    }
+    .img-mobile-responsive {
+        display: none;
+    }
 
     @media (max-width:900px) {
         .main-content {
         background-image: none;
     } 
+    .img-responsive {
+        display: block;
+        float: right;
+    }
+    .img-mobile-responsive {
+        display: none;
+    }
     }
 
     @media (max-width:600px) {
+      .img-responsive {
+        display: none;
+    }
+    .img-mobile-responsive {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
         .main-content {
             background-image: none;
         }
@@ -179,7 +200,9 @@
 
     <main class="main-content">
         <div class= "container mb-5">
-
+          <img src="https://res.cloudinary.com/dex5cbv1n/image/upload/v1571312350/Group_15_vjpzvv.png" class="img-mobile-responsive" alt=""
+          width="300" height="300"
+          >
             <h1 class="text-uppercase abt_heading"><strong>About Us</strong></h1>
             <div>
                 <p>This App was built during the HNG6<br>
@@ -194,6 +217,9 @@
                     the results. Know exactly what has been changed, paraphrased, or<br>
                     copied between two textual documents. This diff tool allows you<br>
                     to see the similarity in the files quickly and easily.
+                    <img src="https://res.cloudinary.com/dex5cbv1n/image/upload/v1571312350/Group_15_vjpzvv.png" class="img-responsive" alt=""
+                    width="300" height="300"
+                    >
                     <ul>
                         <li>Compare online content by submitting URLs</li>
                         <li>Compare raw text - simply type in your text in a text box</li>

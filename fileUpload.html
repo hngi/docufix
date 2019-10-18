@@ -341,7 +341,39 @@
                     >
                 </div>
                 <div>
-                    <table class="table table-striped">
+                        <table class="table table-striped">
+                                <thead>
+                                  <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col" >RESULT</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <th scope="col">DIFFERENCE</th>
+                                    <td id="percentageD"></td>
+                                  </tr>
+                                </tbody>
+                                <tbody>
+                                    <tr>
+                                        <th scope="col">SIMILARITY</th>
+                                      <td  id="percentageS"></td>
+                                    </tr>
+                                  </tbody>
+                                  <tbody>
+                                    <tr>
+                                        <th scope="col">CHARACTER ADDED</th>
+                                      <td id="added"></td>
+                                    </tr>
+                                  </tbody>
+                                  <tbody>
+                                    <tr>
+                                        <th scope="col">CHARACTER DELETED</th>
+                                      <td id="deleted"></td>
+                                    </tr>
+                                  </tbody>
+                              </table>
+                    <!-- <table class="table table-striped">
                         <thead>
                           <tr>
                                 <th scope="col">#</th>
@@ -360,7 +392,7 @@
                             <td id="deleted" class="text-center"></td>
                           </tr>
                         </tbody>
-                      </table>
+                      </table> -->
                     <label>Result:</label>
                     <br />
                     <div contenteditable="true" id="textareaDifferences" style="border:none;height:200px; width: 100%; min-height:25%;overflow: scroll; box-shadow: 0px 0px 4px 1px grey;"></div>

@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Ubuntu:500,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Ubuntu|Pacifico&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
-    <title>Res Nav-Bar</title>
+    <title>Docufix | Team Page</title>
     <style>
         *{
     box-sizing: border-box;
@@ -61,7 +61,7 @@ a{
 a:hover{
     text-decoration: none;
     color: lightgrey !important;
-    background-color: none !important,
+    background-color: none !important;
     
 }
 
@@ -286,10 +286,10 @@ a:hover{
         
         }
 
-				/* main body */
+				/* main body 
 				.card-top{
 					background: #CAC9D9;
-					/* transform: rotate(-180deg);		 */
+					/* transform: rotate(-180deg);		 
 				}
                 .card{
                     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
@@ -352,166 +352,414 @@ a:hover{
 				@media only screen and (max-width: 768px){
 					.mt-sm{
 			margin-top:20px!important;
-		}
-				}
+		}*/
+        .content-box {
+    padding: 60px 0 60px 0;
+}
+
+.content-title h3 {
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 0 10px 0;
+}
+
+.content-title-underline {
+    width: 100px;
+    height: 3px;
+    background-color: #060541;
+    margin: 0 auto 30px auto;
+}
+
+/*====================================================================
+            Diagonal Line and Profile Picture Setting
+===================================================================*/
+
+.the-col {
+    width: 350px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.all-users {
+    width: 350px;
+    height: auto;
+    background-color: #fff;
+    padding: 0;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.user-image {
+    background-color: #013A6B;
+    background-image: -webkit-linear-gradient(-60deg, #CAC9D9 50%, #fff 50%);
+    min-height: 200px;
+    padding-top: 50px;
+}
+
+.user-image-box-1 {
+    height: 140px;
+    width: 140px;
+    background-image: url("https://res.cloudinary.com/kuic/image/upload/v1571244972/docufix/Ellipse_1_vpt9nw.png");
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.user-image-box-2 {
+    height: 140px;
+    width: 140px;
+    background-image: url("https://res.cloudinary.com/kuic/image/upload/v1571244983/docufix/Ellipse_2_uy6jcr.png");
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.user-image-box-3 {
+    height: 140px;
+    width: 140px;
+    background-image: url("https://res.cloudinary.com/kuic/image/upload/v1571245043/docufix/Ellipse_3_ahe63z.png");
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.content-part {
+    padding: 30px 0 30px 0;
+    text-align: center;
+}
+
+.user-content {
+    padding: 0 0 30px 0;
+}
+
+.user-button {
+    padding: 0 0 30px 0;
+}
+
+.contact-btn {
+    border-radius: 30px;
+    padding: 10px 40px 10px 40px;
+    background: #060541;
+}
+
+.contact-btn:hover {
+    background: rgba(6, 5, 65, 0.83);
+}
+
+.content-footer {
+    text-align: center;
+    background: rgba(199, 195, 195, 0.1);
+    height: 50px;
+}
+
+.social-icons {
+    padding: 10px 20px;
+}
+
+/*====================================================================
+                    Social Icons styles
+===================================================================*/
+
+.fa-twitter-square {
+    color: #50ABF1;
+}
+
+.fa-linkedin {
+    color: #0D5C77;
+}
+
+.fa-google-plus-square {
+    color: #DD4B39;
+}
+
+.content-footer a {
+    color: #060541;
+}
 				
+                .fa-bars{
+                    color: white;
+                }
+                .navbar-brand h1{
+                    font-family: 'Open Sans',sans-serif;
+                    font-size:40px;
+                    line-height: 1.5em;
+                }
+			
     </style>
    
 
 
 </head>
 <body>
-
-    <nav>
-        <ul class="menu">
-                <li class="logo"><a href="#">DOCUFIX</a></li>
-                <li class="item"><a href="#" class="text-center">About Us</a></li>
-                <li class="item"><a href="#" class="text-center">Team</a></li>
-                <li class="item"><a href="#" class="text-center">Sponsors</a></li>
-                <li class="toggle"><span class="bars"></span></a></li>
-        </ul>
-    </nav>
-
+            <header>
+                <div>
+                    <nav class="navbar navbar-expand-lg" aria-label="Main navigation">
+                        <a class="navbar-brand text-center mt-2 ml-3" href="#"><h1>DOCUFIX</h1></a>
+                        <button class="navbar-toggler mt-2" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <i class="fa fa-bars fa-lg"></i>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav list-unstyled text-uppercase pt-3 pt-lg-0 ml-auto text-center">
+                                <li class="nav-item  text-center mr-4">
+                                    <a class="nav-link" href="#">About Us</a>
+                                </li>
+                                <li class="nav-item mr-4">
+                                    <a class="nav-link" href="#">Team</a>
+                                </li>
+                                <li class="nav-item mr-4">
+                                    <a class="nav-link" href="#">Sponsors</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav> 
+                </div>
+ 
     <main>
-			<h1 class="text-center top-head mt-4">MEET OUR TEAM</h1><hr>
-			<div class="container py-5">
-				<div class="row">
-					<div class="col-sm-12 col-md-4 d-flex justify-content-center mt-sm">
-						<div class="card" style="width: 18rem;">
-							<div class="card-top d-flex justify-content-center align-items-center py-4">
-								<div class="dis-img">
-                                    <img  class="p-1" src="https://res.cloudinary.com/echef/image/upload/v1571186220/10BD0035-7E1F-4510-B9E7-B1B85BA36871_yyfxqz.png" style="width: 150px;height:150px;border-radius:50%;">
-                                </div>
-							</div>
-							<div class="card-body d-flex align-items-center flex-column">
-								<h5 class="card-title text-center">Samad Ahmed</h5>
-								<p class="card-text text-center">Backend Engineer</p>
-								<p class="card-text text-center">lorem ipsum lore ipsum lore ipsum to lorem ipssss sum rhg gjg ghghg hhgtedkj fg tf</p>
-								<button class="v-primary py-2 px-2">Contact</button>
-							</div>
-							<div class="card-foot d-flex justify-content-center">
-									<a href="" class="mr-2 p-2"><i class="fab fa-twitter-square"></i></a>
-									<a href="" class="mr-2 p-2"><i class="fab fa-instagram"></i></a>
-									<a href="" class="mr-2 p-2"><i class="fab fa-linkedin"></i></a>
-									<a href="" class="mr-2 p-2"><i class="fab fa-google-plus-square"></i></a>
-								</div>
-						</div>
-					</div>
-					<div class="col-sm-12 col-md-4 d-flex justify-content-center mt-sm">
-						<div class="card" style="width: 18rem;">
-							<div class="card-top d-flex justify-content-center align-items-center py-4">
-								<div class="dis-img">
-                                    <img  class="p-1" src="https://res.cloudinary.com/echef/image/upload/v1571186207/6289795B-89C9-4D23-8453-8E22C2F084BD_fmcqiy.png" style="width: 150px;height:150px;border-radius:50%;">
-                                </div>
-							</div>
-							<div class="card-body d-flex align-items-center flex-column">
-								<h5 class="card-title text-center">Samad Ahmed</h5>
-								<p class="card-text text-center">Backend Engineer</p>
-								<p class="card-text text-center">lorem ipsum lore ipsum lore ipsum to lorem ipssss sum rhg gjg ghghg hhgtedkj fg tf</p>
-								<button class="v-primary py-2 px-2">Contact</button>
-							</div>
-							<div class="card-foot d-flex justify-content-center">
-                                <a href="" class="mr-2 p-2"><i class="fab fa-twitter-square"></i></a>
-                                <a href="" class="mr-2 p-2"><i class="fab fa-instagram"></i></a>
-                                <a href="" class="mr-2 p-2"><i class="fab fa-linkedin"></i></a>
-                                <a href="" class="mr-2 p-2"><i class="fab fa-google-plus-square"></i></a>
-
-								</div>
-						</div>
-					</div>
-					<div class="col-sm-12 col-md-4 d-flex justify-content-center mt-sm">
-						<div class="card" style="width: 18rem;">
-							<div class="card-top d-flex justify-content-center align-items-center py-4">
-								<div class="dis-img">
-                                    <img  class="p-1" src="https://res.cloudinary.com/echef/image/upload/v1571186220/10BD0035-7E1F-4510-B9E7-B1B85BA36871_yyfxqz.png" style="width: 150px;height:150px;border-radius:50%;">
-                                </div>
-							</div>
-							<div class="card-body d-flex align-items-center flex-column">
-								<h5 class="card-title text-center">Samad Ahmed</h5>
-								<p class="card-text text-center">Backend Engineer</p>
-								<p class="card-text text-center">lorem ipsum lore ipsum lore ipsum to lorem ipssss sum rhg gjg ghghg hhgtedkj fg tf</p>
-								<button class="v-primary py-2 px-2">Contact</button>
-							</div>
-							<div class="card-foot d-flex justify-content-center">
-                                <a href="" class="mr-2 p-2"><i class="fab fa-twitter-square"></i></a>
-                                <a href="" class="mr-2 p-2"><i class="fab fa-instagram"></i></a>
-                                <a href="" class="mr-2 p-2"><i class="fab fa-linkedin"></i></a>
-                                <a href="" class="mr-2 p-2"><i class="fab fa-google-plus-square"></i></a>
-
-								</div>
-						</div>
-					</div>
-				</div>
-				<div class="row mt-4">
-					<div class="col-sm-12 col-md-4 d-flex justify-content-center mt-sm">
-						<div class="card" style="width: 18rem;">
-							<div class="card-top d-flex justify-content-center align-items-center py-4">
-								<div class="dis-img">
-                                    <img  class="p-1" src="https://res.cloudinary.com/echef/image/upload/v1571186220/10BD0035-7E1F-4510-B9E7-B1B85BA36871_yyfxqz.png" style="width: 150px;height:150px;border-radius:50%;">
-                                </div>
-							</div>
-							<div class="card-body d-flex align-items-center flex-column">
-								<h5 class="card-title text-center">Samad Ahmed</h5>
-								<p class="card-text text-center">Backend Engineer</p>
-								<p class="card-text text-center">lorem ipsum lore ipsum lore ipsum to lorem ipssss sum rhg gjg ghghg hhgtedkj fg tf</p>
-								<button class="v-primary py-2 px-2">Contact</button>
-							</div>
-							<div class="card-foot d-flex justify-content-center">
-                                <a href="" class="mr-2 p-2"><i class="fab fa-twitter-square"></i></a>
-                                <a href="" class="mr-2 p-2"><i class="fab fa-instagram"></i></a>
-                                <a href="" class="mr-2 p-2"><i class="fab fa-linkedin"></i></a>
-                                <a href="" class="mr-2 p-2"><i class="fab fa-google-plus-square"></i></a>
-
-								</div>
-						</div>
-					</div>
-					<div class="col-sm-12 col-md-4 d-flex justify-content-center mt-sm">
-						<div class="card" style="width: 18rem;">
-							<div class="card-top d-flex justify-content-center align-items-center py-4">
-								<div class="dis-img">
-                                    <img  class="p-1" src="https://res.cloudinary.com/echef/image/upload/v1571186207/6289795B-89C9-4D23-8453-8E22C2F084BD_fmcqiy.png" style="width: 150px;height:150px;border-radius:50%;">
-                                </div>
-							</div>
-							<div class="card-body d-flex align-items-center flex-column">
-								<h5 class="card-title text-center">Samad Ahmed</h5>
-								<p class="card-text text-center">Backend Engineer</p>
-								<p class="card-text text-center">lorem ipsum lore ipsum lore ipsum to lorem ipssss sum rhg gjg ghghg hhgtedkj fg tf</p>
-								<button class="v-primary py-2 px-2">Contact</button>
-							</div>
-							<div class="card-foot d-flex justify-content-center">
-                                <a href="" class="mr-2 p-2"><i class="fab fa-twitter-square"></i></a>
-                                <a href="" class="mr-2 p-2"><i class="fab fa-instagram"></i></a>
-                                <a href="" class="mr-2 p-2"><i class="fab fa-linkedin"></i></a>
-                                <a href="" class="mr-2 p-2"><i class="fab fa-google-plus-square"></i></a>
-
-								</div>
-						</div>
-					</div>
-					<div class="col-sm-12 col-md-4 d-flex justify-content-center mt-sm">
-						<div class="card" style="width: 18rem;">
-							<div class="card-top d-flex justify-content-center align-items-center py-4">
-								<div class="dis-img">
-                                    <img  class="p-1" src="https://res.cloudinary.com/echef/image/upload/v1571186207/6289795B-89C9-4D23-8453-8E22C2F084BD_fmcqiy.png" style="width: 150px;height:150px;border-radius:50%;">
-                                </div>
-							</div>
-							<div class="card-body d-flex align-items-center flex-column">
-								<h5 class="card-title text-center">Samad Ahmed</h5>
-								<p class="card-text text-center">Backend Engineer</p>
-								<p class="card-text text-center">lorem ipsum lore ipsum lore ipsum to lorem ipssss sum rhg gjg ghghg hhgtedkj fg tf</p>
-								<button class="v-primary py-2 px-2">Contact</button>
-							</div>
-							<div class="card-foot d-flex justify-content-center">
-                                <a href="" class="mr-2 p-2"><i class="fab fa-twitter-square"></i></a>
-                                <a href="" class="mr-2 p-2"><i class="fab fa-instagram"></i></a>
-                                <a href="" class="mr-2 p-2"><i class="fab fa-linkedin"></i></a>
-                                <a href="" class="mr-2 p-2"><i class="fab fa-google-plus-square"></i></a>
-
-								</div>
-						</div>
-					</div>
-				</div>
-			</div>
-    </main>
+        
+        
+     <!--  TEAM -->
+     <section id="team">
+            <div class="content-box">
+                <div class="content-title">
+                    <h3>Meet Our Team</h3>
+                    <div class="content-title-underline"></div>
+                </div>
+                <div class="container">
+                   <div class="row">
+                      
+                       <div class="col the-col">
+                          
+                          <div class="all-users side">
+                              <div class="user-image">
+                                   <div class="user-image-box-1"></div>
+                               </div>
+                               <div class="content-part back">
+                                   <div class="user-info">
+                                       <h3>Christian Ani</h3>
+                                       <p>Front-End Developer</p>
+                                   </div>
+                                   <div class="user-content">
+                                       lorem ipsum lore ipsum lore ipsum to lorem ipssss sum rhg gjg ghghg hhgtedkj fg tf.
+                                   </div>
+                                   <div class="user-button">
+                                       <button type="button" class="btn btn-secondary btn-lg contact-btn">Contact</button>
+                                   </div>
+                               </div>
+                               <div class="content-footer">
+                                   <a href="#">
+                                       <i class="fab fa-twitter-square fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="#">
+                                       <i class="fab fa-instagram fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="#">
+                                       <i class="fab fa-linkedin fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="#">
+                                       <i class="fab fa-google-plus-square fa-2x social-icons"></i>
+                                   </a>
+                               </div>
+                          </div>
+                           
+                           
+                       </div>
+                      
+                       <div class="col the-col">
+                          
+                          <div class="all-users">
+                              <div class="user-image">
+                                   <div class="user-image-box-2"></div>
+                               </div>
+                               <div class="content-part">
+                                   <div class="user-info">
+                                       <h3>Samad Ahmed</h3>
+                                       <p>Back-End Developer</p>
+                                   </div>
+                                   <div class="user-content">
+                                       lorem ipsum lore ipsum lore ipsum to lorem ipssss sum rhg gjg ghghg hhgtedkj fg tf.
+                                   </div>
+                                   <div class="user-button">
+                                       <button type="button" class="btn btn-secondary btn-lg contact-btn">Contact</button>
+                                   </div>
+                               </div>
+                               <div class="content-footer">
+                                   <a href="#">
+                                       <i class="fab fa-twitter-square fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="#">
+                                       <i class="fab fa-instagram fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="#">
+                                       <i class="fab fa-linkedin fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="#">
+                                       <i class="fab fa-google-plus-square fa-2x social-icons"></i>
+                                   </a>
+                               </div>
+                          </div>
+                           
+                           
+                       </div>
+                      
+                       <div class="col the-col">
+                          
+                          <div class="all-users">
+                              <div class="user-image">
+                                   <div class="user-image-box-3"></div>
+                               </div>
+                               <div class="content-part">
+                                   <div class="user-info">
+                                       <h3>Paula White</h3>
+                                       <p>UI/UX Designer</p>
+                                   </div>
+                                   <div class="user-content">
+                                       lorem ipsum lore ipsum lore ipsum to lorem ipssss sum rhg gjg ghghg hhgtedkj fg tf.
+                                   </div>
+                                   <div class="user-button">
+                                       <button type="button" class="btn btn-secondary btn-lg contact-btn">Contact</button>
+                                   </div>
+                               </div>
+                               <div class="content-footer">
+                                   <a href="#">
+                                       <i class="fab fa-twitter-square fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="#">
+                                       <i class="fab fa-instagram fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="#">
+                                       <i class="fab fa-linkedin fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="#">
+                                       <i class="fab fa-google-plus-square fa-2x social-icons"></i>
+                                   </a>
+                               </div>
+                          </div>
+                           
+                           
+                       </div>
+                      
+                       <div class="col the-col">
+                          
+                          <div class="all-users">
+                              <div class="user-image">
+                                   <div class="user-image-box-1"></div>
+                               </div>
+                               <div class="content-part">
+                                   <div class="user-info">
+                                       <h3>Christian Ani</h3>
+                                       <p>Front-End Developer</p>
+                                   </div>
+                                   <div class="user-content">
+                                       lorem ipsum lore ipsum lore ipsum to lorem ipssss sum rhg gjg ghghg hhgtedkj fg tf.
+                                   </div>
+                                   <div class="user-button">
+                                       <button type="button" class="btn btn-secondary btn-lg contact-btn">Contact</button>
+                                   </div>
+                               </div>
+                               <div class="content-footer">
+                                   <a href="#">
+                                       <i class="fab fa-twitter-square fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="#">
+                                       <i class="fab fa-instagram fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="#">
+                                       <i class="fab fa-linkedin fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="#">
+                                       <i class="fab fa-google-plus-square fa-2x social-icons"></i>
+                                   </a>
+                               </div>
+                          </div>
+                           
+                           
+                       </div>
+                      
+                       <div class="col the-col">
+                          
+                          <div class="all-users">
+                              <div class="user-image">
+                                   <div class="user-image-box-2"></div>
+                               </div>
+                               <div class="content-part">
+                                   <div class="user-info">
+                                       <h3>Samad Ahmed</h3>
+                                       <p>Back-End Developer</p>
+                                   </div>
+                                   <div class="user-content">
+                                       lorem ipsum lore ipsum lore ipsum to lorem ipssss sum rhg gjg ghghg hhgtedkj fg tf.
+                                   </div>
+                                   <div class="user-button">
+                                       <button type="button" class="btn btn-secondary btn-lg contact-btn">Contact</button>
+                                   </div>
+                               </div>
+                               <div class="content-footer">
+                                   <a href="#">
+                                       <i class="fab fa-twitter-square fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="#">
+                                       <i class="fab fa-instagram fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="#">
+                                       <i class="fab fa-linkedin fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="#">
+                                       <i class="fab fa-google-plus-square fa-2x social-icons"></i>
+                                   </a>
+                               </div>
+                          </div>
+                           
+                           
+                       </div>
+                      
+                       <div class="col the-col">
+                          
+                          <div class="all-users">
+                              <div class="user-image">
+                                   <div class="user-image-box-3"></div>
+                               </div>
+                               <div class="content-part">
+                                   <div class="user-info">
+                                       <h3>Paula White</h3>
+                                       <p>UI/UX Designer</p>
+                                   </div>
+                                   <div class="user-content">
+                                       lorem ipsum lore ipsum lore ipsum to lorem ipssss sum rhg gjg ghghg hhgtedkj fg tf.
+                                   </div>
+                                   <div class="user-button">
+                                       <button type="button" class="btn btn-secondary btn-lg contact-btn">Contact</button>
+                                   </div>
+                               </div>
+                               <div class="content-footer">
+                                   <a href="#">
+                                       <i class="fab fa-twitter-square fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="#">
+                                       <i class="fab fa-instagram fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="#">
+                                       <i class="fab fa-linkedin fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="#">
+                                       <i class="fab fa-google-plus-square fa-2x social-icons"></i>
+                                   </a>
+                               </div>
+                          </div>
+                           
+                           
+                       </div>
+                       
+                       
+                   </div>
+                    
+                </div>
+            </div>
+        </section>
+        
     
     <footer>
         <div class="top-footer">
@@ -527,20 +775,15 @@ a:hover{
             </span>
         </div>
     </footer>
-    <script>
-            
-        $(function() {
-            $(".toggle").on("click", function(){
-                if($(".item").hasClass("active")){
-                    $(".item").removeClass("active");
-                } else{
-                    $(".item").addClass("active");
-                }
-            })
-        });
-
+   
+       
+        <script>
+              AOS.init();
         </script>
+       
+
         <script src="https://kit.fontawesome.com/85682eb992.js" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>

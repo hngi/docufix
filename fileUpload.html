@@ -133,7 +133,34 @@
             }
         }
     </style>
-    <body style="background-color:  white; font-family: Ubuntu;">
+   <!-- <body style="background-color:  white; font-family: Ubuntu;">-->
+        
+        <body style="background-color:  white; font-family: Ubuntu;"   onload ="document.getElementById('id01').style.display='block'">
+
+        <!----modal box-->
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<!--<body >-->
+
+<div class="w3-container">
+  
+  <!--<button onload ="document.getElementById('id01').style.display='block'" class="w3-button w3-black">Open Modal</button>-->
+
+  <div id="id01" class="w3-modal">
+    <div class="w3-modal-content">
+      <div class="w3-container">
+        <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+        
+        <h2>NOTE:</h2>
+        <p>Please only documents on .docx format is valid for <strong>uploading</strong></p>
+        <p>If you must compare documents from any other formatr, <br> please make use of the text option, then <strong> copy</strong> and <strong> paste</strong> into the text-box</strong></p>
+        <p>Your compared data gives you result in percentage %</p>
+        <p>You can choose to download compared documents as .doc file if you wish</p>
+        <p>Compared text are <strong>editable,</strong> this means you can edit your work for correction after comparing</p>
+
+    </div>
+    </div>
+  </div>
+</div>
         <header>
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div class="container">

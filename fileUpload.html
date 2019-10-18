@@ -151,6 +151,14 @@
 
 }
 
+.shareBtn a {
+    text-decoration: none
+}
+
+
+.shareBtn a:hover {
+    color: rgb(87, 207, 244);
+}
 .shareBtn button:hover {
     padding: 9px 18px;
 }
@@ -174,7 +182,7 @@
 
 ::-webkit-scrollbar-thumb {
   background: #343a40;
-  border-radius: 25px;
+  border-radius: 8px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -191,7 +199,7 @@
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <!--<body >-->
 
-<div class="w3-container" >
+<div class="w3-container">
   
   <!--<button onload ="document.getElementById('id01').style.display='block'" class="w3-button w3-black">Open Modal</button>-->
 
@@ -255,7 +263,7 @@
                         href="#"
                         id="fileBtn"
                         class="active1 pb-1"
-                        style="text-decoration: none; color:black;"
+                        style="text-decoration: none; color:black; margin-right: 10px;"
                         ><img class="top-icons" src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571193844/samples/figma%20career-list/lario/xisa8mltboqmepbzjqks.png">File</a
                     ></span
                 >
@@ -263,7 +271,7 @@
                     ><a
                         href="#"
                         id="textBtn"
-                        style="text-decoration: none; color:black;"
+                        style="text-decoration: none; color:black; margin-left: 10px"
                         ><img class="top-icons" src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571193193/samples/figma%20career-list/lario/slpij76xxh4f7bpixbr5.png">Text
                     </a></span
                 >
@@ -349,6 +357,7 @@
                 <h4>Helpful? Please Share With Your Friends On:</h4>
                 <button class="twtShare" data-js="twitter-share"><i class="fab fa-twitter"></i> Twitter</button>
                 <button class="fbShare" data-js="facebook-share"><i class="fab fa-facebook-f"></i> Facebook</button>
+                <button class="fbShare" data-js="facebook-share"><a href="mailto:info@example.com?&subject=&body=http://docufix.ga Hey! I just compared my files for similarities on Docufix"><i class="fas fa-envelope"></i> Email</a></button>
             </div>
 
             <!-- <div id="text" style="display: none;">
@@ -1096,7 +1105,7 @@
 
             facebookShare.onclick = function(e) {
               e.preventDefault();
-              var facebookWindow = window.open('https://www.facebook.com/sharer/sharer.php?u=' + document.URL, 'facebook-popup', 'height=350,width=600');
+              var facebookWindow = window.open('https://www.facebook.com/sharer/sharer.php?u=http://docufix.ga', 'facebook-popup', 'height=350,width=600');
               if(facebookWindow.focus) { facebookWindow.focus(); }
                 return false;
             }

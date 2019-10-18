@@ -1,375 +1,752 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Team Page</title>
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Ubuntu:500&display=swap&subset=greek" rel="stylesheet">
-        <style>
-            *, *:before, *:after {
-                box-sizing: border-box;
-            }
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Ubuntu|Pacifico&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+    <title>Docufix | Team Page</title>
+    <style>
+        *{
+    box-sizing: border-box;
+    } 
+    html{
+            scroll-behavior: smooth;
+        }
+        body{
+            font-family:  Open Sans, sans-serif;
+            width: 100%;
+            height: 100%;
+            margin: 0 auto;
+            padding: 0;
+            background-color: #DDE8E8;
+        }
 
-            body {
-                font-family: 'Open Sans', sans-serif;
-                background-color: #DDE8E8;
-            }
+.logo{
+    flex: 1;
+    font-weight: bold;
+    cursor: pointer;
+    }
+    
 
-            .meet {
-                position: relative;
-                font-size: 64px;
-                line-height: 87px;
-                text-align: center;
-            }
+body{
+    font-family: ubuntu;
+}
+/*hr{
+    background: #060541;
+border-radius: 5px;
+    width: 10%;
+    width: 160px;
+height: 10px;
+}*/
 
-            .meet:after {
-              content: "";
-              position: absolute;
-              border-top: 10px solid black;
-              left: 46%;
-              bottom: -10px;
-              margin-left: -15px;
-              width: 150px;
-              height: 0px;
-              border-radius: 5px;
-            }
-
-            .row {
-                display: flex;
-                flex-wrap: wrap;
-            }
-
-            .column {
-                flex-grow: 1;
-                width: 25%;
-                margin: 20px 2%;
-                padding: 0 10px;
-            }
-
-            .card {
-                box-shadow: 5px 5px 20px rgb(0, 0, 0, 0.3);
-            }
-
-            .container1 {
-                position: relative;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                padding: 40px 10px;
-                overflow: hidden;
-            }
-
-            .container1::after, 
-            .row::after {
-                content: "";
-                clear: both;
-                display: table;
-            }
-
-            .user-img {
-                border-radius: 100%;
-            }
-
-            .text {
-                text-align: center;
-            }
-
-            .name {
-                font-size: 36px;
-                line-height: 49px;
-            }
-
-            .title {
-                color: rgba(0,0,0,0.85);
-            }
-
-            .container1 p {
-                font-size: 18px;
-                line-height: 25px;
-            }
-
-            .button {
-                border: none;
-                border-radius: 30px;
-                outline: 0;
-                display: inline-block;
-                padding: 10px 20px;
-                color: white;
-                background-color: #060541;
-                text-align: center;
-                cursor: pointer;
-                text-transform: uppercase;
-                font-weight: 600;
-                font-size: 20px;
-            }
-
-            .button:hover {
-                background-color: blue;
-            }
-
-            footer {
-              font-size: 15px;
-            }
-
-
-            .slant:after {
-              content: '';
-              position: absolute;
-              top: 0;
-              left: 0;
-              width: 100%;
-              height: 50%;
-              background:  #CAC9D9;
-              transform-origin: 100% 0;
-              transform: skew(-65deg);
-              z-index: -1;
-            }
-
-            .icon {
-                width: 40px;
-                height: 40px;
-                padding: 5px;
-            }
-
-
-            .socials {
-                display: flex;
-                justify-content: space-between;
-                border-top: 1px solid rgba(0, 0, 0, 0.1);
-                background-color: rgba(199, 195, 195, 0.1);
-                padding: 5px 50px;
-            }
-
-
-            
-      
-            
-            @media screen and (max-width: 620px) {
-              .column {
-                width: 100%;
-                display: block;
-              }
-
-                  .slant:after {
-                    content: '';
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 70%;
-                    background:  #CAC9D9;
-                    transform-origin: 100% 0;
-                    transform: skew(-65deg);
-                    z-index: -1;
-                }
-
-                  .meet {
-                    font-size: 50px;
-                }
-
-                  .meet:after {
-                     left: 38%;
-                }
-            }
-
-            @media (min-width: 620px) and (max-width: 960px) {
-
-                .column {
-                    width: 45%;
-                }
-
-                 .meet:after {
-                     left: 42.5%;
-                }
-
-                .socials {
-                    padding: 5px 20px;
-                }
-            }
-
-            body {
-  margin: 0px;
-  font-family: 'segoe ui';
+nav{
+    background: #222;
+    padding: 5px 50px;
 }
 
-        </style>
-    </head>
-    <body>
-      <header>
-          <nav class="navbar navbar-expand-lg navbar-dark pt-2" style="background-color:#121610;">
-            <a class="navbar-brand" href="index.html">
-               <h1 class="m-0 ml-5 text-white" style="font-family: 'Ubuntu';">DOCUFIX</h1>
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-               aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-               <span class="navbar-toggler-icon"></span>
-            </button>
-            <div id="navbarNavDropdown" class="navbar-collapse collapse">
-               <ul class="navbar-nav mr-auto">
-      
-               </ul>
-               <ul class="navbar-nav mr-5 ">
-      
-                  <li class="nav-item mr-5 ">
-                     <a class="nav-link font-weight-bold text-light " href="about_us.html">About Us</a>
-                  </li>
-                  <li class="nav-item mr-5">
-                     <a class="nav-link font-weight-bold text-light " href="teampage.html">Team</a>
-                  </li>
-                  <li class="nav-item mr-5">
-                     <a class="nav-link font-weight-bold text-light" href="https://hng.tech/" target="_blank">Sponsors</a>
-                  </li>
-                  
-               </ul>
-            </div>
-         </nav>
-        </header>
-      
+ul{
+    list-style-type: none;
+}
+a{
+    color: white;
+    text-decoration:none; 
+}
+a:hover{
+    text-decoration: none;
+    color: lightgrey !important;
+    background-color: none !important;
     
-        <h2 class="meet">MEET OUR TEAM</h2>
-        <br>
-        
-        <div class="row">
-          <div class="column">
-            <div class="card">
-              
-              <div class="container1">
-                <div class="slant"></div>
-                <img class="user-img" src="img/1.jpg" alt="Member" style="width:150px; height:150px">
-                <div class="text">
-                    <h2 class="name">Steven Kobe</h2>
-                    <p class="title">Creative Director</p>
-                    <p>lorem ipsum ipsum lorem lorem ipsum ipsum lorem lorem ipsum ipsum lorem lorem ipsum ipsum lorem lorem ipsum ipsum lorem.</p>
-                </div>
-                <button class="button">Contact</button>
-              </div>
-              <div class="socials">
-                  <a href="https://twitter.com"><img class="icon" src="img/icons/twitter.png" alt="Twitter"></a>
-                  <a href="https://www.instagram.com"><img class="icon" src="img/icons/instagram.png" alt="Twitter"></a>
-                  <a href="https://www.linkedin.com"><img class="icon" src="img/icons/linked.png" alt="Twitter"></a>
-                  <a href="https://mail.google.com"><img class="icon" src="img/icons/google-plus.png" alt="Twitter"></a>
-              </div>
-            </div>
-          </div>
-          
-          <div class="column">
-            <div class="card">
-              
-              <div class="container1">
-                <div class="slant"></div>
-                <img class="user-img" src="img/2.jpg" alt="Member" style="width:150px; height:150px">
-                <div class="text">
-                    <h2 class="name">Samad Hamid</h2>
-                    <p class="title">Backend Engineer</p>
-                    <p>lorem ipsum ipsum lorem lorem ipsum ipsum lorem lorem ipsum ipsum lorem lorem ipsum ipsum lorem lorem ipsum ipsum lorem.</p>
-                </div>
-                <button class="button">Contact</button>
-              </div>
-              <div class="socials">
-                  <a href="https://twitter.com"><img class="icon" src="img/icons/twitter.png" alt="Twitter"></a>
-                  <a href="https://www.instagram.com"><img class="icon" src="img/icons/instagram.png" alt="Twitter"></a>
-                  <a href="https://www.linkedin.com"><img class="icon" src="img/icons/linked.png" alt="Twitter"></a>
-                  <a href="https://mail.google.com"><img class="icon" src="img/icons/google-plus.png" alt="Twitter"></a>
-              </div>
-            </div>
-          </div>
-          
-          <div class="column">
-            <div class="card">
-              
-              <div class="container1">
-                <div class="slant"></div>
-                <img class="user-img" src="img/3.jpg" alt="Member" style="width:150px; height:150px">
-                <div class="text">
-                    <h2 class="name">Paula White</h2>
-                    <p class="title">Lead Designer</p>
-                    <p>lorem ipsum ipsum lorem lorem ipsum ipsum lorem lorem ipsum ipsum lorem lorem ipsum ipsum lorem lorem ipsum ipsum lorem.</p>
-                </div>
-                <button class="button">Contact</button>
-              </div>
-              <div class="socials">
-                  <a href="https://twitter.com"><img class="icon" src="img/icons/twitter.png" alt="Twitter"></a>
-                  <a href="https://www.instagram.com"><img class="icon" src="img/icons/instagram.png" alt="Twitter"></a>
-                  <a href="https://www.linkedin.com"><img class="icon" src="img/icons/linked.png" alt="Twitter"></a>
-                  <a href="https://mail.google.com"><img class="icon" src="img/icons/google-plus.png" alt="Twitter"></a>
-              </div>
-            </div>
-          </div>
-          
-          <div class="column">
-            <div class="card">
-              
-              <div class="container1">
-                <div class="slant"></div>
-                <img class="user-img" src="img/4.jpg" alt="Member" style="width:150px; height:150px">
-                <div class="text">
-                    <h2 class="name">Steven Kobe</h2>
-                    <p class="title">Creative Director</p>
-                    <p>lorem ipsum ipsum lorem lorem ipsum ipsum lorem lorem ipsum ipsum lorem lorem ipsum ipsum lorem lorem ipsum ipsum lorem.</p>
-                </div>
-                <button class="button">Contact</button>
-              </div>
-              <div class="socials">
-                  <a href="https://twitter.com"><img class="icon" src="img/icons/twitter.png" alt="Twitter"></a>
-                  <a href="https://www.instagram.com"><img class="icon" src="img/icons/instagram.png" alt="Twitter"></a>
-                  <a href="https://www.linkedin.com"><img class="icon" src="img/icons/linked.png" alt="Twitter"></a>
-                  <a href="https://mail.google.com"><img class="icon" src="img/icons/google-plus.png" alt="Twitter"></a>
-              </div>
-            </div>
-          </div>
-          
-          <div class="column">
-            <div class="card">
-              
-              <div class="container1">
-                <div class="slant"></div>
-                <img class="user-img" src="img/5.jpg" alt="Member" style="width:150px; height:150px">
-                <div class="text">
-                    <h2 class="name">Samad Hamid</h2>
-                    <p class="title">Backend Engineer</p>
-                    <p>lorem ipsum ipsum lorem lorem ipsum ipsum lorem lorem ipsum ipsum lorem lorem ipsum ipsum lorem lorem ipsum ipsum lorem.</p>
-                </div>
-                <button class="button">Contact</button>
-              </div>
-              <div class="socials">
-                  <a href="https://twitter.com"><img class="icon" src="img/icons/twitter.png" alt="Twitter"></a>
-                  <a href="https://www.instagram.com"><img class="icon" src="img/icons/instagram.png" alt="Twitter"></a>
-                  <a href="https://www.linkedin.com"><img class="icon" src="img/icons/linked.png" alt="Twitter"></a>
-                  <a href="https://mail.google.com"><img class="icon" src="img/icons/google-plus.png" alt="Twitter"></a>
-              </div>
-            </div>
-          </div>
-          
-          <div class="column">
-            <div class="card">
-              
-              <div class="container1">
-                <div class="slant"></div>
-                <img class="user-img" src="img/1.jpg" alt="Member" style="width:150px; height:150px">
-                <div class="text">
-                    <h2 class="name">Paula White</h2>
-                    <p class="title">Lead Designer</p>
-                    <p>lorem ipsum ipsum lorem lorem ipsum ipsum lorem lorem ipsum ipsum lorem lorem ipsum ipsum lorem lorem ipsum ipsum lorem.</p>
-                </div>
-                <button class="button">Contact</button>
-              </div>
-              <div class="socials">
-                  <a href="https://twitter.com"><img class="icon" src="img/icons/twitter.png" alt="Twitter"></a>
-                  <a href="https://www.instagram.com"><img class="icon" src="img/icons/instagram.png" alt="Twitter"></a>
-                  <a href="https://www.linkedin.com"><img class="icon" src="img/icons/linked.png" alt="Twitter"></a>
-                  <a href="https://mail.google.com"><img class="icon" src="img/icons/google-plus.png" alt="Twitter"></a>
-              </div>
-            </div>
-          </div>
-          
-        </div>
+}
 
-         <footer class="page-footer font-small mdb-color pt-4" style="background: #C4C4C4;">
+.menu li{
+    font-size: 24px;
+    padding: 15px 5px;
+    
+}
+
+.menu li a{
+    display: block;
+}
+
+.logo a{
+    font-size:40px;
+}
+.logo a:hover{
+    text-decoration: none;
+}
+
+.button.secondary{
+    border-bottom: 1px #444 solid;
+}
+.item{
+    /* justify-content: space-around; */
+}
+/*.item:hover {
+   background-color: #444;
+}*/
+
+/* Mobile Menu */
+.menu{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toggle{
+    order: 1;
+}
+
+.item.button{
+    order: 2;
+}
+
+.item{
+    width: 100%;
+    text-align: center;
+    order: 3;
+    display: none;
+}
+
+.item.active{
+    display: block;
+}
+
+.toggle {
+    cursor: pointer;
+}
+
+.bars{
+    background: #999;
+    display: inline-block;
+    height: 2px;
+    position: relative;
+    width: 19px;
+}
+
+.bars::before,.bars::after{
+    background: #999;
+    content: "";
+    display: inline-block;
+    height: 2px;
+    position: absolute;
+    width: 19px;
+}
+
+.bars::before{
+    top: 5px;
+}
+
+.bars::after{
+    top: -5px;
+}
+
+/* Tablet Menu */
+@media all and (min-width:458px){
+    .menu a{
+        justify-content: center;
+    }
+
+    .logo{
+        flex: 1;
+        font-weight: bold;
+        cursor: pointer;
+        
+        }
+        .logo:hover{
+            text-decoration: none;
+        }
+ 
+    .toggle{
+        order: 2;
+        display: block;
+    }
+
+
+    
+}
+
+@media all and (min-width:768px){
+    .item{
+        display: block;
+        width: auto;
+    }
+
+    .toggle{
+        display: none;
+    }
+
+    .toggle:active {
+        transition: all .25s ease;
+    }
+
+    .logo{
+        order: 0;
+    }
+
+    .item{
+        order: 1;
+    }
+
+   
+
+    .menu li{
+       padding: 15px 10px; 
+    }
+
+    .menu li button{
+        padding-right: 0;
+    }
+		
+}
+/*Footer*/
+    footer {
+            height: auto;
+            font-family: 'Ubuntu', sans-serif;
+            bottom: 0;
+            width: 100%;
+
+        }
+        .top-footer {
+            height: 55px;
+            background-color: #000000;
+        }
+   .bottom-footer {
+        height: auto;
+        background-color:#C4C4C4;
+        color: #fff;
+        display: flex;
+        flex-direction: row;
+        }
+          .bottom-footer a {
+            text-decoration: none;
+            color: #fff;
+          }
+        .bottom-footer .name {
+            font-style: normal;
+            font-weight: bold;
+            font-size: 25px;
+            padding:15px 20px 10px 20px;
+            width: 20%;
+            
+        
+        }
+        .bottom-footer .copyright {
+            font-weight: 400;
+            font-size: 25px;
+                padding-top:15px; 
+                padding-right: 40px;
+            width: 63%;
+        text-align: right;
+         word-spacing: 0.3rem;
+    
+        }
+        .bottom-footer .icon{
+            font-weight: 500;
+            font-size: 36px;
+            width: 18%;
+            padding-top:8px; 
+            padding-left: 80px;
+             word-spacing: 1rem;
+        }
+        #icon{
+            color: #000000;
+        }
+        
+
+            @media (max-width: 800px) {
+                  .bottom-footer {
+        flex-direction: column;
+        }
+    .bottom-footer .icon{
+            width: 100%;
+            text-align: center;
+            padding: 3px;
+            }
+            .bottom-footer .copyright {
+                width: 100%;
+                font-size: 20px;
+                text-align: center;
+                padding:8px;
+        
+            }
+            .bottom-footer .name {
+                width: 100%;
+                text-align: center;
+                font-size: 22px;
+                padding: 8px;
+            }
+        
+        }
+
+				
+        .content-box {
+    padding: 60px 0 60px 0;
+}
+
+.content-title h3 {
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 0 10px 0;
+}
+
+.content-title-underline {
+    width: 100px;
+    height: 3px;
+    background-color: #060541;
+    margin: 0 auto 30px auto;
+}
+
+/*====================================================================
+            Diagonal Line and Profile Picture Setting
+===================================================================*/
+
+.the-col {
+    width: 350px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.all-users {
+    width: 350px;
+    height: auto;
+    background-color: #fff;
+    padding: 0;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.user-image {
+    background-color: #013A6B;
+    background-image: -webkit-linear-gradient(-60deg, #CAC9D9 50%, #fff 50%);
+    min-height: 200px;
+    padding-top: 50px;
+}
+
+.user-image-box-1 {
+    height: 140px;
+    width: 140px;
+    background-image: url("https://res.cloudinary.com/kuic/image/upload/v1571244972/docufix/Ellipse_1_vpt9nw.png");
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.user-image-box-2 {
+    height: 140px;
+    width: 140px;
+    background-image: url("https://res.cloudinary.com/kuic/image/upload/v1571244983/docufix/Ellipse_2_uy6jcr.png");
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.user-image-box-3 {
+    height: 140px;
+    width: 140px;
+    background-image: url("https://res.cloudinary.com/kuic/image/upload/v1571245043/docufix/Ellipse_3_ahe63z.png");
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.content-part {
+    padding: 30px 0 30px 0;
+    text-align: center;
+}
+
+.user-content {
+    padding: 0 0 30px 0;
+}
+
+.user-button {
+    padding: 0 0 30px 0;
+}
+
+.contact-btn {
+    border-radius: 30px;
+    padding: 10px 40px 10px 40px;
+    background: #060541;
+}
+
+.contact-btn:hover {
+    background: rgba(6, 5, 65, 0.83);
+}
+
+.content-footer {
+    text-align: center;
+    background: rgba(199, 195, 195, 0.1);
+    height: 50px;
+}
+
+.social-icons {
+    padding: 10px 20px;
+}
+
+/*====================================================================
+                    Social Icons styles
+===================================================================*/
+
+.fa-twitter-square {
+    color: #50ABF1;
+}
+
+.fa-linkedin {
+    color: #0D5C77;
+}
+
+.fa-google-plus-square {
+    color: #DD4B39;
+}
+
+.content-footer a {
+    color: #060541;
+}
+				
+                .fa-bars{
+                    color: white;
+                }
+                .navbar-brand h1{
+                    font-family: 'Open Sans',sans-serif;
+                    font-size:40px;
+                    line-height: 1.5em;
+                }
+			
+    </style>
+   
+
+
+</head>
+<body>
+    <!---
+    <header>
+        <div>
+            <nav class="navbar navbar-expand-lg" aria-label="Main navigation">
+                <a class="navbar-brand text-center mt-2 ml-3" href="#"><h1>DOCUFIX</h1></a>
+                <button class="navbar-toggler mt-2" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa fa-bars fa-lg"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav list-unstyled text-uppercase pt-3 pt-lg-0 ml-auto text-center">
+                        <li class="nav-item  text-center mr-4">
+                            <a class="nav-link" href="#">About Us</a>
+                        </li>
+                        <li class="nav-item mr-4">
+                            <a class="nav-link" href="#">Team</a>
+                        </li>
+                        <li class="nav-item mr-4">
+                            <a class="nav-link" href="#">Sponsors</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav> 
+        </div>
+    </header>
+-->
+<header>
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: black">
+          <div class="container">
+              <a class="navbar-brand" href="index.html" style="font-weight: bold;font-size: 1.5em;"
+                  >DOCUFIX</a
+              >
+              <button
+                  class="navbar-toggler border-0"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#navbarNav"
+                  aria-controls="navbarNav"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation"
+              >
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul
+                      class="navbar-nav ml-auto"
+                      style="font-weight: bold;"
+                  >
+                      <li class="nav-item">
+                          <a class="nav-link  text-light" href="about_us.html">About Us</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link  text-light" href="teampage.html">Team</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link  text-light" href="https://hng.tech/" target="_blank">Sponsors</a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </nav>
+      </header>
+    <main>     
+     <!--  TEAM -->
+     <section id="team">
+            <div class="content-box">
+                <div class="content-title">
+                    <h3>Meet Our Team</h3>
+                    <div class="content-title-underline"></div>
+                </div>
+                <div class="container">
+                   <div class="row">
+                      
+                       <div class="col the-col">
+                          
+                          <div class="all-users side">
+                              <div class="user-image">
+                                   <div class="user-image-box-1"></div>
+                               </div>
+                               <div class="content-part back">
+                                   <div class="user-info">
+                                       <h3>Christian Ani</h3>
+                                       <p>Front-End Developer</p>
+                                   </div>
+                                   <div class="user-content">
+                                       lorem ipsum lore ipsum lore ipsum to lorem ipssss sum rhg gjg ghghg hhgtedkj fg tf.
+                                   </div>
+                                   <div class="user-button">
+                                       <button type="button" class="btn btn-secondary btn-lg contact-btn">Contact</button>
+                                   </div>
+                               </div>
+                               <div class="content-footer">
+                                   <a href="#">
+                                       <i class="fab fa-twitter-square fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="#">
+                                       <i class="fab fa-instagram fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="#">
+                                       <i class="fab fa-linkedin fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="#">
+                                       <i class="fab fa-google-plus-square fa-2x social-icons"></i>
+                                   </a>
+                               </div>
+                          </div>
+                           
+                           
+                       </div>
+                      
+                       <div class="col the-col">
+                          
+                          <div class="all-users">
+                              <div class="user-image">
+                                   <div class="user-image-box-2"></div>
+                               </div>
+                               <div class="content-part">
+                                   <div class="user-info">
+                                       <h3>Samad Ahmed</h3>
+                                       <p>Back-End Developer</p>
+                                   </div>
+                                   <div class="user-content">
+                                       lorem ipsum lore ipsum lore ipsum to lorem ipssss sum rhg gjg ghghg hhgtedkj fg tf.
+                                   </div>
+                                   <div class="user-button">
+                                       <button type="button" class="btn btn-secondary btn-lg contact-btn">Contact</button>
+                                   </div>
+                               </div>
+                               <div class="content-footer">
+                                   <a href="#">
+                                       <i class="fab fa-twitter-square fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="#">
+                                       <i class="fab fa-instagram fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="#">
+                                       <i class="fab fa-linkedin fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="#">
+                                       <i class="fab fa-google-plus-square fa-2x social-icons"></i>
+                                   </a>
+                               </div>
+                          </div>
+                           
+                           
+                       </div>
+                      
+                       <div class="col the-col">
+                          
+                          <div class="all-users">
+                              <div class="user-image">
+                                   <div class="user-image-box-3"></div>
+                               </div>
+                               <div class="content-part">
+                                   <div class="user-info">
+                                       <h3>Paula White</h3>
+                                       <p>UI/UX Designer</p>
+                                   </div>
+                                   <div class="user-content">
+                                       lorem ipsum lore ipsum lore ipsum to lorem ipssss sum rhg gjg ghghg hhgtedkj fg tf.
+                                   </div>
+                                   <div class="user-button">
+                                       <button type="button" class="btn btn-secondary btn-lg contact-btn">Contact</button>
+                                   </div>
+                               </div>
+                               <div class="content-footer">
+                                   <a href="#">
+                                       <i class="fab fa-twitter-square fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="#">
+                                       <i class="fab fa-instagram fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="#">
+                                       <i class="fab fa-linkedin fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="#">
+                                       <i class="fab fa-google-plus-square fa-2x social-icons"></i>
+                                   </a>
+                               </div>
+                          </div>
+                           
+                           
+                       </div>
+                      
+                       <div class="col the-col">
+                          
+                          <div class="all-users">
+                              <div class="user-image">
+                                   <div class="user-image-box-1"></div>
+                               </div>
+                               <div class="content-part">
+                                   <div class="user-info">
+                                       <h3>Christian Ani</h3>
+                                       <p>Front-End Developer</p>
+                                   </div>
+                                   <div class="user-content">
+                                       lorem ipsum lore ipsum lore ipsum to lorem ipssss sum rhg gjg ghghg hhgtedkj fg tf.
+                                   </div>
+                                   <div class="user-button">
+                                       <button type="button" class="btn btn-secondary btn-lg contact-btn">Contact</button>
+                                   </div>
+                               </div>
+                               <div class="content-footer">
+                                   <a href="#">
+                                       <i class="fab fa-twitter-square fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="#">
+                                       <i class="fab fa-instagram fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="#">
+                                       <i class="fab fa-linkedin fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="#">
+                                       <i class="fab fa-google-plus-square fa-2x social-icons"></i>
+                                   </a>
+                               </div>
+                          </div>
+                           
+                           
+                       </div>
+                      
+                       <div class="col the-col">
+                          
+                          <div class="all-users">
+                              <div class="user-image">
+                                   <div class="user-image-box-2"></div>
+                               </div>
+                               <div class="content-part">
+                                   <div class="user-info">
+                                       <h3>Samad Ahmed</h3>
+                                       <p>Back-End Developer</p>
+                                   </div>
+                                   <div class="user-content">
+                                       lorem ipsum lore ipsum lore ipsum to lorem ipssss sum rhg gjg ghghg hhgtedkj fg tf.
+                                   </div>
+                                   <div class="user-button">
+                                       <button type="button" class="btn btn-secondary btn-lg contact-btn">Contact</button>
+                                   </div>
+                               </div>
+                               <div class="content-footer">
+                                   <a href="#">
+                                       <i class="fab fa-twitter-square fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="#">
+                                       <i class="fab fa-instagram fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="#">
+                                       <i class="fab fa-linkedin fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="#">
+                                       <i class="fab fa-google-plus-square fa-2x social-icons"></i>
+                                   </a>
+                               </div>
+                          </div>
+                           
+                           
+                       </div>
+                      
+                       <div class="col the-col">
+                          
+                          <div class="all-users">
+                              <div class="user-image">
+                                   <div class="user-image-box-3"></div>
+                               </div>
+                               <div class="content-part">
+                                   <div class="user-info">
+                                       <h3>Paula White</h3>
+                                       <p>UI/UX Designer</p>
+                                   </div>
+                                   <div class="user-content">
+                                       lorem ipsum lore ipsum lore ipsum to lorem ipssss sum rhg gjg ghghg hhgtedkj fg tf.
+                                   </div>
+                                   <div class="user-button">
+                                       <button type="button" class="btn btn-secondary btn-lg contact-btn">Contact</button>
+                                   </div>
+                               </div>
+                               <div class="content-footer">
+                                   <a href="#">
+                                       <i class="fab fa-twitter-square fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="#">
+                                       <i class="fab fa-instagram fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="#">
+                                       <i class="fab fa-linkedin fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="#">
+                                       <i class="fab fa-google-plus-square fa-2x social-icons"></i>
+                                   </a>
+                               </div>
+                          </div>
+                           
+                           
+                       </div>
+                       
+                       
+                   </div>
+                    
+                </div>
+            </div>
+        </section>
+ <!--       
+    
+    <footer>
+        <div class="top-footer">
+            
+        </div>
+        <div class="bottom-footer">
+            <span class="name"><p> DOCUFIX</p></span>
+            <span class="copyright"><p class="text-center"> &copy Copyright 2019 Docufix.io and HNG6 affiliates</p></span>
+            <span class="icon mr-4">
+                <a href="#"><i class="fab fa-facebook-square" style="color:  #F5F5F5;;"></i></a>
+                <a href="#"><i class="fab fa-twitter-square" style="color: #F5F5F5;"></i></a>
+                <a href="#"><i class="fab fa-instagram" style="color:  #F5F5F5;;background-color: none;"></i></a>
+            </span>
+        </div>
+    </footer>
+-->
+<footer class="page-footer font-small mdb-color pt-4" style="background: #C4C4C4;">
 
         <div class="container text-center text-md-left">
 
@@ -450,13 +827,14 @@
           </div>
         </div>
       </footer>
-    <div>
         
+       
+
+        <script src="https://kit.fontawesome.com/85682eb992.js" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-        <script src="https://kit.fontawesome.com/7967e81f77.js" crossorigin="anonymous"></script>
-        
-    </div>
-    </body>
+  
+</body>
 </html>

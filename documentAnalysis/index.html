@@ -10,7 +10,7 @@
   href="https://fonts.googleapis.com/css?family=Ubuntu"> -->
     <title>Document Analysis</title>
 </head>
-<body>
+
     <style>
 
         .active{
@@ -76,6 +76,8 @@
     text-align: center;
 
     color: black;
+    height: responsive;
+    width: responsive;
 
 }
 .vara {
@@ -90,13 +92,26 @@
 .mara {
     text-align: left;
     margin-left: 40px;
-    display: vertical;
-    margin-top: 0.1px;
+    display: horizontal;
+    margin-bottom: 20px;
+    white-space: normal;
+}
+
+.tara{
+    text-align: center;
+    white-space: normal;
+    display: horizontal;
     
 
 }
-
+.bara {
+    text-align: right;
+    white-space: normal;
+    margin-right: 90px;
+    display: horizontal;
+}
     </style>
+    <body>
     <div class="navbar" id="myNavbar">
         <a href="#" class="active"><img src="DOCUFIX.png"> </a>
         <a href="#" class="others">About Us</a>
@@ -124,10 +139,16 @@
     <div class="para">
 <h3> Words in document : 250</h3>
     </div>
-<pre>
+
         <div class="mara">
-                <h4> Identical                                                      Related                                                             Minor Charges </h4>   </div>
-        </pre>
+                <h4> Identical   </h4>  </div>      
+                
+                <div class="tara" >  
+                    <h4>Related   </h4>  </div>
+
+                    <div class="bara"> 
+                         <h4> Minor Charges </h4>   </div>
+        
 
     </div>
 <span class="circle">100%</span>

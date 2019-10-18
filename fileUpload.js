@@ -114,6 +114,7 @@ function getCookie(name) {
        
     
     $('#compare').on('click', function (e) {
+      document.getElementById("shareBtn").style.display = "block"
         e.preventDefault();
 
      let separators = [' ', '\\\+', '-', '\\\(', '\\\)','\\*', '/', '\\\.', '\\\?'];

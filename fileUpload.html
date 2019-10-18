@@ -18,12 +18,12 @@
         <title>Docufix</title>
     </head>
     <style>
-/* #file-text{
+    /* #file-text{
     display: flex;
     justify-content: center;
     align-items: center;
     font-weight: bold;;
-}
+    }
     #file{
         display: flex;;
         border-right: 2px solid black;
@@ -35,11 +35,11 @@
         padding: 20px 0 20px 30px;
         align-items: center;;
     }
-#text-compare{
+    #text-compare{
     display: flex;
     padding: 30px 60px;
     justify-content: space-between;
-}
+    }
     #text-1{
         width: 44%;
     }
@@ -95,7 +95,7 @@
             vertical-align: middle;
             margin-right: 10px;
             }
-@media screen and (max-width: 600px){
+    @media screen and (max-width: 600px){
     #main-text{
         margin-bottom: 25px;
         font-size: 24px;
@@ -114,7 +114,7 @@
         width: 70%;
         font-size: 15px;
     }
-}
+    }
         .active1 {
             border-bottom: 2px solid black;
         }
@@ -136,8 +136,52 @@
             }
         }
         .active a{
-   color: grey !important;
- }
+    color: grey !important;
+    }
+
+.shareBtn button {
+    background: #343a40;
+    color: rgb(87, 207, 244);
+    cursor: pointer;
+    display: inline-block;
+    padding: 10px 20px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    border: none;
+
+}
+
+.shareBtn button:hover {
+    padding: 9px 18px;
+}
+
+.shareBtn h4 {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.shareBtn {
+    display: none;
+}
+
+::-webkit-scrollbar{
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px white;
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #343a40;
+  border-radius: 25px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(130, 18, 140);
+  width: 15px;
+}
+
     </style>
    <!-- <body style="background-color:  white; font-family: Ubuntu;">-->
         
@@ -147,21 +191,21 @@
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <!--<body >-->
 
-<div class="w3-container">
+<div class="w3-container" >
   
   <!--<button onload ="document.getElementById('id01').style.display='block'" class="w3-button w3-black">Open Modal</button>-->
 
   <div id="id01" class="w3-modal">
-    <div class="w3-modal-content">
+    <div class="w3-modal-content" style="border-radius: 4px;">
       <div class="w3-container">
         <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
         
-        <h2>NOTE:</h2>
-        <p>Please only documents on .docx format is valid for <strong>uploading</strong></p>
-        <p>If you must compare documents from any other formatr, <br> please make use of the text option, then <strong> copy</strong> and <strong> paste</strong> into the text-box</strong></p>
+        <h2 style="font-weight: bolder;">NOTE:</h2>
+        <p>Docufix only supports file formats like .txt .pdf .doc and .docx for <strong>uploading</strong></p>
+        <p>If you must compare documents from any other format, aside the above formats mentioned, <br> please make use of the text option, then <strong> copy</strong> and <strong> paste</strong> into the text-box.</strong></p>
         <p>Your compared data gives you result in percentage %</p>
         <p>You can choose to download compared documents as .doc file if you wish</p>
-        <p>Compared text are <strong>editable,</strong> this means you can edit your work for correction after comparing</p>
+        <p>Compared texts are <strong>editable,</strong> this means you can edit your work for correction after comparing.</p>
 
     </div>
     </div>
@@ -246,8 +290,8 @@
                             />
                         </div>
                         <div class="form-group mt-5">
-                                <input id="uploadBtn" type="submit" value="submit" class="btn btn-dark font-weight-bold ml-md-5 mt-3"
-                                    />
+                                <button id="uploadBtn" type="submit" value="submit" class="btn btn-dark font-weight-bold ml-md-5 mt-3 "
+                                    ><i class="fas fa-cloud-upload-alt"></i> upload</button>
                             </div>
                     </form>
                 </div>
@@ -285,7 +329,7 @@
                 </div>
                 <div class="text-center m-5" >
                     <button value="compare" class="btn btn-dark font-weight-bold"
-                          type="submit" onclick="buttonCompareClicked();"> <img class="compare-img" src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571193103/samples/figma%20career-list/lario/butfaguuckar9dl0i1ug.png">Compare</button
+                          type="submit" onclick="buttonCompareClicked();"> <img class="compare-img" src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571193103/samples/figma%20career-list/lario/butfaguuckar9dl0i1ug.png" width="23" height="23" style="margin-right: 10px;">Compare</button
                     >
                 </div>
                 <div>
@@ -295,11 +339,16 @@
                     <br>
                     <label>Result:</label>
                     <br />
-                    <div contenteditable="true" id="textareaDifferences" style="border:1px solid;height:200px; width: 100%; min-height:25%;overflow: scroll;"></div>
+                    <div contenteditable="true" id="textareaDifferences" style="border:none;height:200px; width: 100%; min-height:25%;overflow: scroll; box-shadow: 0px 0px 4px 1px grey;"></div>
                 </div>
             
-                <button id="btn-export" onclick="exportHTML();" class="btn-dark mt-2 mb-5">Export to word
+                <button id="btn-export" onclick="exportHTML();" class="btn-dark mt-2 mb-5" style="padding: 7px 14px;"><i class="fas fa-cloud-download-alt"></i> Download as word
                     doc</button>
+            </div>
+            <div align="right" class="shareBtn" id="shareBtn">
+                <h4>Helpful? Please Share With Your Friends On:</h4>
+                <button class="twtShare" data-js="twitter-share"><i class="fab fa-twitter"></i> Twitter</button>
+                <button class="fbShare" data-js="facebook-share"><i class="fab fa-facebook-f"></i> Facebook</button>
             </div>
 
             <!-- <div id="text" style="display: none;">
@@ -479,6 +528,7 @@
                     "textareaDifferences"
                 );
                 textareaDifferences.innerHTML =differencesAsString;
+                document.getElementById("shareBtn").style.display = "block"
                   
             }
               
@@ -1031,6 +1081,26 @@
                document.body.removeChild(fileDownload);
             }
         </script>
+
+        <script type="text/javascript">
+          var twitterShare = document.querySelector('[data-js="twitter-share"]');
+
+            twitterShare.onclick = function(e) {
+              e.preventDefault();
+              var twitterWindow = window.open('https://twitter.com/intent/tweet?text=Hey! I just compared my files for similarities on&url=http://docufix.ga/fileUpload.html&###', 'twitter-popup', 'height=350,width=600');
+              if(twitterWindow.focus) { twitterWindow.focus(); }
+                return false;
+              }
+
+            var facebookShare = document.querySelector('[data-js="facebook-share"]');
+
+            facebookShare.onclick = function(e) {
+              e.preventDefault();
+              var facebookWindow = window.open('https://www.facebook.com/sharer/sharer.php?u=' + document.URL, 'facebook-popup', 'height=350,width=600');
+              if(facebookWindow.focus) { facebookWindow.focus(); }
+                return false;
+            }
+    </script>
       
     </body>
 </html>

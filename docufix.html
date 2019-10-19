@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:500&display=swap&subset=greek" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:locale:alternate" content="en_US" />
+    <title>Docufix</title>
+</head>
+<style type="text/css">
+  * {
+  box-sizing: border-box;
+}
+
+h3 {
+  margin-top: 15px;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: 'Ubuntu', sans-serif;
+  margin-left: 10px;
+}
+
+button {
+  border: none;
+  border-right: 2px solid black;
+  background-color: white;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: bold;
+  padding-left: 0px;
+  font-size: 20px;
+  padding-right: 15px;
+  
+
+}
+
+.textC{
+  border-right: none;
+  padding-right: 0px;
+  
+  
+}
+
+.firstimg, .secondimg {
+  width: 25px;
+  height: 25px;
+  padding: 3px;
+  margin-bottom: 8px;
+  
+
+}
+
+.comp img {
+
+  width: 25px;
+  height: 25px;
+  padding: 3px;
+  margin-bottom: 8px;
+  
+
+}
+
+.secondimg {
+  margin-left: 10px;
+}
+
+
+input[type="file"] {
+  display: none;
+}
+
+.custom-file-upload {
+  border: none;
+  border-bottom: 2px solid black;
+  display: inline-block;
+  padding: 6px 12px;
+  cursor: pointer;
+  margin-top: 40px;
+  width: 40vw;
+  
+}
+
+.custom-file-upload span {
+  font-weight: bold;
+  float: left;
+  color: grey;
+  font-size: 20px;
+  margin-bottom: -8px;
+  
+}
+
+.upload {
+  border: none;
+  background: #0FC789;
+  border-radius: 10px;
+  margin-left: 40px;
+  font-weight: normal;
+  font-size: 15px;
+  margin-bottom: 50px;
+  
+
+}
+
+.upload img {
+  size: 20px;
+  margin-left: 10px;
+  margin-top: 7px;
+  margin-right: 7px;
+  font-size: bold;
+  
+}
+
+span {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 20px;
+  margin-right: 50px;
+  margin-bottom: 30px;
+  
+}
+
+.compare {
+  margin-top: 20px;
+  padding-right: 18px;
+  padding-left: 8px;
+  border: none;
+  border-radius: 7px;
+  background-color: black;
+  color: white;
+  font-weight: normal;
+  font-size: 15px;
+  margin-bottom: 10px;
+
+}
+
+.compare img {
+  margin: 10px;
+  
+}
+
+.compar1 {
+  margin-top: 20px;
+  padding-right: 18px;
+  padding-left: 8px;
+  border: none;
+  border-radius: 7px;
+  background-color: black;
+  color: white;
+  font-weight: normal;
+  font-size: 15px;
+  margin-bottom: 10px;
+  
+
+}
+
+.compar1 img {
+  margin: 14px;
+  width: 15px;
+  height: 15px;
+  
+
+}
+
+.textArea {
+  margin-top: 50px;
+  
+}
+
+.txtarea {
+  width: 27vw;
+  height: 50vh;
+  border-top: 50px solid black;
+  resize: none;
+  
+
+}
+
+
+.fileContents {
+  width: 500px;
+  height: 300px;
+  box-shadow: 0px 0px 4px 1px grey;
+  position: relative;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  border-top: 0px;
+
+}
+
+@media screen and (max-width: 700px) {
+
+h3 {
+  font-size: 15px;
+  font-weight: bold;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.fileContents {
+  width: 400px;
+  height: 300px;
+  margin-left: 18px; 
+
+}
+
+.firstimg, .secondimg {
+  width: 18px;
+  height: 18px;
+  padding: 2px;
+  margin-bottom: 6px;
+
+}
+
+button {
+  border: none;
+  border-right: 2px solid black;
+  background-color: white;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: bold;
+  padding-left: 0px;
+  font-size: 15px;
+  padding-right: 12px;
+
+}
+
+.custom-file-upload {
+  border: none;
+  border-bottom: 2px solid black;
+  display: inline-block;
+  padding: 4px 8px;
+  cursor: pointer;
+  margin-top: 40px;
+  width: 60vw;
+}
+
+.custom-file-upload span {
+  font-weight: bold;
+  float: left;
+  color: grey;
+  font-size: 14px;
+  margin-bottom: -8px;
+}
+
+.compare img {
+  margin: 6px;
+}
+
+.txtarea {
+  border-top: 40px solid black;
+  margin: 5px;
+
+}
+
+.compar1 img {
+  margin: 12px;
+  width: 12px;
+  height: 12px;
+
+}
+
+span {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 15px;
+  margin-right: 20px;
+  margin-left: 0px;
+  margin-bottom: 30px;
+}
+
+.upload img {
+  display: none;
+}
+
+.upload {
+  display: none;
+}
+
+.compare {
+  margin-top: 40px;
+  padding-right: 18px;
+  padding-left: 8px;
+  border: none;
+  border-radius: 7px;
+  background-color: black;
+  color: white;
+  font-weight: normal;
+  font-size: 15px;
+
+}
+
+
+}
+
+@media screen and (min-width: 470px) and (max-width: 680px) {
+
+.fileContents {
+  width: 445px;
+  height: 300px;
+  margin-left: 10px; 
+
+}
+}
+
+@media screen and (min-width: 380px) and (max-width: 470px) {
+
+.fileContents {
+  width: 350px;
+  height: 300px;
+  margin-left: 10px; 
+
+}
+}
+
+
+@media screen and (max-width: 380px) {
+
+.fileContents {
+  width: 300px;
+  height: 300px;
+  margin-left: 15px; 
+
+}
+
+span {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 15px;
+  margin-right: 9px;
+  margin-left: 0px;
+  margin-bottom: 30px;
+}
+
+.custom-file-upload {
+  border: none;
+  border-bottom: 2px solid black;
+  display: inline-block;
+  padding: 4px 8px;
+  cursor: pointer;
+  margin-top: 40px;
+  width: 55vw;
+}
+
+}
+</style>
+<body>
+  <header>
+      <nav class="navbar navbar-expand-lg navbar-dark pt-2" style="background-color:#121610;">
+            <a class="navbar-brand" href="index.html">
+               <h1 class="m-0 ml-5 text-white" style="font-family: 'Ubuntu';">DOCUFIX</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+               aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="navbarNavDropdown" class="navbar-collapse collapse">
+               <ul class="navbar-nav mr-auto">
+      
+               </ul>
+               <ul class="navbar-nav mr-5 ">
+      
+                  <li class="nav-item mr-5 ">
+                     <a class="nav-link font-weight-bold text-light " href="about_us.html">About Us</a>
+                  </li>
+                  <li class="nav-item mr-5">
+                     <a class="nav-link font-weight-bold text-light " href="teampage.html">Team</a>
+                  </li>
+                  <li class="nav-item mr-5">
+                     <a class="nav-link font-weight-bold text-light" href="https://hng.tech/" target="_blank">Sponsors</a>
+                  </li>
+                  
+               </ul>
+            </div>
+         </nav>
+    </header>
+    <div class="">
+      <div>
+        <h3>Compare Two Documents</h3>
+        <div align="center">
+          <img src="https://res.cloudinary.com/ros4eva/image/upload/v1571283299/Group_jciiib.png" class="firstimg"><button class="fileU">File</button><img src="https://res.cloudinary.com/ros4eva/image/upload/v1571283299/Group1_bdknmm.png" class="secondimg"><button class="textC">Text</button>
+        </div>
+        <div align="center" class="comp">
+          <div align="center" class="fileUpload">
+            <span class="uploadTitle">First Document:</span><label class="custom-file-upload">
+                <input type="file" id="fileForUpload" />
+                <span>Click to upload your document</span>
+            </label>
+            <button class="upload" id="fileForUpload"><img src="https://res.cloudinary.com/ros4eva/image/upload/v1571283299/upload_aitbzl.png">Upload</button>
+          </div>
+
+          <div align="center" class="fileUpload">
+            <span class="uploadTitle">Second Document:</span><label class="custom-file-upload">
+                <input type="file" id="fileForUpload" />
+                <span>Click to upload your document</span>
+            </label>
+            <button class="upload" id="fileForUpload"><img src="https://res.cloudinary.com/ros4eva/image/upload/v1571283299/upload_aitbzl.png">Upload</button>
+          </div>
+
+          <button class="compare"><img src="https://res.cloudinary.com/ros4eva/image/upload/v1571283299/Group3_gcpy1q.png">Compare</button>
+        </div>
+        
+          
+      </div>
+      <div class="textArea" align="center">
+        
+        <div class="d-flex bd-highlight">
+          <div class="p-2 flex-fill bd-highlight">
+            <textarea class="txtarea" placeholder="write your text here"></textarea>
+          </div>
+          <div class="p-2 bd-highlight"><img src="https://res.cloudinary.com/ros4eva/image/upload/v1571283299/Group5_qrxqax.png" style="margin-top: 60px;"></div>
+          <div class="p-2 flex-fill bd-highlight">
+            <textarea class="txtarea" placeholder="write your text here"></textarea>
+          </div>
+        </div>
+        <button class="compar1"><img src="https://res.cloudinary.com/ros4eva/image/upload/v1571283299/Group3_gcpy1q.png">Compare</button>
+      </div>
+    </div>
+    <div class="container">
+        <div class="row">
+          <div class="col">
+           <div class="fileContents" align="center">
+
+          </div>
+          </div>
+          <div class="col">
+              <div class="fileContents" align="center">
+
+              </div>
+          </div>
+        </div>
+      </div>
+    <div>
+      
+      <footer class="page-footer font-small mdb-color pt-4" style="background: #C4C4C4;">
+
+        <div class="container text-center text-md-left">
+
+          <div class="row text-center text-md-left mt-3 pb-3">
+
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+              <h6 class="text-uppercase mb-4 font-weight-bold">Docufix</h6>
+              <p>We help you arrange, sort and put your files and data in other for easy management</p>
+            </div>
+
+            <hr class="w-100 clearfix d-md-none">
+
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+              <p>
+                <a href="about_us.html">How it works</a>
+              </p>
+              <p>
+                <a href="teampage.html">Our Team</a>
+              </p>
+            </div>
+            <!-- Grid column -->
+
+            <hr class="w-100 clearfix d-md-none">
+
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+              <p>
+                <a href="index.html">Home Page</a>
+              </p>
+              <p>
+                <a href="#!">Privacy Policy</a>
+              </p>
+            </div>
+
+          </div>
+
+          <hr>
+
+          <div class="row d-flex align-items-center">
+
+            <div class="col-md-7 col-lg-8">
+
+              <p class="text-center text-md-left">© 2019 Copyright:
+                <a href="https://hng/internship">
+                  <strong> Docufix</strong>
+                </a>
+              </p>
+
+            </div>
+
+            <div class="col-md-5 col-lg-4 ml-lg-0">
+
+              <div class="text-center text-md-right">
+                <ul class="list-unstyled list-inline">
+                  <li class="list-inline-item">
+                    <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                      <i class="fab fa-facebook-f"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                      <i class="fab fa-twitter"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                      <i class="fab fa-google-plus-g"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                      <i class="fab fa-linkedin-in"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+      $(function(){
+          $(".textArea").hide();
+          
+            $("button.textC").on("click", function(){
+               $(".textArea").show();
+               $(".comp").hide();
+            });
+          
+            $("button.fileU").on("click", function(){
+               $(".textArea").hide();
+               $(".comp").show();
+            });
+        });
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/7967e81f77.js" crossorigin="anonymous"></script>
+    
+
+</body>
+</html>

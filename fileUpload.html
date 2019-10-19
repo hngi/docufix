@@ -32,6 +32,7 @@
             rel="stylesheet"
         />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+        <link rel="stylesheet" type="text/css" href="wysiwyg.css">
         <title>Docufix</title>
     </head>
     <style>
@@ -144,6 +145,10 @@
         textarea{
             width: 100% !important;
         }
+        .padding{
+            padding-left: 9em;
+            padding-right: 9em;
+        }
         @media (max-width: 576px){
             label{
                 display: block;
@@ -151,6 +156,13 @@
             img{
                 padding-top: 0 !important;
             }
+            .margin{
+                margin-bottom: 2em;
+            }
+            .padding{
+            padding-left: 1.5em;
+            padding-right: 1.5em;
+        }
         }
         .active a{
     color: grey !important;
@@ -296,26 +308,39 @@
                     </a></span
                 >
             </h2>
-            <div id="file">
+            <div id="file" >
                 <div class="text-center mt-5">
                     <form class="mb-5" id="uploadForm" method="POST" enctype="multipart/form-data">
-                        <div class="form-group">
-                            <label for="upload1" for="firstDocument" class="mr-md-5 font-weight-bold"
-                                >First Document:</label
-                            >
-                            <input
-                            id="upload1" type="file" name="file1" 
-                                style="border: 0;background-color: transparent;" required
-                            />
-                        </div>
-                        <div class="form-group mt-5">
-                            <label for="upload2" for="secondDocument" class="mr-md-5 font-weight-bold"
-                                >Second Document:</label
-                            >
-                            <input
-                            id="upload2" type="file" name="file2" 
-                                style="border: 0;background-color: transparent;" required
-                            />
+                        <div class="row padding">
+                                <div class="custom-file col-md-6 margin">
+                                    <label for="upload1" for="firstDocument" class="text-left mr-md-5 font-weight-bold custom-file-label"
+                                        >First Document:</label
+                                    >
+                                    <input
+                                    id="upload1" 
+                                    type="file" 
+                                    name="file1" 
+                                accept=".doc,.pdf,.txt,.docx,.csv,.xml,.json"
+                                class="custom-file-input"
+                                        style="border: 0;background-color: transparent;" required
+                                    />
+                                    <div class="invalid-feedback">
+                                        No Images Allowed
+                                      </div>
+                                </div>
+                                <div class="custom-file col-md-6">
+                                    <label for="upload2" for="secondDocument" class="text-left mr-md-5 font-weight-bold custom-file-label"
+                                        >Second Document:</label
+                                    >
+                                    <input
+                                    id="upload2" type="file" name="file2" accept=".doc,.pdf,.txt,.docx,.csv,.xml,.json" class="custom-file-input"
+                                        style="border: 0;background-color: transparent;" required
+                                    />
+                                    <div class="invalid-feedback">
+                                        No Images Allowed
+                                      </div>
+                                </div>
+
                         </div>
                         <div class="form-group mt-5">
                                 <button id="uploadBtn" type="submit" value="submit" class="btn btn-dark font-weight-bold ml-md-5 mt-3 "
@@ -333,13 +358,13 @@
                             </div>
                             <div class="card-body">
                                 <textarea
-                                    placeholder="Write your text here" class=" pl-5" id="textareaBefore" cols="" rows="10"
+                                    placeholder="Write your text here" class="" id="textareaBefore" cols="" rows="10"
                                     style="border: 0;border-right:2px solid #444;border-left:2px solid #444;"
                                 ></textarea>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-2 text-center " > <img style="padding-top: 50%;" id="compare-txt" class="align-middle" src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571193103/samples/figma%20career-list/lario/hyu5pvtsmqxymfx5ohwi.png"></div>
+                    <div class="col-md-2 text-center mt-5 mb-5" > <img style="padding-top: 50%;" id="compare-txt" class="align-middle" src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571193103/samples/figma%20career-list/lario/hyu5pvtsmqxymfx5ohwi.png"></div>
                     <div class="col-md-5">
                         <div class="card">
                             <div class="card-header bg-dark text-light">
@@ -347,7 +372,7 @@
                             </div>
                             <div class="card-body">
                                 <textarea
-                                    placeholder="Write your text here" class="input-txt pl-5"
+                                    placeholder="Write your text here" class="input-txt"
                                      id="textareaAfter" cols="" rows="10"
                                     style="border: 0;border-right:2px solid #444;border-left:2px solid #444;"
                                 ></textarea>
@@ -415,7 +440,44 @@
                       </table> -->
                     <label>Result:</label>
                     <br />
-                    <div contenteditable="true" id="textareaDifferences" style="border:none;height:200px; width: 100%; min-height:25%;overflow: scroll; box-shadow: 0px 0px 4px 1px grey;"></div>
+
+                    <br>
+
+                    
+                    <div class="toolbar">
+                        <a href="#" data-command='undo'><i class='fa fa-undo'></i></a>
+                        <a href="#" data-command='redo'><i class='fa fa-repeat'></i></a>
+                        <div class="fore-wrapper"><i class='fa fa-font' style='color:#C96;'></i>
+                          <div class="fore-palette">
+                          </div>
+                        </div>
+                        <div class="back-wrapper"><i class='fa fa-font' style='background:#C96;'></i>
+                          <div class="back-palette">
+                          </div>
+                        </div>
+                        <a href="#" data-command='bold'><i class='fa fa-bold'></i></a>
+                        <a href="#" data-command='italic'><i class='fa fa-italic'></i></a>
+                        <a href="#" data-command='underline'><i class='fa fa-underline'></i></a>
+                        <a href="#" data-command='strikeThrough'><i class='fa fa-strikethrough'></i></a>
+                        <a href="#" data-command='justifyLeft'><i class='fa fa-align-left'></i></a>
+                        <a href="#" data-command='justifyCenter'><i class='fa fa-align-center'></i></a>
+                        <a href="#" data-command='justifyRight'><i class='fa fa-align-right'></i></a>
+                        <a href="#" data-command='justifyFull'><i class='fa fa-align-justify'></i></a>
+                        <a href="#" data-command='indent'><i class='fa fa-indent'></i></a>
+                        <a href="#" data-command='outdent'><i class='fa fa-outdent'></i></a>
+                        <a href="#" data-command='insertUnorderedList'><i class='fa fa-list-ul'></i></a>
+                        <a href="#" data-command='insertOrderedList'><i class='fa fa-list-ol'></i></a>
+                        <a href="#" data-command='h1'>H1</a>
+                        <a href="#" data-command='h2'>H2</a>
+                        <a href="#" data-command='createlink'><i class='fa fa-link'></i></a>
+                        <a href="#" data-command='unlink'><i class='fa fa-unlink'></i></a>
+                        <a href="#" data-command='insertimage'><i class='fa fa-image'></i></a>
+                        <a href="#" data-command='p'>P</a>
+                        <a href="#" data-command='subscript'><i class='fa fa-subscript'></i></a>
+                        <a href="#" data-command='superscript'><i class='fa fa-superscript'></i></a>
+                      </div>
+                    
+                    <div contenteditable="true" id="textareaDifferences" style="border:none;min-height:100%; width: 100%;overflow: scroll; box-shadow: 0px 0px 4px 1px grey;"></div>
                 </div>
             
                 <button id="btn-export" onclick="exportHTML();" class="btn-dark mt-2 mb-5" style="padding: 7px 14px;"><i class="fas fa-cloud-download-alt"></i> Download as word
@@ -493,7 +555,7 @@
                 <a href="about_us.html">How it works</a>
               </p>
               <p>
-                <a href="teampage.html">Our Team</a>
+                <a href="teampage.html">About Us</a>
               </p>
             </div>
             <!-- Grid column -->
@@ -506,7 +568,7 @@
                 <a href="index.html">Home Page</a>
               </p>
               <p>
-                <a href="#!">Privacy Policy</a>
+                <a href="privacy.html">Privacy Policy</a>
               </p>
             </div>
 
@@ -582,6 +644,7 @@
             }
         </script>
         <script src="fileUpload.js"></script>
+        <script src = "wysiwyg.js"></script>
         <script type="text/javascript">
   
             // events
@@ -1178,13 +1241,30 @@
               }
 
             var facebookShare = document.querySelector('[data-js="facebook-share"]');
-
+              
             facebookShare.onclick = function(e) {
               e.preventDefault();
               var facebookWindow = window.open('https://www.facebook.com/sharer/sharer.php?u=http://docufix.ga', 'facebook-popup', 'height=350,width=600');
               if(facebookWindow.focus) { facebookWindow.focus(); }
                 return false;
             }
+
+            document.getElementById("upload1").addEventListener("change", function(e){
+                var upload1 = document.getElementById("upload1");
+                if(upload1.value.includes(".jpg" || ".png")){
+                    upload1.classList.add("is-invalid");
+                }else {
+                    upload1.classList.remove("is-invalid");
+                }
+            });
+            document.getElementById("upload2").addEventListener("change", function(e){
+                var upload2 = document.getElementById("upload2");
+                if(upload2.value.includes(".jpg" || ".png")){
+                    upload2.classList.add("is-invalid");
+                }else {
+                    upload2.classList.remove("is-invalid");
+                }
+            });
     </script>
       
     </body>

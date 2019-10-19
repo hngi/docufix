@@ -284,7 +284,10 @@
                                 >First Document:</label
                             >
                             <input
-                            id="upload1" type="file" name="file1" 
+                            id="upload1" 
+                            type="file" 
+                            name="file1" 
+                        accept=".doc,.pdf,.txt,.docx,.csv,.xml,.json"
                                 style="border: 0;background-color: transparent;" required
                             />
                         </div>
@@ -293,7 +296,7 @@
                                 >Second Document:</label
                             >
                             <input
-                            id="upload2" type="file" name="file2" 
+                            id="upload2" type="file" name="file2" accept=".doc,.pdf,.txt,.docx,.csv,.xml,.json"
                                 style="border: 0;background-color: transparent;" required
                             />
                         </div>
@@ -319,7 +322,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-2 text-center " > <img style="padding-top: 50%;" id="compare-txt" class="align-middle" src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571193103/samples/figma%20career-list/lario/hyu5pvtsmqxymfx5ohwi.png"></div>
+                    <div class="col-md-2 text-center mt-5 mb-5" > <img style="padding-top: 50%;" id="compare-txt" class="align-middle" src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571193103/samples/figma%20career-list/lario/hyu5pvtsmqxymfx5ohwi.png"></div>
                     <div class="col-md-5">
                         <div class="card">
                             <div class="card-header bg-dark text-light">
@@ -395,7 +398,7 @@
                       </table> -->
                     <label>Result:</label>
                     <br />
-                    <div contenteditable="true" id="textareaDifferences" style="border:none;height:200px; width: 100%; min-height:25%;overflow: scroll; box-shadow: 0px 0px 4px 1px grey;"></div>
+                    <div contenteditable="true" id="textareaDifferences" style="border:none;min-height:100%; width: 100%;overflow: scroll; box-shadow: 0px 0px 4px 1px grey;"></div>
                 </div>
             
                 <button id="btn-export" onclick="exportHTML();" class="btn-dark mt-2 mb-5" style="padding: 7px 14px;"><i class="fas fa-cloud-download-alt"></i> Download as word

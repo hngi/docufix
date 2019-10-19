@@ -9,5 +9,5 @@ $('#cmd').click(function () {
         'width': 190, 
             'elementHandlers': specialElementHandlers 
     }); 
-    doc.save('sample-page.pdf'); 
+    doc.save('docufix' + new Date() + '.pdf'); 
 });

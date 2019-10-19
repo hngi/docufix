@@ -14,13 +14,8 @@
             href="https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap"
             rel="stylesheet"
         />
-        <link href = 'https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js' >
-        <link href='https://fonts.googleapis.com/css?family=Dosis|Candal' rel='stylesheet' type='text/css'>
-        <link href = 'https://netdna.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.css' rel = 'stylesheet' type = 'text/css'>
-</head>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
         <link rel="stylesheet" type="text/css" href="wysiwyg.css">
-       
         <title>Docufix</title>
     </head>
     <style>
@@ -290,7 +285,10 @@
                                 >First Document:</label
                             >
                             <input
-                            id="upload1" type="file" name="file1" 
+                            id="upload1" 
+                            type="file" 
+                            name="file1" 
+                        accept=".doc,.pdf,.txt,.docx,.csv,.xml,.json"
                                 style="border: 0;background-color: transparent;" required
                             />
                         </div>
@@ -299,7 +297,7 @@
                                 >Second Document:</label
                             >
                             <input
-                            id="upload2" type="file" name="file2" 
+                            id="upload2" type="file" name="file2" accept=".doc,.pdf,.txt,.docx,.csv,.xml,.json"
                                 style="border: 0;background-color: transparent;" required
                             />
                         </div>
@@ -325,7 +323,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-2 text-center " > <img style="padding-top: 50%;" id="compare-txt" class="align-middle" src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571193103/samples/figma%20career-list/lario/hyu5pvtsmqxymfx5ohwi.png"></div>
+                    <div class="col-md-2 text-center mt-5 mb-5" > <img style="padding-top: 50%;" id="compare-txt" class="align-middle" src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571193103/samples/figma%20career-list/lario/hyu5pvtsmqxymfx5ohwi.png"></div>
                     <div class="col-md-5">
                         <div class="card">
                             <div class="card-header bg-dark text-light">
@@ -402,8 +400,9 @@
                     <label>Result:</label>
                     <br />
 
-                    <br/>
+                    <br>
 
+                    
                     <div class="toolbar">
                         <a href="#" data-command='undo'><i class='fa fa-undo'></i></a>
                         <a href="#" data-command='redo'><i class='fa fa-repeat'></i></a>
@@ -436,7 +435,8 @@
                         <a href="#" data-command='subscript'><i class='fa fa-subscript'></i></a>
                         <a href="#" data-command='superscript'><i class='fa fa-superscript'></i></a>
                       </div>
-                    <div contenteditable="true" id="textareaDifferences" style="border:none;height:200px; width: 100%; min-height:25%;overflow: scroll; box-shadow: 0px 0px 4px 1px grey;"></div>
+                    
+                    <div contenteditable="true" id="textareaDifferences" style="border:none;min-height:100%; width: 100%;overflow: scroll; box-shadow: 0px 0px 4px 1px grey;"></div>
                 </div>
             
                 <button id="btn-export" onclick="exportHTML();" class="btn-dark mt-2 mb-5" style="padding: 7px 14px;"><i class="fas fa-cloud-download-alt"></i> Download as word
@@ -581,8 +581,6 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
        <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
        <script src="https://kit.fontawesome.com/7967e81f77.js" crossorigin="anonymous"></script>
-       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-       <script src = "wysiwyg.js"></script>
        <script>
             document
                 .getElementById("fileBtn")
@@ -605,6 +603,7 @@
             }
         </script>
         <script src="fileUpload.js"></script>
+        <script src = "wysiwyg.js"></script>
         <script type="text/javascript">
   
             // events

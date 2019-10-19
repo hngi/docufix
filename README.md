@@ -1,3 +1,0 @@
-# docufix
-HNG i6
-

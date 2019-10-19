@@ -128,6 +128,10 @@
         textarea{
             width: 100% !important;
         }
+        .padding{
+            padding-left: 9em;
+            padding-right: 9em;
+        }
         @media (max-width: 576px){
             label{
                 display: block;
@@ -135,6 +139,13 @@
             img{
                 padding-top: 0 !important;
             }
+            .margin{
+                margin-bottom: 2em;
+            }
+            .padding{
+            padding-left: 1.5em;
+            padding-right: 1.5em;
+        }
         }
         .active a{
     color: grey !important;
@@ -277,29 +288,39 @@
                     </a></span
                 >
             </h2>
-            <div id="file">
+            <div id="file" >
                 <div class="text-center mt-5">
                     <form class="mb-5" id="uploadForm" method="POST" enctype="multipart/form-data">
-                        <div class="form-group">
-                            <label for="upload1" for="firstDocument" class="mr-md-5 font-weight-bold"
-                                >First Document:</label
-                            >
-                            <input
-                            id="upload1" 
-                            type="file" 
-                            name="file1" 
-                        accept=".doc,.pdf,.txt,.docx,.csv,.xml,.json"
-                                style="border: 0;background-color: transparent;" required
-                            />
-                        </div>
-                        <div class="form-group mt-5">
-                            <label for="upload2" for="secondDocument" class="mr-md-5 font-weight-bold"
-                                >Second Document:</label
-                            >
-                            <input
-                            id="upload2" type="file" name="file2" accept=".doc,.pdf,.txt,.docx,.csv,.xml,.json"
-                                style="border: 0;background-color: transparent;" required
-                            />
+                        <div class="row padding">
+                                <div class="custom-file col-md-6 margin">
+                                    <label for="upload1" for="firstDocument" class="text-left mr-md-5 font-weight-bold custom-file-label"
+                                        >First Document:</label
+                                    >
+                                    <input
+                                    id="upload1" 
+                                    type="file" 
+                                    name="file1" 
+                                accept=".doc,.pdf,.txt,.docx,.csv,.xml,.json"
+                                class="custom-file-input"
+                                        style="border: 0;background-color: transparent;" required
+                                    />
+                                    <div class="invalid-feedback">
+                                        No Images Allowed
+                                      </div>
+                                </div>
+                                <div class="custom-file col-md-6">
+                                    <label for="upload2" for="secondDocument" class="text-left mr-md-5 font-weight-bold custom-file-label"
+                                        >Second Document:</label
+                                    >
+                                    <input
+                                    id="upload2" type="file" name="file2" accept=".doc,.pdf,.txt,.docx,.csv,.xml,.json" class="custom-file-input"
+                                        style="border: 0;background-color: transparent;" required
+                                    />
+                                    <div class="invalid-feedback">
+                                        No Images Allowed
+                                      </div>
+                                </div>
+
                         </div>
                         <div class="form-group mt-5">
                                 <button id="uploadBtn" type="submit" value="submit" class="btn btn-dark font-weight-bold ml-md-5 mt-3 "
@@ -317,7 +338,7 @@
                             </div>
                             <div class="card-body">
                                 <textarea
-                                    placeholder="Write your text here" class=" pl-5" id="textareaBefore" cols="" rows="10"
+                                    placeholder="Write your text here" class="" id="textareaBefore" cols="" rows="10"
                                     style="border: 0;border-right:2px solid #444;border-left:2px solid #444;"
                                 ></textarea>
                             </div>
@@ -331,7 +352,7 @@
                             </div>
                             <div class="card-body">
                                 <textarea
-                                    placeholder="Write your text here" class="input-txt pl-5"
+                                    placeholder="Write your text here" class="input-txt"
                                      id="textareaAfter" cols="" rows="10"
                                     style="border: 0;border-right:2px solid #444;border-left:2px solid #444;"
                                 ></textarea>
@@ -1200,13 +1221,30 @@
               }
 
             var facebookShare = document.querySelector('[data-js="facebook-share"]');
-
+              
             facebookShare.onclick = function(e) {
               e.preventDefault();
               var facebookWindow = window.open('https://www.facebook.com/sharer/sharer.php?u=http://docufix.ga', 'facebook-popup', 'height=350,width=600');
               if(facebookWindow.focus) { facebookWindow.focus(); }
                 return false;
             }
+
+            document.getElementById("upload1").addEventListener("change", function(e){
+                var upload1 = document.getElementById("upload1");
+                if(upload1.value.includes(".jpg" || ".png")){
+                    upload1.classList.add("is-invalid");
+                }else {
+                    upload1.classList.remove("is-invalid");
+                }
+            });
+            document.getElementById("upload2").addEventListener("change", function(e){
+                var upload2 = document.getElementById("upload2");
+                if(upload2.value.includes(".jpg" || ".png")){
+                    upload2.classList.add("is-invalid");
+                }else {
+                    upload2.classList.remove("is-invalid");
+                }
+            });
     </script>
       
     </body>

@@ -128,6 +128,10 @@
         textarea{
             width: 100% !important;
         }
+        .padding{
+            padding-left: 9em;
+            padding-right: 9em;
+        }
         @media (max-width: 576px){
             label{
                 display: block;
@@ -138,6 +142,10 @@
             .margin{
                 margin-bottom: 2em;
             }
+            .padding{
+            padding-left: 1.5em;
+            padding-right: 1.5em;
+        }
         }
         .active a{
     color: grey !important;
@@ -283,9 +291,9 @@
             <div id="file" >
                 <div class="text-center mt-5">
                     <form class="mb-5" id="uploadForm" method="POST" enctype="multipart/form-data">
-                        <div class="row p-3">
+                        <div class="row padding">
                                 <div class="custom-file col-md-6 margin">
-                                    <label for="upload1" for="firstDocument" class="mr-md-5 font-weight-bold custom-file-label"
+                                    <label for="upload1" for="firstDocument" class="text-left mr-md-5 font-weight-bold custom-file-label"
                                         >First Document:</label
                                     >
                                     <input
@@ -301,7 +309,7 @@
                                       </div>
                                 </div>
                                 <div class="custom-file col-md-6">
-                                    <label for="upload2" for="secondDocument" class="mr-md-5 font-weight-bold custom-file-label"
+                                    <label for="upload2" for="secondDocument" class="text-left mr-md-5 font-weight-bold custom-file-label"
                                         >Second Document:</label
                                     >
                                     <input

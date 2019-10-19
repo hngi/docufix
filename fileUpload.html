@@ -15,7 +15,6 @@
             rel="stylesheet"
         />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
-        <link rel="stylesheet" type="text/css" href="wysiwyg.css">
         <title>Docufix</title>
     </head>
     <style>
@@ -114,6 +113,7 @@
     button{
         width: 70%;
         font-size: 15px;
+       
     }
     }
         .active1 {
@@ -189,6 +189,9 @@
 ::-webkit-scrollbar-thumb:hover {
   background: rgb(130, 18, 140);
   width: 15px;
+}
+#upload1{
+    padding-left:18px;
 }
 
     </style>
@@ -285,10 +288,7 @@
                                 >First Document:</label
                             >
                             <input
-                            id="upload1" 
-                            type="file" 
-                            name="file1" 
-                        accept=".doc,.pdf,.txt,.docx,.csv,.xml,.json"
+                            id="upload1" type="file" name="file1" 
                                 style="border: 0;background-color: transparent;" required
                             />
                         </div>
@@ -297,7 +297,7 @@
                                 >Second Document:</label
                             >
                             <input
-                            id="upload2" type="file" name="file2" accept=".doc,.pdf,.txt,.docx,.csv,.xml,.json"
+                            id="upload2" type="file" name="file2" 
                                 style="border: 0;background-color: transparent;" required
                             />
                         </div>
@@ -323,7 +323,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-2 text-center mt-5 mb-5" > <img style="padding-top: 50%;" id="compare-txt" class="align-middle" src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571193103/samples/figma%20career-list/lario/hyu5pvtsmqxymfx5ohwi.png"></div>
+                    <div class="col-md-2 text-center " > <img style="padding-top: 50%;" id="compare-txt" class="align-middle" src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571193103/samples/figma%20career-list/lario/hyu5pvtsmqxymfx5ohwi.png"></div>
                     <div class="col-md-5">
                         <div class="card">
                             <div class="card-header bg-dark text-light">
@@ -399,44 +399,7 @@
                       </table> -->
                     <label>Result:</label>
                     <br />
-
-                    <br>
-
-                    
-                    <div class="toolbar">
-                        <a href="#" data-command='undo'><i class='fa fa-undo'></i></a>
-                        <a href="#" data-command='redo'><i class='fa fa-repeat'></i></a>
-                        <div class="fore-wrapper"><i class='fa fa-font' style='color:#C96;'></i>
-                          <div class="fore-palette">
-                          </div>
-                        </div>
-                        <div class="back-wrapper"><i class='fa fa-font' style='background:#C96;'></i>
-                          <div class="back-palette">
-                          </div>
-                        </div>
-                        <a href="#" data-command='bold'><i class='fa fa-bold'></i></a>
-                        <a href="#" data-command='italic'><i class='fa fa-italic'></i></a>
-                        <a href="#" data-command='underline'><i class='fa fa-underline'></i></a>
-                        <a href="#" data-command='strikeThrough'><i class='fa fa-strikethrough'></i></a>
-                        <a href="#" data-command='justifyLeft'><i class='fa fa-align-left'></i></a>
-                        <a href="#" data-command='justifyCenter'><i class='fa fa-align-center'></i></a>
-                        <a href="#" data-command='justifyRight'><i class='fa fa-align-right'></i></a>
-                        <a href="#" data-command='justifyFull'><i class='fa fa-align-justify'></i></a>
-                        <a href="#" data-command='indent'><i class='fa fa-indent'></i></a>
-                        <a href="#" data-command='outdent'><i class='fa fa-outdent'></i></a>
-                        <a href="#" data-command='insertUnorderedList'><i class='fa fa-list-ul'></i></a>
-                        <a href="#" data-command='insertOrderedList'><i class='fa fa-list-ol'></i></a>
-                        <a href="#" data-command='h1'>H1</a>
-                        <a href="#" data-command='h2'>H2</a>
-                        <a href="#" data-command='createlink'><i class='fa fa-link'></i></a>
-                        <a href="#" data-command='unlink'><i class='fa fa-unlink'></i></a>
-                        <a href="#" data-command='insertimage'><i class='fa fa-image'></i></a>
-                        <a href="#" data-command='p'>P</a>
-                        <a href="#" data-command='subscript'><i class='fa fa-subscript'></i></a>
-                        <a href="#" data-command='superscript'><i class='fa fa-superscript'></i></a>
-                      </div>
-                    
-                    <div contenteditable="true" id="textareaDifferences" style="border:none;min-height:100%; width: 100%;overflow: scroll; box-shadow: 0px 0px 4px 1px grey;"></div>
+                    <div contenteditable="true" id="textareaDifferences" style="border:none;height:200px; width: 100%; min-height:25%;overflow: scroll; box-shadow: 0px 0px 4px 1px grey;"></div>
                 </div>
             
                 <button id="btn-export" onclick="exportHTML();" class="btn-dark mt-2 mb-5" style="padding: 7px 14px;"><i class="fas fa-cloud-download-alt"></i> Download as word
@@ -514,7 +477,7 @@
                 <a href="about_us.html">How it works</a>
               </p>
               <p>
-                <a href="teampage.html">About Us</a>
+                <a href="teampage.html">Our Team</a>
               </p>
             </div>
             <!-- Grid column -->
@@ -527,7 +490,7 @@
                 <a href="index.html">Home Page</a>
               </p>
               <p>
-                <a href="privacy.html">Privacy Policy</a>
+                <a href="#!">Privacy Policy</a>
               </p>
             </div>
 
@@ -603,7 +566,6 @@
             }
         </script>
         <script src="fileUpload.js"></script>
-        <script src = "wysiwyg.js"></script>
         <script type="text/javascript">
   
             // events

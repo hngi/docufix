@@ -45,10 +45,41 @@
         .features {
             line-height: 2;
         }
+            .labels img{
+                max-width: 20px;
+                max-height: 20px;
+            }
+    #arrow{
+        align-self: center;
+        
+    }
+    #text-2{
+        width: 44%;
+    }
 
-        .features img {
-            margin-bottom: 10px;
-            margin-top: 10px;
+    .input-txt{
+        margin-top: -15px;
+        width: 100%;
+        height: 400px;
+        padding: 15px 30px;
+        /* color: white;; */
+    }
+
+    #button{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        margin-top: 30px;
+    }
+
+        button{
+            border-radius: 20px;
+            background-color: #000000;
+            color: #ffffff;
+            padding: 15px 30px;
+            border: none;
+            outline: none;
+            cursor: pointer;
         }
         .active a{
    color: grey !important;
@@ -103,30 +134,105 @@
                 <div class="col-md-7">
                     <h2 style="font-weight:bold;">
 
+	<div class="container-fluid wrapper">	
+		<div class="fileUpload w-100">
 
-                        Document Comparison Solution
-                    </h2>
-                    <p>
-                        Compare document content and find out the differences
-                        contained in each of the files without stress
-                    </p>
-                    <a
+<!---- Text and File compare starts here---->
+
+		<h3 class="my-4">Compare Two Documents</h3>
+		
+        <div class="row justify-content-center upload">
+          <div class="uploadFile pr-2"><img src="https://res.cloudinary.com/kai123/image/upload/v1571214840/HNG/Docfix/text_uu5kgu.png"><b>File</b></div>
+          <div class="uploadText pl-2"><img src="https://res.cloudinary.com/kai123/image/upload/v1571214841/HNG/Docfix/Group_1_wiuwlq.png"><b>Text</b></div>
+       </div>
+
+
+<!---- Text and File compare ends here---->
+
+<!---- Uploading of Documents starts here---->
+
+
+        <div class="row document justify-content-center my-5">
+          <div class="first d-flex justify-content-between mb-5">
+           <div><b>First Document:</b></div>
+          <div class="firstInput"><input type="file" id="fileInput" name="first-doc"accept=".doc, .txt, .pdf, .docx">
+          <span class="file-line">No file chosen</span>
+          </div>
+          <div class="firstImage">
+            <label class="btn custom-input-btn" for="fileInput"><input type="file" name="photo" style="display:none" accept="*" multiple> <i class="fa fa-cloud-upload"></i> Upload</label></div>
+
+          </div>
+
+          <div class="second d-flex justify-content-between"><b>Second Document:</b>
+           <div class="secondInput"><input type="file" id="fileInput2" name="first-doc"accept=".doc, .txt, .pdf, .docx">
+            <span class="file-line file-line-s">No file chosen</span>
+           </div>       
+           <div class="secondImage">
+            <label class="btn custom-input-btn"  for="fileInput2"><input type="file" name="photo" style="display:none" accept="*" multiple> <i class="fa fa-cloud-upload" ></i> Upload</label></div>
 
                         href="fileUpload.html"
 
-                        class="btn  p-2  btn-outline-dark"
-                        style="font-weight: bold;"
-                        >Get Started</a
-                    >
+    <!---- Uploading of Documents ends here---->
+
+      </div>
+
+
+<!---- Check for compare starts here---->
+     </div>
+	</div>	
+
+
+	<div class='body'>
+        <h3 class="my-4">Compare Two Documents</h3>
+        
+        <div class="row justify-content-center upload">
+          <div class="uploadFile pr-2"><img src="https://res.cloudinary.com/kai123/image/upload/v1571214840/HNG/Docfix/text_uu5kgu.png"><b>File</b></div>
+          <div class="uploadText pl-2"><img src="https://res.cloudinary.com/kai123/image/upload/v1571214841/HNG/Docfix/Group_1_wiuwlq.png"><b>Text</b></div>
+       </div>
+    
+    <section id="text-compare">
+        <div id="text-1">
+            <label for="text" class="two-text">
+                <div class="labels" >
+                    <img class="white-txt" src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571194266/samples/figma%20career-list/lario/ct8pi1qsjgonxsa7zdyn.png">
+                    <span id="white-txt" class="compare">Text</span>
                 </div>
-                <div class="col-md-5">
-                    <img
-                        src="https://res.cloudinary.com/mercyinyang/image/upload/v1571224753/Docufix/images/undraw_collecting_fjjl_1_hokax9.svg"
-                        alt=""
-                        style="width: 100%; height:400px;"
-                    />
+            </label> <br>
+            <textarea placeholder="Write your text here" id="content-show" class="input-txt"></textarea>
+        </div>
+        <div id="arrow">
+            <img id="compare-txt" src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571193103/samples/figma%20career-list/lario/hyu5pvtsmqxymfx5ohwi.png">
+        </div>
+
+        <div class="add-text add-text2" id="text-2">
+            <label for="text" class="two-text">
+                <div class="labels">
+                    <img class="white-txt" src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571194266/samples/figma%20career-list/lario/ct8pi1qsjgonxsa7zdyn.png">
+                    <span id="white-txt" class="compare">Text</span>
                 </div>
-            </div>
+            </label> <br>
+            <textarea placeholder="Write your text here"id="content-target" class="input-txt"></textarea>
+        </div>
+    </section>
+    <div id="button">
+        <button type="submit">
+            <img class="compare-img" src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571193103/samples/figma%20career-list/lario/butfaguuckar9dl0i1ug.png">
+            <span class="compare-btn-txt">COMPARE</span>
+        </button>
+    </div>
+    
+
+    </div>
+
+
+    <!-- analysis starts here -->
+    <div class="analysis">
+        <h2>Document Analysis</h2>
+        <div>
+            <p class="word">Words in document: <span id='num'> 0</span> </p>
+            <p class="text-right" style="margin-bottom:0px;padding-right:70px;">Percent Similarity</p>
+            <p  class="text-right"style="margin-bottom:0px;padding-right:70px;color:#FF0505;"> <span id='percent' >100</span>%</p>
+            <p  class="text-right"style="margin-bottom:0px;padding-right:70px;"> <span id="wordsCopied">0</span> words copied</p>
         </div>
 
         <div style="background-color:  #fff">
@@ -179,19 +285,43 @@
                 </div>
             </div>
         </div>
+        
+    </div>			
+<!---- Footer starts here---->
+<div class="container-fluid">
+       <div class="row mt-4" id="footer">
+         <div class="col">
+            <p>DOCUFIX </p>
+         </div>
+         <div class="col text-center">
+            <p>&copy; 2019. Docufix.io and HNG6 affiliates</p>
+         </div>
+         <div class="col text-right icon">
+            <a href="facebook.com/docufix" class="fa fa-facebook"></a>
+            <a href="twitter.com/docufix" class="fa fa-twitter"></a>
+            <a href="twitter.com/docufix" class="fa fa-instagram"></a>
+         </div>
+       </div>
+    </div>
 
-        <footer class="page-footer font-small mdb-color pt-4" style="background: #C4C4C4;">
 
-        <div class="container text-center text-md-left">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
-          <div class="row text-center text-md-left mt-3 pb-3">
+	<script>
 
-            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-              <h6 class="text-uppercase mb-4 font-weight-bold">Docufix</h6>
-              <p>We help you arrange, sort and put your files and data in other for easy management</p>
-            </div>
+        let cfile = document.getElementById("fileInput");
+        cfile.addEventListener('change', function(){
+           let fileline = document.querySelector('.file-line');
+            fileline.innerHTML = cfile.value;
+        });
 
-            <hr class="w-100 clearfix d-md-none">
+        let cfile2 = document.getElementById("fileInput2");
+        cfile2.addEventListener('change', function(){
+           let fileline = document.querySelector('.file-line-s');
+            fileline.innerHTML = cfile2.value;
+        });
 
             <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
               <p>
@@ -215,23 +345,56 @@
               </p>
             </div>
 
-          </div>
+function getFile(event) {
+	const input = event.target
+  if ('files' in input && input.files.length > 0) {
+	  placeFileContent(
+      document.getElementById('content-target'),
+      input.files[0])
+  }
+}
 
-          <hr>
+function placeFileContent(target, file) {
+	readFileContent(file).then(content => {
+  	target.value = content
+  }).catch(error => console.log(error))
+}
 
-          <div class="row d-flex align-items-center">
+function readFileContent(file) {
+	const reader = new FileReader()
+  return new Promise((resolve, reject) => {
+    reader.onload = event => resolve(event.target.result)
+    reader.onerror = error => reject(error)
+    reader.readAsText(file)
+  })
+}
 
-            <div class="col-md-7 col-lg-8">
+document.getElementById('fileInput2')
+  .addEventListener('change', getF)
 
-              <p class="text-center text-md-left">© 2019 Copyright:
-                <a href="https://hng/internship">
-                  <strong> Docufix</strong>
-                </a>
-              </p>
+function getF(event) {
+	const input = event.target
+  if ('files' in input && input.files.length > 0) {
+	  placeFileContent(
+      document.getElementById('content-show'),
+      input.files[0])
+  }
+}
 
-            </div>
+function placeFileContent(target, file) {
+	readFileContent(file).then(content => {
+  	target.value = content
+  }).catch(error => console.log(error))
+}
 
-            <div class="col-md-5 col-lg-4 ml-lg-0">
+function readFileContent(file) {
+	const reader = new FileReader()
+  return new Promise((resolve, reject) => {
+    reader.onload = event => resolve(event.target.result)
+    reader.onerror = error => reject(error)
+    reader.readAsText(file)
+  })
+}
 
               <div class="text-center text-md-right">
                 <ul class="list-unstyled list-inline">

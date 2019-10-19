@@ -247,10 +247,11 @@
         <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
         
         <h2 style="font-weight: bolder;">NOTE:</h2>
-        <p>Docufix only supports file formats like .txt .pdf .doc and .docx for <strong>uploading</strong></p>
+        <p>Docufix only supports file formats like .csv, .json, .xml .txt .pdf and .docx for <strong>uploading</strong></p>
         <p>If you must compare documents from any other format, aside the above formats mentioned, <br> please make use of the text option, then <strong> copy</strong> and <strong> paste</strong> into the text-box.</strong></p>
         <p>Your compared data gives you result in percentage %</p>
-        <p>You can choose to download compared documents as .doc file if you wish</p>
+        <p>You can choose to download compared documents as .doc or pdf file formats</p>
+        <p>This App has an inbuilt words formatting editor</p>
         <p>Compared texts are <strong>editable,</strong> this means you can edit your work for correction after comparing.</p>
 
     </div>
@@ -482,12 +483,15 @@
                         <a href="#" data-command='subscript'><i class='fa fa-subscript'></i></a>
                         <a href="#" data-command='superscript'><i class='fa fa-superscript'></i></a>
                       </div>
-                    
+                      <div id="page"></div> 
                     <div contenteditable="true" id="textareaDifferences" style="border:none;min-height:100%; width: 100%;overflow: scroll; box-shadow: 0px 0px 4px 1px grey;"></div>
                 </div>
             
                 <button id="btn-export" onclick="exportHTML();" class="btn-dark mt-2 mb-5" style="padding: 7px 14px;"><i class="fas fa-cloud-download-alt"></i> Download as word
                     doc</button>
+                    <button id="cmd" class="btn-dark mt-2 mb-5" style="padding: 7px 14px;"><i class="fas fa-cloud-download-alt"></i>Download as PDF</button>
+            
+
             </div>
             <div align="right" class="shareBtn" id="shareBtn">
                 <h4>Helpful? Please Share With Your Friends On:</h4>
@@ -651,6 +655,9 @@
         </script>
         <script src="fileUpload.js"></script>
         <script src = "wysiwyg.js"></script>
+        <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.debug.js"></script>
+        <script src = "jsPDF.js"></script>
         <script type="text/javascript">
   
             // events

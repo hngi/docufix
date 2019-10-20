@@ -1,183 +1,261 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=Pacifico|Ubuntu&display=swap" rel="stylesheet">
-    <title>Docufix | Compare Text</title>
-
-    <style>
-  *{
-    margin:0px;
-    padding: 0px;
-    box-sizing: border-box;
-}
-
-body{
-    padding: 60px 60px 90px 30px;
-    background-color: #EEF3F3;
-    font-family: 'Ubuntu', sans-serif;
-}
-
-#file-text{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-    #file{
-        display: flex;;
-        border-right: 2px solid black;
-        padding: 20px 30px 20px 0px;
-        align-items: center;
-    }
-    #text{
-        display: flex;
-        padding: 20px 0 20px 30px;
-        align-items: center;;
-    }
-
-#text-compare{
-    display: flex;
-    padding: 30px 60px;
-    justify-content: space-between;
-}
-    #text-1{
-        width: 44%;
-    }
-        .labels{
-            display: flex;
-            padding: 10px 0px 10px 30px;
-            width: 100%;
-            background-color: #000000;
-            color: white;
-            margin-bottom: -7px
-            
-        }
-            .labels img{
-                margin-right: 10px;
-            }
-    #arrow{
-        align-self: center;
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" /> 
+        <meta name="robots" content="index, follow">
+        <meta name="googlebot" content="index, follow" />
+        <meta name="google" content="translate" />
+        <link rel="icon" type="image/png" href="https://res.cloudinary.com/ros4eva/image/upload/v1571538580/favicon_elbl53.png"/>
         
-    }
-    #text-2{
-        width: 44%;
-    }
+        <link rel="stylesheet" type="text/css" href="https://dl.dropbox.com/s/v5nuo2k9pvuoogf/rose.css">
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+            crossorigin="anonymous"
+        />
+        <link
+            href="https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap"
+            rel="stylesheet"
+        />
+        <title>Docufix</title>
+        <meta name="description" content="Docufix HNG Intership Project" />
+    </head>
 
-    .input-txt{
-        margin-top: -15px;
-        width: 100%;
-        height: 400px;
-        padding: 15px 30px;
-        color: white;;
-    }
-
-    #button{
-        display: flex;
-        justify-content: center;
-        text-align: center;
-        margin-top: 30px;
-    }
-
-        button{
-            border-radius: 20px;
-            background-color: #000000;
-            color: #ffffff;
-            padding: 15px 30px;
-            border: none;
-            outline: none;
-            cursor: pointer;
+    <style type="text/css">
+        .features {
+            line-height: 2;
         }
-        
-            button img{
-            width: 16.5px;
-            height: 16.5px;
-            vertical-align: middle;
-            margin-right: 10px;
-            }
 
-
-
-@media screen and (max-width: 600px){
-
-    body{
-        padding: 60px 30px;
-        text-align: center;
-    }
-
-    #main-text{
-        margin-bottom: 25px;
-        font-size: 24px;
-    }
-    #file-text{
-        font-size: 18px;
-    }
-
-    #text-compare{
-        flex-direction: column;
-        padding: 30px 10px 10px 10px ;
-    }
-    #text-2, #text-1{
-        width: 100%;
-    }
-
-    button{
-        width: 70%;
-        font-size: 15px;
-    }
-
-}
-
+        .features img {
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
+        .active a{
+   color: grey !important;
+ }
+ .navbar{
+   position:fixed;
+   width:100%;
+   top:0;
+   z-index:1;
+ }
+ 
     </style>
-</head>
-<body>
-    <h1 id="main-text">Compare two documents</h1>
-
-    <div id="file-text">
-        <div id="file">
-            <img class="top-icons" src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571193844/samples/figma%20career-list/lario/xisa8mltboqmepbzjqks.png">
-            <span class="compare">File</span>
-        </div>
-
-        <div id="text">
-            <img class="top-icons" src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571193193/samples/figma%20career-list/lario/slpij76xxh4f7bpixbr5.png">
-            <span class="compare">Text</span>
-        </div>
-        
-    </div>
-    
-    <section id="text-compare">
-        <div id="text-1">
-            <label for="text" class="two-text">
-                <div class="labels" >
-                    <img class="white-txt" src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571194266/samples/figma%20career-list/lario/ct8pi1qsjgonxsa7zdyn.png">
-                    <span id="white-txt" class="compare">Text</span>
+    <body style="background-color:  #fff; font-family: Ubuntu;">
+        <header>
+          <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: black">
+            <div class="container">
+                <a class="navbar-brand" href="index.html" style="font-weight: bold;font-size: 1.5em;"
+                    >DOCUFIX</a
+                >
+                <button
+                    class="navbar-toggler border-0"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#navbarNav"
+                    aria-controls="navbarNav"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul
+                        class="navbar-nav ml-auto"
+                        style="font-weight: bold;"
+                    >
+                        <li class="nav-item">
+                            <a class="nav-link  text-light" href="about_us.html">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link  text-light" href="teampage.html">Team</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link  text-light" href="https://hng.tech/" target="_blank">Donate</a>
+                        </li>
+                    </ul>
                 </div>
-            </label> <br>
-            <textarea placeholder="Write your text here" class="input-txt"></textarea>
-        </div>
-        <div id="arrow">
-            <img id="compare-txt" src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571193103/samples/figma%20career-list/lario/hyu5pvtsmqxymfx5ohwi.png">
-        </div>
+            </div>
+        </nav>
+        </header>
+        <div class="container">
+            <div class="row align-items-center mt-5" style="min-height: 80vh">
+                <div class="col-md-7">
+                    <h2 style="font-weight:bold;">
 
-        <div class="add-text add-text2" id="text-2">
-            <label for="text" class="two-text">
-                <div class="labels">
-                    <img class="white-txt" src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571194266/samples/figma%20career-list/lario/ct8pi1qsjgonxsa7zdyn.png">
-                    <span id="white-txt" class="compare">Text</span>
+
+                        Document Comparison Solution
+                    </h2>
+                    <p>
+                        Compare document content and find out the differences
+                        contained in each of the files without stress
+                    </p>
+                    <a
+
+                        href="fileUpload.html"
+
+                        class="btn  p-2  btn-outline-dark"
+                        style="font-weight: bold;"
+                        >Get Started</a
+                    >
                 </div>
-            </label> <br>
-            <textarea placeholder="Write your text here" class="input-txt"></textarea>
+                <div class="col-md-5">
+                    <img
+                        src="https://res.cloudinary.com/mercyinyang/image/upload/v1571224753/Docufix/images/undraw_collecting_fjjl_1_hokax9.svg"
+                        alt=""
+                        style="width: 100%; height:400px;"
+                    />
+                </div>
+            </div>
         </div>
-    </section>
-    <div id="button">
-        <button type="submit">
-            <img class="compare-img" src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571193103/samples/figma%20career-list/lario/butfaguuckar9dl0i1ug.png">
-            <span class="compare-btn-txt">COMPARE</span>
-        </button>
-    </div>
-    
 
-</body>
+        <div style="background-color:  #fff">
+            <div class="container features">
+
+                <h3
+                    class="text-center mb-5 pt-5"
+                    style="color: darkgreen; font-weight: bold"
+                >
+                    Our Features
+                </h3>
+                <div class="row">
+                    <div class="col-md-4 mb-5 text-center">
+                        <h4 class="font-weight-bold text-center">Plagiarism Checker</h4>
+                        <!-- src="https://res.cloudinary.com/mercyinyang/image/upload/v1571224752/Docufix/images/IMG-20191016-WA0000_zlay8q.jpg" -->
+                            <!-- alt="" -->
+                            <!-- style="height: 150px; width:100%;border-radius: 10px;" -->
+                        <img
+                            src="https://res.cloudinary.com/tolulopedavid/image/upload/v1571517948/docufix/pla_iu8wue.png"
+                            alt="plagiarism image"
+                            style="height: 100px; margin: 0 auto;"
+                            
+                        />
+                        <p style="text-align: justify;line-height: 1.5rem;padding-top: 20px;">Plagiarism checker detects plagiarism in your text and checks for other writing issues.
+                            Our plagiarism checker flags specific sentences and provides reference information about the source, calculates an overall originality score for your document, and offers advanced writing feedback and corrections across several dimensions.
+                        </p>
+                    </div>
+                    <div class="col-md-4 mb-5 text-center">
+
+                        <h4 class="font-weight-bold  text-center">Avoid Word Duplicates</h4>
+                            <!--   src="https://res.cloudinary.com/mercyinyang/image/upload/v1571224752/Docufix/images/IMG-20191016-WA0000_zlay8q.jpg"
+                            alt=""
+                            style="height: 150px; width:100%;border-radius: 10px;" -->
+                        <img
+                           src="https://res.cloudinary.com/tolulopedavid/image/upload/v1571517948/docufix/dupl_ef0tj0.png"
+                            alt="text duplication image"
+                            style="height: 100px; margin: 0 auto;"
+                        />
+                        <p style="text-align: justify;line-height: 1.5rem;padding-top: 20px;">
+                           One of the main problem in document is that most of the words that are duplicated also appear in the previous line, which makes it difficult to achieve your goal. If you'd want to remove all duplicated words, then it wasn't that difficult by using our tool, all duplicated file will be reviewed.
+                        </p>
+                    </div>
+
+                    
+                    <div class="col-md-4 mb-5 text-center">
+                        <h4 class="font-weight-bold  text-center">File Comparisons</h4>
+                             <!-- src="https://res.cloudinary.com/mercyinyang/image/upload/v1571224752/Docufix/images/IMG-20191016-WA0000_zlay8q.jpg"
+                            alt=""
+                            style="height: 150px; width:100%;border-radius: 10px;" -->
+                        <img
+                            src="https://res.cloudinary.com/tolulopedavid/image/upload/v1571517958/docufix/comp_xjwqsh.png"
+                            alt="text comparison image"
+                            style="height: 100px; margin: 0 auto; "
+                        />
+                        <p style="text-align: justify;line-height: 1.5rem;padding-top: 20px;">It helps you compare both files and folders, that generate differences in a visual text format which is easy to manage and understand. Comparing hundreds of files manually is a tedious task and virtually impossible. There are high chances that you would miss out on something.<!--  You might also want to double check with the files if there have been any changes made by hackers! The smartest thing to do here would be to use our file comparison tool to compare files effectively, while you save time. -->
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="page-footer font-small mdb-color pt-4 bg-dark" >
+
+        <div class="container text-center text-md-left">
+
+          <div class="row text-center text-md-left mt-3 pb-3">
+
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+              <h6 class="text-uppercase mb-4 font-weight-bold text-light">Docufix</h6>
+              <p class="text-light">We help you arrange, sort and put your files and data in other for easy management.</p>
+              <p>Proudly Built By HNGi6 Interns</p>
+            </div>
+
+            <hr class="w-100 clearfix d-md-none">
+
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3 ">
+              <p class="text-light">
+                <a href="about_us.html" class="text-light">About Us</a>
+              </p>
+              <p>
+                <a href="teampage.html" class="text-light">Our Team</a>
+              </p>
+            </div>
+            <!-- Grid column -->
+
+            <hr class="w-100 clearfix d-md-none">
+
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+              <p>
+                <a href="index.html" class="text-light">Home Page</a>
+              </p>
+              <p>
+                <a href="privacy.html" class="text-light">Privacy Policy</a>
+              </p>
+            </div>
+
+          </div>
+
+          <hr>
+
+          <div class="row d-flex align-items-center">
+
+            <div class="col-md-7 col-lg-8">
+
+              <p class="text-center text-md-left text-light">© 2019 Copyright:
+                <a href="https://hng/internship">
+                  <strong class="text-light"> Docufix</strong>
+                </a>
+              </p>
+
+            </div>
+
+            <div class="col-md-5 col-lg-4 ml-lg-0">
+
+              <div class="text-center text-md-right">
+                <ul class="list-unstyled list-inline">
+                  <li class="list-inline-item">
+                    <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                      <i class="fab fa-facebook-f text-light"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                      <i class="fab fa-twitter text-light"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                      <i class="fab fa-google-plus-g text-light"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                      <i class="fab fa-linkedin-in text-light"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+      <script src="https://kit.fontawesome.com/7967e81f77.js" crossorigin="anonymous"></script>
+    </body>
 </html>

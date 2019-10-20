@@ -31,7 +31,7 @@
     font-family: 'Ubuntu';
     }
         
-    /*.main-content {
+    .main-content {
         background-image: url('https://res.cloudinary.com/dex5cbv1n/image/upload/v1571312350/Group_15_vjpzvv.png');
         background-size: 45%;
         background-position: right;
@@ -77,14 +77,14 @@
         left: 0%;
         }
     }
-*/
-.imgm {
+
+ .imgm {
   display: none;
 }
 
 #about h1 {
   margin-bottom: 20px;
-  margin-top: 10px;
+  margin-top: 10em;
 }
 
 #about h2 {
@@ -123,14 +123,14 @@
   #about {
     font-size: 15px;
   }
-/*  .imgm2 {
+ .imgm2 {
   margin-top: 100px;
-}*/
-
-
+}
 }
 
-@media screen and (max-width: 700px){
+
+
+ @media screen and (max-width: 700px){
 
 .col2 {
   display: none;
@@ -144,12 +144,12 @@
   margin-top: 100px;
 
 }
-}
+} 
 </style>
 </head>
 <body>
     <header>
-            <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: black">
+            <nav class="navbar navbar-expand-lg navbar-dark fixed-top mb-5" style="background-color: black">
                 <div class="container">
                     <a class="navbar-brand" href="index.html" style="font-weight: bold;font-size: 1.5em;"
                         >DOCUFIX</a
@@ -184,9 +184,8 @@
                 </div>
             </nav>
         </header>
-
-        <div class="container" id="about">
-          <h1 align="center">About Us</h1>
+        <div class="container mt-5" id="about"  >
+          <h1 align="center" class="mt-5 pt-5" >About Us</h1>
             <div class="row">
               <div class="col">
                 <h2>Who We Are</h2>
@@ -246,8 +245,8 @@
 
             <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
               <h6 class="text-uppercase mb-4 font-weight-bold">Docufix</h6>
-              <p>We help you arrange, sort and put your files and data in other for easy management</p>
-              <p>Proudly Built By HNGi6 Interns</p>
+              <p>We help you arrange, sort, compare and extract information from different file formats</p>
+              <p>This App Was Built By HNGi6 Interns</p>
             </div>
 
             <hr class="w-100 clearfix d-md-none">

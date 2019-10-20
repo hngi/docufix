@@ -1,172 +1,357 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-   <title>Docufix</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/7967e81f77.js" crossorigin="anonymous"></script>
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <!--google-font-->
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
-   <!-- links -->
-   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-   <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-   <link
-            href="https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap"
-            rel="stylesheet"
-        />
+    <title>About Docufix</title>
+    <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
 
-   <style>
-    .about-body{
-        background: #E5FAFA;
+    <style>
+        * {
+    box-sizing: border-box;
+    }
+
+    body {
+    margin: 0px;
+    font-family: 'segoe ui';
+    }
+
+    .mb-5{
+      margin-top: 5rem;
+    }
+        
+    .main-content {
+        background-image: url('https://res.cloudinary.com/dex5cbv1n/image/upload/v1571312350/Group_15_vjpzvv.png');
+        background-size: 45%;
+        background-position: right;
+        background-repeat: no-repeat;
+        background-position-y: 0;
+        margin-top: 5%;
+    }
+
+    footer{ position: relative;
+        bottom: 0;
+        left: 0;
+        margin: 0 auto !important;
+        text-align: center !important;
+        width: 100% !important;
+        height: 40px;
+        position: relative;
+        
+    }
+    footer .social {
+        display: inline-flex;
+        background-color: grey;
         font-family: Ubuntu;
-    }
-    .col-grey{
-        background-color: #C4C4C4;
-        padding:1rem 2rem;
-    }
+        font-style: normal;
+        font-weight: bold;
+        padding-top: 5px;
+        width: 100%;
+        height: auto;
+        bottom: 0;
 
-    .container-90{
-      max-width: 95%;
     }
-
-    .icon .fa{
-      padding-right: 1rem;
-      color:#000;
-      font-size:1.1rem;
+    
+    footer h1 {
+        margin-left: 26px;
     }
-
-    #footer {
-      margin-top: 10px;
-      padding: 10px;
-      background-color: #c4c4c4;
-      /*text-align: center;*/
-      color: white;
-      font-weight: bold;
+    
+    .social_media {
+        list-style: none;
+        display: inline-flex;
+        padding-left: 340px;
     }
-
-    .about-title{
-      font-weight: bold;
+    .fa {
+        font-size: 25px;
+        margin: 10px;
+        color: white;
     }
-
-    @media (max-width: 800px){
-      .col-grey{
-         width:100%;
-         max-width: 100%;
-         margin-bottom: 1rem;
-      }
-
-      .about-col-row{
-         flex-direction: column;
-         margin-bottom: 0;
-      }
+    .img-responsive {
+        display: none;
+    }
+    .img-mobile-responsive {
+        display: none;
     }
 
+    @media (max-width:900px) {
+        .main-content {
+        background-image: none;
+    } 
+    .img-responsive {
+        display: block;
+        float: right;
+    }
+    .img-mobile-responsive {
+        display: none;
+    }
+    }
 
+    @media (max-width:600px) {
+      .img-responsive {
+        display: none;
+    }
+    .img-mobile-responsive {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+        .main-content {
+            background-image: none;
+        }
+    .navv > .navv-btn {
+        display: inline-block;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+    }
+    .navv > .navv-btn > label {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        padding: 13px;
+    }
+    .navv > .navv-btn > label:hover,.navv  #nav-check:checked ~ .navv-btn > label {
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+    .navv > .navv-btn > label > span {
+        display: block;
+        width: 25px;
+        height: 10px;
+        border-top: 2px solid #eee;
+    }
+    .navv > .navv-links {
+        position: absolute;
+        display: block;
+        width: 100%;
+        background-color: #333;
+        height: 0px;
+        transition: all 0.3s ease-in;
+        overflow-y: hidden;
+        top: 50px;
+        left: 0px;
+    }
+    .navv > .navv-links > a {
+        display: block;
+        width: 100%;
+    }
+    .navv > #nav-check:not(:checked) ~ .navv-links {
+        height: 0px;
+    }
+    .navv > #nav-check:checked ~ .navv-links {
+        height: calc(100vh - 50px);
+        overflow-y: auto;
+    }
+    }
+    #gs-btn:hover{
+        background-color: #c4c4c4 !important;
+        color: #000 !important;
+    }
+    #gs-btn{
+        position: relative;
+        left: 80%;
+    }
+    @media (max-width:850px) {
+        #gs-btn {
+        left: 0%;
+        }
+    }
+   
+    .navbar{
+   position:fixed;
+   width:100%;
+   top:0;
+   z-index:1;
+ }
+ body{
+    font-family: ubuntu;
+}
 </style>
 </head>
-<body class="about-body">
-
-      <nav class="navbar navbar-expand-lg navbar-dark pt-2" style="background-color:#121610;">
-            <a class="navbar-brand" href="index.html">
-               <h1 class="m-0 ml-5 text-white ">DOCUFIX</h1>
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-               aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-               <span class="navbar-toggler-icon"></span>
-            </button>
-            <div id="navbarNavDropdown" class="navbar-collapse collapse">
-               <ul class="navbar-nav mr-auto">
-      
-               </ul>
-               <ul class="navbar-nav mr-5 ">
-      
-                  <li class="nav-item mr-5 ">
-                     <a class="nav-link font-weight-bold text-light " href="about.html">About Us</a>
-                  </li>
-                  <li class="nav-item mr-5">
-                     <a class="nav-link font-weight-bold text-light " href="team.html">Team</a>
-                  </li>
-                  <li class="nav-item mr-5">
-                     <a class="nav-link font-weight-bold text-light" href="sponsors.html">Sponsors</a>
-                  </li>
-                  
-               </ul>
-            </div>
-         </nav>
-
-      <div class="container-fluid container-90">
-        <h1 class="about-title my-4 text-center">About Us</h1>
-        <div class="row about-col-row">
-            <div class="col col-grey mr-5">
-                <p>Compare Documents.</p>
-                <p>You now have the ability to compare two text documents that can be in different formats and see the highlighted difference in results. Know exactly what has been changed, paraphrased, or copied between two textual documents. This diff tool allows you to see the similarity in files quickly and easily.
-                </p>
-
-            </div>
-            
-            <div class="col col-grey"> 
-                <p>Compare online content by submitting urls.</p>
-                <p>Compare raw text – simply type in your text in a text box.</p>
-                <p>Compare text types</p>
-                <p>Compare text file types: html , txt , pdf , doc , docx , rtf ,     xml , ppt , pptx , odt , chm , epub , odp , ppsx.</p>
-                <p>Compare images with textual content using OCR: jpg , jpeg , png , bmp , gif</p>
-                <p>Upload files from these platforms</p>
-
-            </div>
-        </div>
-        <br>
-        <div class="row about-col-row">
-            <div class="col col-grey mr-5">
-                    <p>We offer many features and options for you to compare almost any type of textual content from files to live text, and URLs for free. Upload files from outside platforms like GoogleDocs, Dropbox, and OneDrive. Simply choose the text to compare and receive a full report with the text similarities immediately, plus the similarity percentage rate and similar word count.
-                    </p>
-
-            </div>
-            
-            <div class="col col-grey">
-                    <p>Dropbox</p>
-                    <p>Google Drive</p>
-                    <p>One Drive</p>
-                    <p>If you’re looking to see how similar a document is, don’t waste time going through comparing files manually. The comparison tool will highlight the similar results from files, URLs, and raw text in a few seconds.
-                    </p>
-                    <p>Be sure your paper is free of plagiarism with this simple  </p>
-            </div>
-        </div>
-        <br>
-        <div class="row about-col-row">
-            <div class="col col-grey mr-5">
-                <p>With the Copyleaks compare documents tool, you can compare documents of these types:
-                </p>
-            </div>
-            
-            <div class="col col-grey">
-                <p>Compare documents tool. Know in a minute how similar your          content is to other files, URLs, and raw text.
-                </p>
-                <p>Compare your files and urls for free with the Copyleaks            Comparison tool today.</p>
-
-            </div>
-        </div>
-
-    </div>
-
-    <div class="container-fluid">
-       <div class="row mt-4" id="footer">
-         <div class="col">
-            <p>DOCUFIX </p>
-         </div>
-         <div class="col text-center">
-            <p>&copy; 2019. Docufix.io and HNG6 affiliates</p>
-         </div>
-         <div class="col text-right icon">
-            <a href="facebook.com/docufix" class="fa fa-facebook"></a>
-            <a href="twitter.com/docufix" class="fa fa-twitter"></a>
-            <a href="twitter.com/docufix" class="fa fa-instagram"></a>
-         </div>
-       </div>
-    </div>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: black">
+          <div class="container">
+              <a class="navbar-brand" href="index.html" style="font-weight: bold;font-size: 1.5em;"
+                  >DOCUFIX</a
+              >
+              <button
+                  class="navbar-toggler border-0"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#navbarNav"
+                  aria-controls="navbarNav"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation"
+              >
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul
+                      class="navbar-nav ml-auto"
+                      style="font-weight: bold;"
+                  >
+                      <li class="nav-item">
+                          <a class="nav-link  text-light" href="about_us.html">About Us</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link  text-light" href="teampage.html">Team</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link  text-light" href="https://hng.tech/" target="_blank">Donate</a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </nav>
+      </header>
     
 
-   
-         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <main class="main-content">
+        <div class= "container mb-5">
+          <img src="https://res.cloudinary.com/dex5cbv1n/image/upload/v1571312350/Group_15_vjpzvv.png" class="img-mobile-responsive" alt=""
+          width="300" height="300"
+          >
+            <h1 class="text-uppercase abt_heading"><strong>About Us</strong></h1>
+            <div>
+                <p>This App was built during the HNG6<br>
+                    INTERNSHIP<br>
+                    For more information visit
+                    <a href="https://hng.tech">hng.tech</a>
+                </p>
+                <p>
+                    <h5 class="text-uppercase"><strong>Compare Documents</strong></h5>
+                    You now have the ability to compare two documents that can<br>
+                    be in different formats and see the highlighted difference in<br> 
+                    the results. Know exactly what has been changed, paraphrased, or<br>
+                    copied between two textual documents. This diff tool allows you<br>
+                    to see the similarity in the files quickly and easily.
+                    <img src="https://res.cloudinary.com/dex5cbv1n/image/upload/v1571312350/Group_15_vjpzvv.png" class="img-responsive" alt=""
+                    width="300" height="300"
+                    >
+                    <ul>
+                       
+                        <li>Compare raw text - simply type in your text in a text box</li>
+                        <li>Compare text types: html, txt, pdf, doc, rtf, xml, ppt, odt, chm, epub, odp</li>
+                       
+                    </ul>
+                </p>
+                
+            </div>
+          
+            <a class="btn btn-lg btn-rounded text-uppercase mt-4" id="gs-btn" style="background-color: #000; color: #fff; border-radius:25px;" href="fileUpload.html">Get started</a>
+        </div> 
+    </main>  
+
+    
+    <footer class="page-footer font-small mdb-color pt-4" style="background: #C4C4C4;">
+        <div style="background: #C4C4C4;">
+        <div class="container text-center text-md-left">
+
+          <div class="row text-center text-md-left mt-3 pb-3">
+
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+              <h6 class="text-uppercase mb-4 font-weight-bold">Docufix</h6>
+              <p>We help you arrange, sort and put your files and data in other for easy management</p>
+            </div>
+
+            <hr class="w-100 clearfix d-md-none">
+
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+              <p>
+                <a href="about_us.html">About Us</a>
+              </p>
+              <p>
+                <a href="teampage.html">Our Team</a>
+              </p>
+            </div>
+            <!-- Grid column -->
+
+            <hr class="w-100 clearfix d-md-none">
+
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+              <p>
+                <a href="index.html">Home Page</a>
+              </p>
+              <p>
+                <a href="privacy.html">Privacy Policy</a>
+              </p>
+            </div>
+
+          </div>
+
+          <hr>
+
+          <div class="row d-flex align-items-center">
+
+            <div class="col-md-7 col-lg-8">
+
+              <p class="text-center text-md-left">© 2019 Copyright:
+                <a href="index.html">
+                  <strong> Docufix</strong>
+                </a>
+              </p>
+
+            </div>
+
+            <div class="col-md-5 col-lg-4 ml-lg-0">
+
+              <div class="text-center text-md-right">
+                <ul class="list-unstyled list-inline">
+                  <li class="list-inline-item">
+                    <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                      <i class="fab fa-facebook-f"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                      <i class="fab fa-twitter"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                      <i class="fab fa-google-plus-g"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                      <i class="fab fa-linkedin-in"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+      </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/7967e81f77.js" crossorigin="anonymous"></script>
 </body>
 </html>

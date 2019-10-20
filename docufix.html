@@ -2,23 +2,36 @@
 <html lang="en">
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta charset="UTF-8">
+  <meta charset="utf-8">
+  <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu:500&display=swap&subset=greek" rel="stylesheet">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta property="og:locale:alternate" content="en_US" />
-	<title>Docufix</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:locale:alternate" content="en_US" />
+    <title>Docufix</title>
 </head>
 <style type="text/css">
-	* {
+  * {
   box-sizing: border-box;
-}
-
-body {
-  
 }
 
 h3 {
@@ -182,87 +195,16 @@ span {
 
 }
 
-.nav {
-  height: 50px;
-  width: 100%;
-  background-color: black;
-  position: relative;
-  font-family: 'Ubuntu', sans-serif;
-}
-.nav > .nav-header {
-  display: inline;
-}
-.nav > .nav-header > .nav-title {
-  display: inline-block;
-  font-size: 22px;
-  color: #fff;
-  padding: 10px 10px 10px 10px;
-}
-.nav > .nav-btn {
-  display: none;
-}
-.nav > .nav-links {
-  display: inline;
-  float: right;
-  font-size: 18px;
-}
-.nav > .nav-links > a {
-  display: inline-block;
-  padding: 13px 10px 13px 10px;
-  text-decoration: none;
-  color: #efefef;
-}
-.nav > .nav-links > a:hover {
-  background-color: rgba(0, 0, 0, 0.3);
-}
-.nav > #nav-check {
-  display: none;
-}
 
-@media (max-width:600px) {
-  .nav > .nav-btn {
-    display: inline-block;
-    position: absolute;
-    right: 0px;
-    top: 0px;
-  }
-  .nav > .nav-btn > label {
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    padding: 13px;
-  }
-  .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
-    background-color: rgba(0, 0, 0, 0.3);
-  }
-  .nav > .nav-btn > label > span {
-    display: block;
-    width: 25px;
-    height: 10px;
-    border-top: 2px solid #eee;
-  }
-  .nav > .nav-links {
-    position: absolute;
-    display: block;
-    width: 100%;
-    background-color: #333;
-    height: 0px;
-    transition: all 0.3s ease-in;
-    overflow-y: hidden;
-    top: 50px;
-    left: 0px;
-  }
-  .nav > .nav-links > a {
-    display: block;
-    width: 100%;
-  }
-  .nav > #nav-check:not(:checked) ~ .nav-links {
-    height: 0px;
-  }
-  .nav > #nav-check:checked ~ .nav-links {
-    height: calc(100vh - 50px);
-    overflow-y: auto;
-  }
+.fileContents {
+  width: 500px;
+  height: 300px;
+  box-shadow: 0px 0px 4px 1px grey;
+  position: relative;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  border-top: 0px;
+
 }
 
 @media screen and (max-width: 700px) {
@@ -271,6 +213,13 @@ h3 {
   font-size: 15px;
   font-weight: bold;
   font-family: 'Ubuntu', sans-serif;
+}
+
+.fileContents {
+  width: 400px;
+  height: 300px;
+  margin-left: 18px; 
+
 }
 
 .firstimg, .secondimg {
@@ -359,178 +308,259 @@ span {
 
 
 }
+
+@media screen and (min-width: 470px) and (max-width: 680px) {
+
+.fileContents {
+  width: 445px;
+  height: 300px;
+  margin-left: 10px; 
+
+}
+}
+
+@media screen and (min-width: 380px) and (max-width: 470px) {
+
+.fileContents {
+  width: 350px;
+  height: 300px;
+  margin-left: 10px; 
+
+}
+}
+
+
+@media screen and (max-width: 380px) {
+
+.fileContents {
+  width: 300px;
+  height: 300px;
+  margin-left: 15px; 
+
+}
+
+span {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 15px;
+  margin-right: 9px;
+  margin-left: 0px;
+  margin-bottom: 30px;
+}
+
+.custom-file-upload {
+  border: none;
+  border-bottom: 2px solid black;
+  display: inline-block;
+  padding: 4px 8px;
+  cursor: pointer;
+  margin-top: 40px;
+  width: 55vw;
+}
+
+}
+
+    .navbar{
+   position:fixed;
+   width:100%;
+   top:0;
+   z-index:1;
+ }
 </style>
 <body>
-	<header>
-			<div class="nav">
-				<input type="checkbox" id="nav-check">
-				<div class="nav-header">
-					<div class="nav-title">
-						DOCUFIX
-					</div>
-				</div>
-				<div class="nav-btn">
-					<label for="nav-check" style="color: white;">
-						☰
-					</label>
-				</div>
+  <header>
+      <nav class="navbar navbar-expand-lg navbar-dark pt-2" style="background-color:#121610;">
+            <a class="navbar-brand" href="index.html">
+               <h1 class="m-0 ml-5 text-white" style="font-family: 'Ubuntu';">DOCUFIX</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+               aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="navbarNavDropdown" class="navbar-collapse collapse">
+               <ul class="navbar-nav mr-auto">
+      
+               </ul>
+               <ul class="navbar-nav mr-5 ">
+      
+                  <li class="nav-item mr-5 ">
+                     <a class="nav-link font-weight-bold text-light " href="about_us.html">About Us</a>
+                  </li>
+                  <li class="nav-item mr-5">
+                     <a class="nav-link font-weight-bold text-light " href="teampage.html">Team</a>
+                  </li>
+                  <li class="nav-item mr-5">
+                     <a class="nav-link font-weight-bold text-light" href="https://hng.tech/" target="_blank">Donate</a>
+                  </li>
+                  
+               </ul>
+            </div>
+         </nav>
+    </header>
+    <div class="">
+      <div>
+        <h3>Compare Two Documents</h3>
+        <div align="center">
+          <img src="https://res.cloudinary.com/ros4eva/image/upload/v1571283299/Group_jciiib.png" class="firstimg"><button class="fileU">File</button><img src="https://res.cloudinary.com/ros4eva/image/upload/v1571283299/Group1_bdknmm.png" class="secondimg"><button class="textC">Text</button>
+        </div>
+        <div align="center" class="comp">
+          <div align="center" class="fileUpload">
+            <span class="uploadTitle">First Document:</span><label class="custom-file-upload">
+                <input type="file" id="fileForUpload" />
+                <span>Click to upload your document</span>
+            </label>
+            <button class="upload" id="fileForUpload"><img src="https://res.cloudinary.com/ros4eva/image/upload/v1571283299/upload_aitbzl.png">Upload</button>
+          </div>
 
-				<div class="nav-links" align="right">
-					<!--    <a href="DOCUFIX.png" target="_blank"></a>-->
-					<a href="#" target="_blank">About Us</a>
-					<a href="#" target="_blank">Team</a>
-					<a href="#" target="_blank">Sponsors</a>
-				</div>
-			</div>
-		</header>
-		<div class="">
-			<div>
-				<h3>Compare Two Documents</h3>
-				<div align="center">
-					<img src="https://res.cloudinary.com/ros4eva/image/upload/v1571283299/Group_jciiib.png" class="firstimg"><button class="fileU">File</button><img src="https://res.cloudinary.com/ros4eva/image/upload/v1571283299/Group1_bdknmm.png" class="secondimg"><button class="textC">Text</button>
-				</div>
-				<div align="center" class="comp">
-					<div align="center" class="fileUpload">
-						<span class="uploadTitle">First Document: </span><label class="custom-file-upload">
-						    <input type="file" id="fileForUpload" />
-						    <span>Click to upload your document</span>
-						</label>
-						<button class="upload" id="fileForUpload"><img src="https://res.cloudinary.com/ros4eva/image/upload/v1571283299/upload_aitbzl.png">Upload</button>
-					</div>
+          <div align="center" class="fileUpload">
+            <span class="uploadTitle">Second Document:</span><label class="custom-file-upload">
+                <input type="file" id="fileForUpload" />
+                <span>Click to upload your document</span>
+            </label>
+            <button class="upload" id="fileForUpload"><img src="https://res.cloudinary.com/ros4eva/image/upload/v1571283299/upload_aitbzl.png">Upload</button>
+          </div>
 
-					<div align="center" class="fileUpload">
-						<span class="uploadTitle">First Document: </span><label class="custom-file-upload">
-						    <input type="file" id="fileForUpload" />
-						    <span>Click to upload your document</span>
-						</label>
-						<button class="upload" id="fileForUpload"><img src="https://res.cloudinary.com/ros4eva/image/upload/v1571283299/upload_aitbzl.png">Upload</button>
-					</div>
+          <button class="compare"><img src="https://res.cloudinary.com/ros4eva/image/upload/v1571283299/Group3_gcpy1q.png">Compare</button>
+        </div>
+        
+          
+      </div>
+      <div class="textArea" align="center">
+        
+        <div class="d-flex bd-highlight">
+          <div class="p-2 flex-fill bd-highlight">
+            <textarea class="txtarea" placeholder="write your text here"></textarea>
+          </div>
+          <div class="p-2 bd-highlight"><img src="https://res.cloudinary.com/ros4eva/image/upload/v1571283299/Group5_qrxqax.png" style="margin-top: 60px;"></div>
+          <div class="p-2 flex-fill bd-highlight">
+            <textarea class="txtarea" placeholder="write your text here"></textarea>
+          </div>
+        </div>
+        <button class="compar1"><img src="https://res.cloudinary.com/ros4eva/image/upload/v1571283299/Group3_gcpy1q.png">Compare</button>
+      </div>
+    </div>
+    <div class="container">
+        <div class="row">
+          <div class="col">
+           <div class="fileContents" align="center">
 
-					<button class="compare"><img src="https://res.cloudinary.com/ros4eva/image/upload/v1571283299/Group3_gcpy1q.png">Compare</button>
-				</div>
-				
-					
-			</div>
-			<div class="textArea" align="center">
-				
-				<div class="d-flex bd-highlight">
-					<div class="p-2 flex-fill bd-highlight">
-						<textarea class="txtarea" placeholder="write your text here"></textarea>
-					</div>
-					<div class="p-2 bd-highlight"><img src="https://res.cloudinary.com/ros4eva/image/upload/v1571283299/Group5_qrxqax.png" style="margin-top: 60px;"></div>
-					<div class="p-2 flex-fill bd-highlight">
-						<textarea class="txtarea" placeholder="write your text here"></textarea>
-					</div>
-				</div>
-				<button class="compar1"><img src="https://res.cloudinary.com/ros4eva/image/upload/v1571283299/Group3_gcpy1q.png">Compare</button>
-			</div>
-		</div>
-		<div>
-			
-			<footer class="page-footer font-small mdb-color pt-4" style="background: #C4C4C4;">
+          </div>
+          </div>
+          <div class="col">
+              <div class="fileContents" align="center">
 
-			  <div class="container text-center text-md-left">
+              </div>
+          </div>
+        </div>
+      </div>
+    <div>
+      
+      <footer class="page-footer font-small mdb-color pt-4" style="background: #C4C4C4;">
 
-			    <div class="row text-center text-md-left mt-3 pb-3">
+        <div class="container text-center text-md-left">
 
-			      <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-			        <h6 class="text-uppercase mb-4 font-weight-bold">Docufix</h6>
-			        <p>We help you arrange, sort and put your files and data in other for easy management</p>
-			      </div>
+          <div class="row text-center text-md-left mt-3 pb-3">
 
-			      <hr class="w-100 clearfix d-md-none">
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+              <h6 class="text-uppercase mb-4 font-weight-bold">Docufix</h6>
+              <p>We help you arrange, sort and put your files and data in other for easy management</p>
+            </div>
 
-			      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-			        <p>
-			          <a href="about.html">How it works</a>
-			        </p>
-			        <p>
-			          <a href="teams.html">Our Team</a>
-			        </p>
-			      </div>
-			      <!-- Grid column -->
+            <hr class="w-100 clearfix d-md-none">
 
-			      <hr class="w-100 clearfix d-md-none">
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+              <p>
+                <a href="about_us.html">How it works</a>
+              </p>
+              <p>
+                <a href="teampage.html">Our Team</a>
+              </p>
+            </div>
+            <!-- Grid column -->
 
-			      <!-- Grid column -->
-			      <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
-			        <p>
-			          <a href="index.html">Home Page</a>
-			        </p>
-			        <p>
-			          <a href="#!">Privacy Policy</a>
-			        </p>
-			      </div>
+            <hr class="w-100 clearfix d-md-none">
 
-			    </div>
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+              <p>
+                <a href="index.html">Home Page</a>
+              </p>
+              <p>
+                <a href="#!">Privacy Policy</a>
+              </p>
+            </div>
 
-			    <hr>
+          </div>
 
-			    <div class="row d-flex align-items-center">
+          <hr>
 
-			      <div class="col-md-7 col-lg-8">
+          <div class="row d-flex align-items-center">
 
-			        <p class="text-center text-md-left">© 2019 Copyright:
-			          <a href="https://hng/internship">
-			            <strong> Docufix</strong>
-			          </a>
-			        </p>
+            <div class="col-md-7 col-lg-8">
 
-			      </div>
+              <p class="text-center text-md-left">© 2019 Copyright:
+                <a href="https://hng/internship">
+                  <strong> Docufix</strong>
+                </a>
+              </p>
 
-			      <div class="col-md-5 col-lg-4 ml-lg-0">
+            </div>
 
-			        <div class="text-center text-md-right">
-			          <ul class="list-unstyled list-inline">
-			            <li class="list-inline-item">
-			              <a class="btn-floating btn-sm rgba-white-slight mx-1">
-			                <i class="fab fa-facebook-f"></i>
-			              </a>
-			            </li>
-			            <li class="list-inline-item">
-			              <a class="btn-floating btn-sm rgba-white-slight mx-1">
-			                <i class="fab fa-twitter"></i>
-			              </a>
-			            </li>
-			            <li class="list-inline-item">
-			              <a class="btn-floating btn-sm rgba-white-slight mx-1">
-			                <i class="fab fa-google-plus-g"></i>
-			              </a>
-			            </li>
-			            <li class="list-inline-item">
-			              <a class="btn-floating btn-sm rgba-white-slight mx-1">
-			                <i class="fab fa-linkedin-in"></i>
-			              </a>
-			            </li>
-			          </ul>
-			        </div>
-			      </div>
-			    </div>
-			  </div>
-			</footer>
-		</div>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-		<script>
-			$(function(){
-				  $(".textArea").hide();
-				  
-				    $("button.textC").on("click", function(){
-				       $(".textArea").show();
-				       $(".comp").hide();
-				    });
-				  
-				    $("button.fileU").on("click", function(){
-				       $(".textArea").hide();
-				       $(".comp").show();
-				    });
-				});
-		</script>
+            <div class="col-md-5 col-lg-4 ml-lg-0">
 
-		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-		<script src="https://kit.fontawesome.com/7967e81f77.js" crossorigin="anonymous"></script>
-		
+              <div class="text-center text-md-right">
+                <ul class="list-unstyled list-inline">
+                  <li class="list-inline-item">
+                    <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                      <i class="fab fa-facebook-f"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                      <i class="fab fa-twitter"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                      <i class="fab fa-google-plus-g"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                      <i class="fab fa-linkedin-in"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+      $(function(){
+          $(".textArea").hide();
+          
+            $("button.textC").on("click", function(){
+               $(".textArea").show();
+               $(".comp").hide();
+            });
+          
+            $("button.fileU").on("click", function(){
+               $(".textArea").hide();
+               $(".comp").show();
+            });
+        });
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/7967e81f77.js" crossorigin="anonymous"></script>
+    
 
 </body>
 </html>

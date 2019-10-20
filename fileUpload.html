@@ -4,23 +4,9 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
-        <link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
-        <link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png">
-        <link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png">
-        <link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png">
-        <link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png">
-        <link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png">
-        <link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png">
-        <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
-        <link rel="icon" type="image/png" sizes="192x192"  href="/favicon/android-icon-192x192.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
-        <link rel="manifest" href="/favicon/manifest.json">
-        <meta name="msapplication-TileColor" content="#ffffff">
-        <meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png">
-        <meta name="theme-color" content="#ffffff">
+        <link rel="icon" type="image/png" href="https://res.cloudinary.com/ros4eva/image/upload/v1571538580/favicon_elbl53.png"/>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" type="text/css" href="https://dl.dropbox.com/s/v5nuo2k9pvuoogf/rose.css">
         <link
             rel="stylesheet"
             href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -200,59 +186,37 @@
     display: none;
 }
 
-::-webkit-scrollbar{
-  width: 8px;
-}
 
-::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px white;
-  border-radius: 8px;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #343a40;
-  border-radius: 8px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: rgb(130, 18, 140);
-  width: 15px;
-}
-
-    .navbar{
-   position:fixed;
-   width:100%;
-   top:0;
-   z-index:1;
- }
- .custom-file{
-     z-index:0.6;
- }
     </style>
-   <!-- <body style="background-color:  white; font-family: Ubuntu;">-->
-        
+       
         <body style="background-color:  white; font-family: Ubuntu;"   onload ="document.getElementById('id01').style.display='block'">
 
-        <!----modal box-->
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<!--<body >-->
-
 <div class="w3-container">
-  
-  <!--<button onload ="document.getElementById('id01').style.display='block'" class="w3-button w3-black">Open Modal</button>-->
-
   <div id="id01" class="w3-modal">
     <div class="w3-modal-content" style="border-radius: 4px;">
       <div class="w3-container">
         <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
         
         <h2 style="font-weight: bolder;">NOTE:</h2>
-        <p>Docufix only supports file formats like .txt .pdf .doc and .docx for <strong>uploading</strong></p>
+        <p>Docufix only supports file formats like .csv, .json, .xml .txt .pdf and .docx for <strong>uploading</strong></p>
         <p>If you must compare documents from any other format, aside the above formats mentioned, <br> please make use of the text option, then <strong> copy</strong> and <strong> paste</strong> into the text-box.</strong></p>
         <p>Your compared data gives you result in percentage %</p>
-        <p>You can choose to download compared documents as .doc file if you wish</p>
+        <p>You can choose to download compared documents as .doc or pdf file formats</p>
+        <p>This App has an inbuilt words formatting editor</p>
         <p>Compared texts are <strong>editable,</strong> this means you can edit your work for correction after comparing.</p>
+<strong style = "color: red">IMPORTANT!!!</strong>
+<ul>The following activities would not be efficiently carried out on mobile phone except for larger screen sizes:
 
+<li>Comparing od documents</li>
+<li>Formatting of compared document</li>
+
+
+</ul>
+<ul>Also note the meaning of the highlighted outputs:
+    <li><span style = "background-color: red"> RED HIGHLIGHT</span> Means the texts in second text input that are not found in the first text input</li>
+    <li><span style = "background-color: yellow"> YELLOW HIGHLIGHT</span> Means the texts in first text input that are not found in the second text input</li>
+    <li>PLAIN TEXT Means text found in both tex inputs</li>
+</ul>
     </div>
     </div>
   </div>
@@ -482,12 +446,15 @@
                         <a href="#" data-command='subscript'><i class='fa fa-subscript'></i></a>
                         <a href="#" data-command='superscript'><i class='fa fa-superscript'></i></a>
                       </div>
-                    
+                      <div id="page"></div> 
                     <div contenteditable="true" id="textareaDifferences" style="border:none;min-height:100%; width: 100%;overflow: scroll; box-shadow: 0px 0px 4px 1px grey;"></div>
                 </div>
             
                 <button id="btn-export" onclick="exportHTML();" class="btn-dark mt-2 mb-5" style="padding: 7px 14px;"><i class="fas fa-cloud-download-alt"></i> Download as word
                     doc</button>
+                    <button id="cmd" class="btn-dark mt-2 mb-5" style="padding: 7px 14px;"><i class="fas fa-cloud-download-alt"></i>Download as PDF</button>
+            
+
             </div>
             <div align="right" class="shareBtn" id="shareBtn">
                 <h4>Helpful? Please Share With Your Friends On:</h4>
@@ -651,6 +618,9 @@
         </script>
         <script src="fileUpload.js"></script>
         <script src = "wysiwyg.js"></script>
+        <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.debug.js"></script>
+        <script src = "jsPDF.js"></script>
         <script type="text/javascript">
   
             // events
@@ -1230,7 +1200,7 @@
                var fileDownload = document.createElement("a");
                document.body.appendChild(fileDownload);
                fileDownload.href = source;
-               fileDownload.download = 'document.doc';
+               fileDownload.download = 'docufix' + new Date() + '.doc';
                fileDownload.click();
                document.body.removeChild(fileDownload);
             }

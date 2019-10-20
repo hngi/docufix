@@ -1,209 +1,573 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Team Page</title>
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Ubuntu:500&display=swap&subset=greek" rel="stylesheet">
-        <style>
-            *, *:before, *:after {
-                box-sizing: border-box;
-            }
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Ubuntu|Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    
+		
+    <title>Docufix | Team Page</title>
+    <style>
+        *{
+    box-sizing: border-box;
+    } 
+  
+    html{
+            scroll-behavior: smooth;
+        }
+        body{
+            font-family:  Open Sans, sans-serif;
+            width: 100%;
+            height: 100%;
+            margin: 0 auto;
+            padding: 0;
+            background-color: #DDE8E8;
+        }
 
-            body {
-                font-family: 'Open Sans', sans-serif;
-                background-color: #DDE8E8;
-            }
+.logo{
+    flex: 1;
+    font-weight: bold;
+    cursor: pointer;
+    }
+    
 
-            .meet {
-                position: relative;
-                font-size: 64px;
-                line-height: 87px;
-                text-align: center;
-            }
-
-            .meet:after {
-              content: "";
-              position: absolute;
-              border-top: 10px solid black;
-              left: 46%;
-              bottom: -10px;
-              margin-left: -15px;
-              width: 150px;
-              height: 0px;
-              border-radius: 5px;
-            }
-
-            .row {
-                display: flex;
-                flex-wrap: wrap;
-            }
-
-            .column {
-                flex-grow: 1;
-                width: 25%;
-                margin: 20px 2%;
-                padding: 0 10px;
-            }
-
-            .card {
-                box-shadow: 5px 5px 20px rgb(0, 0, 0, 0.3);
-            }
-
-            .container1 {
-                position: relative;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                padding: 40px 10px;
-                overflow: hidden;
-            }
-
-            .container1::after, 
-            .row::after {
-                content: "";
-                clear: both;
-                display: table;
-            }
-
-            .user-img {
-                border-radius: 100%;
-            }
-
-            .text {
-                text-align: center;
-            }
-
-            .name {
-                font-size: 36px;
-                line-height: 49px;
-            }
-
-            .title {
-                color: rgba(0,0,0,0.85);
-            }
-
-            .container1 p {
-                font-size: 18px;
-                line-height: 25px;
-            }
-
-            .button {
-                border: none;
-                border-radius: 30px;
-                outline: 0;
-                display: inline-block;
-                padding: 10px 20px;
-                color: white;
-                background-color: #060541;
-                text-align: center;
-                cursor: pointer;
-                text-transform: uppercase;
-                font-weight: 600;
-                font-size: 20px;
-            }
-
-            .button:hover {
-                background-color: blue;
-            }
-
-            footer {
-              font-size: 15px;
-            }
-
-
-            .slant:after {
-              content: '';
-              position: absolute;
-              top: 0;
-              left: 0;
-              width: 100%;
-              height: 50%;
-              background:  #CAC9D9;
-              transform-origin: 100% 0;
-              transform: skew(-65deg);
-              z-index: -1;
-            }
-
-            .icon {
-                width: 40px;
-                height: 40px;
-                padding: 5px;
-            }
-
-
-            .socials {
-                display: flex;
-                justify-content: space-between;
-                border-top: 1px solid rgba(0, 0, 0, 0.1);
-                background-color: rgba(199, 195, 195, 0.1);
-                padding: 5px 50px;
-            }
-
-
-            
-      
-            
-            @media screen and (max-width: 620px) {
-              .column {
-                width: 100%;
-                display: block;
-              }
-
-                  .slant:after {
-                    content: '';
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 70%;
-                    background:  #CAC9D9;
-                    transform-origin: 100% 0;
-                    transform: skew(-65deg);
-                    z-index: -1;
-                }
-
-                  .meet {
-                    font-size: 50px;
-                }
-
-                  .meet:after {
-                     left: 38%;
-                }
-            }
-
-            @media (min-width: 620px) and (max-width: 960px) {
-
-                .column {
-                    width: 45%;
-                }
-
-                 .meet:after {
-                     left: 42.5%;
-                }
-
-                .socials {
-                    padding: 5px 20px;
-                }
-            }
-
-            body {
-  margin: 0px;
-  font-family: 'segoe ui';
+body{
+    font-family: ubuntu;
 }
-.active a{
-   color: grey !important;
- }
+/*hr{
+    background: #060541;
+border-radius: 5px;
+    width: 10%;
+    width: 160px;
+height: 10px;
+}*/
 
-        </style>
-    </head>
-    <body>
-      <header>
+nav{
+    background: #222;
+    padding: 5px 50px;
+}
+
+ul{
+    list-style-type: none;
+}
+a{
+    color: white;
+    text-decoration:none; 
+}
+a:hover{
+    text-decoration: none;
+    color: lightgrey !important;
+    background-color: none !important;
+    
+}
+
+.menu li{
+    font-size: 24px;
+    padding: 15px 5px;
+    
+}
+
+.menu li a{
+    display: block;
+}
+
+.logo a{
+    font-size:40px;
+}
+.logo a:hover{
+    text-decoration: none;
+}
+
+.button.secondary{
+    border-bottom: 1px #444 solid;
+}
+/*.item{
+    /* justify-content: space-around; */
+
+/*.item:hover {
+   background-color: #444;
+}*/
+
+/* Mobile Menu */
+.menu{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toggle{
+    order: 1;
+}
+
+.item.button{
+    order: 2;
+}
+
+.item{
+    width: 100%;
+    text-align: center;
+    order: 3;
+    display: none;
+}
+
+.item.active{
+    display: block;
+}
+
+.toggle {
+    cursor: pointer;
+}
+
+.bars{
+    background: #999;
+    display: inline-block;
+    height: 2px;
+    position: relative;
+    width: 19px;
+}
+
+.bars::before,.bars::after{
+    background: #999;
+    content: "";
+    display: inline-block;
+    height: 2px;
+    position: absolute;
+    width: 19px;
+}
+
+.bars::before{
+    top: 5px;
+}
+
+.bars::after{
+    top: -5px;
+}
+
+/* Tablet Menu */
+@media all and (min-width:458px){
+    .menu a{
+        justify-content: center;
+    }
+
+    .logo{
+        flex: 1;
+        font-weight: bold;
+        cursor: pointer;
+        
+        }
+        .logo:hover{
+            text-decoration: none;
+        }
+ 
+    .toggle{
+        order: 2;
+        display: block;
+    }
+
+
+    
+}
+
+@media all and (min-width:768px){
+    .item{
+        display: block;
+        width: auto;
+    }
+
+    .toggle{
+        display: none;
+    }
+
+    .toggle:active {
+        transition: all .25s ease;
+    }
+
+    .logo{
+        order: 0;
+    }
+
+    .item{
+        order: 1;
+    }
+
+   
+
+    .menu li{
+       padding: 15px 10px; 
+    }
+
+    .menu li button{
+        padding-right: 0;
+    }
+		
+}
+/*Footer*/
+    footer {
+            height: auto;
+            font-family: 'Ubuntu', sans-serif;
+            bottom: 0;
+            width: 100%;
+
+        }
+        .top-footer {
+            height: 55px;
+            background-color: #000000;
+        }
+   .bottom-footer {
+        height: auto;
+        background-color:#C4C4C4;
+        color: #fff;
+        display: flex;
+        flex-direction: row;
+        }
+          .bottom-footer a {
+            text-decoration: none;
+            color: #fff;
+          }
+        .bottom-footer .name {
+            font-style: normal;
+            font-weight: bold;
+            font-size: 25px;
+            padding:15px 20px 10px 20px;
+            width: 20%;
+            
+        
+        }
+        .bottom-footer .copyright {
+            font-weight: 400;
+            font-size: 25px;
+                padding-top:15px; 
+                padding-right: 40px;
+            width: 63%;
+        text-align: right;
+         word-spacing: 0.3rem;
+    
+        }
+        .bottom-footer .icon{
+            font-weight: 500;
+            font-size: 36px;
+            width: 18%;
+            padding-top:8px; 
+            padding-left: 80px;
+             word-spacing: 1rem;
+        }
+        #icon{
+            color: #000000;
+        }
+        
+
+            @media (max-width: 800px) {
+                  .bottom-footer {
+        flex-direction: column;
+        }
+    .bottom-footer .icon{
+            width: 100%;
+            text-align: center;
+            padding: 3px;
+            }
+            .bottom-footer .copyright {
+                width: 100%;
+                font-size: 20px;
+                text-align: center;
+                padding:8px;
+        
+            }
+            .bottom-footer .name {
+                width: 100%;
+                text-align: center;
+                font-size: 22px;
+                padding: 8px;
+            }
+        
+        }
+
+				
+        .content-box {
+    padding: 60px 0 60px 0;
+}
+
+.content-title h3 {
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 0 10px 0;
+}
+
+.content-title-underline {
+    width: 100px;
+    height: 3px;
+    background-color: #060541;
+    margin: 0 auto 30px auto;
+}
+
+/*====================================================================
+            Diagonal Line and Profile Picture Setting
+===================================================================*/
+
+.the-col {
+    width: 350px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.all-users {
+    width: 350px;
+    height: auto;
+    background-color: #fff;
+    padding: 0;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+.user-image {
+    background-color: #013A6B;
+    background-image: -webkit-linear-gradient(-60deg, #CAC9D9 50%, #fff 50%);
+    min-height: 200px;
+    padding-top: 50px;
+    border-radius: 10px;
+}
+.content-part {
+    padding: 30px 0 30px 0;
+    text-align: center;
+}
+
+.user-content {
+    padding: 0 0 30px 0;
+}
+
+.user-button {
+    padding: 0 0 30px 0;
+}
+
+.contact-btn {
+    border-radius: 30px;
+    padding: 10px 40px 10px 40px;
+    background: #060541;
+}
+
+.contact-btn:hover {
+    background: rgba(6, 5, 65, 0.83);
+}
+
+.content-footer {
+    text-align: center;
+    background: rgba(199, 195, 195, 0.1);
+    height: 50px;
+}
+
+.social-icons {
+    padding: 10px 20px;
+}
+
+/*====================================================================
+                    Social Icons styles
+===================================================================*/
+.fab:hover{
+    font-size: 250%;
+}
+.fa-twitter-square {
+    color: #50ABF1;
+}
+
+.fa-linkedin {
+    color: #0D5C77;
+}
+
+.fa-facebook-square {
+    color:  #4267B2;;
+}
+.fa-instagram{
+    color:  #C13584;
+}
+.content-footer a {
+    color: #060541;
+}
+				
+.fa-bars{
+    color: white;
+}
+.navbar-brand h1{
+    font-family: 'Open Sans',sans-serif;
+    font-size:40px;
+    line-height: 1.5em;
+}
+.user-image-box-1 {
+    height: 200px;
+    width: 200px;
+    background-image: url("https://res.cloudinary.com/mercyinyang/image/upload/v1567341335/mercy_-_Mercy_Inyang_fppxi9.jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.user-image-box-2 {
+    height: 200px;
+    width: 200px;
+    background-image: url("https://res.cloudinary.com/chidi6ix/image/upload/v1571420011/20190825_112753_vdkudk.jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.user-image-box-3 {
+    height: 200px;
+    width: 200px;
+    background-image: url("https://res.cloudinary.com/erys1521/image/upload/v1567323865/Me_jgxgkf.jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+.user-image-box-4 {
+    height: 200px;
+    width: 200px;
+    background-image: url("https://res.cloudinary.com/major/image/upload/v1571406076/IMG_20190823_004821_hsnwii.jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+.user-image-box-5 {
+    height: 200px;
+    width: 200px;
+    background-image: url("https://res.cloudinary.com/ros4eva/image/upload/v1570140043/IMG_20190927_150929_gpoaza.jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+.user-image-box-6 {
+    height: 200px;
+    width: 200px;
+    background-image: url("https://res.cloudinary.com/padom2020/image/upload/v1566740261/IMG-20190819-WA0002_xhki10.jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+.user-image-box-7 {
+    height: 200px;
+    width: 200px;
+    background-image: url("https://res.cloudinary.com/kuic/image/upload/v1566490915/startNg2019/kuic_jxb4la.jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+.user-image-box-8 {
+    height: 200px;
+    width: 200px;
+    background-image: url("https://res.cloudinary.com/chidiebere/image/upload/v1523832031/pp.jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+.user-image-box-9 {
+    height: 200px;
+    width: 200px;
+    background-image: url("https://res.cloudinary.com/geedee/image/upload/v1571420489/IMG_20190311_075802_315_hi0dii.jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+.user-image-box-10 {
+    height: 200px;
+    width: 200px;
+    background-image: url("https://res.cloudinary.com/sidebone/image/upload/v1566557645/arleuyaxygdgarwsvrha.jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+.user-image-box-11 {
+    height: 200px;
+    width: 200px;
+    background-image: url("https://res.cloudinary.com/patience/image/upload/v1566544234/peshie.jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+.user-image-box-12 {
+    height: 200px;
+    width: 200px;
+    background-image: url("https://res.cloudinary.com/emmaodia/image/upload/v1571423773/emmaodia.jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+.user-image-box-13{
+    height: 200px;
+    width: 200px;
+    background-image: url("https://res.cloudinary.com/abulwasiu22/image/upload/v1571411993/abdulwasiu02_p4qgpx.jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+.user-image-box-14 {
+    height: 200px;
+    width: 200px;
+    background-image: url("https://res.cloudinary.com/aboogeeky/image/upload/v1566541703/passport_hcist5.jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+.user-image-box-15{
+    height: 200px;
+    width: 200px;
+    background-image: url("");
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+           
+    .navbar{
+   position:fixed;
+   width:100%;
+   top:0;
+   z-index:1;
+ }         
+
+    </style>
+   
+
+
+</head>
+<body>
+<header>
         <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: black">
           <div class="container">
               <a class="navbar-brand" href="index.html" style="font-weight: bold;font-size: 1.5em;"
@@ -228,158 +592,395 @@
                       <li class="nav-item">
                           <a class="nav-link  text-light" href="about_us.html">About Us</a>
                       </li>
-                      <li class="nav-item active">
+                      <li class="nav-item">
                           <a class="nav-link  text-light" href="teampage.html">Team</a>
                       </li>
                       <li class="nav-item">
-                          <a class="nav-link  text-light" href="https://hng.tech/" target="_blank">Sponsors</a>
+                          <a class="nav-link  text-light" href="https://hng.tech/" target="_blank">Donate</a>
                       </li>
                   </ul>
               </div>
           </div>
       </nav>
-        </header>
-      
-    
-        <h2 class="meet">MEET OUR TEAM</h2>
-        <br>
-        
-        <div class="row">
-          <div class="column">
-            <div class="card">
-              
-              <div class="container1">
-                <div class="slant"></div>
-                <img class="user-img" src="img/1.jpg" alt="Member" style="width:150px; height:150px">
-                <div class="text">
-                    <h2 class="name">Steven Kobe</h2>
-                    <p class="title">Creative Director</p>
-                    <p>lorem ipsum ipsum lorem lorem ipsum ipsum lorem lorem ipsum ipsum lorem lorem ipsum ipsum lorem lorem ipsum ipsum lorem.</p>
+      </header>
+    <main>     
+     <!--  TEAM -->
+     <section id="team">
+            <div class="content-box">
+                <div class="content-title">
+                    <h3>Meet Our Team</h3>
+                    <div class="content-title-underline"></div>
                 </div>
-                <button class="button">Contact</button>
-              </div>
-              <div class="socials">
-                  <a href="https://twitter.com"><img class="icon" src="img/icons/twitter.png" alt="Twitter"></a>
-                  <a href="https://www.instagram.com"><img class="icon" src="img/icons/instagram.png" alt="Twitter"></a>
-                  <a href="https://www.linkedin.com"><img class="icon" src="img/icons/linked.png" alt="Twitter"></a>
-                  <a href="https://mail.google.com"><img class="icon" src="img/icons/google-plus.png" alt="Twitter"></a>
-              </div>
-            </div>
-          </div>
-          
-          <div class="column">
-            <div class="card">
-              
-              <div class="container1">
-                <div class="slant"></div>
-                <img class="user-img" src="img/2.jpg" alt="Member" style="width:150px; height:150px">
-                <div class="text">
-                    <h2 class="name">Samad Hamid</h2>
-                    <p class="title">Backend Engineer</p>
-                    <p>lorem ipsum ipsum lorem lorem ipsum ipsum lorem lorem ipsum ipsum lorem lorem ipsum ipsum lorem lorem ipsum ipsum lorem.</p>
+                <div class="container">
+                   <div class="row">
+                      
+                       <div class="col the-col">
+                          <div class="all-users side">
+                              <div class="user-image">
+                                   <div class="user-image-box-1"></div>
+                               </div>
+                               <div class="content-part back text-center">
+                                   <div class="user-info">
+                                       <h3>Mercy Inyang</h3>
+                                       <p>Front-End Developer</p>
+                                   </div>
+                                   <div class="user-content"><b>Team lead</b>
+                                       <p class="text-center p-2">SlackUsername : @Miss Temi</p>
+                                   </div>
+                               </div>
+                               <div class="content-footer mb-4">
+                                   <a href="https://twitter.com/LoneTemi" target="_blank">
+                                       <i class="fab fa-twitter-square fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="https://www.instagram.com/mercyskittles/" target="_blank">
+                                       <i class="fab fa-instagram fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="https://www.linkedin.com/in/mercyinyangp" target="_blank">
+                                       <i class="fab fa-linkedin fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="https://www.facebook.com/mercytemiinyang" target="_blank">
+                                       <i class="fab fa-facebook-square fa-2x social-icons"></i>
+                                   </a>
+                               </div>
+                          </div>  
+                       </div>
+                       <div class="col the-col">
+                            <div class="all-users side">
+                                <div class="user-image">
+                                     <div class="user-image-box-2"></div>
+                                 </div>
+                                 <div class="content-part back text-center">
+                                     <div class="user-info">
+                                         <h3>Onyenkachi Chidiebere</h3>
+                                         <p>Front-End Developer</p>
+                                     </div>
+                                     <div class="user-content"><b>Team lead</b>
+                                         <p class="text-center p-2">SlackUsername : @codeSmith</p>
+                                     </div>
+                                 </div>
+                                 <div class="content-footer mb-4">
+                                     <a href="https://twitter.com/" target="_blank">
+                                         <i class="fab fa-twitter-square fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="https://www.instagram.com/" target="_blank">
+                                         <i class="fab fa-instagram fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="http://www.linkedin.com/in/onyekachi-chidiebere-5202bb124" target="_blank">
+                                         <i class="fab fa-linkedin fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="https://www.facebook.com/" target="_blank">
+                                         <i class="fab fa-facebook-square fa-2x social-icons"></i>
+                                     </a>
+                                 </div>
+                            </div>  
+                        </div>
+                        <div class="col the-col">
+                            <div class="all-users side">
+                                <div class="user-image">
+                                     <div class="user-image-box-3"></div>
+                                 </div>
+                                 <div class="content-part back text-center">
+                                     <div class="user-info">
+                                         <h3>Isuma Chidera</h3>
+                                         <p>Backend | Project Management</p>
+                                     </div>
+                                     <div class="user-content"><b>Project Manager</b>
+                                         <p class="text-center p-2">SlackUsername : @Cross-pm</p>
+                                     </div>
+                                 </div>
+                                 <div class="content-footer mb-4">
+                                     <a href="https://www.twitter.com/" target="_blank">
+                                         <i class="fab fa-twitter-square fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="https://www.instagram.com/" target="_blank">
+                                         <i class="fab fa-instagram fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="https://www.linkedin.com/in/chidera-isuma/" target="_blank">
+                                         <i class="fab fa-linkedin fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="https://www.facebook.com/" target="_blank">
+                                         <i class="fab fa-facebook-square fa-2x social-icons"></i>
+                                     </a>
+                                </div>
+                            </div>  
+                        </div>
+                        <div class="col the-col">
+                            <div class="all-users side">
+                                <div class="user-image">
+                                     <div class="user-image-box-4"></div>
+                                 </div>
+                                 <div class="content-part back text-center">
+                                     <div class="user-info">
+                                         <h3>Samuel Egbajie</h3>
+                                         <p>Front-End Developer</p>
+                                     </div>
+                                     <div class="user-content"><b>Worked on the comparison Algorithm using JavaScript</b>
+                                         <p class="text-center p-2">SlackUsername : @Major</p>
+                                     </div>
+                                 </div>
+                                 <div class="content-footer mb-4">
+                                     <a href="https://www.twitter.com/Engr_Major" target="_blank">
+                                         <i class="fab fa-twitter-square fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="https://www.instagram.com/engr_major" target="_blank">
+                                         <i class="fab fa-instagram fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="https://www.linkedin.com/in/samuel-egbajie-08662415b" target="_blank">
+                                         <i class="fab fa-linkedin fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="https://free.facebook.com/samuel.oshie" target="_blank">
+                                         <i class="fab fa-facebook-square fa-2x social-icons"></i>
+                                     </a>
+                                 </div>
+                            </div>  
+                        </div>
+                        <div class="col the-col">
+                            <div class="all-users side">
+                                <div class="user-image">
+                                     <div class="user-image-box-5"></div>
+                                 </div>
+                                 <div class="content-part back text-center">
+                                     <div class="user-info">
+                                         <h3>Prosper Ndubueze </h3>
+                                         <p>Front-End Developer</p>
+                                     </div>
+                                     <div class="user-content"><b>File and text comparison page frontend</b>
+                                         <p class="text-center p-2">SlackUsername : @Ros4eva</p>
+                                     </div>
+                                 </div>
+                                 <div class="content-footer mb-0">
+                                     <a href="https://twitter.com/rosesopuruchi" target="_blank">
+                                         <i class="fab fa-twitter-square fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="https://www.instagram.com/prospersopuruchi/" target="_blank">
+                                         <i class="fab fa-instagram fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="https://www.linkedin.com/in/prosper-sopuruchi-ndubueze-338209122" target="_blank">
+                                         <i class="fab fa-linkedin fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="https://www.facebook.com/prosper.sopuruchi/" target="_blank">
+                                         <i class="fab fa-facebook-square fa-2x social-icons"></i>
+                                     </a>
+                                 </div>
+                            </div>  
+                         </div>
+                        <div class="col the-col">
+                            <div class="all-users side">
+                                <div class="user-image">
+                                     <div class="user-image-box-6"></div>
+                                 </div>
+                                 <div class="content-part back text-center">
+                                     <div class="user-info">
+                                         <h3>Akpan Dominic Gabriel</h3>
+                                         <p>UI/UX Design</p>
+                                     </div>
+                                     <div class="user-content"><b>I coordinated the design team and designed the home page and contributed/adjusted all the other pages</b>
+                                         <p class="text-center p-2">SlackUsername : @Pa Dom</p>
+                                     </div>
+                                 </div>
+                                 <div class="content-footer mb-4">
+                                     <a href="https://twitter.com/drmusic001?s=09">
+                                         <i class="fab fa-twitter-square fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="https://www.instagram.com/">
+                                         <i class="fab fa-instagram fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="https://www.linkedin.com/in/dominic-akpan-540560196">
+                                         <i class="fab fa-linkedin fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="https://www.facebook.com/akpan.dominic">
+                                         <i class="fab fa-facebook-square fa-2x social-icons"></i>
+                                     </a>
+                                 </div>
+                            </div>  
+                        </div>
+                        <div class="col the-col">
+                            <div class="all-users side">
+                                <div class="user-image">
+                                     <div class="user-image-box-7"></div>
+                                 </div>
+                                 <div class="content-part back text-center">
+                                     <div class="user-info">
+                                         <h3>Kingsley Umujeyan</h3>
+                                         <p>Front-End Developer</p>
+                                     </div>
+                                     <div class="user-content"><b>Team Page</b>
+                                         <p class="text-center p-2">SlackUsername : @kuic</p>
+                                     </div>
+                                 </div>
+                                 <div class="content-footer mb-4">
+                                     <a href="https://twitter.com/kuicpet">
+                                         <i class="fab fa-twitter-square fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="https://www.instagram.com/">
+                                         <i class="fab fa-instagram fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="https://www.linkedin.com/in/kingsley-umujeyan-17858a75/">
+                                         <i class="fab fa-linkedin fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="https://web.facebook.com/umujeyan.kingsley">
+                                         <i class="fab fa-facebook-square fa-2x social-icons"></i>
+                                     </a>
+                                 </div>
+                            </div>  
+                        </div>
+                        <div class="col the-col">
+                            <div class="all-users side">
+                                <div class="user-image">
+                                     <div class="user-image-box-8"></div>
+                                 </div>
+                                 <div class="content-part back text-center">
+                                     <div class="user-info">
+                                         <h3>Chidiebere Chukwudi</h3>
+                                         <p>Back-End Developer</p>
+                                     </div>
+                                     <div class="user-content"><b>Php script for file comparison</b>
+                                         <p class="text-center p-2">SlackUsername : @jovial</p>
+                                     </div>
+                                 </div>
+                                 <div class="content-footer mb-4">
+                                     <a href="https://twitter.com/chidideveloper">
+                                         <i class="fab fa-twitter-square fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="https://www.instagram.com/">
+                                         <i class="fab fa-instagram fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="https://www.linkedin.com/in/">
+                                         <i class="fab fa-linkedin fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="https://m.facebook.com/">
+                                         <i class="fab fa-facebook-square fa-2x social-icons"></i>
+                                     </a>
+                                 </div>
+                            </div>  
+                        </div>
+                        <div class="col the-col">
+                            <div class="all-users side">
+                                <div class="user-image">
+                                     <div class="user-image-box-9"></div>
+                                 </div>
+                                 <div class="content-part back text-center">
+                                     <div class="user-info">
+                                         <h3>Godwin Ikott</h3>
+                                         <p>Front-End Developer</p>
+                                     </div>
+                                     <div class="user-content"><b>Home Page</b>
+                                         <p class="text-center p-2">SlackUsername : @Geedee</p>
+                                     </div>
+                                 </div>
+                                 <div class="content-footer mb-4">
+                                     <a href="http://www.twitter.com/geedeewain">
+                                         <i class="fab fa-twitter-square fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="http://www.instagram.com/geedeewain">
+                                         <i class="fab fa-instagram fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="http://www.linkedin.com/godwinikott">
+                                         <i class="fab fa-linkedin fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="https://m.facebook.com/olawaleesa">
+                                         <i class="fab fa-facebook-square fa-2x social-icons"></i>
+                                     </a>
+                                 </div>
+                            </div>  
+                        </div>
+                        <div class="col the-col">
+                            <div class="all-users side">
+                                <div class="user-image">
+                                     <div class="user-image-box-10"></div>
+                                 </div>
+                                 <div class="content-part back text-center">
+                                     <div class="user-info">
+                                         <h3>Amodu Ola-adewale</h3>
+                                         <p>Front-End Developer</p>
+                                     </div>
+                                     <div class="user-content"><b>About page</b>
+                                         <p class="text-center p-2">SlackUsername : @sidebone</p>
+                                     </div>
+                                 </div>
+                                 <div class="content-footer mb-4">
+                                     <a href="https://twitter.com/I_Am_Amodu/status/1162042614167810050?s=08">
+                                         <i class="fab fa-twitter-square fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="https://www.instagram.com/?hl=en/">
+                                         <i class="fab fa-instagram fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="https://www.linkedin.com/">
+                                         <i class="fab fa-linkedin fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="https://m.facebook.com/?hrc=1&refsrc=http%3A%2F%2Fwww.google.com%2F&_rdr">
+                                         <i class="fab fa-facebook-square fa-2x social-icons"></i>
+                                     </a>
+                                 </div>
+                            </div>  
+                        </div>
+                        <div class="col the-col">
+                            <div class="all-users side">
+                                <div class="user-image">
+                                     <div class="user-image-box-11"></div>
+                                 </div>
+                                 <div class="content-part back text-center">
+                                     <div class="user-info">
+                                         <h3>Patience Akpan</h3>
+                                         <p>Front-End Developer</p>
+                                     </div>
+                                     <div class="user-content"><b>File upload page</b>
+                                         <p class="text-center p-2">SlackUsername : @@peshie</p>
+                                     </div>
+                                 </div>
+                                 <div class="content-footer mb-4">
+                                     <a href="https://mobile.twitter.com/peshie01">
+                                         <i class="fab fa-twitter-square fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="https://www.instagram.com/peshie01/?hl=en">
+                                         <i class="fab fa-instagram fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="https://www.linkedin.com/in/patience-akpan-1442b510a">
+                                         <i class="fab fa-linkedin fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="https://m.facebook.com/patchizzy">
+                                         <i class="fab fa-facebook-square fa-2x social-icons"></i>
+                                     </a>
+                                 </div>
+                            </div>  
+                        </div>
+                        <div class="col the-col">
+                            <div class="all-users side">
+                                <div class="user-image">
+                                     <div class="user-image-box-12"></div>
+                                 </div>
+                                 <div class="content-part back text-center">
+                                     <div class="user-info">
+                                         <h3>Emmanuel Oaikhenan</h3>
+                                         <p>DevOps</p>
+                                     </div>
+                                     <div class="user-content"><b>Installed and setup NGINX for webserver</b>
+                                         <p class="text-center p-2">SlackUsername : @emma_odia</p>
+                                     </div>
+                                 </div>
+                                 <div class="content-footer mb-4">
+                                     <a href="https://twitter.com/LoneTemi">
+                                         <i class="fab fa-twitter-square fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="https://www.instagram.com/mercyskittles/">
+                                         <i class="fab fa-instagram fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="https://www.linkedin.com/in/mercyinyangp">
+                                         <i class="fab fa-linkedin fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="https://www.facebook.com/mercytemiinyang">
+                                         <i class="fab fa-facebook-square fa-2x social-icons"></i>
+                                     </a>
+                                 </div>
+                            </div>  
+                        </div>
+                        
+                    </div> 
                 </div>
-                <button class="button">Contact</button>
-              </div>
-              <div class="socials">
-                  <a href="https://twitter.com"><img class="icon" src="img/icons/twitter.png" alt="Twitter"></a>
-                  <a href="https://www.instagram.com"><img class="icon" src="img/icons/instagram.png" alt="Twitter"></a>
-                  <a href="https://www.linkedin.com"><img class="icon" src="img/icons/linked.png" alt="Twitter"></a>
-                  <a href="https://mail.google.com"><img class="icon" src="img/icons/google-plus.png" alt="Twitter"></a>
-              </div>
             </div>
-          </div>
-          
-          <div class="column">
-            <div class="card">
-              
-              <div class="container1">
-                <div class="slant"></div>
-                <img class="user-img" src="img/3.jpg" alt="Member" style="width:150px; height:150px">
-                <div class="text">
-                    <h2 class="name">Paula White</h2>
-                    <p class="title">Lead Designer</p>
-                    <p>lorem ipsum ipsum lorem lorem ipsum ipsum lorem lorem ipsum ipsum lorem lorem ipsum ipsum lorem lorem ipsum ipsum lorem.</p>
-                </div>
-                <button class="button">Contact</button>
-              </div>
-              <div class="socials">
-                  <a href="https://twitter.com"><img class="icon" src="img/icons/twitter.png" alt="Twitter"></a>
-                  <a href="https://www.instagram.com"><img class="icon" src="img/icons/instagram.png" alt="Twitter"></a>
-                  <a href="https://www.linkedin.com"><img class="icon" src="img/icons/linked.png" alt="Twitter"></a>
-                  <a href="https://mail.google.com"><img class="icon" src="img/icons/google-plus.png" alt="Twitter"></a>
-              </div>
-            </div>
-          </div>
-          
-          <div class="column">
-            <div class="card">
-              
-              <div class="container1">
-                <div class="slant"></div>
-                <img class="user-img" src="img/4.jpg" alt="Member" style="width:150px; height:150px">
-                <div class="text">
-                    <h2 class="name">Steven Kobe</h2>
-                    <p class="title">Creative Director</p>
-                    <p>lorem ipsum ipsum lorem lorem ipsum ipsum lorem lorem ipsum ipsum lorem lorem ipsum ipsum lorem lorem ipsum ipsum lorem.</p>
-                </div>
-                <button class="button">Contact</button>
-              </div>
-              <div class="socials">
-                  <a href="https://twitter.com"><img class="icon" src="img/icons/twitter.png" alt="Twitter"></a>
-                  <a href="https://www.instagram.com"><img class="icon" src="img/icons/instagram.png" alt="Twitter"></a>
-                  <a href="https://www.linkedin.com"><img class="icon" src="img/icons/linked.png" alt="Twitter"></a>
-                  <a href="https://mail.google.com"><img class="icon" src="img/icons/google-plus.png" alt="Twitter"></a>
-              </div>
-            </div>
-          </div>
-          
-          <div class="column">
-            <div class="card">
-              
-              <div class="container1">
-                <div class="slant"></div>
-                <img class="user-img" src="img/5.jpg" alt="Member" style="width:150px; height:150px">
-                <div class="text">
-                    <h2 class="name">Samad Hamid</h2>
-                    <p class="title">Backend Engineer</p>
-                    <p>lorem ipsum ipsum lorem lorem ipsum ipsum lorem lorem ipsum ipsum lorem lorem ipsum ipsum lorem lorem ipsum ipsum lorem.</p>
-                </div>
-                <button class="button">Contact</button>
-              </div>
-              <div class="socials">
-                  <a href="https://twitter.com"><img class="icon" src="img/icons/twitter.png" alt="Twitter"></a>
-                  <a href="https://www.instagram.com"><img class="icon" src="img/icons/instagram.png" alt="Twitter"></a>
-                  <a href="https://www.linkedin.com"><img class="icon" src="img/icons/linked.png" alt="Twitter"></a>
-                  <a href="https://mail.google.com"><img class="icon" src="img/icons/google-plus.png" alt="Twitter"></a>
-              </div>
-            </div>
-          </div>
-          
-          <div class="column">
-            <div class="card">
-              
-              <div class="container1">
-                <div class="slant"></div>
-                <img class="user-img" src="img/1.jpg" alt="Member" style="width:150px; height:150px">
-                <div class="text">
-                    <h2 class="name">Paula White</h2>
-                    <p class="title">Lead Designer</p>
-                    <p>lorem ipsum ipsum lorem lorem ipsum ipsum lorem lorem ipsum ipsum lorem lorem ipsum ipsum lorem lorem ipsum ipsum lorem.</p>
-                </div>
-                <button class="button">Contact</button>
-              </div>
-              <div class="socials">
-                  <a href="https://twitter.com"><img class="icon" src="img/icons/twitter.png" alt="Twitter"></a>
-                  <a href="https://www.instagram.com"><img class="icon" src="img/icons/instagram.png" alt="Twitter"></a>
-                  <a href="https://www.linkedin.com"><img class="icon" src="img/icons/linked.png" alt="Twitter"></a>
-                  <a href="https://mail.google.com"><img class="icon" src="img/icons/google-plus.png" alt="Twitter"></a>
-              </div>
-            </div>
-          </div>
-          
-        </div>
-
-         <footer class="page-footer font-small mdb-color pt-4" style="background: #C4C4C4;">
+        </section>
+ 
+     <footer class="page-footer font-small mdb-color pt-4" style="background: #C4C4C4;">
 
         <div class="container text-center text-md-left">
 
@@ -410,7 +1011,7 @@
                 <a href="index.html">Home Page</a>
               </p>
               <p>
-                <a href="#!">Privacy Policy</a>
+                <a href="privacy.html">Privacy Policy</a>
               </p>
             </div>
 
@@ -460,13 +1061,14 @@
           </div>
         </div>
       </footer>
-    <div>
         
+       
+
+        <script src="https://kit.fontawesome.com/85682eb992.js" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-        <script src="https://kit.fontawesome.com/7967e81f77.js" crossorigin="anonymous"></script>
-        
-    </div>
-    </body>
+  
+</body>
 </html>

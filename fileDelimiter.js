@@ -66,7 +66,7 @@ function getCookie(name) {
             
                 return xhr;
               },
-                url: "http://127.0.0.1:8000/upload/delimeter/",
+                url: "https://docufix.pythonanywhere.com/upload/delimeter/",
                 type: "POST",
                 data: formData,
                 beforeSend: function(xhr, settings) {

@@ -3,6 +3,35 @@
     return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
 }
 
+// $.ajax({
+//   xhr: function() {
+//     var xhr = new window.XMLHttpRequest();
+
+//     xhr.upload.addEventListener("progress", function(evt) {
+//       if (evt.lengthComputable) {
+//         var percentComplete = evt.loaded / evt.total;
+//         percentComplete = parseInt(percentComplete * 100);
+//         console.log(percentComplete);
+
+//         if (percentComplete === 100) {
+
+//         }
+
+//       }
+//     }, false);
+
+//     return xhr;
+//   },
+//   url: posturlfile,
+//   type: "POST",
+//   data: JSON.stringify(fileuploaddata),
+//   contentType: "application/json",
+//   dataType: "json",
+//   success: function(result) {
+//     console.log(result);
+//   }
+// });
+
 function preloader(){
     let textfieldarea = $("#text");
     textfieldarea.prepend(
@@ -59,6 +88,12 @@ function getCookie(name) {
 
     $('#uploadForm').submit(function(e) {
         var csrftoken = jQuery("[name=csrfmiddlewaretoken]").val();
+
+        var bar = $('.bar');
+        var progress = $('.progess')
+        var percent = $('.progress-bar');
+        var status = $('#status');
+        $(".progress").attr("style", "display: block" );
     
           e.preventDefault();
 
@@ -80,6 +115,28 @@ function getCookie(name) {
         
         
             $.ajax({
+              xhr: function() {
+                var xhr = new window.XMLHttpRequest();
+            
+                xhr.upload.addEventListener("progress", function(evt) {
+                  if (evt.lengthComputable) {
+                    var percentComplete = evt.loaded / evt.total;
+                    percentComplete = parseInt(percentComplete * 100);
+                    var percentVal = '0%';
+                    percent.width(`${percentComplete}%`);
+                    percent.text(`${percentComplete}%`);
+                    console.log(percentComplete);
+            
+                    if (percentComplete === 100) {
+                      percent.text('Upload Completed');
+            
+                    }
+            
+                  }
+                }, false);
+            
+                return xhr;
+              },
                 url: "https://docufix.pythonanywhere.com/upload/",
                 type: "POST",
                 data: formData,
@@ -87,12 +144,12 @@ function getCookie(name) {
                     if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
                         xhr.setRequestHeader("X-CSRFToken", csrftoken);
                     }
-                    preloader()
                 },
                 success: function(response){
                     console.log('success');
                     console.log(response);
-                    $("#preloader").remove()
+                    $(".progress").attr("style", "display: none " );
+                    progress.remove()
                     $('#textareaBefore').val(response.file1)
                     $('#textareaAfter').val(response.file2)
                     toastr.success("Content Loaded Successfully");

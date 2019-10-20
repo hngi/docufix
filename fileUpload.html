@@ -328,6 +328,14 @@
                     </form>
                 </div>
             </div>
+            
+            <div class="progress" style="display: none">
+                <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar"
+                aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:0%;">
+                 
+                </div>
+              </div>
+            <div id="status"></div>
             <div id="text" style="display: none;">
                 <div class="row mt-5">
                     <div class="col-md-5">
@@ -527,18 +535,18 @@
 
             <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
               <h6 class="text-uppercase mb-4 font-weight-bold">Docufix</h6>
-              <p>We help you arrange, sort and put your files and data in other for easy management</p>
-              <p>Proudly Built By HNGi6 Interns</p>
+              <p>We help you arrange, sort, compare and extract information from different file formats</p>
+              <p>This App Was Built By HNGi6 Interns</p>
             </div>
 
             <hr class="w-100 clearfix d-md-none">
 
             <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
               <p>
-                <a href="about_us.html">How it works</a>
+                <a href="about_us.html">About Us</a>
               </p>
               <p>
-                <a href="teampage.html">About Us</a>
+                <a href="teampage.html">Our Team</a>
               </p>
             </div>
             <!-- Grid column -->
@@ -564,7 +572,7 @@
             <div class="col-md-7 col-lg-8">
 
               <p class="text-center text-md-left">© 2019 Copyright:
-                <a href="https://hng/internship">
+                <a href="https://hng.tech/">
                   <strong> Docufix</strong>
                 </a>
               </p>
@@ -1203,8 +1211,9 @@
                     "xmlns:w='urn:schemas-microsoft-com:office:word' "+
                     "xmlns='http://www.w3.org/TR/REC-html40'>"+
                     "<head><meta charset='utf-8'><title>Export HTML to Word Document with JavaScript</title></head><body>";
+
                var footer = "</body></html>";
-               var sourceHTML = header+document.getElementById("textareaDifferences").innerHTML+footer;
+               var sourceHTML = header + document.getElementById("textareaDifferences").innerHTML+footer;
                
                var source = 'data:application/vnd.ms-word;charset=utf-8,' + encodeURIComponent(sourceHTML);
                var fileDownload = document.createElement("a");

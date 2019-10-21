@@ -61,7 +61,7 @@
 
         @media only screen and (max-width: 767px) {
           .col-md-7{
-            margin-top: 5em;
+            margin-top: 7em;
           }
 
           .form-box {
@@ -69,6 +69,28 @@
             margin-top: -25em;
             margin-bottom: 1em;
           }
+        }
+
+        @media only screen and (max-width: 350px) {
+          .col-md-7{
+            margin-top: 7em;
+          }
+
+          .btn, .input, .btn-primary{
+            font-size: small;
+          }
+
+          .form-group{
+            margin-left: -40px;
+            margin-right: -40px;
+          }
+
+          .form-box {
+            max-width: 60em;
+            margin-top: -22em;
+            margin-bottom: 2em;
+          }
+          
         }
  
     </style>
@@ -118,7 +140,7 @@
             </div>
 
             <div class="form-box">
-              <form action="https://formspree.io/ssdanso@live.com" method="post">
+              <form id="feedback-form" action="https://formspree.io/ssdanso@live.com" method="post">
                 <div class="form-group">
                   <label for="email">Your Email</label>
                   <input class="form-control" id="email" type="email" name="Email">

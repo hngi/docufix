@@ -1,0 +1,1153 @@
+ <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="icon" type="image/png" href="https://res.cloudinary.com/ros4eva/image/upload/v1571538580/favicon_elbl53.png"/>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" type="text/css" href="https://dl.dropbox.com/s/v5nuo2k9pvuoogf/rose.css">
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+            crossorigin="anonymous"
+        />
+        <link
+            href="https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+        <link rel="stylesheet" type="text/css" href="wysiwyg.css">
+        <title>Docufix</title>
+    </head>
+    <style>
+    /* #file-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;;
+    }
+    #file{
+        display: flex;;
+        border-right: 2px solid black;
+        padding: 20px 30px 20px 0px;
+        align-items: center;
+    }
+    #text{
+        display: flex;
+        padding: 20px 0 20px 30px;
+        align-items: center;;
+    }
+    #text-compare{
+    display: flex;
+    padding: 30px 60px;
+    justify-content: space-between;
+    }
+    #text-1{
+        width: 44%;
+    }
+        .labels{
+            display: flex;
+            padding: 10px 0px 10px 30px;
+            width: 100%;
+            background-color: #000000;
+            color: white;
+            margin-bottom: -7px;
+            font-weight: bold;
+            
+        }
+            .labels img{
+                margin-right: 10px;
+            }
+    #arrow{
+        align-self: center;
+        
+    }
+    #text-2{
+        width: 44%;
+    }
+    .input-txt{
+        margin-top: -15px;
+        width: 100%;
+        height: 400px;
+        padding: 15px 30px;
+        color: black;
+    }
+    #button{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        margin-top: 30px;
+    }
+        button{
+            border-radius: 20px;
+            background-color: #000000;
+            color: #ffffff;
+            padding: 15px 30px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+        }
+            button:hover{
+                font-weight: bold;
+                background-color: #221e1e;
+            }
+            button img{
+            width: 16.5px;
+            height: 16.5px;
+            vertical-align: middle;
+            margin-right: 10px;
+            }
+    @media screen and (max-width: 600px){
+    #main-text{
+        margin-bottom: 25px;
+        font-size: 24px;
+    }
+    #file-text{
+        font-size: 18px;
+    }
+    #text-compare{
+        flex-direction: column;
+        padding: 30px 10px 10px 10px ;
+    }
+    #text-2, #text-1{
+        width: 100%;
+    }
+    button{
+        width: 70%;
+        font-size: 15px;
+    }
+    }
+        .active1 {
+            border-bottom: 2px solid black;
+        }
+        textarea{
+            width: 100% !important;
+        } */
+        .active1 {
+            border-bottom: 3px solid black;
+        }
+        textarea{
+            width: 100% !important;
+        }
+        .padding{
+            padding-left: 9em;
+            padding-right: 9em;
+        }
+        @media (max-width: 576px){
+            label{
+                display: block;
+            }
+            img{
+                padding-top: 0 !important;
+            }
+            .margin{
+                margin-bottom: 2em;
+            }
+            .padding{
+            padding-left: 1.5em;
+            padding-right: 1.5em;
+        }
+        }
+        .active a{
+    color: grey !important;
+    }
+
+.shareBtn button {
+    background: #343a40;
+    color: rgb(87, 207, 244);
+    cursor: pointer;
+    display: inline-block;
+    padding: 10px 20px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    border: none;
+
+}
+
+.shareBtn a {
+    text-decoration: none
+}
+
+
+.shareBtn a:hover {
+    color: rgb(87, 207, 244);
+}
+.shareBtn button:hover {
+    padding: 9px 18px;
+}
+
+.shareBtn h4 {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.shareBtn {
+    display: none;
+}
+/* .navbar{
+   position:fixed;
+   width:100%;
+   top:0;
+   z-index:1;
+ } */
+ /* .duc{
+     margin-top:5%;
+ } */
+ 
+
+    </style>
+       
+        <body style="background-color:  white; font-family: Ubuntu;"   onload ="document.getElementById('id01').style.display='block'">
+
+<div class="w3-container">
+  <div id="id01" class="w3-modal">
+    <div class="w3-modal-content" style="border-radius: 4px;">
+      <div class="w3-container">
+        <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+        
+        <h2 style="font-weight: bolder;">NOTE:</h2>
+        <p>Docufix Duplicates Remover only supports 'docx', 'pdf', 'txt', 'csv', 'json', 'xml' file format for <strong>uploading</strong></p>
+      <p>Upload the document and specfiy the delimter in which they are seperated in i.e ',' </p>
+      <p>For example ramdom@gmail.com, <br/> random@gmail.com,hng@yahoo.com, <br/>mark@gmail.com</p>
+        <p>Compared texts are <strong>editable,</strong> this means you can edit your work for correction after comparing.</p>
+<strong style = "color: red">IMPORTANT!!!</strong>
+<ul>The following activities would not be efficiently carried out on mobile phone except for larger screen sizes:
+
+<li>Removing Duplicates from documents</li>
+
+
+
+</ul>
+
+    </div>
+    </div>
+  </div>
+</div>
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: black">
+                <div class="container">
+                    <a class="navbar-brand" href="index.html" style="font-weight: bold;font-size: 1.5em;"
+                        >DOCUFIX</a
+                    >
+                    <button
+                        class="navbar-toggler border-0"
+                        type="button"
+                        data-toggle="collapse"
+                        data-target="#navbarNav"
+                        aria-controls="navbarNav"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                    >
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul
+                            class="navbar-nav ml-auto"
+                            style="font-weight: bold;"
+                        >
+                            <li class="nav-item ">
+                                <a class="nav-link text-light" href="about_us.html">About Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link  text-light" href="teampage.html">Team</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link  text-light" href="https://hng.tech/" target="_blank">Donate</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div class="container mt-5" style="min-height: 100vh">
+            <h3 class="pt-5 font-weight-bold">Remove Duplicates from Two Documents</h3>
+            <h2 class="text-center mt-5">
+                <span
+                    ><a
+                        href="#"
+                        id="fileBtn"
+                        class="active1 pb-1"
+                        style="text-decoration: none; color:black; margin-right: 10px;"
+                        ><img class="top-icons" src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571193844/samples/figma%20career-list/lario/xisa8mltboqmepbzjqks.png">File</a
+                    ></span
+                >
+                |<span
+                    ><a
+                        href="#"
+                        id="textBtn"
+                        style="text-decoration: none; color:black; margin-left: 10px"
+                        ><img class="top-icons" src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571193193/samples/figma%20career-list/lario/slpij76xxh4f7bpixbr5.png">Text
+                    </a></span
+                >
+            </h2>
+            <div id="file" >
+                <div class="text-center mt-5">
+                    <form class="mb-5" id="uploadForm" method="POST" enctype="multipart/form-data">
+                        <div class="row padding">
+                                <div class="custom-file col-md-6 margin">
+                                    <label for="upload1" id="label1" class="text-left mr-md-5 custom-file-label"
+                                        >Document:</label
+                                    >
+                                    <input
+                                    id="upload1" 
+                                    type="file" 
+                                    name="file1" 
+                                accept=""
+                                class="custom-file-input"
+                                        style="border: 0;background-color: transparent;" required
+                                    />
+                                    <div class="invalid-feedback">
+                                        No Images Allowed
+                                      </div>
+                                </div>
+                                <div class="custom-file col-md-6">
+                                  
+                                    <input
+                                    id="delimiter" for="delimiter" type="text" name="delimiter" accept="" class="form-control"
+                                        style="" required placeholder="delimiter"
+                                    />
+                                    <div class="invalid-feedback">
+                                        No Images Allowed
+                                      </div>
+                                </div>
+
+                        </div>
+                        <div class="form-group mt-5">
+                                <button id="uploadBtn" type="submit" value="submit" class="btn btn-dark mt-3 "
+                                onclick="buttonCompareClicked();" ><i class="fas fa-cloud-upload-alt"></i> upload</button>
+                            </div>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="progress" style="display: none">
+                <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar"
+                aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:0%;">
+                 
+                </div>
+              </div>
+            <div id="status"></div>
+            <div id="text" style="display: none;">
+                <div class="row mt-5">
+                    <div class="col-md-5">
+                        <div class="card">
+                            <div class="card-header bg-dark text-light">
+                                <img class="white-txt" src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571194266/samples/figma%20career-list/lario/ct8pi1qsjgonxsa7zdyn.png">Text
+                            </div>
+                            <div class="card-body">
+                                <textarea
+                                    placeholder="Write your text here" class="" id="textareaBefore" cols="" rows="10"
+                                    style="border: 0;border-right:2px solid #444;border-left:2px solid #444;"
+                                ></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2 text-center mt-5 mb-5" > <img style="padding-top: 50%;" id="compare-txt" class="align-middle" src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571193103/samples/figma%20career-list/lario/hyu5pvtsmqxymfx5ohwi.png"></div>
+                    <div class="col-md-5">
+                        <div class="card">
+                            <div class="card-header bg-dark text-light">
+                                <img class="white-txt" src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571194266/samples/figma%20career-list/lario/ct8pi1qsjgonxsa7zdyn.png"> Text
+                            </div>
+                            <div class="card-body">
+                                <textarea
+                                    placeholder="Write your text here" class="input-txt"
+                                     id="textareaAfter" cols="" rows="10"
+                                    style="border: 0;border-right:2px solid #444;border-left:2px solid #444;"
+                                ></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center m-5" >
+                    <button  id="removeDuplicate" value="compare" class="btn btn-dark font-weight-bold"
+                          type="submit"> <img class="compare-img" src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571193103/samples/figma%20career-list/lario/butfaguuckar9dl0i1ug.png" width="23" height="23" style="margin-right: 10px;">Remove Duplicates</button
+                    >
+                </div>
+                <div>
+                        <!--<table class="table table-striped">
+                                <thead>
+                                  <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col" >RESULT</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <th scope="col">DIFFERENCE %</th>
+                                    <td id="percentageD"></td>
+                                  </tr>
+                                </tbody>
+                                <tbody>
+                                    <tr>
+                                        <th scope="col">SIMILARITY %</th>
+                                      <td  id="percentageS"></td>
+                                    </tr>
+                                  </tbody>
+                                  <tbody>
+                                    <tr>
+                                        <th scope="col">CHARACTER ADDED</th>
+                                      <td id="added"></td>
+                                    </tr>
+                                  </tbody>
+                                  <tbody>
+                                    <tr>
+                                        <th scope="col">CHARACTER DELETED</th>
+                                      <td id="deleted"></td>
+                                    </tr>
+                                  </tbody>
+                              </table>-->
+                    <!-- <table class="table table-striped">
+                        <thead>
+                          <tr>
+                                <th scope="col">#</th>
+                            <th scope="col" class="text-center">DIFFERENCE %</th>
+                            <th scope="col" class="text-center">SIMILARITY %</th>
+                            <th scope="col" class="text-center">CHARACTER ADDED </th>
+                            <th scope="col" class="text-center">CHARACTER DELETED </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">RESULT</th>
+                            <td id="percentageD" class="text-center"></td>
+                            <td  id="percentageS" class="text-center"></td>
+                            <td id="added" class="text-center"></td>
+                            <td id="deleted" class="text-center"></td>
+                          </tr>
+                        </tbody>
+                      </table> -->
+                    <label>Result:</label>
+                    <br />
+
+                    <br>
+
+                    
+            
+                      <div id="page"></div> 
+                      <textarea class="form-control" id="textareaDifferences" rows="10"></textarea>
+                    <!-- <div contenteditable="true" id="textareaDifferences" style="border:none;min-height:100%; width: 100%;overflow: scroll; box-shadow: 0px 0px 4px 1px grey;"></div> -->
+                </div>
+            
+               
+
+            </div>
+            <div align="right" class="shareBtn" id="shareBtn">
+                <h4>Helpful? Please Share With Your Friends On:</h4>
+                <button class="twtShare" data-js="twitter-share"><i class="fab fa-twitter"></i> Twitter</button>
+                <button class="fbShare" data-js="facebook-share"><i class="fab fa-facebook-f"></i> Facebook</button>
+                <button class="fbShare" data-js="facebook-share"><a href="mailto:info@example.com?&subject=&body=http://docufix.ga Hey! I just compared my files for similarities on Docufix"><i class="fas fa-envelope"></i> Email</a></button>
+            </div>
+
+        </div>
+ <footer class="page-footer font-small mdb-color pt-4" style="background: #C4C4C4;">
+
+        <div class="container text-center text-md-left">
+
+          <div class="row text-center text-md-left mt-3 pb-3">
+
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+              <h6 class="text-uppercase mb-4 font-weight-bold">Docufix</h6>
+              <p>We help you arrange, sort, compare and extract information from different file formats</p>
+              <p>This App Was Built By HNGi6 Interns</p>
+            </div>
+
+            <hr class="w-100 clearfix d-md-none">
+
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+              <p>
+                <a href="about_us.html">About Us</a>
+              </p>
+              <p>
+                <a href="teampage.html">Our Team</a>
+              </p>
+            </div>
+            <!-- Grid column -->
+
+            <hr class="w-100 clearfix d-md-none">
+
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+              <p>
+                <a href="index.html">Home Page</a>
+              </p>
+              <p>
+                <a href="privacy.html">Privacy Policy</a>
+              </p>
+            </div>
+
+          </div>
+
+          <hr>
+
+          <div class="row d-flex align-items-center">
+
+            <div class="col-md-7 col-lg-8">
+
+              <p class="text-center text-md-left">© 2019 Copyright:
+                <a href="https://hng.tech/">
+                  <strong> Docufix</strong>
+                </a>
+              </p>
+
+            </div>
+
+            <div class="col-md-5 col-lg-4 ml-lg-0">
+
+              <div class="text-center text-md-right">
+                <ul class="list-unstyled list-inline">
+                  <li class="list-inline-item">
+                    <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                      <i class="fab fa-facebook-f"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                      <i class="fab fa-twitter"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                      <i class="fab fa-google-plus-g"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                      <i class="fab fa-linkedin-in"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+       <script src="https://kit.fontawesome.com/7967e81f77.js" crossorigin="anonymous"></script>
+       <script>
+            document
+                .getElementById("fileBtn")
+                .addEventListener("click", showFile);
+            document
+                .getElementById("textBtn")
+                .addEventListener("click", showtext);
+
+            function showFile() {
+                document.getElementById("file").style.display = "block";
+                document.getElementById("text").style.display = "none";
+                document.getElementById("fileBtn").classList.add("active1");
+                document.getElementById("textBtn").classList.remove("active1");
+            }
+            function showtext() {
+                document.getElementById("text").style.display = "block";
+                document.getElementById("file").style.display = "none";
+                document.getElementById("fileBtn").classList.remove("active1");
+                document.getElementById("textBtn").classList.add("active1");
+            }
+        </script>
+        <script src="fileDelimiter.js"></script>
+        <script src = "wysiwyg.js"></script>
+        <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.debug.js"></script>
+        <script src = "jsPDF.js"></script>
+        <script type="text/javascript">
+  
+            // events
+              
+            function buttonCompareClicked()
+            {      
+                var textBefore = document.getElementById("textareaBefore").value;
+                var textAfter = document.getElementById("textareaAfter").value;
+              
+                var differences = new TextDifferencer().findDifferencesBetweenStrings
+                (
+                    textBefore,
+                    textAfter
+                );
+              
+             
+                var differencesAsString = differences.toString();
+              
+                // var textareaDifferences = document.getElementById
+                // (
+                //     "textareaDifferences"
+                // );
+                // textareaDifferences.innerHTML =differencesAsString;
+                document.getElementById("shareBtn").style.display = "block"
+                  
+            }
+              
+            // extensions
+              
+            function ArrayExtensions()
+            {
+                // extension class
+            }
+            {
+                Array.prototype.insertElementAt = function(element, index)
+                {
+                    this.splice(index, 0, element);
+                }
+              
+                Array.prototype.insertElementsAt = function(elements, index)
+                {
+                    for (var i = 0; i < elements.length; i++)
+                    {
+                        this.splice(index + i, 0, elements[i]);
+                    }
+                }
+              
+                Array.prototype.removeAt = function(index)
+                {
+                    this.splice(index, 1);
+                }
+            }
+              
+            // classes
+              
+            function TextDifferencer()
+            {
+                // do nothing
+            }
+            {
+                TextDifferencer.prototype.findDifferencesBetweenStrings = function(string0, string1)
+                {
+                    var lengthOfShorterString = 
+                        (string0.length <= string1.length ? string0.length : string1.length);
+             
+                    var numberOfExtremes = 2;   
+                    var passagePairsMatchingAtExtremes = [];
+                 
+                    for (var e = 0; e < numberOfExtremes; e++)
+                    {
+                        var lengthOfMatchingSubstring = 0;
+                 
+                        for (var i = 0; i < lengthOfShorterString; i++)
+                        {
+                            var offsetForString0 = (e == 0 ? i : string0.length - i - 1); 
+                            var offsetForString1 = (e == 0 ? i : string1.length - i - 1);
+             
+                            var charFromString0 = string0[offsetForString0];
+                            var charFromString1 = string1[offsetForString1];
+                 
+                            if (charFromString0 != charFromString1)
+                            {
+                                lengthOfMatchingSubstring = i;
+                                break;          
+                            }   
+                        }
+                 
+                        var matchingSubstringAtExtreme;
+             
+                        if (e == 0)
+                        {
+                            matchingSubstringAtExtreme = string0.substr(0, lengthOfMatchingSubstring);
+                            string0 = string0.substr(lengthOfMatchingSubstring);
+                            string1 = string1.substr(lengthOfMatchingSubstring);
+                        } else // if (e == 1)
+                        {
+                            matchingSubstringAtExtreme = string0.substr(string0.length - lengthOfMatchingSubstring);
+                            string0 = string0.substr(0, string0.length - lengthOfMatchingSubstring);
+                            string1 = string1.substr(0, string1.length - lengthOfMatchingSubstring);                
+                        }
+             
+                        var passagePairMatchingAtExtreme = new TextPassagePair
+                        (
+                            true, // doPassagesMatch
+                            [
+                                new TextPassage(matchingSubstringAtExtreme),
+                                new TextPassage(matchingSubstringAtExtreme),
+                            ]
+                        );
+             
+                        passagePairsMatchingAtExtremes.push
+                        (
+                            passagePairMatchingAtExtreme
+                        );
+                    }
+             
+                    var passagePairsAll = [];
+              
+                    var passagePairsMatching = this.findPassagePairsMatchingBetweenStrings
+                    (
+                        string0, string1, [ 0, 0 ]
+                    );
+              
+                    this.insertPassagePairsDifferentBetweenMatching
+                    (
+                        string0,
+                        string1,
+                        passagePairsMatching,
+                        passagePairsAll
+                    );
+             
+                    for (var e = 0; e < passagePairsMatchingAtExtremes.length; e++)
+                    {
+                        var passagePairMatchingAtExtreme = passagePairsMatchingAtExtremes[e];
+                        passagePairsAll.insertElementAt
+                        (
+                            passagePairMatchingAtExtreme, 
+                            (e == 0 ? 0 : passagePairsAll.length)
+                        );
+                    }
+                      
+                    var returnValue = new TextDifferences(passagePairsAll);
+              
+                    return returnValue;
+                }
+              
+                TextDifferencer.prototype.findPassagePairsMatchingBetweenStrings = function
+                (
+                    string0, string1, positionOffsets
+                )
+                {
+                    var passagePairsMatching = [];
+              
+                    var longestCommonPassagePair = this.findLongestCommonPassagePair
+                    (
+                        string0, 
+                        string1
+                    );
+              
+                    var longestCommonPassageText = longestCommonPassagePair.passages[0].text;
+                    var lengthOfCommonPassage = longestCommonPassageText.length;
+              
+                    if (lengthOfCommonPassage == 0)
+                    {
+                        return passagePairsMatching;    
+                    }
+              
+                    passagePairsMatching.push(longestCommonPassagePair);
+              
+                    var passages = longestCommonPassagePair.passages;
+                    var passage0 = passages[0];
+                    var passage1 = passages[1];
+              
+                    var passagePairsMatchingBeforeCommon = this.findPassagePairsMatchingBetweenStrings
+                    (
+                        string0.substr(0, passage0.position),
+                        string1.substr(0, passage1.position),
+                        [
+                            positionOffsets[0], 
+                            positionOffsets[1]
+                        ]
+                    );
+              
+                    var passagePairsMatchingAfterCommon = this.findPassagePairsMatchingBetweenStrings
+                    (
+                        string0.substr
+                        (
+                            passage0.position + lengthOfCommonPassage
+                        ),
+                        string1.substr
+                        (
+                            passage1.position + lengthOfCommonPassage
+                        ),
+                        [
+                            positionOffsets[0] 
+                                + passage0.position 
+                                + lengthOfCommonPassage,
+              
+                            positionOffsets[1] 
+                                + passage1.position 
+                                + lengthOfCommonPassage
+                        ]
+                    );
+              
+                    var passagePairSetsMatchingBeforeAndAfter = 
+                    [
+                        passagePairsMatchingBeforeCommon,
+                        passagePairsMatchingAfterCommon
+                    ];
+              
+                    for (var i = 0; i < passagePairSetsMatchingBeforeAndAfter.length; i++)
+                    {
+                        var passagePairsToInsert = passagePairSetsMatchingBeforeAndAfter[i];
+                        passagePairsMatching.insertElementsAt
+                        (          
+                            passagePairsToInsert,
+                            (i == 0 ? 0 : passagePairsMatching.length)
+                        );
+                    }
+              
+                    for (var i = 0; i < longestCommonPassagePair.passages.length; i++)
+                    {
+                        var passage = longestCommonPassagePair.passages[i];
+                        passage.position += positionOffsets[i];
+                    }
+              
+                    return passagePairsMatching;
+                }
+              
+                TextDifferencer.prototype.findLongestCommonPassagePair = function(string0, string1)
+                {
+                    var passage0 = new TextPassage("", 0);
+                    var passage1 = new TextPassage("", 0);
+              
+                    var returnValue = new TextPassagePair
+                    (
+                        true, // doPassagesMatch
+                        [
+                            passage0, passage1
+                        ]
+                    );
+              
+                    var lengthOfString0 = string0.length;
+                    var lengthOfString1 = string1.length;
+              
+                    var substringLengthsForRow = null;
+                    var substringLengthsForRowPrev;
+              
+                    var lengthOfLongestCommonSubstringSoFar = 0;
+                    var longestCommonSubstringsSoFar = "";
+                    var cellIndex = 0;
+              
+                    // Build a table whose y-axis is chars from string0,
+                    // and whose x-axis is chars from string1.
+                    // Put length of the longest substring in each cell.
+              
+                    for (var i = 0; i < lengthOfString0; i++)
+                    {
+                        substringLengthsForRowPrev = substringLengthsForRow;
+                        substringLengthsForRow = [];
+              
+                        for (var j = 0; j < lengthOfString1; j++)
+                        {
+                            if (string0[i] != string1[j])
+                            {
+                                substringLengthsForRow[j] = 0;
+                            }
+                            else 
+                            {
+                                var cellValue;
+              
+                                if (i == 0 || j == 0)
+                                {
+                                    // first row or column
+                                    cellValue = 1;
+                                }
+                                else
+                                {
+                                    // Copy cell to upper left, add 1.
+                                    cellValue = substringLengthsForRowPrev[j - 1] + 1;
+                                }
+              
+                                substringLengthsForRow[j] = cellValue;
+              
+                                if (cellValue > lengthOfLongestCommonSubstringSoFar)
+                                {
+                                    lengthOfLongestCommonSubstringSoFar = cellValue;
+                                    var startIndex = i - lengthOfLongestCommonSubstringSoFar + 1;
+                                    var longestCommonSubstringSoFar = string0.substring // not "substr"!
+                                    (
+                                        startIndex, 
+                                        i + 1
+                                    );
+              
+                                    passage0.text = longestCommonSubstringSoFar;
+                                    passage0.position = startIndex;
+              
+                                    passage1.text = longestCommonSubstringSoFar;
+                                    passage1.position = j - lengthOfLongestCommonSubstringSoFar + 1;
+                                }
+                            }
+                        }
+                    }
+              
+                    return returnValue;
+                }
+              
+                TextDifferencer.prototype.insertPassagePairsDifferentBetweenMatching = function
+                (
+                    string0,
+                    string1,
+                    passagePairsToInsertBetween,
+                    passagePairsAll
+                )
+                {   
+                    passagePairsToInsertBetween.insertElementAt
+                    (
+                        new TextPassagePair
+                        (
+                            true, // doPassagesMatch
+                            [
+                                new TextPassage("", 0),
+                                new TextPassage("", 0)
+                            ]
+                        ),
+                        0
+                    );
+              
+                    passagePairsToInsertBetween.push
+                    (
+                        new TextPassagePair
+                        (
+                            true, // doPassagesMatch
+                            [
+                                new TextPassage("", string0.length),
+                                new TextPassage("", string1.length)
+                            ]
+                        )
+                    );
+              
+                    var pMax = passagePairsToInsertBetween.length - 1;
+              
+                    for (var p = 0; p < pMax; p++)
+                    {
+                        passagePairToInsertAfter = passagePairsToInsertBetween[p];
+                        passagePairToInsertBefore = passagePairsToInsertBetween[p + 1];
+              
+                        this.buildAndInsertPassagePairBetweenExisting
+                        (
+                            string0,
+                            string1,
+                            passagePairToInsertBefore,
+                            passagePairToInsertAfter,
+                            passagePairsAll
+                        );
+              
+                        passagePairsAll.push(passagePairToInsertBefore);
+                    }
+              
+                    var indexOfPassagePairFinal = passagePairsAll.length - 1;
+              
+                    var passagePairFinal = passagePairsAll[indexOfPassagePairFinal];
+              
+                    if 
+                    (
+                        passagePairFinal.doPassagesMatch == true 
+                        && passagePairFinal.passages[0].text.length == 0
+                    )
+                    {
+                        passagePairsAll.removeAt(indexOfPassagePairFinal, 1);
+                    }
+                }
+              
+                TextDifferencer.prototype.buildAndInsertPassagePairBetweenExisting = function
+                (
+                    string0, 
+                    string1, 
+                    passagePairToInsertBefore, 
+                    passagePairToInsertAfter,
+                    passagePairsAll
+                )
+                {
+                    var lengthOfPassageToInsertAfter = passagePairToInsertAfter.passages[0].text.length;
+              
+                    var positionsForPassagePairDifferent = 
+                    [
+                        [
+                            passagePairToInsertAfter.passages[0].position 
+                                + lengthOfPassageToInsertAfter,
+              
+                            passagePairToInsertAfter.passages[1].position 
+                                + lengthOfPassageToInsertAfter
+                        ],        
+                        [
+                            passagePairToInsertBefore.passages[0].position,
+                            passagePairToInsertBefore.passages[1].position
+                        ]          
+                    ];
+              
+                    var passageToInsert0 =  new TextPassage
+                    (
+                        string0.substring // not "substr"!
+                        (
+                            positionsForPassagePairDifferent[0][0], 
+                            positionsForPassagePairDifferent[1][0]
+                        ),
+                        positionsForPassagePairDifferent[0][0]
+                    );
+              
+                    var passageToInsert1 = new TextPassage
+                    (
+                        string1.substring  // not "substr"!
+                        (
+                            positionsForPassagePairDifferent[0][1], 
+                            positionsForPassagePairDifferent[1][1]
+                        ),
+                        positionsForPassagePairDifferent[0][1]
+                    );
+              
+                    var passagePairToInsert = new TextPassagePair
+                    (
+                        false, // doPassagesMatch
+                        [
+                            passageToInsert0,
+                            passageToInsert1
+                        ]
+                    );
+              
+                    if 
+                    (
+                        passagePairToInsert.passages[0].text.length > 0
+                        || passagePairToInsert.passages[1].text.length > 0
+                    )
+                    {
+                        passagePairsAll.push(passagePairToInsert);
+                    }
+              
+                } 
+            }
+             
+            function TextDifferences(passagePairs)
+            {
+                this.passagePairs = passagePairs;
+            }
+            {
+                // instance methods
+              
+                TextDifferences.prototype.toString = function()
+                {
+                    var returnValue = "";
+              
+                    for (var p = 0; p < this.passagePairs.length; p++)
+                    {
+                        var passagePair = this.passagePairs[p];
+                        var passagePairAsString = passagePair.toString();
+              
+                        returnValue += passagePairAsString;
+                    }
+              
+                    return returnValue ; 
+                }   
+             
+            }
+              
+            function TextPassage(text, position)
+            {
+                this.text = text;
+                this.position = position;
+            }
+              
+            function TextPassagePair(doPassagesMatch, passages)
+            {
+                this.doPassagesMatch = doPassagesMatch;
+                this.passages = passages;   
+            }
+            {
+                TextPassagePair.prototype.toString = function()
+                {
+                    var textBefore = document.getElementById("textareaBefore").value;
+                var textAfter = document.getElementById("textareaAfter").value;
+                
+                var removed = Math.floor(this.passages[0].text.length);
+                var added = Math.floor(this.passages[1].text.length);
+               
+                    
+                    var similarity =Math.floor((textBefore.length - (removed + added))/ textBefore.length * 100);
+                    var difference =  Math.floor(100 - similarity);
+                    var returnValue = "";
+              
+                    if (this.doPassagesMatch == true)
+                    {
+                        returnValue = this.passages[0].text;
+                        returnValue = this.escapeStringForHTML(returnValue);
+                    }
+                    else
+                    {
+                        returnValue += "<mark style='background-color:red'>";
+                        returnValue += this.escapeStringForHTML(this.passages[0].text);
+                        returnValue += "</mark><mark style='background-color:yellow'>";
+                        returnValue += this.escapeStringForHTML(this.passages[1].text);
+                        returnValue += "</mark>"; 
+                    if(difference <= 0){
+                        difference = "No difference";
+                        similarity = similarity;
+                    document.getElementById('percentageD').textContent = `${difference }`;
+                    document.getElementById('percentageS').textContent = ` ${similarity}`;
+                    document.getElementById('added').textContent = `${added} `;
+                    document.getElementById('deleted').textContent = `${removed} `;
+                    console.log(difference, similarity);
+                    } else if( similarity <= 0){
+                        difference = difference;
+                        similarity = "No similarity";
+                        document.getElementById('percentageD').textContent = ` ${difference }`;
+                    document.getElementById('percentageS').textContent = ` ${similarity} `;
+                    document.getElementById('added').textContent = `${added} `;
+                    document.getElementById('deleted').textContent = `${removed} `;
+                    } else{
+                        difference = difference;
+                        similarity = similarity;
+                        document.getElementById('percentageD').textContent = `${difference }`;
+                    document.getElementById('percentageS').textContent = `${similarity}`;
+                    document.getElementById('added').textContent = `${added} `;
+                    document.getElementById('deleted').textContent = `${removed} `;
+                    }
+        
+                    document.getElementById('percentageD').textContent = ` ${difference }`;
+                    document.getElementById('percentageS').textContent = `${similarity}`;
+                    document.getElementById('added').textContent = `${added} `;
+                    document.getElementById('deleted').textContent = `${removed} `;
+                    console.log(difference, similarity);
+                    }
+                    return returnValue;
+                }
+             
+                TextPassagePair.prototype.escapeStringForHTML = function(stringToEscape)
+                {
+                    var returnValue = stringToEscape.replace
+                    (
+                        "&", "&amp;"
+                    ).replace
+                    (
+                        "<", "&lt;"
+                    ).replace
+                    (
+                        ">", "&gt;"
+                    ).replace
+                    (
+                        "\n", "<br />"
+                    );
+             
+                    return returnValue;
+                }
+            }
+              
+            
+              var p = document.getElementById('before').inner.value;
+            function checkpercentage(){
+            
+                  document.getElementById('display').innerHTML = p;
+              }
+            </script>
+        
+        
+        
+        
+        
+        <script type="text/javascript">
+          var twitterShare = document.querySelector('[data-js="twitter-share"]');
+
+            twitterShare.onclick = function(e) {
+              e.preventDefault();
+              var twitterWindow = window.open('https://twitter.com/intent/tweet?text=Hey! I just compared my files for similarities on&url=http://docufix.ga/fileUpload.html&###', 'twitter-popup', 'height=350,width=600');
+              if(twitterWindow.focus) { twitterWindow.focus(); }
+                return false;
+              }
+
+            var facebookShare = document.querySelector('[data-js="facebook-share"]');
+              
+            facebookShare.onclick = function(e) {
+              e.preventDefault();
+              var facebookWindow = window.open('https://www.facebook.com/sharer/sharer.php?u=http://docufix.ga', 'facebook-popup', 'height=350,width=600');
+              if(facebookWindow.focus) { facebookWindow.focus(); }
+                return false;
+            }
+
+            document.getElementById("upload1").addEventListener("change", function(e){
+                var upload1 = document.getElementById("upload1");
+                var label = document.getElementById("label1");
+                if( e.target.files[0].name.includes(".png") || e.target.files[0].name.includes(".jpg")){
+                    upload1.classList.add("is-invalid");
+                }else {
+                    upload1.classList.remove("is-invalid");
+                    label.textContent = e.target.files[0].name;
+                }
+            });
+    </script>
+      
+    </body>
+</html>

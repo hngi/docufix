@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
@@ -207,25 +207,19 @@
         <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
         
         <h2 style="font-weight: bolder;">NOTE:</h2>
-        <p>Docufix only supports file formats like .csv, .json, .xml .txt .pdf and .docx for <strong>uploading</strong></p>
-        <p>If you must compare documents from any other format, aside the above formats mentioned, <br> please make use of the text option, then <strong> copy</strong> and <strong> paste</strong> into the text-box.</strong></p>
-        <p>Your compared data gives you result in percentage %</p>
-        <p>You can choose to download compared documents as .doc or pdf file formats</p>
-        <p>This App has an inbuilt words formatting editor</p>
+        <p>Docufix Duplicates Remover only supports 'docx', 'pdf', 'txt', 'csv', 'json', 'xml' file format for <strong>uploading</strong></p>
+      <p>Upload the document and specfiy the delimter in which they are seperated in i.e ',' </p>
+      <p>For example ramdom@gmail.com, <br/> random@gmail.com,hng@yahoo.com, <br/>mark@gmail.com</p>
         <p>Compared texts are <strong>editable,</strong> this means you can edit your work for correction after comparing.</p>
 <strong style = "color: red">IMPORTANT!!!</strong>
 <ul>The following activities would not be efficiently carried out on mobile phone except for larger screen sizes:
 
-<li>Comparing od documents</li>
-<li>Formatting of compared document</li>
+<li>Removing Duplicates from documents</li>
+
 
 
 </ul>
-<ul>Also note the meaning of the highlighted outputs:
-    <li><span style = "background-color: red"> RED HIGHLIGHT</span> Means the texts in second text input that are not found in the first text input</li>
-    <li><span style = "background-color: yellow"> YELLOW HIGHLIGHT</span> Means the texts in first text input that are not found in the second text input</li>
-    <li>PLAIN TEXT Means text found in both tex inputs</li>
-</ul>
+
     </div>
     </div>
   </div>
@@ -267,7 +261,7 @@
             </nav>
         </header>
         <div class="container mt-5" style="min-height: 100vh">
-            <h3 class="pt-5 font-weight-bold">Compare Two Documents</h3>
+            <h3 class="pt-5 font-weight-bold">Remove Duplicates from Two Documents</h3>
             <h2 class="text-center mt-5">
                 <span
                     ><a
@@ -293,7 +287,7 @@
                         <div class="row padding">
                                 <div class="custom-file col-md-6 margin">
                                     <label for="upload1" id="label1" class="text-left mr-md-5 custom-file-label"
-                                        >First Document:</label
+                                        >Document:</label
                                     >
                                     <input
                                     id="upload1" 
@@ -308,12 +302,10 @@
                                       </div>
                                 </div>
                                 <div class="custom-file col-md-6">
-                                    <label for="upload2" id="label2" class="text-left mr-md-5 custom-file-label"
-                                        >Second Document:</label
-                                    >
+                                  
                                     <input
-                                    id="upload2" for="secondDocument" type="file" name="file2" accept="" class="custom-file-input"
-                                        style="border: 0;background-color: transparent;" required
+                                    id="delimiter" for="delimiter" type="text" name="delimiter" accept="" class="form-control"
+                                        style="" required placeholder="delimiter"
                                     />
                                     <div class="invalid-feedback">
                                         No Images Allowed
@@ -323,7 +315,7 @@
                         </div>
                         <div class="form-group mt-5">
                                 <button id="uploadBtn" type="submit" value="submit" class="btn btn-dark mt-3 "
-                                    ><i class="fas fa-cloud-upload-alt"></i> upload</button>
+                                onclick="buttonCompareClicked();" ><i class="fas fa-cloud-upload-alt"></i> upload</button>
                             </div>
                     </form>
                 </div>
@@ -368,12 +360,12 @@
                     </div>
                 </div>
                 <div class="text-center m-5" >
-                    <button value="compare" class="btn btn-dark font-weight-bold"
-                          type="submit" onclick="buttonCompareClicked();"> <img class="compare-img" src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571193103/samples/figma%20career-list/lario/butfaguuckar9dl0i1ug.png" width="23" height="23" style="margin-right: 10px;">Compare</button
+                    <button  id="removeDuplicate" value="compare" class="btn btn-dark font-weight-bold"
+                          type="submit"> <img class="compare-img" src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571193103/samples/figma%20career-list/lario/butfaguuckar9dl0i1ug.png" width="23" height="23" style="margin-right: 10px;">Remove Duplicates</button
                     >
                 </div>
                 <div>
-                        <table class="table table-striped">
+                        <!--<table class="table table-striped">
                                 <thead>
                                   <tr>
                                         <th scope="col">#</th>
@@ -404,7 +396,7 @@
                                       <td id="deleted"></td>
                                     </tr>
                                   </tbody>
-                              </table>
+                              </table>-->
                     <!-- <table class="table table-striped">
                         <thead>
                           <tr>
@@ -431,46 +423,13 @@
                     <br>
 
                     
-                    <div class="toolbar">
-                        <a href="#" data-command='undo'><i class='fa fa-undo'></i></a>
-                        <a href="#" data-command='redo'><i class='fa fa-repeat'></i></a>
-                        <div class="fore-wrapper"><i class='fa fa-font' style='color:#C96;'></i>
-                          <div class="fore-palette">
-                          </div>
-                        </div>
-                        <div class="back-wrapper"><i class='fa fa-font' style='background:#C96;'></i>
-                          <div class="back-palette">
-                          </div>
-                        </div>
-                        <a href="#" data-command='bold'><i class='fa fa-bold'></i></a>
-                        <a href="#" data-command='italic'><i class='fa fa-italic'></i></a>
-                        <a href="#" data-command='underline'><i class='fa fa-underline'></i></a>
-                        <a href="#" data-command='strikeThrough'><i class='fa fa-strikethrough'></i></a>
-                        <a href="#" data-command='justifyLeft'><i class='fa fa-align-left'></i></a>
-                        <a href="#" data-command='justifyCenter'><i class='fa fa-align-center'></i></a>
-                        <a href="#" data-command='justifyRight'><i class='fa fa-align-right'></i></a>
-                        <a href="#" data-command='justifyFull'><i class='fa fa-align-justify'></i></a>
-                        <a href="#" data-command='indent'><i class='fa fa-indent'></i></a>
-                        <a href="#" data-command='outdent'><i class='fa fa-outdent'></i></a>
-                        <a href="#" data-command='insertUnorderedList'><i class='fa fa-list-ul'></i></a>
-                        <a href="#" data-command='insertOrderedList'><i class='fa fa-list-ol'></i></a>
-                        <a href="#" data-command='h1'>H1</a>
-                        <a href="#" data-command='h2'>H2</a>
-                        <a href="#" data-command='createlink'><i class='fa fa-link'></i></a>
-                        <a href="#" data-command='unlink'><i class='fa fa-unlink'></i></a>
-                        <a href="#" data-command='insertimage'><i class='fa fa-image'></i></a>
-                        <a href="#" data-command='p'>P</a>
-                        <a href="#" data-command='subscript'><i class='fa fa-subscript'></i></a>
-                        <a href="#" data-command='superscript'><i class='fa fa-superscript'></i></a>
-                      </div>
+            
                       <div id="page"></div> 
-                    <div contenteditable="true" id="textareaDifferences" style="border:none;min-height:100%; width: 100%;overflow: scroll; box-shadow: 0px 0px 4px 1px grey;"></div>
+                      <textarea class="form-control" id="textareaDifferences" rows="10"></textarea>
+                    <!-- <div contenteditable="true" id="textareaDifferences" style="border:none;min-height:100%; width: 100%;overflow: scroll; box-shadow: 0px 0px 4px 1px grey;"></div> -->
                 </div>
             
-                <button id="btn-export" onclick="exportHTML();" class="btn-dark mt-2 mb-5" style="padding: 7px 14px;"><i class="fas fa-cloud-download-alt"></i> Download as word
-                    doc</button>
-                    <button id="cmd" class="btn-dark mt-2 mb-5" style="padding: 7px 14px;"><i class="fas fa-cloud-download-alt"></i>Download as PDF</button>
-            
+               
 
             </div>
             <div align="right" class="shareBtn" id="shareBtn">
@@ -480,52 +439,6 @@
                 <button class="fbShare" data-js="facebook-share"><a href="mailto:info@example.com?&subject=&body=http://docufix.ga Hey! I just compared my files for similarities on Docufix"><i class="fas fa-envelope"></i> Email</a></button>
             </div>
 
-            <!-- <div id="text" style="display: none;">
-                    <section id="text-compare">
-                            <div id="text-1">
-                                <label for="text" class="two-text">
-                                    
-                                    <div class="labels" >
-                                        <img class="white-txt" src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571194266/samples/figma%20career-list/lario/ct8pi1qsjgonxsa7zdyn.png">
-                                        <span id="white-txt" class="compare">Text</span>
-                                    </div>
-                                </label> <br>
-                                <textarea placeholder="Write your text here" class="input-txt ms_word_filtered_html1" id="textareaBefore" cols="80" rows="10"></textarea>
-                            </div>
-                            <div id="arrow">
-                                <img id="compare-txt" src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571193103/samples/figma%20career-list/lario/hyu5pvtsmqxymfx5ohwi.png">
-                            </div>
-                    
-                            <div class="add-text add-text2" id="text-2">
-                                <label for="text" class="two-text">
-                                    <div class="labels">
-                                        <img class="white-txt" src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571194266/samples/figma%20career-list/lario/ct8pi1qsjgonxsa7zdyn.png">
-                                        <span id="white-txt" class="compare">Text</span>
-                                    </div>
-                                </label> <br>
-                                <textarea placeholder="Write your text here" class="input-txt  ms_word_filtered_html" id="textareaAfter" cols="80" rows="10"></textarea>
-                            </div>
-                        </section>
-                        <div id="button">
-                            <button type="submit" onclick="buttonCompareClicked();">
-                                <img class="compare-img" src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571193103/samples/figma%20career-list/lario/butfaguuckar9dl0i1ug.png">
-                                <span class="compare-btn-txt" >COMPARE</span>
-                            </button>
-                        </div>
-                    <div>
-                            <div id="percentageD">DIFFERENCE :</div>
-                            <div id="percentageS">SIMILARITY: </div>
-                            <br>
-                            <br>
-                            <label>Result:</label>
-                            <br />
-                            <div contenteditable="true" id="textareaDifferences" style="border:1px solid;height:200px; width: 100%; min-height:25%;overflow: scroll;"></div>
-                        </div>
-                    
-                        <button id="btn-export" onclick="exportHTML();">Export to word
-                            doc</button>
-                </div>
-            </div> -->
         </div>
  <footer class="page-footer font-small mdb-color pt-4" style="background: #C4C4C4;">
 
@@ -543,14 +456,14 @@
 
             <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
               <p>
-                <a href="about_us.html" style="color:black;">About Us</a>
+                <a href="about_us.html">About Us</a>
               </p>
               <p>
-                <a href="teampage.html" style="color:black;">Our Team</a>
+                <a href="teampage.html">Our Team</a>
               </p>
-                <p>
-                  <a href="feedback.html" style="color:black">Share Your Feedback</a>
-                </p>
+             <p>
+               <a href="feedback.html" style="color:black">Share Your Feedback</a>
+             </p>
             </div>
             <!-- Grid column -->
 
@@ -559,10 +472,10 @@
             <!-- Grid column -->
             <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
               <p>
-                <a href="index.html" style="color:black;">Home Page</a>
+                <a href="index.html">Home Page</a>
               </p>
               <p>
-                <a href="privacy.html" style="color:black;">Privacy Policy</a>
+                <a href="privacy.html">Privacy Policy</a>
               </p>
             </div>
 
@@ -575,7 +488,7 @@
             <div class="col-md-7 col-lg-8">
 
               <p class="text-center text-md-left">© 2019 Copyright:
-                <a href="https://hng.tech/" target="_blank" style="color:black;">
+                <a href="https://hng.tech/">
                   <strong> Docufix</strong>
                 </a>
               </p>
@@ -637,7 +550,7 @@
                 document.getElementById("textBtn").classList.add("active1");
             }
         </script>
-        <script src="fileUpload.js"></script>
+        <script src="fileDelimiter.js"></script>
         <script src = "wysiwyg.js"></script>
         <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.debug.js"></script>
@@ -660,11 +573,11 @@
              
                 var differencesAsString = differences.toString();
               
-                var textareaDifferences = document.getElementById
-                (
-                    "textareaDifferences"
-                );
-                textareaDifferences.innerHTML =differencesAsString;
+                // var textareaDifferences = document.getElementById
+                // (
+                //     "textareaDifferences"
+                // );
+                // textareaDifferences.innerHTML =differencesAsString;
                 document.getElementById("shareBtn").style.display = "block"
                   
             }
@@ -1208,26 +1121,6 @@
         
         
         
-        <script>
-            function exportHTML(){
-               var header = "<html xmlns:o='urn:schemas-microsoft-com:office:office' "+
-                    "xmlns:w='urn:schemas-microsoft-com:office:word' "+
-                    "xmlns='http://www.w3.org/TR/REC-html40'>"+
-                    "<head><meta charset='utf-8'><title>Export HTML to Word Document with JavaScript</title></head><body>";
-
-               var footer = "</body></html>";
-               var sourceHTML = header + document.getElementById("textareaDifferences").innerHTML+footer;
-               
-               var source = 'data:application/vnd.ms-word;charset=utf-8,' + encodeURIComponent(sourceHTML);
-               var fileDownload = document.createElement("a");
-               document.body.appendChild(fileDownload);
-               fileDownload.href = source;
-               fileDownload.download = 'docufix' + new Date() + '.doc';
-               fileDownload.click();
-               document.body.removeChild(fileDownload);
-            }
-        </script>
-
         <script type="text/javascript">
           var twitterShare = document.querySelector('[data-js="twitter-share"]');
 
@@ -1255,16 +1148,6 @@
                 }else {
                     upload1.classList.remove("is-invalid");
                     label.textContent = e.target.files[0].name;
-                }
-            });
-            document.getElementById("upload2").addEventListener("change", function(e){
-                var upload2 = document.getElementById("upload2");
-                var label = document.getElementById("label2");
-                if(e.target.files[0].name.includes(".png") || e.target.files[0].name.includes(".jpg")){
-                    upload2.classList.add("is-invalid");
-                }else {
-                    upload2.classList.remove("is-invalid");
-                    label.textContent =  e.target.files[0].name;
                 }
             });
     </script>

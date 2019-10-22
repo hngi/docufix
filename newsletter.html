@@ -1,0 +1,121 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+
+    <!-- Google imported font for pacifico -->
+
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet" />
+
+    <!-- Font awesome icon -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+<style>
+    div.newsletter-wrapper {
+
+        background: #3D9BDA;
+        border-radius: 7px;
+        margin-top: 3rem;
+        height: 70%;
+    }
+
+
+    button.newsBtn {
+        border-radius: 4rem;
+        background-color: #141460;
+        border: 2px solid #141460;
+        box-sizing: border-box;
+        border-radius: 49px;
+        width: 160px;
+        height: 50px;
+        box-shadow: cornsilk;
+        outline: currentColor;
+        left: 100px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        font-style: normal;
+
+    }
+
+    form input.form-control {
+        height: 12%;
+        display: block;
+        width: 80%;
+        margin-left: 10%;
+
+        justify-content: center;
+
+
+    }
+
+    div.input-group-prepend {
+        justify-content: center;
+        vertical-align: baseline;
+
+    }
+
+    h6,
+    h3 {
+        font-family: 'Ubuntu', sans-serif;
+        font-weight: bold;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="row newsletter-wrapper">
+            <div class="col col-md-6">
+                <div class="container">
+
+                </div>
+            </div>
+            <div class="col col-md-6">
+                <div class="container" style="margin-top: 4rem; margin-bottom: -1rem;">
+                    <h5 class="text-center m-3" style="font: black; font-weight: bold;"> NEWSLETTER </h5>
+                </div>
+                <section class="text-center  mt-4">
+                    <div class="container p-1 ">
+                        <h1 style="color: floralwhite;">SUBSCRIBE</h1>
+                        <form class="form-group"
+                            action="https://us20.api.mailchimp.com/3.0/automations/e462e6f810/emails/e4fa6a3d09/queue"
+                            method="Post">
+                            <input class="form-control mt-3 text-center" type="text" name="text"
+                                placeholder="name@email.com" />
+                            <div class="input-group-prepend mt-1 pt-3">
+                                <input type="checkbox" aria-label="Checkbox for following text input"
+                                    style="border:1px solid;">
+                                <p class="text-center"
+                                    style="padding-left: 1rem; margin-top: -0.5rem; font-family: 'Ubuntu', sans-serif;">
+                                    Send me
+                                    promotional offer</p>
+                            </div>
+
+                            <button type="button" class="btn btn-lg btn-primary mt-4 newsBtn" value="submit">SIGN
+                                UP</button>
+                        </form>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

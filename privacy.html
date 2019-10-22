@@ -5,6 +5,11 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta name="theme-color" content="#333" />
+        <link rel="manifest" href="manifest.json" />
+        <link rel="icon" type="image/png" href="https://res.cloudinary.com/ros4eva/image/upload/v1571538580/favicon_elbl53.png"/>
+        
+        <link rel="stylesheet" type="text/css" href="https://dl.dropbox.com/s/v5nuo2k9pvuoogf/rose.css">
         <link
             rel="stylesheet"
             href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -30,10 +35,17 @@
         .active a{
    color: grey !important;
  }
+ 
+ /* .navbar{
+   position:fixed;
+   width:100%;
+   top:0;
+   z-index:1;
+ } */
     </style>
     <body style="background-color:  #fff; font-family: Ubuntu;">
         <header>
-          <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: black">
+          <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: black">
             <div class="container">
                 <a class="navbar-brand" href="index.html" style="font-weight: bold;font-size: 1.5em;"
                     >DOCUFIX</a
@@ -58,17 +70,20 @@
                             <a class="nav-link  text-light" href="about_us.html">About Us</a>
                         </li>
                         <li class="nav-item">
+                          <a class="nav-link  text-light" href="Why Use Docufix.html">Why Use Docufix?</a>
+                      </li>
+                        <li class="nav-item">
                             <a class="nav-link  text-light" href="teampage.html">Team</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link  text-light" href="https://hng.tech/" target="_blank">Sponsors</a>
+                            <a class="nav-link  text-light" href="https://hng.tech/" target="_blank">Donate</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
         </header>
-        <div class="container">
+        <div class="container mt-5">
             <div class="row align-items-center mt-5 text-justify" style="min-height: 80vh">
                 <div class="col-lg-12 ">
                     <h2 style="font-weight:bold;margin-top:40px;margin-bottom:20px;">
@@ -137,7 +152,8 @@
 
             <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
               <h6 class="text-uppercase mb-4 font-weight-bold">Docufix</h6>
-              <p>We help you arrange, sort and put your files and data in other for easy management</p>
+              <p>We help you arrange, sort, compare and extract information from different file formats</p>
+              <p>This App Was Built By HNGi6 Interns</p>
             </div>
 
             <hr class="w-100 clearfix d-md-none">
@@ -147,8 +163,14 @@
                 <a href="about_us.html">About Us</a>
               </p>
               <p>
+                <a href="Why Use Docufix.html">Why Use Docufix?</a>
+              </p>
+              <p>
                 <a href="teampage.html">Our Team</a>
               </p>
+                <p>
+                  <a href="feedback.html" style="color:black">Share Your Feedback</a>
+                </p>
             </div>
             <!-- Grid column -->
 
@@ -173,7 +195,7 @@
             <div class="col-md-7 col-lg-8">
 
               <p class="text-center text-md-left">© 2019 Copyright:
-                <a href="https://hng/internship">
+                <a href="https://hng.tech/" target="_blank">
                   <strong> Docufix</strong>
                 </a>
               </p>
@@ -210,6 +232,8 @@
           </div>
         </div>
       </footer>
+
+        <script src="app.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

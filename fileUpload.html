@@ -4,6 +4,11 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta name="theme-color" content="#333" />
+        <link rel="manifest" href="manifest.json" />
+        <link rel="icon" type="image/png" href="https://res.cloudinary.com/ros4eva/image/upload/v1571538580/favicon_elbl53.png"/>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" type="text/css" href="https://dl.dropbox.com/s/v5nuo2k9pvuoogf/rose.css">
         <link
             rel="stylesheet"
             href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -182,57 +187,53 @@
 .shareBtn {
     display: none;
 }
-
-::-webkit-scrollbar{
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px white;
-  border-radius: 8px;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #343a40;
-  border-radius: 8px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: rgb(130, 18, 140);
-  width: 15px;
-}
+/* .navbar{
+   position:fixed;
+   width:100%;
+   top:0;
+   z-index:1;
+ } */
+ /* .duc{
+     margin-top:5%;
+ } */
+ 
 
     </style>
-   <!-- <body style="background-color:  white; font-family: Ubuntu;">-->
-        
+       
         <body style="background-color:  white; font-family: Ubuntu;"   onload ="document.getElementById('id01').style.display='block'">
 
-        <!----modal box-->
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<!--<body >-->
-
 <div class="w3-container">
-  
-  <!--<button onload ="document.getElementById('id01').style.display='block'" class="w3-button w3-black">Open Modal</button>-->
-
   <div id="id01" class="w3-modal">
     <div class="w3-modal-content" style="border-radius: 4px;">
       <div class="w3-container">
         <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
         
         <h2 style="font-weight: bolder;">NOTE:</h2>
-        <p>Docufix only supports file formats like .txt .pdf .doc and .docx for <strong>uploading</strong></p>
+        <p>Docufix only supports file formats like .csv, .json, .xml .txt .pdf and .docx for <strong>uploading</strong></p>
         <p>If you must compare documents from any other format, aside the above formats mentioned, <br> please make use of the text option, then <strong> copy</strong> and <strong> paste</strong> into the text-box.</strong></p>
         <p>Your compared data gives you result in percentage %</p>
-        <p>You can choose to download compared documents as .doc file if you wish</p>
+        <p>You can choose to download compared documents as .doc or pdf file formats</p>
+        <p>This App has an inbuilt words formatting editor</p>
         <p>Compared texts are <strong>editable,</strong> this means you can edit your work for correction after comparing.</p>
+<strong style = "color: red">IMPORTANT!!!</strong>
+<ul>The following activities would not be efficiently carried out on mobile phone except for larger screen sizes:
 
+<li>Comparing od documents</li>
+<li>Formatting of compared document</li>
+
+
+</ul>
+<ul>Also note the meaning of the highlighted outputs:
+    <li><span style = "background-color: red"> RED HIGHLIGHT</span> Means the texts in second text input that are not found in the first text input</li>
+    <li><span style = "background-color: yellow"> YELLOW HIGHLIGHT</span> Means the texts in first text input that are not found in the second text input</li>
+    <li>PLAIN TEXT Means text found in both tex inputs</li>
+</ul>
     </div>
     </div>
   </div>
 </div>
         <header>
-            <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: black">
+            <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: black">
                 <div class="container">
                     <a class="navbar-brand" href="index.html" style="font-weight: bold;font-size: 1.5em;"
                         >DOCUFIX</a
@@ -256,18 +257,21 @@
                             <li class="nav-item ">
                                 <a class="nav-link text-light" href="about_us.html">About Us</a>
                             </li>
+                            <li class="nav-item ">
+                                <a class="nav-link text-light" href="Why Use Docufix.html">Why Use Docufix?</a>
+                            </li>
                             <li class="nav-item">
                                 <a class="nav-link  text-light" href="teampage.html">Team</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link  text-light" href="https://hng.tech/" target="_blank">Sponsors</a>
+                                <a class="nav-link  text-light" href="https://hng.tech/" target="_blank">Donate</a>
                             </li>
                         </ul>
                     </div>
                 </div>
             </nav>
         </header>
-        <div class="container" style="min-height: 100vh">
+        <div class="container mt-5" style="min-height: 100vh">
             <h3 class="pt-5 font-weight-bold">Compare Two Documents</h3>
             <h2 class="text-center mt-5">
                 <span
@@ -293,14 +297,14 @@
                     <form class="mb-5" id="uploadForm" method="POST" enctype="multipart/form-data">
                         <div class="row padding">
                                 <div class="custom-file col-md-6 margin">
-                                    <label for="upload1" for="firstDocument" class="text-left mr-md-5 font-weight-bold custom-file-label"
+                                    <label for="upload1" id="label1" class="text-left mr-md-5 custom-file-label"
                                         >First Document:</label
                                     >
                                     <input
                                     id="upload1" 
                                     type="file" 
                                     name="file1" 
-                                accept=".doc,.pdf,.txt,.docx,.csv,.xml,.json"
+                                accept=""
                                 class="custom-file-input"
                                         style="border: 0;background-color: transparent;" required
                                     />
@@ -309,11 +313,11 @@
                                       </div>
                                 </div>
                                 <div class="custom-file col-md-6">
-                                    <label for="upload2" for="secondDocument" class="text-left mr-md-5 font-weight-bold custom-file-label"
+                                    <label for="upload2" id="label2" class="text-left mr-md-5 custom-file-label"
                                         >Second Document:</label
                                     >
                                     <input
-                                    id="upload2" type="file" name="file2" accept=".doc,.pdf,.txt,.docx,.csv,.xml,.json" class="custom-file-input"
+                                    id="upload2" for="secondDocument" type="file" name="file2" accept="" class="custom-file-input"
                                         style="border: 0;background-color: transparent;" required
                                     />
                                     <div class="invalid-feedback">
@@ -323,12 +327,20 @@
 
                         </div>
                         <div class="form-group mt-5">
-                                <button id="uploadBtn" type="submit" value="submit" class="btn btn-dark font-weight-bold ml-md-5 mt-3 "
+                                <button id="uploadBtn" type="submit" value="submit" class="btn btn-dark mt-3 "
                                     ><i class="fas fa-cloud-upload-alt"></i> upload</button>
                             </div>
                     </form>
                 </div>
             </div>
+            
+            <div class="progress" style="display: none">
+                <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar"
+                aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:0%;">
+                 
+                </div>
+              </div>
+            <div id="status"></div>
             <div id="text" style="display: none;">
                 <div class="row mt-5">
                     <div class="col-md-5">
@@ -375,13 +387,13 @@
                                 </thead>
                                 <tbody>
                                   <tr>
-                                    <th scope="col">DIFFERENCE</th>
+                                    <th scope="col">DIFFERENCE %</th>
                                     <td id="percentageD"></td>
                                   </tr>
                                 </tbody>
                                 <tbody>
                                     <tr>
-                                        <th scope="col">SIMILARITY</th>
+                                        <th scope="col">SIMILARITY %</th>
                                       <td  id="percentageS"></td>
                                     </tr>
                                   </tbody>
@@ -456,12 +468,15 @@
                         <a href="#" data-command='subscript'><i class='fa fa-subscript'></i></a>
                         <a href="#" data-command='superscript'><i class='fa fa-superscript'></i></a>
                       </div>
-                    
+                      <div id="page"></div> 
                     <div contenteditable="true" id="textareaDifferences" style="border:none;min-height:100%; width: 100%;overflow: scroll; box-shadow: 0px 0px 4px 1px grey;"></div>
                 </div>
             
                 <button id="btn-export" onclick="exportHTML();" class="btn-dark mt-2 mb-5" style="padding: 7px 14px;"><i class="fas fa-cloud-download-alt"></i> Download as word
                     doc</button>
+                    <button id="cmd" class="btn-dark mt-2 mb-5" style="padding: 7px 14px;"><i class="fas fa-cloud-download-alt"></i>Download as PDF</button>
+            
+
             </div>
             <div align="right" class="shareBtn" id="shareBtn">
                 <h4>Helpful? Please Share With Your Friends On:</h4>
@@ -525,18 +540,25 @@
 
             <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
               <h6 class="text-uppercase mb-4 font-weight-bold">Docufix</h6>
-              <p>We help you arrange, sort and put your files and data in other for easy management</p>
+              <p>We help you arrange, sort, compare and extract information from different file formats</p>
+              <p>This App Was Built By HNGi6 Interns</p>
             </div>
 
             <hr class="w-100 clearfix d-md-none">
 
             <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
               <p>
-                <a href="about_us.html">How it works</a>
+                <a href="about_us.html" style="color:black;">About Us</a>
               </p>
               <p>
-                <a href="teampage.html">About Us</a>
+                <a href="Why Use Docufix.html" style="color:black;">Why Use Docufix?</a>
               </p>
+              <p>
+                <a href="teampage.html" style="color:black;">Our Team</a>
+              </p>
+                <p>
+                  <a href="feedback.html" style="color:black">Share Your Feedback</a>
+                </p>
             </div>
             <!-- Grid column -->
 
@@ -545,10 +567,10 @@
             <!-- Grid column -->
             <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
               <p>
-                <a href="index.html">Home Page</a>
+                <a href="index.html" style="color:black;">Home Page</a>
               </p>
               <p>
-                <a href="privacy.html">Privacy Policy</a>
+                <a href="privacy.html" style="color:black;">Privacy Policy</a>
               </p>
             </div>
 
@@ -561,7 +583,7 @@
             <div class="col-md-7 col-lg-8">
 
               <p class="text-center text-md-left">© 2019 Copyright:
-                <a href="https://hng/internship">
+                <a href="https://hng.tech/" target="_blank" style="color:black;">
                   <strong> Docufix</strong>
                 </a>
               </p>
@@ -598,6 +620,7 @@
           </div>
         </div>
       </footer>
+      <script src="app.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
        <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
@@ -625,6 +648,9 @@
         </script>
         <script src="fileUpload.js"></script>
         <script src = "wysiwyg.js"></script>
+        <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.debug.js"></script>
+        <script src = "jsPDF.js"></script>
         <script type="text/javascript">
   
             // events
@@ -1197,14 +1223,15 @@
                     "xmlns:w='urn:schemas-microsoft-com:office:word' "+
                     "xmlns='http://www.w3.org/TR/REC-html40'>"+
                     "<head><meta charset='utf-8'><title>Export HTML to Word Document with JavaScript</title></head><body>";
+
                var footer = "</body></html>";
-               var sourceHTML = header+document.getElementById("textareaDifferences").innerHTML+footer;
+               var sourceHTML = header + document.getElementById("textareaDifferences").innerHTML+footer;
                
                var source = 'data:application/vnd.ms-word;charset=utf-8,' + encodeURIComponent(sourceHTML);
                var fileDownload = document.createElement("a");
                document.body.appendChild(fileDownload);
                fileDownload.href = source;
-               fileDownload.download = 'document.doc';
+               fileDownload.download = 'docufix' + new Date() + '.doc';
                fileDownload.click();
                document.body.removeChild(fileDownload);
             }
@@ -1231,18 +1258,22 @@
 
             document.getElementById("upload1").addEventListener("change", function(e){
                 var upload1 = document.getElementById("upload1");
-                if(upload1.value.includes(".jpg" || ".png")){
+                var label = document.getElementById("label1");
+                if( e.target.files[0].name.includes(".png") || e.target.files[0].name.includes(".jpg")){
                     upload1.classList.add("is-invalid");
                 }else {
                     upload1.classList.remove("is-invalid");
+                    label.textContent = e.target.files[0].name;
                 }
             });
             document.getElementById("upload2").addEventListener("change", function(e){
                 var upload2 = document.getElementById("upload2");
-                if(upload2.value.includes(".jpg" || ".png")){
+                var label = document.getElementById("label2");
+                if(e.target.files[0].name.includes(".png") || e.target.files[0].name.includes(".jpg")){
                     upload2.classList.add("is-invalid");
                 }else {
                     upload2.classList.remove("is-invalid");
+                    label.textContent =  e.target.files[0].name;
                 }
             });
     </script>

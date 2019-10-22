@@ -683,6 +683,17 @@ a:hover{
     border-radius: 50%;
     margin: 0 auto;
 }
+
+@keyframes bottom {
+  from {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
            
     /* .navbar{
    position:fixed;
@@ -1491,39 +1502,6 @@ a:hover{
                         <div class="col the-col">
                             <div class="all-users side">
                                 <div class="user-image">
-                                     <div class="user-image-box-14"></div>
-                                 </div>
-                                 <div class="content-part back text-center">
-                                     <div class="user-info">
-                                         <h3>Idris</h3>
-                                         <p>Front-End</p>
-                                     </div>
-                                     <div class="user-content"><b>About us page</b>
-                                      <br>
-                                      <br>
-                                         <p class="text-center p-2">SlackUsername : @Aboogeeky </p>
-                                     </div>
-                                 </div>
-                                 <div class="content-footer mb-4">
-                                     <a href="http://www.Twitter.com/aboogeeky" target="_blank">
-                                         <i class="fab fa-twitter-square fa-2x social-icons"></i>
-                                     </a>
-                                     <a href="" target="_blank">
-                                         <i class="fab fa-instagram fa-2x social-icons"></i>
-                                     </a>
-                                     <a href="" target="_blank">
-                                         <i class="fab fa-linkedin fa-2x social-icons"></i>
-                                     </a>
-                                     <a href="" target="_blank">
-                                         <i class="fab fa-facebook-square fa-2x social-icons"></i>
-                                     </a>
-                                 </div>
-                            </div>  
-                        </div>
-
-                        <div class="col the-col">
-                            <div class="all-users side">
-                                <div class="user-image">
                                      <div class="user-image-box-18"></div>
                                  </div>
                                  <div class="content-part back text-center">
@@ -1553,67 +1531,7 @@ a:hover{
                             </div>  
                         </div>
 
-                        <div class="col the-col">
-                            <div class="all-users side">
-                                <div class="user-image">
-                                     <div class="user-image-box-20"></div>
-                                 </div>
-                                 <div class="content-part back text-center">
-                                     <div class="user-info">
-                                         <h3></h3>
-                                         <p></p>
-                                     </div>
-                                     <div class="user-content"><b></b>
-                                         <p class="text-center p-2">SlackUsername : </p>
-                                     </div>
-                                 </div>
-                                 <div class="content-footer mb-4">
-                                     <a href="" target="_blank">
-                                         <i class="fab fa-twitter-square fa-2x social-icons"></i>
-                                     </a>
-                                     <a href="" target="_blank">
-                                         <i class="fab fa-instagram fa-2x social-icons"></i>
-                                     </a>
-                                     <a href="" target="_blank">
-                                         <i class="fab fa-linkedin fa-2x social-icons"></i>
-                                     </a>
-                                     <a href="" target="_blank">
-                                         <i class="fab fa-facebook-square fa-2x social-icons"></i>
-                                     </a>
-                                 </div>
-                            </div>  
-                        </div>
-
-                        <div class="col the-col">
-                            <div class="all-users side">
-                                <div class="user-image">
-                                     <div class="user-image-box-20"></div>
-                                 </div>
-                                 <div class="content-part back text-center">
-                                     <div class="user-info">
-                                         <h3></h3>
-                                         <p></p>
-                                     </div>
-                                     <div class="user-content"><b></b>
-                                         <p class="text-center p-2">SlackUsername : </p>
-                                     </div>
-                                 </div>
-                                 <div class="content-footer mb-4">
-                                     <a href="" target="_blank">
-                                         <i class="fab fa-twitter-square fa-2x social-icons"></i>
-                                     </a>
-                                     <a href="" target="_blank">
-                                         <i class="fab fa-instagram fa-2x social-icons"></i>
-                                     </a>
-                                     <a href="" target="_blank">
-                                         <i class="fab fa-linkedin fa-2x social-icons"></i>
-                                     </a>
-                                     <a href="" target="_blank">
-                                         <i class="fab fa-facebook-square fa-2x social-icons"></i>
-                                     </a>
-                                 </div>
-                            </div>  
-                        </div>
+                        
                          
                         
                         
@@ -1643,6 +1561,9 @@ a:hover{
               <p>
                 <a href="teampage.html" style="color:black;">Our Team</a>
               </p>
+		<p>
+		  <a href="feedback.html" style="color:black">Share Your Feedback</a>
+		</p>	    
             </div>
             <!-- Grid column -->
 
@@ -1712,6 +1633,11 @@ a:hover{
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="daveScroll.js"></script>
+        <script>
+          const cards = document.querySelectorAll('.side');
+          cards.forEach(card => scroll(card, 'bottom'));
+        </script>
   
 </body>
 </html>

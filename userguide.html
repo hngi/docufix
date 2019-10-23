@@ -29,10 +29,200 @@
         }
     
         body {
-        margin: 40px;
-        font-family: 'Ubuntu';
+       padding: 0;
+       margin: 0;
+       }
+        footer{
+          font-family: 'Ubuntu';
+          background-color: #003152;
+          font-style: normal;
+          padding-top: 25px;
+          
+          color: white;
         }
-            
+        hr {
+          color: white;
+          text-decoration: none;
+        }
+        h1 {
+          font-weight: bold;
+        }
+        .socials{
+          list-style: none;
+          display: inline-flex;
+          padding-left: 700px;
+        }
+   
+        .fa {
+          font-size: 30px;
+          margin: 15px;
+          color: white;
+        }
+        
+        .foot {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding-left: 80px;
+        }
+        
+        .title {
+          font-size: 28px;
+          color: white;
+        }
+        
+        .copy {
+          color: white;
+          font-size: 18px;
+          color: red;
+        }
+        .link {
+          list-style: none;
+          float: right;
+          padding-left: 800px;
+        }
+        .link a {
+          padding-top: 25px;
+        }
+        a {
+          color: white;
+          text-decoration: none;
+          float: right;
+        }
+        .foot1 {
+          display: inline-flex;
+          font-size: 20px;
+        }
+        .header {
+          overflow: hidden;
+          background: #141460;
+          padding: 20px;
+        }
+
+        .header a{
+          float: left;
+          text-align: center;
+          padding: 12px;
+          text-decoration: none;
+          border-radius: 4px;
+          color: #FFFFFF;;
+          font-family: Poppins;
+          font-style: normal;
+          font-size: 22px;
+          line-height: 33px;
+          cursor: pointer;
+          width: 156px;
+
+
+        }
+
+
+        .header a.logo {
+          font-family: Plaster;
+          font-style: normal;
+          font-weight: normal;
+
+        }
+
+        .header a:hover {
+          background-color: #4747AD;
+          color: white;
+        }
+
+        .header-right {
+          float: right;
+
+        }
+
+        /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+        @media screen and (max-width: 500px) {
+          .header a {
+            float: none;
+            display: block;
+            text-align: left;
+          }
+          .header-right {
+            float: none;
+          }
+        }
+        @media screen and (max-width: 500px) {
+              .link1 {
+                flex-direction: column;
+                  display: block;
+                  float: none;
+                  width: 100%;
+                  text-align: center;
+              }
+            .socials, .foot, .link {
+                padding-left: 0px;
+                padding-top: 0px;
+                text-align: center;
+              }
+            .link {
+                flex-direction: column;
+                  padding-left: 120px;
+                float: left;
+                text-align: center;
+            }
+            .foot1 { 
+                flex-direction: column;
+                text-align: center;
+                float: none;
+                display: block;
+                width: 100%;
+            }
+          }
+
+        /* Dropdown button on hover & focus */
+        .dropbtn:hover, .dropbtn1:hover {
+          background-color: #4747AD;
+        }
+        .dropbtn, .dropbtn1 {
+          background: #141460;
+          border: none;
+          color: white;
+          font-size: 22px;
+          font-family: Poppins;
+          font-style: normal;
+          line-height: 33px;
+          cursor: pointer;
+          border-radius: 4px;
+          text-decoration: none;
+          margin-left: 10px;
+          width: 156px;
+          padding: 4px;
+        }
+
+        /* The container <div> - needed to position the dropdown content */
+        .dropdown, .dropdown1{
+          
+          display: inline-block;
+        }
+
+        /* Dropdown Content (Hidden by Default) */
+        .dropdown-content, .dropdown-content1 {
+          z-index: 1px;
+          position: absolute;
+          display: none;
+          background-color: #141460;
+          
+        }
+
+        /* Links inside the dropdown */
+        .dropdown-content a, .dropdown-content1 a {
+          color: white;
+          text-decoration: none;
+          display: block;
+          text-align: left;
+          float: none;
+        }
+        .fa-caret-down {
+          font-size: 20px;
+        }
+
+        /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+        .show {display:block;}    
+
         .main-ontent {
             background-image: url('https://res.cloudinary.com/dex5cbv1n/image/upload/v1571312350/Group_15_vjpzvv.png');
             background-size: 45%;
@@ -80,177 +270,162 @@
             }
         }
     
-     .imgm {
-      display: none;
-    }
-    
-    #about h1 {
-      margin-bottom: 20px;
-      margin-top: 10em;
-    }
-    
-    #about h2 {
-      margin-bottom: 10px;
-      margin-top: 20px;
-    }
-    
-    #about {
-      line-height: 2;
-      font-size: 20px;
-    }
-    
-    #about li {
-      display: inline-block;
-      margin-right: 3px;
-      font-weight: bold;
-    }
-    
-    .imgm {
-      display: none;
-    }
-    
-    #more {
-      display: none;
-    }
-    
-    #myBtn {
-      border: none;
-      background-color: white;
-      color: blue;
-      font-size: 20px;
-    }
-    
-    
-    @media screen and (max-width: 400px){
-      #about {
-        font-size: 15px;
-      }
-     .imgm2 {
-      margin-top: 100px;
-    }
-    }
-    
-    
-    
-     @media screen and (max-width: 700px){
-    
-    .col2 {
-      display: none;
-      }
-    
       .imgm {
-      display: block;
-    
-    }
-      .imgm2 {
-      margin-top: 100px;
-    
-    }
-    } 
-.onyeishi{
-    padding-left:7.5em;
-}
-    @media screen and (max-width:1963px) {
- 
-        .imgis{
-            width:900px;
-            border: 2px solid black;
+        display: none;
+      }
+      
+      #about h1 {
+        margin-bottom: 20px;
+        margin-top: 10em;
+      }
+      
+      #about h2 {
+        margin-bottom: 10px;
+        margin-top: 20px;
+      }
+      
+      #about {
+        line-height: 2;
+        font-size: 20px;
+      }
+      
+      #about li {
+        display: inline-block;
+        margin-right: 3px;
+        font-weight: bold;
+      }
+      
+      .imgm {
+        display: none;
+      }
+      
+      #more {
+        display: none;
+      }
+      
+      #myBtn {
+        border: none;
+        background-color: white;
+        color: blue;
+        font-size: 20px;
+      }
+      
+      
+      @media screen and (max-width: 400px){
+        #about {
+          font-size: 15px;
         }
-        .onyeishi{
-    padding-left:2em;
-    text-align:left;
-      text-justify:inter-word;
-}
-.imgit{
+      .imgm2 {
+        margin-top: 100px;
+      }
+      }
+      
+      
+      
+      @media screen and (max-width: 700px){
+      
+      .col2 {
+        display: none;
+        }
+      
+        .imgm {
+        display: block;
+      
+      }
+        .imgm2 {
+        margin-top: 100px;
+      
+      }
+      } 
+  .onyeishi{
+      padding-left:7.5em;
+  }
+      @media screen and (max-width:1963px) {
   
-  display:none;
-}
-    }
-    @media screen and (max-width:817px){
-.imgis{
-    width:600px;
-    border: 2px solid black;
-}
-.onyeishi{
-padding-left:2.2em;
-}
-.imgit{
-  
-  display:none;
-}
-}
-@media screen and (max-width:670px){
-.imgis{
-    width:400px;
+          .imgis{
+              width:900px;
+              border: 2px solid black;
+          }
+          .onyeishi{
+      padding-left:2em;
+      text-align:left;
+        text-justify:inter-word;
+  }
+  .imgit{
+    
+    display:none;
+  }
+      }
+      @media screen and (max-width:817px){
+  .imgis{
+      width:600px;
+      border: 2px solid black;
+  }
+  .onyeishi{
+  padding-left:2.2em;
+  }
+  .imgit{
+    
+    display:none;
+  }
+  }
+  @media screen and (max-width:670px){
+  .imgis{
+      width:400px;
+      display:block;
+      border: 2px solid black;
+  }
+  .imgit{
+    
+      display:none;
+  }
+  .onyeishi{
+  padding-left:2em;
+  }
+  }
+  @media screen and (max-width:650px){
+  .imgis{
+      width:400px;
     display:block;
     border: 2px solid black;
-}
-.imgit{
-  
-    display:none;
-}
-.onyeishi{
-padding-left:2em;
-}
-}
-@media screen and (max-width:650px){
-.imgis{
-    width:400px;
-  display:block;
-  border: 2px solid black;
-}
-.imgit{
-    width:400px;
-    display:none;
-    margin: 0 auto 20px auto;
-}
-.onyeishi{
-padding-left:0.3em;
-}
-}
+  }
+  .imgit{
+      width:400px;
+      display:none;
+      margin: 0 auto 20px auto;
+  }
+  .onyeishi{
+  padding-left:0.3em;
+  }
+  }
     </style>
     </head>
 
     <body style="font-family:'Ubuntu'; ">
-      <header>
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: black">
-          <div class="container">
-              <a class="navbar-brand" href="index.html" style="font-weight: bold;font-size: 1.5em;"
-                  >DOCUFIX</a
-              >
-              <button
-                  class="navbar-toggler border-0"
-                  type="button"
-                  data-toggle="collapse"
-                  data-target="#navbarNav"
-                  aria-controls="navbarNav"
-                  aria-expanded="false"
-                  aria-label="Toggle navigation"
-              >
-                  <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNav">
-                  <ul
-                      class="navbar-nav ml-auto"
-                      style="font-weight: bold;"
-                  >
-                      <li class="nav-item">
-                          <a class="nav-link  text-light" href="about_us.html">About Us</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link  text-light" href="Why Use Docufix.html">Why Use Docufix?</a>
-                    </li>
-                      <li class="nav-item">
-                          <a class="nav-link  text-light" href="teampage.html">Team</a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link  text-light" href="https://hng.tech/" target="_blank">Donate</a>
-                      </li>
-                  </ul>
-              </div>
-          </div>
-      </nav>
-      </header>
+    <div class="header">
+      <img src="https://res.cloudinary.com/sape123/image/upload/c_scale,w_178/v1571775208/Group_248logo_omlzj8.png"></a>
+      <div class="header-right">
+        <a class="active" href="#home">About Us</a>
+        <a href="#contact">Team</a>
+        <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">Tools<i class="fa fa-caret-down"></i></button>
+            <div id="myDropdown" class="dropdown-content">
+              <a href="#">Compare files</a>
+              <a href="#">Check for duplicates</a> 
+            </div>
+        </div> 
+        <div class="dropdown1">
+            <button onclick="myFunction1()" class="dropbtn1">Support<i class="fa fa-caret-down"></i></button>
+            <div id="myDropdown1" class="dropdown-content1">
+              <a href="#">FAQ</a>
+              <a href="#">Feedback</a>
+              <a href="#">User Guide</a>
+            </div>
+        </div>
+        <a href="#">Donate</a>
+      </div>
+
+    </div> 
     <div class="container-fluid" style="line-height: 40px;">
         <div class="row mt-4 onyeishi"  >
          <div class="col-12 mt-5 clear-fix">  <h1 class="text-uppercase abt_heading"><strong>Step BY STEP USER GUIDE</strong></h1>
@@ -408,96 +583,82 @@ padding-left:0.3em;
     </div>
 </div>
 
-<footer class="page-footer font-small mdb-color pt-4" style="background: #C4C4C4;">
-    <div style="background: #C4C4C4;">
-    <div class="container text-center text-md-left">
-
-      <div class="row text-center text-md-left mt-3 pb-3">
-
-        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-          <h6 class="text-uppercase mb-4 font-weight-bold">Docufix</h6>
-          <p>We help you arrange, sort, compare and extract information from different file formats</p>
-          <p>This App Was Built By HNGi6 Interns</p>
+<footer>
+  <div class="foot">
+    <div class="foot1">
+        <div>
+          <h1 class="title">DOCUFIX</h1>
+          <p>we help you arrange sort and <br>put your files and data in order<br>for easy management</p><br>
+          <p class="copy">proudly built by HNGi6 interns</p>
         </div>
-
-        <hr class="w-100 clearfix d-md-none">
-
-        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-          <p>
-            <a href="about_us.html" style="color:black">About Us</a>
-          </p>
-          <p>
-            <a href="Why Use Docufix.html" style="color:black">Why Use Docufix?</a>
-          </p>
-          <p>
-            <a href="teampage.html" style="color:black">Our Team</a>
-          </p>
-        </div>
-        <!-- Grid column -->
-
-        <hr class="w-100 clearfix d-md-none">
-
-        <!-- Grid column -->
-        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
-          <p>
-            <a href="index.html" style="color:black">Home Page</a>
-          </p>
-          <p>
-            <a href="privacy.html" style="color:black">Privacy Policy</a>
-          </p>
-        </div>
-
-      </div>
-
-      <hr>
-
-      <div class="row d-flex align-items-center">
-
-        <div class="col-md-7 col-lg-8">
-
-          <p class="text-center text-md-left">© 2019 Copyright:
-            <a href="index.html">
-              <strong style="color:black"> Docufix</strong>
-            </a>
-          </p>
-
-        </div>
-
-        <div class="col-md-5 col-lg-4 ml-lg-0">
-
-          <div class="text-center text-md-right">
-            <ul class="list-unstyled list-inline">
-              <li class="list-inline-item">
-                <a class="btn-floating btn-sm rgba-white-slight mx-1">
-                  <i class="fab fa-facebook-f"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a class="btn-floating btn-sm rgba-white-slight mx-1">
-                  <i class="fab fa-twitter"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a class="btn-floating btn-sm rgba-white-slight mx-1">
-                  <i class="fab fa-google-plus-g"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a class="btn-floating btn-sm rgba-white-slight mx-1">
-                  <i class="fab fa-linkedin-in"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
+      <div>
+        <ul class="link">
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Our Team</a></li>
+          <li><a href="#">Feed back</a></li>
+          <li><a href="#">Privacy policy</a></li>
+        </ul>
       </div>
     </div>
-</div>
-  </footer>
+  </div>
+  <hr> 
+  <div style="display: inline-flex;" class="foot">
+    <p style="font-size: 25px;">©2019 Copyright: Docufix</p>
+        <div class="link1">
+            <ul class="socials">
+                <li><a href="https://www.facebook.com"><i class="fa fa-facebook-square"></i></a></li>
+                <li><a href="https://www.twitter.com"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="https://www.google.com"><i class="fa fa-google-plus"></i></a></li>
+                <li><a href="https://www.linkedin.com"><i class="fa fa-linkedin-square"></i></a></li>
+            </ul>
+        </div>
+      </div>
+     
+</footer>
+<script type="text/javascript">
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
 
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+    </script>
+  <script type="text/javascript">
+    // second dropdown 
+function myFunction1() {
+  document.getElementById("myDropdown1").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn1')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content1");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+  </script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-        </body>
+</body>

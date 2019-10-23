@@ -30,6 +30,7 @@ window.onload = function(){
         wrapperChild4.classList.add('p-3');
         let wrapperChild5 = document.createElement('div');
         wrapperChild5.classList.add('user-content');
+        wrapperChild5.classList.add('p-2')
         let wrapperChild6 = document.createElement('div');
         wrapperChild6.classList.add('content-footer');
         wrapperChild6.classList.add('mb-3');
@@ -119,7 +120,7 @@ window.onload = function(){
     const teamArr = [
       {
         name: "Mercy Temi Inyang",
-        stack: "Front-End Developer",
+        stack: "Front-End",
         imgUrl: "https://res.cloudinary.com/mercyinyang/image/upload/v1567341335/mercy_-_Mercy_Inyang_fppxi9.jpg",
         workDone:'Team lead',
         slackUsername:'SlackUsername: @Miss Temi',
@@ -133,8 +134,8 @@ window.onload = function(){
         stack: "Front End",
         imgUrl: "https://res.cloudinary.com/chidi6ix/image/upload/v1571420011/20190825_112753_vdkudk.jpg",
         workDone:'Team lead',
-        slackUsername:'SlackUsername: @codeSmith',
-        a1:'https://twitter.com/',
+        slackUsername:'SlackUsername: @codeSm1th',
+        a1:'https://www.twitter.com/',
         a2:'https://www.instagram.com/',
         a3:'http://www.linkedin.com/in/onyekachi-chidiebere-5202bb124',
         a4:'https://www.facebook.com/'
@@ -145,7 +146,10 @@ window.onload = function(){
       slackUsername: "SlackUsername: @Cross",
       stack: "Backend | Project Management",
       workDone: "Project Manager",
+      a1: "https://www.twitter.com/",
+      a2:'https://www.instagram.com/',
       a3: "https://www.linkedin.com/in/chidera-isuma/",
+      a4:'https://www.facebook.com/',
       imgUrl: "https://res.cloudinary.com/erys1521/image/upload/v1567323865/Me_jgxgkf.jpg"
   },
   {
@@ -168,12 +172,13 @@ window.onload = function(){
     a1: "https://twitter.com/Adem0la_jr",
     a2: "https://www.instagram.com/",
     a3: "https://www.linkedin.com/in/ademola-madelewi-9441a8102/",
+    a4:'https://www.facebook.com/',
     imgUrl: "https://res.cloudinary.com/ademolamadelewi/image/upload/v1571505429/IMG_20190910_180814_631_lgqv01.jpg"
 },
 {
     name: "Prosper Ndubueze ",
     slackUsername: "SlackUsername: @Ros4eva",
-    stack: "Frontend",
+    stack: "Front end",
     workDone: "File and text comparison page frontend ",
     a1: "https://twitter.com/rosesopuruchi",
     a2: "https://www.instagram.com/prospersopuruchi/",
@@ -185,8 +190,9 @@ window.onload = function(){
     name: "Akpan Dominic Gabriel",
     slackUsername: "SlackUsername: @Pa Dom",
     stack: "Design",
-    workDone: "I coordinated the design team and designed the home page and contributed/adjusted all the other pages",
+    workDone: "I coordinated the design team and designed the home page.",
     a1: "https://twitter.com/drmusic001?s=09",
+    a2: "https://www.instagram.com/",
     a3: "https://www.linkedin.com/in/dominic-akpan-540560196",
     a4: "https://www.facebook.com/akpan.dominic",
     imgUrl: "https://res.cloudinary.com/padom2020/image/upload/v1566740261/IMG-20190819-WA0002_xhki10.jpg"
@@ -198,6 +204,8 @@ window.onload = function(){
       workDone: "Worked on the design for the Docufix app",
       a1: "https://www.twitter.com/benjeee_",
       a2: "https://www.instagram.com/_ben.jeee_",
+      a3: "https://www.linkedin.com/",
+      a4: "https://www.facebook.com/",
       imgUrl: "https://res.cloudinary.com/benjee/image/upload/v1571406592/PHOTO-2019-08-15-11-18-51_smoyo8.jpg"
   },
   {
@@ -206,6 +214,7 @@ window.onload = function(){
     stack: "Front end",
     workDone: "Team Page",
     a1: "https://twitter.com/kuicpet",
+    a2: "https;//www.instagram.com/",
     a3: "https://www.linkedin.com/in/kingsley-umujeyan-17858a75/",
     a4: "https://web.facebook.com/umujeyan.kingsley",
     imgUrl: "https://res.cloudinary.com/kuic/image/upload/v1566490915/startNg2019/kuic_jxb4la.jpg"
@@ -227,6 +236,9 @@ window.onload = function(){
     stack: "Back end",
     workDone: "Php script for file comparison",
     a1: "https://twitter.com/chidideveloper",
+    a2: "https://www.instagram.com/",
+    a3: "https://www.linkedin.com/",
+    a4: "https://www.facebook.com/",
     imgUrl: "https://res.cloudinary.com/chidiebere/image/upload/v1523832031/pp.jpg"
 },
 {
@@ -234,6 +246,10 @@ window.onload = function(){
     slackUsername: "SlackUsername: @Ayo-Onams",
     stack: "Front End ",
     workDone: "Homepage ",
+    a1: "https://twitter.com/",
+    a2: "https://www.instagram.com/",
+    a3: "https://www.linkedin.com/",
+    a4: "https://www.facebook.com/",
     imgUrl: "https://res.cloudinary.com/onamusia/image/upload/v1567605657/Screenshot_2019-09-04_at_14.18.06_rap7kt.png"
 },
 {
@@ -242,17 +258,21 @@ window.onload = function(){
     stack: "Front end ",
     workDone: "Linking pages ",
     a1: "https://twitter.com/OmotosoYusuf",
+    a2: "https://www.instagram.com/",
     a3: "https://www.linkedIn.com/OmotosoYusuf ",
+    a4: "https://www.facebook.com/",
     imgUrl: "https://res.cloudinary.com/omotosoyusuf/image/upload/v1566572749/yusufOmotoso_adafxo.jpg"
 },
 {
      
     name: "Yusuf Ismaili",
     slackUsername: "SlackUsername: @YUSUF",
-    stack: "FRONTEND",
+    stack: "Front end",
     workDone: "Header & Footer - Index.html",
     a1: "https://twitter.com/yusufIsmail1",
+    a2: "https://www.instagram.com/",
     a3: "https://linkedin.com/in/yusuf-ismail-59706089",
+    a4: "https://facebook.com",
     imgUrl: "https://bit.ly/31w0RMR"
 },
 {
@@ -273,6 +293,10 @@ window.onload = function(){
       slackUsername: "SlackUsername: @emma_odia",
       stack: "DevOps",
       workDone: "Installed and setup NGINX for webserver",
+      a1: "https://twitter.com/",
+      a2: "https://www.instagram.com/",
+      a3: "https://www.linkedin.com/",
+      a4: "https://mobile.facebook.com/",
       imgUrl: "https://res.cloudinary.com/emmaodia/image/upload/v1571423773/emmaodia.jpg"
   },
   {
@@ -282,6 +306,8 @@ window.onload = function(){
       stack: "Front End",
       workDone: "Document Analysis Page",
       a1: "https://twitter.com/jtabdulrahman",
+      a2: "https://www.instagram.com/",
+      a4: "https://mobile.facebook.com/samemeje",
       a3: "https://www.linkedin.com/in/abdulrahman-abu/",
       imgUrl: "https://res.cloudinary.com/aburahman/image/upload/v1566652016/AbdulRahman%20Pictures/gzscf5hwgqalt8kiogph.jpg"
   },
@@ -316,6 +342,7 @@ window.onload = function(){
       a1: "https://twitter.com/daveaji",
       a2: "https://www.instagram.com/ajiva_D/",
       a3: "https://www.linkedin.com/in/david-aji-386197164/",
+      a4: "https://mobile.facebook.com/",
       imgUrl: "https://res.cloudinary.com/ajiva/image/upload/v1568641919/profile-pic.jpg"
   },
   {
@@ -347,6 +374,7 @@ window.onload = function(){
       workDone: "About Page",
       a1: "https://twitter.com/MartiniDeen",
       a2: "https://www.instagram.com/martinideen/?hl=en",
+      a3: "https://www.linkedin.com/",
       a4: "https://www.facebook.com/martini.mabifa?ref=bookmarks",
       imgUrl: "https://res.cloudinary.com/martinideen/image/upload/c_scale,h_192,w_192/v1566761204/Martini_For_Real_zppc1k.jpg"
   },
@@ -356,6 +384,9 @@ window.onload = function(){
       stack: "Front End",
       workDone: "Data Analysis",
       a1: "https://twitter.com/ono_hannah",
+      a2: "https://www.instagram.com/",
+      a3: "https://www.linkedin.com/",
+      a4: "https://mobile.facebook.com/",
       imgUrl: "https://res.cloudinary.com/onose/image/upload/v1571412582/Ono/j5wdvxagvqr2rvthbfzr.jpg"
   },
   {
@@ -363,6 +394,9 @@ window.onload = function(){
       slackUsername: "SlackUsername: @Coded_Savage",
       stack: "Front end",
       workDone: "File Upload page",
+      a1: "https://www.twitter.com",
+      a2: "https://www.instagram.com/",
+      a3: "https://www.linkedin.com/",
       a4: "https://mobile.facebook.com/olasumbo.afolabi.18?ref=wizard",
       imgUrl: "https://res.cloudinary.com/olasumboeniola/image/upload/v1571408198/FB_IMG_15700193231610244_tffkyv.jpg"
   },
@@ -384,6 +418,8 @@ window.onload = function(){
       workDone: "Team page 2",
       a1: "https://twitter.com/segun_os",
       a2: "https://instagram.com/segun_os",
+      a3: "https://www.linkedin.com/",
+      a4: "https://mobile.facebook.com/",
       imgUrl: "https://res.cloudinary.com/dowrygm9b/image/upload/v1570267346/IMG_6894-1_ykvrgg.jpg"
   },
   
@@ -393,6 +429,8 @@ window.onload = function(){
       stack: "Front End ",
       workDone: "About Us page ",
       a1: "https://twitter.com/lodgendury?s=09",
+      a2: "https://www.instagram.com/",
+      a4: "https://mobile.facebook.com/",
       a3: "https://www.linkedin.com/in/tosan-lodge-084b20125",
       imgUrl: "https://res.cloudinary.com/lodgendury/image/upload/v1571417716/20181113_213452_cfhslm.jpg"
   },
@@ -402,6 +440,7 @@ window.onload = function(){
       stack: "Front end",
       workDone: "About Us",
       a1: "https://twitter.com/holushola",
+      a2: "https://www.instagram.com/",
       a3: "https://linkedin.com/in/Abiodun2050",
       a4: "https://Facebook.com/eshjaylee",
       imgUrl: "https://res.cloudinary.com/dlqceb87c/image/upload/v1566503590/shola_grav_het1lf.jpg"
@@ -425,6 +464,7 @@ window.onload = function(){
       a1: "https://twitter.com/_AdemiAde",
       a2: "https://www.instagram.com/ademi64/",
       a3: "https://www.linkedin.com/in/adenike-salau-118a55164",
+      a4: "https://www.facebook.com/",
       imgUrl: "https://res.cloudinary.com/adenike/image/upload/v1571418297/1_eiunzt.jpg"
   },
   {
@@ -444,9 +484,10 @@ window.onload = function(){
       slackUsername: "SlackUsername: @ElijahWale",
       stack: "Front end",
       workDone: "Homepage",
-      a1: "https://mobile.twitter.com/OlawaleElijah3",
+      a1: "https://www.twitter.com/",
       a2: "https://www.instagram.com/elijah_wale/?hl=en",
-      a4: "https://m.facebook.com/olawaleesa",
+      a3: 'https://www.linkedin.com',
+      a4: "https://www.facebook.com/olawaleesa",
       imgUrl: "https://res.cloudinary.com/elijahwale/image/upload/v1571405763/20180218_133219_ttgxkt.jpg"
   },
   {
@@ -455,6 +496,10 @@ window.onload = function(){
       slackUsername: "SlackUsername: @Omobola",
       stack: "Front end",
       workDone: "I review the codes and upload images to cloudinary for efficiency",
+      a1: "https://www.twitter.com/",
+      a2: "https://www.instagram.com/",
+      a3: "https://www.linkedin.com/",
+      a4: "https://www.facebook.com/",
       imgUrl: "https://res.cloudinary.com/omobola/image/upload/v1566608564/StartNG/Saudat.png"
   },
   {
@@ -462,6 +507,10 @@ window.onload = function(){
       slackUsername: "SlackUsername: @Soares Dolapo Paul",
       stack: "Front End",
       workDone: "About us Page",
+      a1: "https://www.twitter.com/",
+      a2: "https://www.instagram.com/",
+      a3: "https://www.linkedin.com/",
+      a4: "https://www.facebook.com/",
       imgUrl: "https://res.cloudinary.com/soares04/image/upload/v1566492008/uxxbl8xkagqeo9h00pl8.jpg"
   },
   {
@@ -469,6 +518,8 @@ window.onload = function(){
       slackUsername: "SlackUsername: @kingz",
       stack: "Front end ",
       workDone: "Homepage ",
+      a1: "https://www.twitter.com/",
+      a2: "https://www.instagram.com/",
       a3: "https://www.linkedin.com/in/nora-ndajem-a699aa98",
       a4: "https://www.facebook.com/nora.king.5209",
       imgUrl: "https://res.cloudinary.com/nnonornora/image/upload/v1571415194/IMG_20190624_100838_6_c2j4tr.jpg"
@@ -504,6 +555,7 @@ window.onload = function(){
       stack: "Front end",
       workDone: "Navbar-2",
       a1: "https://twitter.com/zaydabdulrahman",
+      a2: "https://www.instagram.com",
       a3: "https://www.linkedin.com/in/abdulrahman-yusuf-a44463176",
       a4: "https://facebook.com/damilola.yusuf.96",
       imgUrl: "https://res.cloudinary.com/young-einstein/image/upload/v1567517232/passport_cjsegl.jpg"
@@ -551,6 +603,8 @@ window.onload = function(){
       workDone: "About us page",
       a1: "https://twitter.com/ola_leye_",
       a2: "https://www.instagram.com/danielbisiriyu/?hl=en",
+      a3: "https://www.linkedin.com/",
+      a4: "https://www.facebook.com/",
       imgUrl: "https://res.cloudinary.com/olaleye247/image/upload/v1571407030/passport_akcscg.jpg"
   },
   {
@@ -561,6 +615,7 @@ window.onload = function(){
       workDone: "Linking Pages",
       a1: "https://twitter.com/The_Cavemann",
       a2: "https://www.instagram.com/_arinzee/",
+      a4: "https://www.linkedin.com/",
       a3: "https://www.linkedin.com/in/arinze-chibueze-876127188/",
       imgUrl: "https://res.cloudinary.com/dzwtycmnl/image/upload/v1566590092/IMG_2602_osa6ad.jpg"
   },
@@ -571,6 +626,7 @@ window.onload = function(){
       stack: "Front end",
       workDone: "Comparison algorithm",
       a1: "https://mobile.twitter.com/lil_Dave1379",
+      a2: "https://www.instagram.com",
       a3: "https://www.linkedin.com/in/dave-chinweike-7b448418b",
       a4: "https://m.facebook.com/dave.chinweike.3",
       imgUrl: "https://res.cloudinary.com/chidi6ix/image/upload/v1571407468/IMG_20190909_152905_EDIT_1_tppov7.jpg"
@@ -595,6 +651,7 @@ window.onload = function(){
       workDone: "Footer",
       a1: "https://www.twitter.com/strictyfiza",
       a2: "https://www.instagram.com/ha_fizaah_",
+      a3: 'https://www.linkedin.com/',
       a4: "http://www.facebook.com/hafizah.muhyideen7",
       imgUrl: "https://res.cloudinary.com/hafizah/image/upload/v1566627089/Snapchat-733321432_3_ode4vf.jpg"
   },
@@ -629,6 +686,9 @@ window.onload = function(){
       stack: "Front End",
       workDone: "About Us Page",
       a1: "http://www.Twitter.com/aboogeeky",
+      a2: "https://www.instagram.com/",
+      a3: "https://www.linkedin.com/",
+      a4: "https://www.facebook.com/",
       imgUrl: "https://res.cloudinary.com/aboogeeky/image/upload/v1566541703/passport_hcist5.jpg"
   },
   {
@@ -646,10 +706,11 @@ window.onload = function(){
   {
       name: "Joshua Odejide",
       slackUsername: "SlackUsername: @Joshua Odjide",
-      stack: "Frontend",
+      stack: "Front end",
       workDone: "Upload page 2",
       a1: "https://mobile.twitter.com/JOdejide",
       a2: "https://www.instagram.com/sir_novo/",
+      a3: "https://www.linkedin.com",
       a4: "https://m.facebook.com/joshua.odejide?ref=bookmarks",
       imgUrl: "https://res.cloudinary.com/joshualoni2/image/upload/v1571407100/IMG-20190629-WA0011_s2kswp.jpg"
   },
@@ -658,10 +719,12 @@ window.onload = function(){
       
       name: "Mercy Nwamara ",
       slackUsername: "SlackUsername: @Mercy Nwamara ",
-      stack: "Frontend",
-      workdone: "Footer and Header fix ",
+      stack: "Front end",
+      workDone: "Footer and Header fix ",
       a1: "https://twitter.com/itsmercie?s=09",
       a3: "https://www.linkedin.com/in/mercy-nwamara-334379b4",
+      a2: "https://www.instagram.com/",
+      a4: "https://www.facebook.com/",
       imgUrl: "https://res.cloudinary.com/memz/image/upload/v1571403771/IMG-20190411-WA0026_ejbgow.jpg"
   },
  
@@ -669,7 +732,7 @@ window.onload = function(){
       
       name: "Miracle Alex",
       slackUsername: "SlackUsername: @Miracle",
-      stack: "Frontend",
+      stack: "Front end",
       workDone: "About Us page ",
       a1: "https://twitter.com/mirakul_1",
       a2: "https://www.instagram.com/mirakul_1/",
@@ -680,7 +743,7 @@ window.onload = function(){
   {
       name: "Oghenebrume Kofi Oghenetega",
       slackUsername: "SlackUsername: @tegakay",
-      stack: "Frontend",
+      stack: "Front end",
       workDone: "Docufix about us",
       a1: "https://twitter.com/tega_kay",
       a2: "https://www.instagram.com/p/B155eBRnSD4/?igshid=i3kzuj4ebq8",
@@ -692,7 +755,7 @@ window.onload = function(){
      
       name: "oluwadamilare Alonge",
       slackUsername: "SlackUsername: @Maphorbs",
-      stack: "Frontend",
+      stack: "Front end",
       workDone: "Team page",
       a1: "https://mobile.twitter.com/Dreman3082",
       a2: "https://www.instagram.com/dare3082/",
@@ -704,8 +767,12 @@ window.onload = function(){
      
       name: "Omeokwe Asobie",
       slackUsername: "SlackUsername: @Asobank",
-      stack: "Frontend",
+      stack: "Front end",
       workDone: "Update content on homepage",
+      a1: "https://www.twitter.com/",
+      a2: "https://www.instagram.com/",
+      a3: "https://www.linkedin.com/",
+      a4: "https://www.facebook.com/",
       imgUrl: "https://res.cloudinary.com/omyasobie/image/upload/v1569340436/omi_ief366.jpg"
   },
   {
@@ -716,13 +783,14 @@ window.onload = function(){
     a1: "https://twitter.com/CindySho_?s=03",
     a2: "https://www.instagram.com/cinamide_/",
     a3: "https://www.linkedin.com/in/cindy-shontan-164468110",
+    a4: "https://www.facebook.com/",
     imgUrl: "https://res.cloudinary.com/cindyshontan/image/upload/v1566550689/txojypnvyzoonwkmaota.jpg"
 },
 
   {
       name: "Patience Akpan",
       slackUsername: "SlackUsername: @peshie",
-      stack: "Frontend",
+      stack: "Front end",
       workDone: "File upload page",
       a1: "https://mobile.twitter.com/peshie01",
       a2: "https://www.instagram.com/peshie01/?hl=en",
@@ -734,7 +802,7 @@ window.onload = function(){
      
       name: "Precious Akams",
       slackUsername: "SlackUsername: @precious de wonder woman",
-      stack: "FrontEnd",
+      stack: "Front End",
       workDone: "Navigation bar",
       a1: "https://twitter.com/precious_akams",
       a2: "https://instagram.com/preciousakams",
@@ -745,10 +813,10 @@ window.onload = function(){
   
   {
       
-      name: "Salawu AbdulMalik Adewale the",
+      name: "Salawu AbdulMalik Adewale",
       slackUsername: "SlackUsername: @saintmalik",
-      stack: "Frontend",
-      workDone: "SEO optimization and some few coding",
+      stack: "Front end",
+      workDone: "SEO optimization",
       a1: "https://twitter.com/saintmalik_",
       a2: "https://instagram.com/iamsaintmalik_",
       a3: "https://www.linkedin.com/in/saintmalik",
@@ -759,16 +827,19 @@ window.onload = function(){
     
       name: "Tomisin Ajayi",
       slackUsername: "SlackUsername: @tomisinAjayi",
-      stack: "frontend",
+      stack: "front end",
       workDone: "Document analysis page ",
       a1: "https://twitter.com/tomiajayi_",
+      a2: "https://www.instagram.com/",
+      a3: "https://www.linkedin.com/",
+      a4: "https://www.facebook.com/",
       imgUrl: "https://res.cloudinary.com/tomisin/image/upload/c_scale,h_177,w_138/v1571413110/tomisin_ebjcqo.png"
   },
   {
       
       name: "Yusuf Adeyemo",
       slackUsername: "SlackUsername: @Cypher",
-      stack: "Frontend",
+      stack: "Front end",
       workDone: "File Upload Page",
       a1: "https://twitter.com/marshaladex",
       a2: "https://www.instagram.com/marshaladex/?hl=en",
@@ -781,10 +852,11 @@ window.onload = function(){
       
       name: "Bankole Adejuwon ",
       slackUsername: "SlackUsername: @ositubanky",
-      stack: "Frontend ",
+      stack: "Front end ",
       workDone: "Team page",
       a1: "https://mobile.twitter.com/home?logout=1571414921177",
       a2: "https://www.instagram.com/adejuwonbankole/",
+      a3: "https://www.linkedin.com/",
       a4: "https://m.facebook.com/?hrc=1&refsrc=http%3A%2F%2Fh.facebook.com%2Fhr%2Fr&_rdr",
       imgUrl: "https://res.cloudinary.com/ositu/image/upload/v1571414130/bankole/banks_llrq1m.jpg"
   },
@@ -792,46 +864,54 @@ window.onload = function(){
      
       name: "Emmanuel Chigozie Ihejirika ",
       slackUsername: "SlackUsername: @Dev Chibris ",
-      stack: "Frontend ",
+      stack: "Front end ",
       workDone: "Document Analysis ",
       a1: "https://twitter.com/ihejirika07",
+      a2: "https://www.instagram.com/",
+      a3: "https://www.linkedin.com/",
+      a4: "https://www.facebook.com/",
       imgUrl: "https://res.cloudinary.com/dxonc8cxc/image/upload/v1566546938/Chigozie_i5bkw8.jpg"
   },
   {
     
       name: "Godwin Ikott",
       slackUsername: "SlackUsername: @Geedee",
-      stack: "Frontend ",
+      stack: "Front end ",
       workDone: "Homepage ",
       a1: "http://www.twitter.com/geedeewain",
       a2: "http://www.instagram.com/geedeewain",
       a3: "http://www.linkedin.com/godwinikott",
+      a4: "https://www.facebook.com/",
       imgUrl: "https://res.cloudinary.com/geedee/image/upload/v1571420489/IMG_20190311_075802_315_hi0dii.jpg"
   },
   {
       name: "Michelle Nwachukwu ",
       slackUsername: "SlackUsername: @Michelle Nwachukwu ",
-      stack: "Frontend ",
+      stack: "Front end ",
       workDone: "Document Analysis Page ",
       a1: "https://mobile.twitter.com/Nanyabooks",
       a2: "https://www.instagram.com/_miichey/",
       a3: "https://www.linkedin.com/in/michelle-nwachukwu-b95775176",
+      a4: "https;//www.facebook.com/",
       imgUrl: "https://res.cloudinary.com/michelle300/image/upload/v1566599180/81EBDAE3-32FE-4C3D-B237-EC19C38207F8_na3ccj.jpg"
   },
   
   {
-      name: "CHIEGANG SAPE BULCARD BRANDONE",
+      name: "Chiegang Sape Bulcard",
       slackUsername: "SlackUsername: @Brandone_Sape",
-      stack: "Frontend developer",
+      stack: "Front end",
       workDone: "I worked on the footer ",
       a1: "https://mobile.twitter.com/tjrsape",
+      a2: "https://www.instagram.com/",
+      a3: "https://www.linkedin.com/",
+      a4: "https://www.facebook.com/",
       imgUrl: "https://res.cloudinary.com/sape123/image/upload/v1571408607/IMG_20190518_183300_785_500x466_2_sykpju.jpg"
   },
   {
       
-      name: "okoye moses ebuka",
+      name: "Okoye Moses Ebuka",
       slackUsername: "SlackUsername: @gentlebukan",
-      stack: "frontend developer",
+      stack: "front end",
       workDone: "text comparison page 2",
       a1: "https://twitter.com/Bukan_moses",
       a2: "https://instagram.com/Bukan_moses",
@@ -842,17 +922,18 @@ window.onload = function(){
   {
       name: "Okonye Tochi ",
       slackUsername: "SlackUsername: @Tochi",
-      stack: "Frontend ",
-      workdone: "Analysis page footer",
+      stack: "Front end ",
+      workDone: "Analysis page footer",
       a1: "https://mobile.twitter.com/Okonyetochi",
       a2: "https://www.instagram.com/okonyetochi",
       a3: "https://www.linkedin.com/in/okonyetochi",
+      a4: "https://www.facebook.com",
       imgUrl: "https://res.cloudinary.com/dvqlwtdpk/image/upload/v1571414014/81A550CC-DF2C-4715-8107-368B3027FBB4_byznsq.jpg"
   },
   {
       name: "Iwuoha Chimezie Solomon",
       slackUsername: "SlackUsername: @iwuoha chimezie solomon",
-      stack: "Frontend/mobile web specialist",
+      stack: "Front end",
       workDone: "About us page",
       a1: "https://twitter.com/6e3c25b935fd489",
       a2: "https://www.instagram.com/chimezie.solomon/",
@@ -863,9 +944,10 @@ window.onload = function(){
   {
       name: "Tolulope David ",
       slackUsername: "SlackUsername: @Tolulope_David",
-      stack: "Backend ",
+      stack: "Back end ",
       workDone: "Text comparison page ",
       a1: "https://mobile.twitter.com/toluwa_david",
+      a2: "https://www.instagram.com/",
       a3: "https://www.linkedin.com/in/tolulope-david-7a2077195",
       a4: "https://m.facebook.com/?_rdr",
       imgUrl:"https://pbs.twimg.com/profile_images/559637048030953473/saIYHqN8_400x400.jpeg"
@@ -876,12 +958,7 @@ window.onload = function(){
       
      ];
     
-    
-
-    
      displayTeam(teamArr);
-
-    //  users.forEach(user => scroll(user, 'bottom'))
      
     
     

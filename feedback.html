@@ -5,6 +5,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="robots" content="index, follow">
+  <meta name="googlebot" content="index, follow" />
+  <meta name="google" content="translate" />
   <meta name="theme-color" content="#333" />
   <link rel="manifest" href="manifest.json" />
   <link rel="icon" type="image/png"
@@ -16,9 +19,18 @@
   <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/nav-footer.css">
   <title>Docufix</title>
+  <meta name="description" content="Docufix HNG Intership Project" />
 </head>
 
 <style type="text/css">
+  h2 {
+    font-weight: bold;
+    margin-top: -210px;
+  }
+
+  /* .col-md-7{
+          margin-top: 17em;
+        } */
   .features {
     line-height: 2;
   }
@@ -32,12 +44,146 @@
     color: grey !important;
   }
 
-  /* .navbar{
-   position:fixed;
-   width:100%;
-   top:0;
-   z-index:1;
- } */
+  .navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+  }
+
+  .form-box {
+    max-width: 50%;
+    margin: auto;
+    padding: 50px;
+    background: #ffffff;
+    border: 10px solid #f2f2f2;
+    margin-top: -25em;
+    margin-bottom: 1em;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+  }
+
+  @media only screen and (max-width: 767px) {
+    .col-md-7 {
+      margin-top: 7em;
+    }
+
+    .form-box {
+      max-width: 50em;
+      margin-top: -25em;
+      margin-bottom: 1em;
+    }
+  }
+
+  @media only screen and (max-width: 350px) {
+    .col-md-7 {
+      margin-top: 7em;
+    }
+
+    .btn,
+    .input,
+    .btn-primary {
+      font-size: small;
+    }
+
+    .form-group {
+      margin-left: -40px;
+      margin-right: -40px;
+      margin-top: -1rem;
+    }
+
+    .form-box {
+      max-width: 60em;
+      margin-top: -19em;
+      margin-bottom: 2em;
+    }
+
+    /* h2{
+            margin-top: -260px;
+          } */
+
+  }
+
+  /*         h2{
+            font-weight:bold;
+            margin-top: -280px;
+          }
+        
+        .features {
+            line-height: 2;
+        }
+
+        .features img {
+          margin-bottom: 10px;
+          margin-top: 10px;
+        }
+
+        .active a{
+          color: grey !important;
+        }
+
+        .navbar{
+          position:fixed;
+          width:100%;
+          top:0;
+          z-index:1;
+        }
+
+        .form-box {
+          max-width: 50%;
+          margin: auto;
+          padding: 50px;
+          background: #ffffff;
+          border: 10px solid #f2f2f2;
+          margin-top: -33em;
+          margin-bottom: 1em;
+        }
+
+        input, textarea {
+          width: 100%;
+        }
+
+        @media only screen and (max-width: 767px) {
+          .col-md-7{
+            margin-top: 7em;
+          }
+
+          .form-box {
+            max-width: 50em;
+            margin-top: -25em;
+            margin-bottom: 1em;
+          }
+        }
+
+        @media only screen and (max-width: 350px) {
+          .col-md-7{
+            margin-top: 7em;
+          }
+
+          .btn, .input, .btn-primary{
+            font-size: small;
+          }
+
+          .form-group{
+            margin-left: -40px;
+            margin-right: -40px;
+            margin-top: -1rem;
+          }
+
+          .form-box {
+            max-width: 60em;
+            margin-top: -19em;
+            margin-bottom: 2em;
+          }
+
+          h2{
+            margin-top: -260px;
+          }
+          
+        } */
 </style>
 
 <body style="background-color:  #fff; font-family: Ubuntu;">
@@ -104,110 +250,74 @@
       </div>
     </nav>
   </header>
-  <div class="container mt-5">
-    <div class="row align-items-center mt-5 text-justify" style="min-height: 80vh">
-      <div class="col-lg-12 ">
-        <h2 style="font-weight:bold;margin-top:40px;margin-bottom:20px;">
-
-          Our Privacy Policy
-
-        </h2>
-
-
-
-        <p>
-          This privacy policy has been compiled to show the information we collect, how we make use of it,
-          user choices as to how we make use of such information provided, how we treat your personal data and protect
-          your privacy when you use our services.
-          Therefore we encourage every user of our products or services to carefully read this policy.
-          If you use Docufix, you agreed to the terms and conditions laid out in this policy.
-        </p>
-        <p>
-          <b>Docufix</b>, as a document comparison and analytical tool, at this point does not require any user to sign
-          in or sign up for an account before using its tool.
-          Neither is there any payment via credit card or any other form required before use, as our solution is made
-          online for free, and open to all to use - individual, enterprise or organizations.
-          All you simply need to do as a user to get started is to select your comparing documents and upload to see
-          results; which is simple and fast. For later versions, that may include new features that require certain user
-          data, the purpose, and the method(s) of user data collection will be specified.
-          Also this privacy policy page will be updated to suit the new arrangements.
-        </p>
-
-        <p>
-          Like many sites, we collect information your browser sends each time you visit our website.
-          This is simply called “Log Data”, and may include certain information such as your Internet Protocol (IP)
-          address, browser type and version, pages visited on our site, time and date of the visit,
-          time spent on those pages and other statistics; using cookies for research regarding the effectiveness of the
-          website and the marketing,
-          advertising and sales efforts of <b>Docufix</b>, and its trusted affiliates.
-        </p>
-
-        <p>
-          Any emails you send to <b>Docufix</b>, and our replies to you are retained in <b>Docufix</b> email archives to
-          assist in providing you the highest level of service possible.
-          And any action to process in due course, we process with your consent and/or with another legal basis
-          basically to fulfill the purpose of your interaction with us.
-        </p>
-        <p>
-          Documents you compare are protected by a secret URL and stored in a secured server. Acccess to a third party
-          except to the extent required by law are not allowed. However, anyone you
-          share the URL with can view the comparison.
-        </p>
-        <p>
-          Please contact us with any questions regarding the <b>Docufix Privacy Policy</b> by email: info@docufix.com
-        </p>
-
-        <a href="fileUpload.html" class="btn  p-2  btn-outline-dark" style="font-weight: bold;margin-bottom:20px;">Get
-          Started</a>
+  <div class="container">
+    <div class="row align-items-center mt-5" style="min-height: 80vh">
+      <div class="col-md-7">
+        <h2>Share your experience with us!</h2>
       </div>
 
     </div>
-  </div>
 
+    <div class="form-box">
+      <form id="feedback-form" action="https://formspree.io/ssdanso@live.com" method="post">
+        <div class="form-group">
+          <label for="email">Your Email</label>
+          <input class="form-control" id="email" type="email" name="Email">
+        </div>
+        <div class="form-group">
+          <label for="message">Your Suggestion/Feedback</label>
+          <textarea class="form-control" id="message" name="Message" style="height: 200px;""></textarea>
+                </div>
+                <input class=" btn btn-primary" type="submit" value="Submit Feedback" />
+          </div>
+              </form>
+            </div>
 
+        </div>
+                
 
-  <footer>
-    <div class="section-one">
-      <section>
-        <h4>DOCUFIX</h4>
-        <p>We help you arrange, sort, compare and extract information from different file formats</p>
-
-        <p class="text-two">This app was built by <a href="https://hng.tech/" target="_blank">HNGi6</a> interns</p>
-      </section>
-      <section>
-        <ul>
-          <li><a href="about_us.html">About us</a></li>
-          <li><a href="teampage.html">Our Team</a></li>
-          <li><a href="feedback.html" target="_blank">Feedback</a></li>
-          <li><a href="privacy.html" target="_blank">Privacy policy</a></li>
-        </ul>
-      </section>
-    </div>
-    <div class="footer-line"></div>
-    <div class="section-two">
-      <section class="icons">
-        <a href="#">
-          <i class="fab fa-facebook-f" aria-hidden="true"></i>
-        </a>
-        <a href="#">
-          <i class="fab fa-twitter" aria-hidden="true"></i>
-        </a>
-        <a href="#">
-          <i class="fab fa-google-plus-g" aria-hidden="true"></i>
-        </a>
-        <a href="#">
-          <i class="fab fa-linkedin" aria-hidden="true"></i>
-        </a>
-      </section>
-      <section class="copy">
-        &copy; 2019 Copyright: Docufix
-      </section>
-    </div>
-  </footer>
-
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> 
-</body>
-
+        <footer>
+            <div class="section-one">
+              <section>
+                <h4>DOCUFIX</h4>
+                <p>We help you arrange, sort, compare and extract information from different file formats</p>
+          
+                <p class="text-two">This app was built by <a href="https://hng.tech/" target="_blank">HNGi6</a> interns</p>
+              </section>
+              <section>
+                <ul>
+                  <li><a href="about_us.html">About us</a></li>
+                  <li><a href="teampage.html">Our Team</a></li>
+                  <li><a href="feedback.html" target="_blank">Feedback</a></li>
+                  <li><a href="privacy.html" target="_blank">Privacy policy</a></li>
+                </ul>
+              </section>
+            </div>
+            <div class="footer-line"></div>
+            <div class="section-two">
+              <section class="icons">
+                <a href="#">
+                  <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fab fa-twitter" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fab fa-google-plus-g" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fab fa-linkedin" aria-hidden="true"></i>
+                </a>
+              </section>
+              <section class="copy">
+                  &copy; 2019 Copyright: Docufix
+              </section>
+            </div>
+          </footer>
+      <script src="app.js"></script>
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+      <script src="https://kit.fontawesome.com/7967e81f77.js" crossorigin="anonymous"></script>
+    </body>
 </html>

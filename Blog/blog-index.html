@@ -2,106 +2,22 @@
 <html>
 
 <head>
+  <title>DOCUFIX BLOG</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
-    integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="blog.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="/nav-footer.css">
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Poppins', Sans-Serif;
-    }
-
-    .top-img {
-      width: 95%;
-      margin: 20px auto;
-    }
-
-    img {
-      max-width: 100%;
-    }
-
-    h2 {
-      margin: 40px 0px 100px 70px;
-      font-size: 48px;
-      text-transform: uppercase;
-      line-height: 56px;
-    }
-
-    .container {
-      display: flex;
-      flex-wrap: wrap;
-      width: 75%;
-      margin: auto;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .col {
-      text-align: center;
-      font-size: 28.69px;
-      line-height: 43px;
-    }
-
-    .col img {
-      width: 80px;
-      height: 80px;
-    }
-
-    .about-text {
-      background-color: #3D9BDA;
-      width: 95%;
-      margin: 40px auto 30px;
-      padding: 20px 40px;
-      color: white;
-      font-weight: bold;
-      font-size: 23px;
-      line-height: 41px;
-    }
-
-    .about-text h4 {
-      text-transform: uppercase;
-      text-decoration: underline;
-    }
-
-    ul {
-      margin: 0;
-      padding: 0;
-    }
-
-    @media (max-width: 880px) {
-      .col {
-        width: 45%;
-        margin: 2.5%;
-      }
-
-      .about-text {
-        font-weight: normal;
-      }
-
-      .col h4 {
-        font-size: 20px;
-      }
-
-      h2 {
-        margin: 40px 0px 70px 0px;
-        text-align: center;
-      }
-    }
-  </style>
 </head>
 
 <body>
+  <div class="header">
+    <h2>DOCUFIX Blog</h2>
+  </div>
+
   <nav class="navbar navbar-expand-lg navbar-light bg-light" id="nav">
-    <a class="navbar-brand" href="index.html" id="logo">
+    <a class="navbar-brand" href="/index.html" id="logo">
       <svg width="321" height="100" viewBox="0 0 321 100" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           d="M37.5171 38.9927C37.5171 45.4559 35.673 50.4062 31.9849 53.8438C28.3146 57.2812 23.0062 59 16.0596 59H4.94141V19.7373H17.2681C23.6776 19.7373 28.6548 21.4292 32.1997 24.813C35.7446 28.1968 37.5171 32.9233 37.5171 38.9927ZM28.8696 39.2075C28.8696 30.7749 25.1457 26.5586 17.6978 26.5586H13.2666V52.125H16.8384C24.8592 52.125 28.8696 47.8192 28.8696 39.2075ZM86.7915 39.3149C86.7915 45.814 85.1802 50.8091 81.9575 54.3003C78.7349 57.7915 74.1157 59.5371 68.1001 59.5371C62.0845 59.5371 57.4653 57.7915 54.2427 54.3003C51.02 50.8091 49.4087 45.7961 49.4087 39.2612C49.4087 32.7264 51.02 27.7402 54.2427 24.3027C57.4832 20.8473 62.1203 19.1196 68.1538 19.1196C74.1873 19.1196 78.7975 20.8563 81.9844 24.3296C85.1891 27.8029 86.7915 32.798 86.7915 39.3149ZM58.1367 39.3149C58.1367 43.7013 58.9692 47.0046 60.6343 49.2246C62.2993 51.4447 64.7879 52.5547 68.1001 52.5547C74.7424 52.5547 78.0635 48.1414 78.0635 39.3149C78.0635 30.4705 74.7603 26.0483 68.1538 26.0483C64.8416 26.0483 62.3441 27.1673 60.6611 29.4053C58.9782 31.6253 58.1367 34.9285 58.1367 39.3149ZM117.106 26.1021C113.973 26.1021 111.547 27.2837 109.828 29.647C108.109 31.9924 107.25 35.2687 107.25 39.4761C107.25 48.231 110.535 52.6084 117.106 52.6084C119.863 52.6084 123.202 51.9191 127.123 50.5405V57.5229C123.9 58.8657 120.302 59.5371 116.327 59.5371C110.616 59.5371 106.247 57.8094 103.222 54.354C100.196 50.8807 98.6831 45.9035 98.6831 39.4224C98.6831 35.3403 99.4261 31.7686 100.912 28.707C102.398 25.6276 104.529 23.2733 107.304 21.644C110.097 19.9969 113.364 19.1733 117.106 19.1733C120.919 19.1733 124.751 20.0954 128.6 21.9395L125.915 28.707C124.446 28.0088 122.969 27.4001 121.483 26.8809C119.997 26.3617 118.538 26.1021 117.106 26.1021ZM172.96 19.7373V45.1426C172.96 48.043 172.306 50.5853 171 52.7695C169.71 54.9538 167.84 56.6278 165.387 57.7915C162.934 58.9552 160.034 59.5371 156.686 59.5371C151.637 59.5371 147.716 58.248 144.923 55.6699C142.13 53.0739 140.733 49.529 140.733 45.0352V19.7373H149.032V43.7729C149.032 46.7987 149.64 49.0187 150.858 50.4331C152.075 51.8475 154.09 52.5547 156.9 52.5547C159.622 52.5547 161.591 51.8475 162.809 50.4331C164.044 49.0008 164.662 46.7629 164.662 43.7192V19.7373H172.96ZM196.265 59H188.074V19.7373H210.579V26.5586H196.265V36.6831H209.585V43.4775H196.265V59ZM223.76 59V19.7373H232.085V59H223.76Z"
@@ -161,61 +77,81 @@
       </ul>
     </div>
   </nav>
-  <div class="top-img">
-    <img src="https://res.cloudinary.com/theonlybakare/image/upload/v1571828998/about/office_nkfgse.png" alt="office" />
+
+  <div class="row">
+    <div class="leftcolumn">
+      <div class="card">
+        <h2>What’s The Difference Between RTF And DOC?</h2>
+        <h5>Oct 21, 2019 by Bakare Oyindamola</h5>
+        <div class="b">
+          <img class="b-img"
+            src="https://res.cloudinary.com/theonlybakare/image/upload/v1571768798/img/RTF-VS.-DOC_qgho7f.jpg"
+            width="50%" />
+          <div class="b-post">
+            <p>Both RTF (Rich Text Format) and DOC format were developed by Microsoft. Unlike its sibling, however, RTF
+              rarely becomes the subject of discussion when it comes to document format. Why is that...</p>
+            <a href="blog-post-1.html">Read more</a>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <h2>Why is PDF So Popular?</h2>
+        <h5>Oct 21, 2019 by Blessing Etok</h5>
+        <div class="b">
+          <img class="b-img" src="https://res.cloudinary.com/theonlybakare/image/upload/v1571768669/img/PDF_vivvvx.jpg"
+            width="50%" />
+          <div class="b-post">
+            <p>The Portable Document Format or PDF is an incredibly popular format for a good number of reasons. Let’s
+              take a closer look and the five reasons why so many people use this format for office and personal use....
+            </p>
+            <a href="blog-post-2.html">Read more</a>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <h2>How To Convert From DJVU To PDF</h2>
+        <h5>Oct 21, 2019 by Bakare Oyindamola</h5>
+        <div class="b">
+          <img class="b-img"
+            src="https://res.cloudinary.com/theonlybakare/image/upload/v1571768816/img/djvu_jf7cb1.jpg" />
+          <div class="b-post">
+            <p>Different file formats are our forte at Online-Convert.com. You can convert your files, common or rare,
+              to the most common formats of different categories. Thus, we know about the advantages and disadvantages
+              that come with using the one or other file format. To help you in your conversion needs, we will have a
+              look at why you might want to turn your DJVU files into...</p>
+            <a href="blog-post-3.html">Read more</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="rightcolumn">
+      <div class="card">
+        <h2>Categories</h2>
+        <ul>
+          <li><a href="">Documents</a></li>
+          <li><a href="">eBook</a></li>
+          <li><a href="">Mobile File</a></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Follow Us</h3>
+        <i class="fab fa-facebook-square"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-google-plus-g"></i>
+        <i class="fab fa-linkedin"></i>
+      </div>
+    </div>
   </div>
 
-  <h2>About Us</h2>
-
-  <div class="container">
-    <div class="col">
-      <img src="https://res.cloudinary.com/theonlybakare/image/upload/v1571828993/about/easy_ycvxfa.png" alt="Easy" />
-      <h4>Simple & Easy</h4>
-    </div>
-    <div class="col">
-      <img src="https://res.cloudinary.com/theonlybakare/image/upload/v1571828993/about/innovative_yvqbzf.png"
-        alt="Innovative" />
-      <h4>Innovative</h4>
-    </div>
-    <div class="col">
-      <img src="https://res.cloudinary.com/theonlybakare/image/upload/v1571828993/about/effective_kfchpy.png"
-        alt="Effective" />
-      <h4>Effective</h4>
-    </div>
-    <div class="col">
-      <img src="https://res.cloudinary.com/theonlybakare/image/upload/v1571828993/about/responsive_iwk1jy.png"
-        alt="Responsive" />
-      <h4>Responsive</h4>
+  <div class="page">
+    <div class="pagination">
+      <a class="active" href="blog-index.html">1</a>
+      <a href="blog-index2.html">2</a>
+      <a href="blog-index-3.html">3</a>
+      <a href="blog-index2.html">&raquo;</a>
     </div>
   </div>
 
-  <div class="about-text">
-    <h4>Who we are</h4>
-    <p>Docufix is one of the most innovative Technology of our age. Built solidly with the latest technical tools for
-      file and data management. This Magnificient tool was built by the most intellectual young coders from HNGi6
-      Internship.</p>
-
-    <h4>What we do</h4>
-    <p>With the help of our finest refined data management alogorithm, we help you sort, arrange, compare and extract
-      information from different file formats. We give you the Super power to compare two totally different documents in
-      different file formats. With Docufix you have the potential to know exactly the difference and similarities
-      between two files, extract texts from the files and also download the files in file formats like: .docx, .pdf</p>
-
-    <h4>How it works</h4>
-    <p>This tool is as easy as picking up your mobile phone to send a text message. Simply go to the comparison page,
-      paste your copied texts to compare, or click on file upload your file type and extract and compare.</p>
-
-    <h4>Supported file formats</h4>
-    <p>Docufix currently supports the following file formats</p>
-    <ul>
-      <ol>.txt</ol>
-      <ol>.pdf</ol>
-      <ol>.docx</ol>
-      <ol>.json</ol>
-      <ol>.csv</ol>
-      <ol>.xml</ol>
-    </ul>
-  </div>
   <footer>
     <div class="section-one">
       <section>

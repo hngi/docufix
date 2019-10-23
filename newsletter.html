@@ -16,57 +16,8 @@
 
     <!-- Font awesome icon -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="http://newsleta.000webhostapp.com/newsletter.css" />
 </head>
-<style>
-    div.newsletter-wrapper {
-
-        background: #3D9BDA;
-        border-radius: 7px;
-        margin-top: 3rem;
-        height: 70%;
-    }
-
-
-    button.newsBtn {
-        border-radius: 4rem;
-        background-color: #141460;
-        border: 2px solid #141460;
-        box-sizing: border-box;
-        border-radius: 49px;
-        width: 160px;
-        height: 50px;
-        box-shadow: cornsilk;
-        outline: currentColor;
-        left: 100px;
-        font-family: Arial, Helvetica, sans-serif;
-        font-weight: bold;
-        font-style: normal;
-
-    }
-
-    form input.form-control {
-        height: 12%;
-        display: block;
-        width: 80%;
-        margin-left: 10%;
-
-        justify-content: center;
-
-
-    }
-
-    div.input-group-prepend {
-        justify-content: center;
-        vertical-align: baseline;
-
-    }
-
-    h6,
-    h3 {
-        font-family: 'Ubuntu', sans-serif;
-        font-weight: bold;
-    }
-</style>
 
 <body>
     <div class="container">
@@ -83,11 +34,9 @@
                 <section class="text-center  mt-4">
                     <div class="container p-1 ">
                         <h1 style="color: floralwhite;">SUBSCRIBE</h1>
-                        <form class="form-group"
-                            action="https://us20.api.mailchimp.com/3.0/automations/e462e6f810/emails/e4fa6a3d09/queue"
-                            method="Post">
-                            <input class="form-control mt-3 text-center" type="text" name="text"
-                                placeholder="name@email.com" />
+                        <form class="form-group" action="newsletter_action.php" method="Post">
+                            <input class="form-control mt-3 text-center" type="email" name="email"
+                                placeholder="name@email.com" required />
                             <div class="input-group-prepend mt-1 pt-3">
                                 <input type="checkbox" aria-label="Checkbox for following text input"
                                     style="border:1px solid;">
@@ -97,7 +46,7 @@
                                     promotional offer</p>
                             </div>
 
-                            <button type="button" class="btn btn-lg btn-primary mt-4 newsBtn" value="submit">SIGN
+                            <button type="button" class="btn btn-lg btn-primary mt-4 newsBtn" name="submit">SIGN
                                 UP</button>
                         </form>
                     </div>

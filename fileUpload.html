@@ -218,7 +218,7 @@
 <strong style = "color: red">IMPORTANT!!!</strong>
 <ul>The following activities would not be efficiently carried out on mobile phone except for larger screen sizes:
 
-<li>Comparing od documents</li>
+<li>Comparing of documents</li>
 <li>Formatting of compared document</li>
 
 
@@ -226,7 +226,7 @@
 <ul>Also note the meaning of the highlighted outputs:
     <li><span style = "background-color: red"> RED HIGHLIGHT</span> Means the texts in second text input that are not found in the first text input</li>
     <li><span style = "background-color: yellow"> YELLOW HIGHLIGHT</span> Means the texts in first text input that are not found in the second text input</li>
-    <li>PLAIN TEXT Means text found in both tex inputs</li>
+    <li>PLAIN TEXT Means text found in both text inputs</li>
 </ul>
     </div>
     </div>
@@ -236,8 +236,7 @@
             <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: black">
                 <div class="container">
                     <a class="navbar-brand" href="index.html" style="font-weight: bold;font-size: 1.5em;"
-                        >DOCUFIX</a
-                    >
+                        >DOCUFIX</a>
                     <button
                         class="navbar-toggler border-0"
                         type="button"
@@ -341,18 +340,22 @@
                 </div>
               </div>
             <div id="status"></div>
+            
             <div id="text" style="display: none;">
                 <div class="row mt-5">
                     <div class="col-md-5">
                         <div class="card">
                             <div class="card-header bg-dark text-light">
                                 <img class="white-txt" src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571194266/samples/figma%20career-list/lario/ct8pi1qsjgonxsa7zdyn.png">Text
-                            </div>
+                                <button type="button"  class="btn btn-outline-secondary btn-sm text-light reset-btn1" style="float:right; " >Clear</button>
+                            </div> 
                             <div class="card-body">
-                                <textarea
-                                    placeholder="Write your text here" class="" id="textareaBefore" cols="" rows="10"
-                                    style="border: 0;border-right:2px solid #444;border-left:2px solid #444;"
+                                <form action=" " method="post" id="mytextBefore" >
+                                <textarea 
+                                    placeholder="Write your text here" class="" name="txtarea" id="textareaBefore" cols="" rows="10"
+                                    style="border: 0;border-right:2px solid #444;border-left:2px solid #444;" required
                                 ></textarea>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -361,13 +364,16 @@
                         <div class="card">
                             <div class="card-header bg-dark text-light">
                                 <img class="white-txt" src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571194266/samples/figma%20career-list/lario/ct8pi1qsjgonxsa7zdyn.png"> Text
+                                <button type="button" class="btn btn-outline-secondary btn-sm text-light reset-btn2" style="float:right; outline: none;">Clear</button>
                             </div>
                             <div class="card-body">
+                                <form  action=" " method="post" id="mytextAfter" >
                                 <textarea
-                                    placeholder="Write your text here" class="input-txt"
+                                    placeholder="Write your text here" name="txtarea" class="input-txt"
                                      id="textareaAfter" cols="" rows="10"
-                                    style="border: 0;border-right:2px solid #444;border-left:2px solid #444;"
+                                    style="border: 0;border-right:2px solid #444;border-left:2px solid #444;" required
                                 ></textarea>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -377,6 +383,7 @@
                           type="submit" onclick="buttonCompareClicked();"> <img class="compare-img" src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571193103/samples/figma%20career-list/lario/butfaguuckar9dl0i1ug.png" width="23" height="23" style="margin-right: 10px;">Compare</button
                     >
                 </div>
+            
                 <div>
                         <table class="table table-striped">
                                 <thead>
@@ -652,7 +659,21 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.debug.js"></script>
         <script src = "jsPDF.js"></script>
         <script type="text/javascript">
-  
+
+            //clear TextArea
+
+            $(document).ready(function(){
+                    $(".reset-btn1").click(function(){
+                        $("#mytextBefore").trigger("reset");
+                    });
+                });
+            
+            $(document).ready(function(){
+                    $(".reset-btn2").click(function(){
+                        $("#mytextAfter").trigger("reset");
+                    });
+                });
+
             // events
               
             function buttonCompareClicked()

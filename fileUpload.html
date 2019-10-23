@@ -21,7 +21,10 @@
         />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
         <link rel="stylesheet" type="text/css" href="wysiwyg.css">
+        
         <title>Docufix</title>
+        <script type="text/javascript" src="https://www.dropbox.com/static/api/2/dropins.js" id="dropboxjs" data-app-key="
+        7r74mdmmdg00d52"></script>
     </head>
     <style>
     /* #file-text{
@@ -345,6 +348,7 @@
                                 class="custom-file-input"
                                         style="border: 0;background-color: transparent;" required
                                     />
+                                    <div id="button3" class="p-3"></div>
                                     <div class="invalid-feedback">
                                         No Images Allowed
                                       </div>
@@ -357,6 +361,7 @@
                                     id="upload2" for="secondDocument" type="file" name="file2" accept="" class="custom-file-input"
                                         style="border: 0;background-color: transparent;" required
                                     />
+                                    <div id="button4" class="p-3"></div>
                                     <div class="invalid-feedback">
                                         No Images Allowed
                                       </div>
@@ -1341,6 +1346,42 @@
                     label.textContent =  e.target.files[0].name;
                 }
             });
+    </script>
+    <script>
+        
+
+options1 = {
+        success: function(files){
+            var upload1 = document.getElementById("upload1");
+            var label = document.getElementById("label1");
+            upload1.value =  files[0].link;
+            label.textContent = files[0].name;
+        },
+        cancel: function(){
+                 console.log("error")
+        },
+        linkType: "preview",
+        multiselect: false,
+
+};
+var button = Dropbox.createChooseButton(options1);
+document.getElementById("button3").appendChild(button);
+options2 = {
+        success: function(files){
+            var upload2 = document.getElementById("upload2");
+            var label = document.getElementById("label2");
+            upload2.value =  files[0].link;
+            label.textContent = files[0].name;
+        },
+        cancel: function(){
+                 console.log("error")
+        },
+        linkType: "preview",
+        multiselect: false,
+
+};
+var button = Dropbox.createChooseButton(options2);
+document.getElementById("button4").appendChild(button);
     </script>
       
     </body>

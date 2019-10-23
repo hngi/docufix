@@ -7,178 +7,225 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    
+
     <title>Newsletter</title>
 </head>
-    <style>
-        * {
-    margin: 0;
-    padding: 0;
-}
-html {
-    box-sizing: border-box;
-}
-body {
-    max-height: 100vh;
-}
-.newsletter {
-    background: #3D9BDA;
-    border-radius: 15px;
-    height: 100vh;
-    /* margin: 20px; */
-   
-}
-
-.newsletter-heading {
-    color: #272929;
-    font-family: Ubuntu;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 40px;
-    line-height: 46px;
-    text-transform: uppercase;
-    margin: 0.5rem;
-    text-align: center;
-}
-
-.newsletter-wrapper {
-    height: 300px;
-    width: 300px;
-    margin: 30% auto;
-}
-
-.newsletter-subscribe {
-    margin: 10% auto;
-    text-align: center;
-}
-
-.newsletter-heading-sub {
-    font-family: Ubuntu;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 60px;
-    line-height: 88px;
-    color: #FFFFFF;
-    /* height: 88px; */
-    margin-bottom: 1rem;
-    text-transform: uppercase;
-    text-align: center;
-}
-
-input::placeholder {
-    text-align: center;
-    width: 248px;
-    font-family: Ubuntu;
-    font-style: normal;
-    width: 248px;
-    height: 34px;
-    font-weight: 500;
-    font-size: 30px;
-    line-height: 34px;
-    color: #9E9D9D;
-}
-
-.newsletter-img img {
-    height: 100%;
-    width: 350px;
-}
-
-
-.default-input {
-    width: 70%;
-    height: 66px;
-    background: #ECF4F8;
-    border: 1px solid #FFFFFF;
-    box-sizing: border-box;
-    border-radius: 8px;
-    margin: 0 auto;
-}
-
-.form-check  {
-    padding-left: 5rem;
-}
-.form-check-label {
-    width: 274px;
-    height: 24px;
-    font-weight: 500;
-    font-size: 21px;
-    line-height: 24px;
-    color: #383A3A;
-    
-}
-
-.btn-wrapper {
-    width: 100%;
-    text-align: center;
-}
-
-.newsletter-btn {
-    width: 50%;
-    font-family: Arial;
-    background: #141460;
-    color: #fff;
-    border: 2px solid #141460;
-    box-sizing: border-box;
-    border-radius: 49px;
-    font-size: 33px;
-    text-transform: uppercase;
-    margin-bottom: 1rem;
-}
-
-/* media queries */
-@media (max-width: 500px) {
-    .newsletter {
-        border-radius: 0;
-    }
-    .newsletter-wrapper {
-        margin: 0 !important;
-        height: 100%;
-    }
-    .newsletter-subscribe {
+<style>
+    * {
         margin: 0;
+        padding: 0;
     }
+
+    html {
+        box-sizing: border-box;
+    }
+
+    body {
+        max-height: 100vh;
+    }
+
+    .newsletter {
+        background: #3D9BDA;
+        border-radius: 15px;
+        height: 100vh;
+
+    }
+
     .newsletter-heading {
-        font-size: 20px;
+        color: #272929;
+        font-family: Ubuntu;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 46px;
+        text-transform: uppercase;
+        margin: 0.5rem;
+        text-align: center;
     }
-    .newsletter-heading-sub {
-        font-size: 35px;
-    }
-    .form-check  {
-        padding-left: 0;
-        margin-bottom: 1rem !important;
-    }
-    .newsletter-img {
+
+    .newsletter-wrapper {
+        height: 300px;
         width: 300px;
+        margin: 30% auto;
     }
+
+    .newsletter-subscribe {
+        margin: 10% auto;
+        text-align: center;
+    }
+
+    .newsletter-heading-sub {
+        font-family: Ubuntu;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 60px;
+        line-height: 88px;
+        color: #FFFFFF;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    input::placeholder {
+        text-align: center;
+        width: 248px;
+        font-family: Ubuntu;
+        font-style: normal;
+        width: 248px;
+        height: 34px;
+        font-weight: 500;
+        font-size: 30px;
+        line-height: 34px;
+        color: #9E9D9D;
+    }
+
     .newsletter-img img {
         height: 100%;
-        width: 200px !important;
-        overflow: hidden;
+        width: 350px;
     }
-    .newsletter-btn {
-        width: 60%;
-        font-size: 25px;
-    }
+
+
     .default-input {
-        width: 90%;
-        height: 50px;
+        width: 70%;
+        height: 66px;
+        background: #ECF4F8;
+        border: 1px solid #FFFFFF;
+        box-sizing: border-box;
+        border-radius: 8px;
+        margin: 0 auto;
     }
-    
-}
-    </style>
+
+    .form-check {
+        padding-left: 5rem;
+    }
+
+    .form-check-label {
+        width: 274px;
+        height: 24px;
+        font-weight: 500;
+        font-size: 21px;
+        line-height: 24px;
+        color: #383A3A;
+
+    }
+
+    .btn-wrapper {
+        width: 100%;
+        text-align: center;
+    }
+
+    .newsletter-btn {
+        width: 50%;
+        font-family: Arial;
+        background: #141460;
+        color: #fff;
+        border: 2px solid #141460;
+        box-sizing: border-box;
+        border-radius: 49px;
+        font-size: 33px;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+    }
+
+    .newsletter-btn:hover {
+        background: #141460;
+        color: #fff;
+    }
+
+    /* media queries */
+    @media (max-width: 999px) {
+        .newsletter-heading {
+            font-size: 20px;
+        }
+
+        .newsletter-heading-sub {
+            font-size: 30px;
+            line-height: 50px;
+        }
+
+        .form-check-input {
+            height: 20px;
+        }
+
+        .default-input {
+            width: 100%;
+        }
+
+        .form-check {
+            padding-left: 1rem;
+        }
+
+        .newsletter-btn {
+            width: 100%;
+            font-size: 25px;
+        }
+    }
+
+    @media (max-width: 580px) {
+        .newsletter {
+            border-radius: 0;
+        }
+
+        .newsletter-wrapper {
+            margin: 0 !important;
+            height: 100%;
+        }
+
+        .newsletter-subscribe {
+            margin: 0;
+        }
+
+        .newsletter-heading {
+            font-size: 20px;
+        }
+
+        .newsletter-heading-sub {
+            font-size: 35px;
+        }
+
+        .form-check {
+            padding-left: 0;
+            margin-bottom: 1rem !important;
+        }
+
+        .newsletter-img {
+            width: 300px;
+        }
+
+        .newsletter-img img {
+            height: 100%;
+            width: 200px !important;
+            overflow: hidden;
+            margin: 10% 0 0 31%;
+        }
+
+        .newsletter-btn {
+            width: 60%;
+            font-size: 25px;
+        }
+
+        .default-input {
+            width: 90%;
+            height: 50px;
+        }
+
+    }
+
+    /* end of media queries */
+</style>
+
 <body>
     <section class="newsletter ">
-
         <div class="row ">
-            <div class="col-  col-lg-4 col-md-6 col-sm-6 col-xs-6">
-                <div class="newsletter-wrapper ">
+            <div class="col  col-lg-4 col-md-6 col-sm-6 col-xs-12 ">
+                <div class="newsletter-wrapper container">
                     <div class="newsletter-img">
                         <img src="newsletter.svg" alt="" srcset="">
                     </div>
                 </div>
             </div>
-            <div class="col- col-lg-8 col-md-6 col-sm-6 col-xs-6">
-                <div class="newsletter-subscribe container ">
+            <div class="col col-lg-8 col-md-6 col-sm-6 col-xs-12">
+                <div class="newsletter-subscribe  container">
                     <h6 class="newsletter-heading">newletter</h6>
                     <h2 class="newsletter-heading-sub">subscribe</h2>
                     <div class="form-group input-control">

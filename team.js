@@ -876,7 +876,12 @@ window.onload = function(){
       
      ];
     
+    
+
+    
      displayTeam(teamArr);
+
+    //  users.forEach(user => scroll(user, 'bottom'))
      
     
     

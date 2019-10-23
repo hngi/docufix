@@ -114,7 +114,7 @@
     </style>
     <body style="background-color:  #fff; font-family: Ubuntu;">
         <header>
-          <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: black">
+          <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #141460">
             <div class="container">
                 <a class="navbar-brand" href="index.html" style="font-weight: bold;font-size: 1.5em;"
                     >DOCUFIX</a
@@ -138,13 +138,28 @@
                         <li class="nav-item">
                             <a class="nav-link  text-light" href="about_us.html">About Us</a>
                         </li>
-                        <li class="nav-item">
-                          <a class="nav-link  text-light" href="Why Use Docufix.html">Why Use Docufix?</a>
+                         <li class="nav-item">
+                            <a class="nav-link  text-light" href="about_us.html">Team</a>
+                        </li> 
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-light" id="navbardrop1" data-toggle="dropdown" href="about_us.html">Tools</a>
+                             <div class="dropdown-menu">
+                              <a class="dropdown-item" href="">Compare files</a>
+                              <a class="dropdown-item" href="">Check for duplicates</a>
+                          </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle text-light" id="navbardrop" data-toggle="dropdown" href="Why Use Docufix.html">Support</a>
+                          <div class="dropdown-menu">
+                            <a class="dropdown-item" href="">Faq</a>
+                            <a class="dropdown-item" href="">Feed back</a>
+                            <a class="dropdown-item" href="">User guide</a>
+                          </div>
                       </li>
-                        <li class="nav-item">
+                       <!--  <li class="nav-item">
                             <a class="nav-link  text-light" href="teampage.html">Team</a>
                         </li>
-                        <li class="nav-item">
+ -->                        <li class="nav-item">
                             <a class="nav-link  text-light" href="https://hng.tech/" target="_blank">Donate</a>
                         </li>
                     </ul>
@@ -152,19 +167,22 @@
             </div>
         </nav>
         </header>
+        <!-- end of the navbar -->
+        <!-- Begining of the introductory section of the page -->
         <div class="container mt-5">
-            <div class="row align-items-center mt-5" style="min-height: 80vh">
+            <div class="row align-items-center mt-5">
                 <div class="col-md-7" id="left-content">
-                    <h2 style="font-weight:bold;">
+                    <h2 style="font-weight:bold; padding: 0px;">
 
 
-                        Document Comparison Solution
+                        Document Comparison<br>Solution
                     </h2>
                     <p>
+                        <br><br>
                         Compare document content and find out the differences
                         contained in each of the files without stress
                     </p>
-                    <a
+                    <!-- <a
 
                         href="fileUpload.html"
 
@@ -180,7 +198,7 @@
                     class="btn  p-2  btn-outline-dark"
                     style="font-weight: bold;"
                     >Check for Duplicates</a
-                >
+                > -->
                 </div>
                 <div class="col-md-5" id="right-content">
                     <img
@@ -190,19 +208,27 @@
                     />
                 </div>
             </div>
+            <div class="row p-2 mt-5" >
+              <div class="col-sm-6 text-center p-1">
+                <a href="fileUpload.html" class="btn btn-outline-dark " style="font-weight: bold; border-radius: 20px;">Compare Files</a>
+              </div>
+              <div class="col-sm-6 text-center p-1">
+                <a href="fileDelimiter.html" class="btn btn-outline-dark" style="font-weight: bold; border-radius: 20px;">Check for Duplicates</a>
+              </div>
+            </div>
         </div>
-
+        <!-- End of the introductory section of the page -->
         <div style="background-color:  #fff">
             <div class="container features">
 
                 <h3
                     class="text-center mb-5 pt-5"
-                    style="color: darkgreen; font-weight: bold"
+                    style="color: #141460; font-weight: bold"
                 >
                     Our Features
                 </h3>
-                <div class="row">
-                    <div class="col-md-4 mb-5 text-center">
+                <div class="row text-center">
+                    <div class="col-md-3 mb-5 text-center card" style="border-radius: 15px; background-color: #FDFBFF; box-shadow: 0px 8px 4px rgba(0, 0, 0, 0.25);">
                         <h4 class="font-weight-bold text-center headin">Plagiarism Checker</h4>
                         <!-- src="https://res.cloudinary.com/mercyinyang/image/upload/v1571224752/Docufix/images/IMG-20191016-WA0000_zlay8q.jpg" -->
                             <!-- alt="" -->
@@ -217,7 +243,8 @@
                             Our plagiarism checker flags specific sentences and provides reference information about the source, calculates an overall originality score for your document, and offers advanced writing feedback and corrections across several dimensions.
                         </p>
                     </div>
-                    <div class="col-md-4 mb-5 text-center">
+                    <div class="col-md-1 text-center"></div>
+                    <div class="col-md-3 mb-5 text-center card" style="border-radius: 15px; background-color: #FDFBFF; box-shadow: 0px 8px 4px rgba(0, 0, 0, 0.25);">
 
                         <h4 class="font-weight-bold  text-center headin">Avoid Word Duplicates</h4>
                             <!--   src="https://res.cloudinary.com/mercyinyang/image/upload/v1571224752/Docufix/images/IMG-20191016-WA0000_zlay8q.jpg"
@@ -234,8 +261,8 @@
                         </p>
                     </div>
 
-                    
-                    <div class="col-md-4 mb-5 text-center">
+                    <div class="col-md-1 text-center"></div>
+                    <div  class="col-md-3 mb-5 text-center card" style="border-radius: 15px; background-color: #FDFBFF; box-shadow: 0px 8px 4px rgba(0, 0, 0, 0.25);">
                         <h4 class="font-weight-bold  text-center headin">File Comparisons</h4>
                              <!-- src="https://res.cloudinary.com/mercyinyang/image/upload/v1571224752/Docufix/images/IMG-20191016-WA0000_zlay8q.jpg"
                             alt=""
@@ -251,21 +278,64 @@
                 </div>
             </div>
         </div>
-        <footer class="page-footer font-small mdb-color pt-4" style="background: #C4C4C4;">
-          <div style="background: #C4C4C4;">
+        <!-- End of the info section -->
+        <!-- Begining of the what peopel think we are section -->
+        <div class="mb-5">
+            <div class="container">
+              <h3 class="text-center mb-5 pt-5" style="color: #141460; font-weight: bold">What people think</h3>
+              <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-4 text-center">
+                  <div class="card">
+                    <img class="card-img-top" src="">
+                    <div class="card-body">
+                      <p class="card-text" style="font-size:25px;">
+                        <b>"Incredible Service and amazing customer support"</b>
+                      </p>
+                      <p class="card-text" style="font-size: 10px;">
+                        <b>-Sunday Odogue</b><br>
+                        <span>UI/UX designer docufix</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 text-center">
+                  <div class="card">
+                   <img class="card-img-top" src="">
+                    <div class="card-body">
+                      <p class="card-text" style="font-size:25px;">
+                        <b>"Incredible Service and amazing customer support"</b>
+                      </p>
+                      <p class="card-text" style="font-size: 10px;">
+                        <b>-Sunday Odogue</b><br>
+                        <span>UI/UX designer docufix</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-2"></div>
+              </div>
+            </div>
+        </div>
+
+
+        <!-- end of the section of the waht people think we are -->
+        <!-- Begining of the footer region -->
+        <footer class="page-footer font-small mdb-color pt-4" style="background:  #141460;">
+          <div style="background:  #141460;">
           <div class="container text-center text-md-left">
       
-            <div class="row text-center text-md-left mt-3 pb-3 bottom">
+            <div class="row text-md-left mt-3 pb-3 bottom">
       
-              <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-                <h6 class="text-uppercase mb-4 font-weight-bold">Docufix</h6>
-                <p>We help you arrange, sort, compare and extract information from different file formats</p>
-                <p>This App Was Built By HNGi6 Interns</p>
+              <div class="col-md-6 col-lg-3 col-xl-3 mx-auto mt-3">
+                <h6 class="text-uppercase mb-4 font-weight-bold text-light">Docufix</h6>
+                <p class="text-light">We help you arrange, sort, compare and extract information from different file formats</p>
+                <p style="color: red;">This App Was Built By HNGi6 Interns</p>
               </div>
       
               <hr class="w-100 clearfix d-md-none">
       
-              <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+             <!--  <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
                 <p>
                   <a href="about_us.html" style="color:black">About Us</a>
                 </p>
@@ -278,18 +348,24 @@
                   <p>
                   <a href="feedback.html" style="color:black">Share Your Feedback</a>
                 </p>
-              </div>
+              </div> -->
               <!-- Grid column -->
       
               <hr class="w-100 clearfix d-md-none">
       
               <!-- Grid column -->
-              <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
-                <p>
-                  <a href="index.html" style="color:black">Home Page</a>
+              <div class="col-md-6 col-lg-2 col-xl-2 mx-auto mt-3">
+                 <p>
+                  <a href="about_us.html" class="text-light">About Us</a>
+                </p>
+                 <p>
+                  <a href="teampage.html" class="text-light">Our Team</a>
+                </p>
+               <p>
+                  <a href="feedback.html" class="text-light">Feedback</a>
                 </p>
                 <p>
-                  <a href="privacy.html" style="color:black">Privacy Policy</a>
+                  <a href="privacy.html" class="text-light">Privacy Policy</a>
                 </p>
               </div>
       
@@ -301,9 +377,9 @@
       
               <div class="col-md-7 col-lg-8">
       
-                <p class="text-center text-md-left">© 2019 Copyright:
+                <p class="text-center text-md-left text-light">© 2019 Copyright:
                   <a href="index.html">
-                    <strong style="color:black"> Docufix</strong>
+                    <strong style="color:black" class="text-light"> Docufix</strong>
                   </a>
                 </p>
       

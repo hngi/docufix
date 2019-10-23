@@ -5,9 +5,10 @@ var specialElementHandlers = {
     } 
 };
 $('#cmd').click(function () { 
+    var fileName = document.getElementById('saveAs').value
     doc.fromHTML($('#textareaDifferences').html(), 15, 15, { 
         'width': 190, 
             'elementHandlers': specialElementHandlers 
     }); 
-    doc.save('docufix' + new Date() + '.pdf'); 
+    doc.save(fileName + " " + '.pdf'); 
 });

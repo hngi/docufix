@@ -90,6 +90,42 @@
 </head>
 
 <body>
+    <div class="container">
+        <h2>Our Features</h2>
+        <div class="feature-container">
+            <div class="checker col">
+                <h3>Plagiarism Checker</h3>
+                <img src="https://res.cloudinary.com/theonlybakare/image/upload/v1571799407/features/checker_whwu3r.png"
+                    alt="Checker"/>
+                <p>Plagiarism checker detects plagiarism in your text and checks for other writing issues. Our
+                    plagiarism checker flags specfic sentences and provides reference information about the source,
+                    calculates and overall orginality score for your document. We have you covered.</p>
+            </div>
+
+            <div class="word col">
+                <h3>Aviod Word Duplicate</h3>
+                <img src="https://res.cloudinary.com/theonlybakare/image/upload/v1571799407/features/word_fr2zwf.png"
+                    alt="Word Duplicate" />
+                <p>One of the main problem in document is that most of the word that are duplicated also appear in the
+                    previous line, which makes it difficult to achieve your goal. If you'd want to remove all duplicated
+                    words, then it isn't that difficult by using our tool, all duplicated file will be reviewed.</p>
+            </div>
+
+            <div class="file col">
+                <h3>File Comaparison</h3>
+                <img src="https://res.cloudinary.com/theonlybakare/image/upload/v1571799407/features/file_ue6olp.png"
+                    alt="File" />
+                <p>We help you compare file and texts, and generate differences in a visual text format which is easy to
+                    manage and understand. Comapring hundreds of files can be a tedious task, there are high chances you
+                    would miss out on something. Here we make that easy for you.</p>
+            </div>
+        </div>
+    </div>
+
+     <!-- what people think goes into this div -->
+    <div class="container">
+     
+    </div>
      <!-- start of newsletter section -->
     <div class="container">
         <div class="row newsletter-wrapper">
@@ -127,46 +163,15 @@
         </div>
     </div>
      <!-- end of newsletter section -->
-    <div class="container">
-        <h2>Our Features</h2>
-        <div class="feature-container">
-            <div class="checker col">
-                <h3>Plagiarism Checker</h3>
-                <img src="https://res.cloudinary.com/theonlybakare/image/upload/v1571799407/features/checker_whwu3r.png"
-                    alt="Checker"/>
-                <p>Plagiarism checker detects plagiarism in your text and checks for other writing issues. Our
-                    plagiarism checker flags specfic sentences and provides reference information about the source,
-                    calculates and overall orginality score for your document. We have you covered.</p>
-            </div>
-
-            <div class="word col">
-                <h3>Aviod Word Duplicate</h3>
-                <img src="https://res.cloudinary.com/theonlybakare/image/upload/v1571799407/features/word_fr2zwf.png"
-                    alt="Word Duplicate" />
-                <p>One of the main problem in document is that most of the word that are duplicated also appear in the
-                    previous line, which makes it difficult to achieve your goal. If you'd want to remove all duplicated
-                    words, then it isn't that difficult by using our tool, all duplicated file will be reviewed.</p>
-            </div>
-
-            <div class="file col">
-                <h3>File Comaparison</h3>
-                <img src="https://res.cloudinary.com/theonlybakare/image/upload/v1571799407/features/file_ue6olp.png"
-                    alt="File" />
-                <p>We help you compare file and texts, and generate differences in a visual text format which is easy to
-                    manage and understand. Comapring hundreds of files can be a tedious task, there are high chances you
-                    would miss out on something. Here we make that easy for you.</p>
-            </div>
-        </div>
-    </div>
 
     <!-- Bootstrap core JavaScript -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
 </body>

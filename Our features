@@ -132,8 +132,8 @@
              <!-- start of newsletter image -->
             <div class="col-sm">
                 <div class="container">
-                    <div class="container">
-                    <img class="responsive" src="https://newsleta.000webhostapp.com/newsletter.png" alt="mailing-list">
+                    <div class="">
+                    <img class=" responsive" src="https://newsleta.000webhostapp.com/newsletter.png" alt="mailing-list">
                 </div>
                 </div>
             </div>

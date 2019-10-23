@@ -42,6 +42,53 @@
         .active a{
    color: grey !important;
  }
+ .col-md-4 {
+  background: #FDFBFF;
+  box-shadow: 0px 8px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 60px;
+ }
+ .container-fluid{
+  background: linear-gradient(230.90deg, #D7B1F6 -15.75%, #404CB7 87.3%);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+ }
+
+/* Dropdown button */
+.dropdown .dropbtn {
+
+  border: none;
+  outline: none;
+  color: rgb(17, 7, 7);
+  background-color: inherit;
+  font: inherit; 
+  padding-top: 8px;
+  color: white;
+}
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 100px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 5px 10px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
  /* .navbar{
    position:fixed;
    width:100%;
@@ -143,13 +190,32 @@
                             <a class="nav-link  text-light" href="teampage.html">Team</a>
                         </li>
                         <li class="nav-item">
-                                <a class="nav-link  text-light" href="Why Use Docufix.html">Tools</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link  text-light" href="404.html">Support</a>
-                        </li>
+                            <div class="dropdown">
+                                <button class="dropbtn">Tools
+                                  <i class="fa fa-caret-down"></i>
+                                </button>
+                                <div class="dropdown-content">
+                                  <a href="#">Link 1</a>
+                                  <a href="#">Link 2</a>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="dropdown">
+                                <button class="dropbtn">Support
+                                  <i class="fa fa-caret-down"></i>
+                                </button>
+                                <div class="dropdown-content">
+                                  <a href="#">Link 1</a>
+                                  <a href="#">Link 2</a>
+                                </div>
+                              </div>
+                              </li>
                         <li class="nav-item">
                             <a class="nav-link  text-light" href="https://hng.tech/" target="_blank">Donate</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link  text-light" href="blog.html" target="_blank">Blog</a>
                         </li>
                     </ul>
                 </div>
@@ -194,7 +260,7 @@
                 >
                     Our Features
                 </h3>
-                <div class="row">
+                <div class="row" style="box-shadow: 0px 8px 4px rgba(0, 0, 0, 0.25);">
                     <div class="col-md-4 mb-5 text-center">
                         <h4 class="font-weight-bold text-center headin">Plagiarism Checker</h4>
                         <!-- src="https://res.cloudinary.com/mercyinyang/image/upload/v1571224752/Docufix/images/IMG-20191016-WA0000_zlay8q.jpg" -->
@@ -243,11 +309,32 @@
                     </div>
                 </div>
             </div>
-            <div class="col md-12" style=" width:100%;
-            background:url(https://res.cloudinary.com/patience/image/upload/c_scale,h_715,w_1203/v1571791384/Docufix/Group_218_yzjz9o.png);">
-              <img src="https://res.cloudinary.com/patience/image/upload/c_scale,w_847/v1571791384/Docufix/Group_220_yavw7v.png" style="padding:80px 200px 10px ;"/>
+          
+            <div class="row align-items-center mt-7">
+            <div class="col md-7" style=" min-width:100%;
+            background:url(https://res.cloudinary.com/patience/image/upload/c_scale,w_1487/v1571829926/Docufix/Group_218_1_juulsg.png);">
+              <img src="https://res.cloudinary.com/patience/image/upload/c_scale,w_1223/v1571791384/Docufix/Group_220_yavw7v.png" style="padding:100px 10px 0px 50px;"/>
             </div>
+            
         </div>
+        <!--<div class="form-group" style="background: #3D9BDA;">
+            <div class="col-md-5" id="right-content">  
+          <form class="form-inline">
+         <div  class="btn-info btn pull-right">
+           <p>NEWSLETTER</p>
+           <h2>Subscribe</h2>
+         <input type="email" class="form-control" placeholder="name@email.com">
+         </div>
+         <button type="submit" style="background: #141460;
+         border: 2px solid #141460;
+         box-sizing: border-box;
+         border-radius: 49px; color:#fff;">Sign-up</button>
+        </div>
+       </form>
+       <div class="col-md-5" id="left-content">
+         <img src="https://res.cloudinary.com/patience/image/upload/c_scale,w_634/v1571802809/Docufix/newsletter_1_1_bfgozq.png" />
+         </div>-->
+      </div>
         
         <footer class="page-footer font-small mdb-color pt-4" style="background: #003152; color:#fff; font-weight:bold;">
           <div >

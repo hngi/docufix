@@ -1,42 +1,655 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" /> 
-        <meta name="robots" content="index, follow">
-        <meta name="googlebot" content="index, follow" />
-        <meta name="google" content="translate" />
-        <meta name="theme-color" content="#333" />
-        <link rel="manifest" href="manifest.json" />
-		
-		<link rel="icon" type="image/png" href="https://res.cloudinary.com/thecavemann/image/upload/v1571839870/logo_g4kuoa.png"/>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="https://res.cloudinary.com/ros4eva/image/upload/v1571538580/favicon_elbl53.png"/>
         
         <link rel="stylesheet" type="text/css" href="https://dl.dropbox.com/s/v5nuo2k9pvuoogf/rose.css">
-        <link rel="stylesheet" type="text/css" href="https://dl.dropbox.com/s/j4fpnd5yvaexq0c/docufixHomepage.css">
-        <link
-            rel="stylesheet"
-            href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-            crossorigin="anonymous"
-        />
-        <link
-            href="https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap"
-            rel="stylesheet"
-        />
-        <link 
-        	rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"
-        />
-  		<link 
-  			rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"
-  		/>
-        <title>Docufix | Compare Files</title>
-        <meta name="description" content="Docufix HNG Intership Project" />
-    </head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Ubuntu|Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    
+        
+    <title>Docufix | Team Page</title>
+    <style>
+        *{
+    box-sizing: border-box;
+    } 
+  
+    html{
+            scroll-behavior: smooth;
+        }
+        body{
+            font-family: Ubuntu,sans-serif;
+            width: 100%;
+            height: 100%;
+            margin: 0 auto;
+            padding: 0;
+            background-color: #DDE8E8;
+        }
+        svg {
+		    width: 200px;
+		    height: 50px;
+		  }
+		  a {
+		    color: #fff;
+		    text-decoration: none;
+		  }
+		  #nav,
+		  .dropdown-menu {
+		    background: #141460 !important;
+		    color: #fff !important;
+		    font-weight: 300;
+		  }
+		  #nav li:hover {
+		    background:  #6130d4 !important;
+		  }
+		  .dropdown-menu a:hover {
+		    background:  #6130d4 !important;
+		  }
+		  #nav li a {
+		    color: #ffffff !important;
+		  }
+		  nav ul {
+		      margin-left: 1.7rem;
+		  }
+		  footer {
+		    background: #003152;
+		    color: #fff;
+		    position: relative;
+		    text-align: center;
+		    font-family: Helvetica;
+		  }
+		  .section-one {
+		    padding: 1rem;
+		  }
+		  footer li {
+		    padding: 0.5rem;
+		  }
+		  footer ul {
+		    margin-right: 1rem;
+		  }
+		  .section-one section {
+		    margin: 2rem 0;
+		  }
+		  .section-one h4 {
+		    padding: 0.5rem 0;
+		  }
+		  .section-one .text-two {
+		    padding: 0.5rem 0;
+		  }
+		  .section-one .text-two {
+		    color: red;
+		    text-decoration: none;
+		  }
+		  .section-two .icons {
+		    padding: 0.5rem 0;
+		  }
+		  .icons a {
+		    padding: 0 0.5rem;
+		    text-decoration: none;
+		    color: #fff;
+		  }
+		  footer ul li {
+		    list-style: none;
+		  }
+		  .footer-line {
+		    width: 100%;
+		    height: 2px;
+		    background: #fff;
+		    margin: 1rem 0;
+		  }
+		  #btn span i {
+		    color: #fff;
+		  }
+		  @media (min-width: 1000px) {
+		    .collapse {
+		      display: flex;
+		      justify-content:flex-end;
+		   }
+		   li {
+		        padding: 0 0.5rem;
+		      }
+		    ul {
+		      margin-right: 3rem;
+		    }
+		    
+		    #logo {
+		      margin-left: 1.5rem;
+		    }
+		    .section-one,
+		    .section-two {
+		      display: flex;
+		      justify-content: space-between;
+		      padding: 0 4rem;
+		      padding-right: 3rem;
+		    }
+		    footer ul {
+		      text-align: right;
+		    }
+		    .section-two {
+		      flex-flow: row-reverse;
+		    }
+		    .section-one {
+		      margin-bottom: 1rem;
+		    }
+		    .section-one h4 {
+		      padding: 2rem 0;
+		    }
+		    footer {
+		      text-align: left;
+		    }
+		  }
+                
+        .content-box {
+		    padding: 60px 0 60px 0;
+		}
+		.content-title h3 {
+		    font-size: 40px;
+		    font-weight: bold;
+		    text-align: center;
+		    margin: 0 0 10px 0;
+		    font-family: 'Poppins', sans-serif;
+		    color: #333333;
+		}
+		.content-title-underline {
+		    width: 100px;
+		    height: 5px;
+		    background-color: #141460;
+		    margin: 0 auto 30px auto;
+		}
+		/*====================================================================
+		            Diagonal Line and Profile Picture Setting
+		===================================================================*/
+		.the-col {
+		    width: 350px;
+		    display: flex;
+		    justify-content: space-around;
+		    margin-bottom: 50px;
+		}
+		.all-users {
+		    width: 350px;
+		    height: auto;
+		    background-color: #fff;
+		    padding: 0;
+		    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
+		    border-radius: 10px;
+		}
+		.user-image {
+		    background-color: #013A6B;
+		    background-image: -webkit-linear-gradient(-60deg, #4747AD 50%, #fff 50%);
+		    min-height: 200px;
+		    padding-top: 50px;
+		    border-radius: 10px;
+		}
+		.content-part {
+		    padding: 30px 0 30px 0;
+		    text-align: center;
+		}
+		.user-content {
+		    padding: 0 0 30px 0;
+		}
+		/*.user-button {
+		    padding: 0 0 30px 0;
+		}
+		.contact-btn {
+		    border-radius: 30px;
+		    padding: 10px 40px 10px 40px;
+		    background: #060541;
+		}
+		.contact-btn:hover {
+		    background: rgba(6, 5, 65, 0.83);
+		}*/
+		.content-footer {
+		    text-align: center;
+		    background: rgba(199, 195, 195, 0.1);
+		    height: 50px;
+		}
+		.social-icons {
+		    padding: 10px 20px;
+		}
+		/*====================================================================
+		                    Social Icons styles
+		===================================================================*/
+		.fa-twitter {
+		    color: #50ABF1;
+		}
+		.fa-twitter {
+		    color: #73C2FB;
+		}
+		.fa-linkedin {
+		    color: #73C2FB;
+		}
+		.fa-facebook {
+		    color:  #4267B2;
+		}
+		.fa-facebook {
+		    color:  #73C2FB;
+		}
+		.fa-instagram{
+		    color:  #73C2FB;
+		}
+        .fa-instagram:hover{
+            color:  #E1306C;
+        }
+        .fa-linkedin:hover{
+            color:#2867B2;
+        }.fa-facebook:hover{
+            color:#4267B2;
+        }
+        .fa-twitter:hover{
+            color: #1DA1F2;
+        }
+        .content-footer{
+         margin-bottom: 10%;
+        }
+		.content-footer a {
+		    color: #060541;
+		}
+		                
+		.fa-bars{
+		    color: white;
+		}
+		.navbar-brand h1{
+		    font-family: 'Open Sans',sans-serif;
+		    font-size:40px;
+		    line-height: 1.5em;
+		}
+		.user-image-box-1 {
+		    height: 200px;
+		    width: 200px;
+		    background-image: url("https://res.cloudinary.com/mercyinyang/image/upload/v1567341335/mercy_-_Mercy_Inyang_fppxi9.jpg");
+		    background-size: cover;
+		    background-position: center;
+		    border-radius: 50%;
+		    margin: 0 auto;
+		}
+		.user-image-box-2 {
+		    height: 200px;
+		    width: 200px;
+		    background-image: url("https://res.cloudinary.com/chidi6ix/image/upload/v1571420011/20190825_112753_vdkudk.jpg");
+		    background-size: cover;
+		    background-position: center;
+		    border-radius: 50%;
+		    margin: 0 auto;
+		}
+		.user-image-box-3 {
+		    height: 200px;
+		    width: 200px;
+		    background-image: url("https://res.cloudinary.com/erys1521/image/upload/v1567323865/Me_jgxgkf.jpg");
+		    background-size: cover;
+		    background-position: center;
+		    border-radius: 50%;
+		    margin: 0 auto;
+		}
+		.user-image-box-4 {
+		    height: 200px;
+		    width: 200px;
+		    background-image: url("https://res.cloudinary.com/major/image/upload/v1571406076/IMG_20190823_004821_hsnwii.jpg");
+		    background-size: cover;
+		    background-position: center;
+		    border-radius: 50%;
+		    margin: 0 auto;
+		}
+		.user-image-box-5 {
+		    height: 200px;
+		    width: 200px;
+		    background-image: url("https://res.cloudinary.com/ros4eva/image/upload/v1570140043/IMG_20190927_150929_gpoaza.jpg");
+		    background-size: cover;
+		    background-position: center;
+		    border-radius: 50%;
+		    margin: 0 auto;
+		}
+		.user-image-box-6 {
+		    height: 200px;
+		    width: 200px;
+		    background-image: url("https://res.cloudinary.com/padom2020/image/upload/v1566740261/IMG-20190819-WA0002_xhki10.jpg");
+		    background-size: cover;
+		    background-position: center;
+		    border-radius: 50%;
+		    margin: 0 auto;
+		}
+		.user-image-box-7 {
+		    height: 200px;
+		    width: 200px;
+		    background-image: url("https://res.cloudinary.com/kuic/image/upload/v1566490915/startNg2019/kuic_jxb4la.jpg");
+		    background-size: cover;
+		    background-position: center;
+		    border-radius: 50%;
+		    margin: 0 auto;
+		}
+		.user-image-box-8 {
+		    height: 200px;
+		    width: 200px;
+		    background-image: url("https://res.cloudinary.com/chidiebere/image/upload/v1523832031/pp.jpg");
+		    background-size: cover;
+		    background-position: center;
+		    border-radius: 50%;
+		    margin: 0 auto;
+		}
+		.user-image-box-9 {
+		    height: 200px;
+		    width: 200px;
+		    background-image: url("https://res.cloudinary.com/geedee/image/upload/v1571420489/IMG_20190311_075802_315_hi0dii.jpg");
+		    background-size: cover;
+		    background-position: center;
+		    border-radius: 50%;
+		    margin: 0 auto;
+		}
+		.user-image-box-10 {
+		    height: 200px;
+		    width: 200px;
+		    background-image: url("https://res.cloudinary.com/sidebone/image/upload/v1566557645/arleuyaxygdgarwsvrha.jpg");
+		    background-size: cover;
+		    background-position: center;
+		    border-radius: 50%;
+		    margin: 0 auto;
+		}
+		.user-image-box-11 {
+		    height: 200px;
+		    width: 200px;
+		    background-image: url("https://res.cloudinary.com/patience/image/upload/v1566544234/peshie.jpg");
+		    background-size: cover;
+		    background-position: center;
+		    border-radius: 50%;
+		    margin: 0 auto;
+		}
+		.user-image-box-12 {
+		    height: 200px;
+		    width: 200px;
+		    background-image: url("https://res.cloudinary.com/emmaodia/image/upload/v1571423773/emmaodia.jpg");
+		    background-size: cover;
+		    background-position: center;
+		    border-radius: 50%;
+		    margin: 0 auto;
+		}
+		.user-image-box-13{
+		    height: 200px;
+		    width: 200px;
+		    background-image: url("https://res.cloudinary.com/abulwasiu22/image/upload/v1571411993/abdulwasiu02_p4qgpx.jpg");
+		    background-size: cover;
+		    background-position: center;
+		    border-radius: 50%;
+		    margin: 0 auto;
+		}
+		.user-image-box-14 {
+		    height: 200px;
+		    width: 200px;
+		    background-image: url("https://res.cloudinary.com/aboogeeky/image/upload/v1566541703/passport_hcist5.jpg");
+		    background-size: cover;
+		    background-position: center;
+		    border-radius: 50%;
+		    margin: 0 auto;
+		}
+		.user-image-box-15{
+		    height: 200px;
+		    width: 200px;
+		    background-image: url("https://res.cloudinary.com/ademolamadelewi/image/upload/v1571505429/IMG_20190910_180814_631_lgqv01.jpg");
+		    background-size: cover;
+		    background-position: center;
+		    border-radius: 50%;
+		    margin: 0 auto;
+		}
+		.user-image-box-16{
+		    height: 200px;
+		    width: 200px;
+		    background-image: url("https://res.cloudinary.com/rejreign/image/upload/v1566577575/Screenshot_from_2019-08-20_20-31-08_rexp8d.png");
+		    background-size: cover;
+		    background-position: center;
+		    border-radius: 50%;
+		    margin: 0 auto;
+		}
+		.user-image-box-17{
+		    height: 200px;
+		    width: 200px;
+		    background-image: url("https://res.cloudinary.com/rammy/image/upload/v1554506675/rammy.jpg");
+		    background-size: cover;
+		    background-position: center;
+		    border-radius: 50%;
+		    margin: 0 auto;
+		}
+		.user-image-box-18{
+		    height: 200px;
+		    width: 200px;
+		    background-image: url("https://res.cloudinary.com/adenike/image/upload/v1571418297/1_eiunzt.jpg");
+		    background-size: cover;
+		    background-position: center;
+		    border-radius: 50%;
+		    margin: 0 auto;
+		}
+		.user-image-box-19{
+		    height: 200px;
+		    width: 200px;
+		    background-image: url("https://res.cloudinary.com/onamusia/image/upload/v1567605657/Screenshot_2019-09-04_at_14.18.06_rap7kt.png");
+		    background-size: cover;
+		    background-position: center;
+		    border-radius: 50%;
+		    margin: 0 auto;
+		}
+		.user-image-box-20{
+		    height: 200px;
+		    width: 200px;
+		    background-image: url("https://res.cloudinary.com/omotosoyusuf/image/upload/v1566572749/yusufOmotoso_adafxo.jpg");
+		    background-size: cover;
+		    background-position: center;
+		    border-radius: 50%;
+		    margin: 0 auto;
+		}
+		.user-image-box-21{
+		    height: 200px;
+		    width: 200px;
+		    background-image: url("https://bit.ly/31w0RMR");
+		    background-size: cover;
+		    background-position: center;
+		    border-radius: 50%;
+		    margin: 0 auto;
+		}
+		.user-image-box-22{
+		    height: 200px;
+		    width: 200px;
+		    background-image: url("https://res.cloudinary.com/dqvu3ts0s/image/upload/v1502874057/IMG_20170707_065607_gqay7p.png");
+		    background-size: cover;
+		    background-position: center;
+		    border-radius: 50%;
+		    margin: 0 auto;
+		}
+		.user-image-box-23{
+		    height: 200px;
+		    width: 200px;
+		    background-image: url("https://res.cloudinary.com/dlkp3rtps/image/upload/v1571404933/paassport_tj_ukba4v.jpg");
+		    background-size: cover;
+		    background-position: center;
+		    border-radius: 50%;
+		    margin: 0 auto;
+		}
+		.user-image-box-24{
+		    height: 200px;
+		    width: 200px;
+		    background-image: url("https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571405356/samples/lario/qqov6cplw8qs7uosewx7.jpg");
+		    background-size: cover;
+		    background-position: center;
+		    border-radius: 50%;
+		    margin: 0 auto;
+		}
+		.user-image-box-74{
+		    height: 200px;
+		    width: 200px;
+		    background-image: url("https://res.cloudinary.com/anikriz/image/upload/v1566560640/HNG%20%7CStartng%20Internship/passport_photo-min_zremwg.jpg");
+		    background-size: cover;
+		    background-position: center;
+		    border-radius: 50%;
+		    margin: 0 auto;
+		}
+		.generic-image-circle {
+		    height: 200px;
+		    width: 200px;
+		    background-size: cover;
+		    background-position: center;
+		    border-radius: 50%;
+		    margin: 0 auto;
+		}
+		.user-image-box-25{
+		    background-image: url("https://res.cloudinary.com/ebukamoses/image/upload/v1570259839/MY%20PERSONAL%20PIX/DSC_1948_gb8tjn.jpg");
+		}
+		.user-image-box-26{
+		    background-image: url("https://res.cloudinary.com/habeebability/image/upload/v1554381379/habeebability_pic.jpg");
+		}
+		.user-image-box-27{
+		    background-image: url("https://res.cloudinary.com/hafizah/image/upload/v1566627089/Snapchat-733321432_3_ode4vf.jpg");
+		}
+		.user-image-box-28{
+		    background-image: url("https://res.cloudinary.com/haroldb/image/upload/v1566662471/My_Photo_qjo6xz.jpg");
+		}
+		.user-image-box-29{
+		    background-image: url("https://res.cloudinary.com/sima-inc/image/upload/v1566541929/samples/igoboSTNG_l7vvm4.jpg");
+		}
+		.user-image-box-30{
+		    background-image: url("https://res.cloudinary.com/chimeziesolomon/image/upload/v1571403236/mypic.png_eq6fzr.jpg");
+		}
+		.user-image-box-31{
+		    background-image: url("https://res.cloudinary.com/joshualoni2/image/upload/v1571407100/IMG-20190629-WA0011_s2kswp.jpg");
+		}
+		.user-image-box-33{
+		    background-image: url("https://res.cloudinary.com/nnonornora/image/upload/v1571415194/IMG_20190624_100838_6_c2j4tr.jpg");
+		}
+		.user-image-box-34{
+		    background-image: url("https://res.cloudinary.com/kuic/image/upload/v1571245043/docufix/Ellipse_3_ahe63z.png");
+		}
+		.user-image-box-35{
+		    background-image: url("https://res.cloudinary.com/olaleye247/image/upload/v1571407030/passport_akcscg.jpg");
+		}
+		.user-image-box-36{
+		    background-image: url("https://res.cloudinary.com/sidebone/image/upload/v1566557645/arleuyaxygdgarwsvrha.jpg");
+		}
+		.user-image-box-37{
+		    background-image: url("https://res.cloudinary.com/adaeze123/image/upload/v1566518405/myfacepicture_fcjp8m.jpg");
+		}
+		.user-image-box-38{
+		    background-image: url("https://res.cloudinary.com/omyasobie/image/upload/v1569340436/omi_ief366.jpg");
+		}
+		.user-image-box-39{
+		    background-image: url("https://res.cloudinary.com/olasumboeniola/image/upload/v1571408198/FB_IMG_15700193231610244_tffkyv.jpg");
+		}
+		.user-image-box-40{
+		    background-image: url("https://res.cloudinary.com/dlqceb87c/image/upload/v1566503590/shola_grav_het1lf.jpg");
+		}
+		.user-image-box-41{
+		    background-image: url("https://res.cloudinary.com/el-beracah/image/upload/v1566893213/67973790_479745906182578_7630307018294191377_n.jpg_dmmkmn.jpg");
+		}
+		.user-image-box-42{
+		    background-image: url("https://res.cloudinary.com/soares04/image/upload/v1566492008/uxxbl8xkagqeo9h00pl8.jpg");
+		}
+		.user-image-box-43{
+		    background-image: url("https://res.cloudinary.com/saintmalik/image/upload/v1566558378/u9q6wxtekw0dv5p8hn2i.jpg");
+		}
+		.user-image-box-44{
+		    background-image: url("https://res.cloudinary.com/sape123/image/upload/v1571408607/IMG_20190518_183300_785_500x466_2_sykpju.jpg");
+		}
+		.user-image-box-45{
+		    background-image: url("https://res.cloudinary.com/michelle300/image/upload/v1566599180/81EBDAE3-32FE-4C3D-B237-EC19C38207F8_na3ccj.jpg");
+		}
+		.user-image-box-46{
+		    background-image: url("https://res.cloudinary.com/dxonc8cxc/image/upload/v1566546938/Chigozie_i5bkw8.jpg");
+		}
+		.user-image-box-47{
+		    background-image: url("https://pbs.twimg.com/profile_images/825105787467026436/0GILl_nN_400x400.jpg");
+		}
+		.user-image-box-48{
+		    background-image: url("https://res.cloudinary.com/ecstasy/image/upload/v1571409691/Passport/IMG_20190817_183732_veknsq.jpg");
+		}
+		.user-image-box-49{
+		    background-image: url("https://res.cloudinary.com/onose/image/upload/v1571412582/Ono/j5wdvxagvqr2rvthbfzr.jpg");
+		}
+		.user-image-box-50{
+		    background-image: url("https://res.cloudinary.com/tomisin/image/upload/c_scale,h_177,w_138/v1571413110/tomisin_ebjcqo.png");
+		}
+		.user-image-box-51{
+		    background-image: url("https://res.cloudinary.com/ajiva/image/upload/v1568641919/profile-pic.jpg");
+		}
+		.user-image-box-52{
+		    background-image: url("https://res.cloudinary.com/cypher/image/upload/v1566537651/Yusuf_zrin2n.jpg");
+		}
+		.user-image-box-53{
+		    background-image: url("https://pbs.twimg.com/profile_images/559637048030953473/saIYHqN8_400x400.jpeg");
+		}
+		.user-image-box-54{
+		    background-image: url("https://res.cloudinary.com/dvqlwtdpk/image/upload/v1571414014/81A550CC-DF2C-4715-8107-368B3027FBB4_byznsq.jpg");
+		}
+		.user-image-box-55{
+		    background-image: url("https://res.cloudinary.com/wonderwoman/image/upload/v1571413682/docufix/cloudinary_krfskf.jpg");
+		}
+		.user-image-box-56{
+		    background-image: url("https://res.cloudinary.com/ositu/image/upload/v1571414130/bankole/banks_llrq1m.jpg");
+		}
+		.user-image-box-57{
+		    background-image: url("https://res.cloudinary.com/omobola/image/upload/v1566608564/StartNG/Saudat.png");
+		}
+		.user-image-box-58{
+		    background-image: url("https://res.cloudinary.com/young-einstein/image/upload/v1567517232/passport_cjsegl.jpg");
+		}
+		.user-image-box-59{
+		    background-image: url("https://res.cloudinary.com/mirakul1/image/upload/ar_1:1,c_fill,e_art:hokusai,g_auto,w_416/v1570188521/oe4mjfk792exqjpzwkxz.jpg");
+		}
+		.user-image-box-60{
+		    background-image: url("https://res.cloudinary.com/lodgendury/image/upload/v1571417716/20181113_213452_cfhslm.jpg");
+		}
+		.user-image-box-61{
+		    background-image: url("https://res.cloudinary.com/luqmonac56/image/upload/v1571416406/IMG-20190331-WA0006_mo6bmh.jpg");
+		}
+		.user-image-box-62{
+		    background-image: url("https://res.cloudinary.com/haroldb/image/upload/v1566662471/My_Photo_qjo6xz.jpg");
+		}
+		.user-image-box-63{
+		    background-image: url("https://pbs.twimg.com/profile_images/1092875947756437507/HTY2WmLx_400x400.jpg");
+		}
+		.user-image-box-65{
+		    background-image: url("https://res.cloudinary.com/dowrygm9b/image/upload/v1570267346/IMG_6894-1_ykvrgg.jpg");
+		}
+		.user-image-box-66{
+		    background-image: url("https://res.cloudinary.com/mcnoble/image/upload/v1566593070/StartNG/festus_g91ynv.webp");
+		}
+		.user-image-box-67{
+		    background-image: url("https://res.cloudinary.com/yugach/image/upload/v1571404456/yugach_wn6y2u.jpg");
+		}
+		.user-image-box-68{
+		    background-image: url("https://res.cloudinary.com/dzwtycmnl/image/upload/v1566590092/IMG_2602_osa6ad.jpg");
+		}
+		.user-image-box-69{
+		    background-image: url("https://res.cloudinary.com/martinideen/image/upload/c_scale,h_192,w_192/v1566761204/Martini_For_Real_zppc1k.jpg");
+		}
+		.user-image-box-71{
+		    background-image: url("https://res.cloudinary.com/maphorbs/image/upload/v1571404331/IMG_20190824_183700_ec93wk.jpg");
+		}
+		.user-image-box-72{
+		    background-image: url("https://res.cloudinary.com/chidi6ix/image/upload/v1571407468/IMG_20190909_152905_EDIT_1_tppov7.jpg");
+		}
+		.user-image-box-73{
+		    background-image: url("https://res.cloudinary.com/aburahman/image/upload/v1566652016/AbdulRahman%20Pictures/gzscf5hwgqalt8kiogph.jpg");
+		}
+		           
+		    /* .navbar{
+		   position:fixed;
+		   width:100%;
+		   top:0;
+		   z-index:1;
+		 }          */
+    </style>
+   
+
+
+</head>
 <body>
-	<header>
-		<div>
-			<nav class="navbar navbar-expand-lg navbar-light bg-light" id="nav">
+        <div id="translator_6392"><noscript>Javascript is disable - <a href="http://www.webestools.com/">http://www.webestools.com/</a> - <a href="http://www.webestools.com/translator-buttons-web-page-translation-google-translate-website-widget-online-html-translator.html">Translation Buttons Generator</a></noscript></div><script type="text/javascript" src="http://services.webestools.com/translator/6392-1-yyyyyyyyy.js"></script>
+        <header>
+           
+
+<header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light" id="nav">
 		    <a class="navbar-brand" href="index.html" id="logo">
 		      <svg width="321" height="100" viewBox="0 0 321 100" fill="none" xmlns="http://www.w3.org/2000/svg">
 		        <path d="M37.5171 38.9927C37.5171 45.4559 35.673 50.4062 31.9849 53.8438C28.3146 57.2812 23.0062 59 16.0596 59H4.94141V19.7373H17.2681C23.6776 19.7373 28.6548 21.4292 32.1997 24.813C35.7446 28.1968 37.5171 32.9233 37.5171 38.9927ZM28.8696 39.2075C28.8696 30.7749 25.1457 26.5586 17.6978 26.5586H13.2666V52.125H16.8384C24.8592 52.125 28.8696 47.8192 28.8696 39.2075ZM86.7915 39.3149C86.7915 45.814 85.1802 50.8091 81.9575 54.3003C78.7349 57.7915 74.1157 59.5371 68.1001 59.5371C62.0845 59.5371 57.4653 57.7915 54.2427 54.3003C51.02 50.8091 49.4087 45.7961 49.4087 39.2612C49.4087 32.7264 51.02 27.7402 54.2427 24.3027C57.4832 20.8473 62.1203 19.1196 68.1538 19.1196C74.1873 19.1196 78.7975 20.8563 81.9844 24.3296C85.1891 27.8029 86.7915 32.798 86.7915 39.3149ZM58.1367 39.3149C58.1367 43.7013 58.9692 47.0046 60.6343 49.2246C62.2993 51.4447 64.7879 52.5547 68.1001 52.5547C74.7424 52.5547 78.0635 48.1414 78.0635 39.3149C78.0635 30.4705 74.7603 26.0483 68.1538 26.0483C64.8416 26.0483 62.3441 27.1673 60.6611 29.4053C58.9782 31.6253 58.1367 34.9285 58.1367 39.3149ZM117.106 26.1021C113.973 26.1021 111.547 27.2837 109.828 29.647C108.109 31.9924 107.25 35.2687 107.25 39.4761C107.25 48.231 110.535 52.6084 117.106 52.6084C119.863 52.6084 123.202 51.9191 127.123 50.5405V57.5229C123.9 58.8657 120.302 59.5371 116.327 59.5371C110.616 59.5371 106.247 57.8094 103.222 54.354C100.196 50.8807 98.6831 45.9035 98.6831 39.4224C98.6831 35.3403 99.4261 31.7686 100.912 28.707C102.398 25.6276 104.529 23.2733 107.304 21.644C110.097 19.9969 113.364 19.1733 117.106 19.1733C120.919 19.1733 124.751 20.0954 128.6 21.9395L125.915 28.707C124.446 28.0088 122.969 27.4001 121.483 26.8809C119.997 26.3617 118.538 26.1021 117.106 26.1021ZM172.96 19.7373V45.1426C172.96 48.043 172.306 50.5853 171 52.7695C169.71 54.9538 167.84 56.6278 165.387 57.7915C162.934 58.9552 160.034 59.5371 156.686 59.5371C151.637 59.5371 147.716 58.248 144.923 55.6699C142.13 53.0739 140.733 49.529 140.733 45.0352V19.7373H149.032V43.7729C149.032 46.7987 149.64 49.0187 150.858 50.4331C152.075 51.8475 154.09 52.5547 156.9 52.5547C159.622 52.5547 161.591 51.8475 162.809 50.4331C164.044 49.0008 164.662 46.7629 164.662 43.7192V19.7373H172.96ZM196.265 59H188.074V19.7373H210.579V26.5586H196.265V36.6831H209.585V43.4775H196.265V59ZM223.76 59V19.7373H232.085V59H223.76Z" fill="white"/>
@@ -61,8 +674,8 @@
 		            Tools
 		          </a>
 		          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-		            <a class="dropdown-item" href="fileUpload.html">Compare files</a>
-		            <a class="dropdown-item" href="fileDelimiter.html">Check for duplicates</a>
+		            <a class="dropdown-item" href="fileupload.html">Compare files</a>
+		            <a class="dropdown-item" href="filedelimiter.html">Check for duplicates</a>
 		          </div>
 		        </li>
 		        <li class="nav-item dropdown">
@@ -80,114 +693,2249 @@
 		            <a class="nav-link" href="https://hng.tech/" target="_blank">Donate</a>
 		          </li>
 		          <li class="nav-item">
-		            <a class="nav-link" href="Blog/blog-index.html">Blog</a>
+		            <a class="nav-link" href="Blog/blog-index.html" target="_blank">Blog</a>
 		          </li>
 		      </ul>
 		    </div>
 		  </nav>
-		</div>
-	</header>
-	<div style="background: linear-gradient(230.94deg, #D7B1F6 -15.75%, #404CB7 87.3%); padding-bottom: 40px;">
-		<div class="container">
-		  <div class="row">
-		    <div class="col content1" >
-		      <h2>Document Comparison <br>Solution</h2>
-		      <img src="https://res.cloudinary.com/ros4eva/image/upload/v1571850647/Group35_oixima.png" class="img-fluid img4mobile">
-		      <span >Compare documents content and find out the differences in each content of the files without much stress</span>
-		    </div>
-		    <div class="col content-img">
-		      <img src="https://res.cloudinary.com/ros4eva/image/upload/v1571850647/Group35_oixima.png" class="img-fluid">
-		    </div>
-		</div>
-	    <div class="row">
-		    <div class="col navigation-links" align="center" >
-		      <a href="fileUpload.html">Compare Files</a><a href="fileDelimiter.html">Check For Duplicates</a>
-		    </div>
-		  </div>
-		 </div>
-	</div>
+      </header>
+    <main>     
+     <!--  TEAM -->
+     <section id="team">
+            <div class="content-box">
+                <div class="content-title">
+                    <h3>Meet Our Team</h3>
+                    <div class="content-title-underline"></div>
+                </div>
+                <div class="container">
+                   <div class="row">
+                      
+                       <div class="col the-col">
+                          <div class="all-users side">
+                              <div class="user-image">
+                                   <div class="user-image-box-1"></div>
+                               </div>
+                               <div class="content-part back text-center">
+                                   <div class="user-info">
+                                       <h3>Mercy Inyang</h3>
+                                       <p>Front-End Developer</p>
+                                   </div>
+                                   <div class="user-content"><b>Team lead</b>
+                                       <p class="text-center pt-5">SlackUsername : @Miss Temi</p>
+                                   </div>
+                               </div>
+                               <div class="content-footer">
+                                   <a href="https://twitter.com/LoneTemi" target="_blank">
+                                       <i class="fab fa-twitter fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="https://www.instagram.com/mercyskittles/" target="_blank">
+                                       <i class="fab fa-instagram fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="https://www.linkedin.com/in/mercyinyangp" target="_blank">
+                                       <i class="fab fa-linkedin fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="https://www.facebook.com/mercytemiinyang" target="_blank">
+                                       <i class="fab fa-facebook fa-2x social-icons"></i>
+                                   </a>
+                               </div>
+                          </div>  
+                       </div>
+                       <div class="col the-col">
+                            <div class="all-users side">
+                                <div class="user-image">
+                                     <div class="user-image-box-2"></div>
+                                 </div>
+                                 <div class="content-part back text-center">
+                                     <div class="user-info">
+                                         <h3>Onyenkachi Chidiebere</h3>
+                                         <p>Front-End Developer</p>
+                                     </div>
+                                     <div class="user-content"><b>Team lead</b>
+                                         <p class="text-center pt-5">SlackUsername : @codeSmith</p>
+                                     </div>
+                                 </div>
+                                 <div class="content-footer">
+                                     <a href="https://twitter.com/" target="_blank">
+                                         <i class="fab fa-twitter fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="https://www.instagram.com/" target="_blank">
+                                         <i class="fab fa-instagram fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="http://www.linkedin.com/in/onyekachi-chidiebere-5202bb124" target="_blank">
+                                         <i class="fab fa-linkedin fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="https://www.facebook.com/" target="_blank">
+                                         <i class="fab fa-facebook fa-2x social-icons"></i>
+                                     </a>
+                                 </div>
+                            </div>  
+                        </div>
+                        <div class="col the-col">
+                            <div class="all-users side">
+                                <div class="user-image">
+                                     <div class="user-image-box-3"></div>
+                                 </div>
+                                 <div class="content-part back text-center">
+                                     <div class="user-info">
+                                         <h3>Isuma Chidera</h3>
+                                         <p>Backend | Project Management</p>
+                                     </div>
+                                     <div class="user-content"><b>Project Manager</b>
+                                         <p class="text-center pt-5">SlackUsername : @Cross-pm</p>
+                                     </div>
+                                 </div>
+                                 <div class="content-footer">
+                                     <a href="https://www.twitter.com/" target="_blank">
+                                         <i class="fab fa-twitter fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="https://www.instagram.com/" target="_blank">
+                                         <i class="fab fa-instagram fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="https://www.linkedin.com/in/chidera-isuma/" target="_blank">
+                                         <i class="fab fa-linkedin fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="https://www.facebook.com/" target="_blank">
+                                         <i class="fab fa-facebook fa-2x social-icons"></i>
+                                     </a>
+                                </div>
+                            </div>  
+                        </div>
+                        
+                   
+                        <div class="col the-col">
+                            <div class="all-users side">
+                                <div class="user-image">
+                                     <div class="user-image-box-4"></div>
+                                 </div>
+                                 <div class="content-part back text-center">
+                                     <div class="user-info">
+                                         <h3>Samuel Egbajie</h3>
+                                         <p>Front-End Developer</p>
+                                     </div>
+                                     <div class="user-content"><b>Worked on the comparison Algorithm using JavaScript, Built a WYSIWYG text editor, Added downloable feature As .pdf and .doc files format, created a modal box.</b>
+                                         <p class="text-center pt-5">SlackUsername : @Major</p>
+                                     </div>
+                                 </div>
+                                 <div class="content-footer ">
+                                     <a href="https://www.twitter.com/Engr_Major" target="_blank">
+                                         <i class="fab fa-twitter fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="https://www.instagram.com/engr_major" target="_blank">
+                                         <i class="fab fa-instagram fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="https://www.linkedin.com/in/samuel-egbajie-08662415b" target="_blank">
+                                         <i class="fab fa-linkedin fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="https://free.facebook.com/samuel.oshie" target="_blank">
+                                         <i class="fab fa-facebook fa-2x social-icons"></i>
+                                     </a>
+                                 </div>
+                            </div>  
+                        </div>
 
-	<div class="container content2" align="center">
-		<h2>Our Features</h2>
-		<div class="container features-cont">
-		  <div class="row">
-		    <div class="col">
-		      <div class="container border">
-		      	<h4>Plagiarism Checker</h4>
-		      	<img src="https://res.cloudinary.com/ros4eva/image/upload/v1571850647/feature1_vjffqi.png" width="165" height="165">
-		      	<p>Plagiarism checker detects plagiarism in your text and checks for other writing issues. Our plagiarism checker flags specific sentences and provides reference information about the source, calculates an overall originality score for your document. So you don’t need to worry we have you covered.</p>
-		      </div>
-		    </div>
-		    <div class="col">
-		      <div class="container border">
-		      	<h4>Avoid Word Duplicates</h4>
-		      	<img src="https://res.cloudinary.com/ros4eva/image/upload/v1571850646/feature2_d0tfpm.png" width="165" height="165">
-		      	<p>One of the main problem in document is that most of the words that are duplicated also appear in the previous line, which makes it difficult to achieve your goal. If you'd want to remove all duplicated words, then it wasn't that difficult by using our tool, all duplicated file will be reviewed.</p>
-		      </div>
-		      
-		    </div>
-		    <div class="col">
-		      <div class="container border">
-		      	<h4>File Comparison</h4>
-		      	<img src="https://res.cloudinary.com/ros4eva/image/upload/v1571850646/feature3_ozmb0n.png" width="165" height="165">
-		      	<p>We help you compare files and texts, and generate differences in a visual text format which is easy to manage and understand. Comparing hundreds of files can be a tedious task, there are high chances that you would miss out on something. Here we make that easy for you.</p>
-		      </div>
-		    </div>
-		  </div>
-		</div>
-	</div>
-	<div class="container content3">
-		<div align="center">
-			<h2>What People Say About Us!</h2>
-		</div>
-		
-		<div class="card-deck">
-		  <div class="card">
-		    <img src="https://res.cloudinary.com/ros4eva/image/upload/v1571850647/image5_j4ylm3.png" class="card-img-top" alt="...">
-		    <div class="card-body">
-		      <h5 class="card-title">Helene White</h5>
-		      <h6>Student</h6>
-		      <p class="card-text">This is the most cool tool I ever come across online and guess what guys? Docufix just saved the day for me by helping me extract some valuable information on the PDF I uploaded. </p>
-		      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-		    </div>
-		  </div>
-		  <div class="card">
-		    <img src="https://res.cloudinary.com/ros4eva/image/upload/v1571850649/image7_xrzrdq.png" class="card-img-top" alt="...">
-		    <div class="card-body">
-		      <h5 class="card-title">Mr Frank</h5>
-		      <h6>Content Writter</h6>
-		      <p class="card-text">Ever since I learnt about this tool from my colleague, I no longer find it difficult to compare between my 2 articles to check for correspondenes.</p>
-		      <p class="card-text"><small class="text-muted">Last updated 5 mins ago</small></p>
-		    </div>
-		  </div>
-		</div>
-	</div>
+                        <div class="col the-col">
+                            <div class="all-users side">
+                                <div class="user-image">
+                                     <div class="user-image-box-15"></div>
+                                 </div>
+                                 <div class="content-part back text-center">
+                                     <div class="user-info">
+                                         <h3>Ademola Madelewi</h3>
+                                         <p>Front-End Developer</p>
+                                     </div>
+                                     <div class="user-content"><b>Homepage, File-Upload page and Comparison Algorithm</b>
+                                         <p class="text-center pt-5">SlackUsername : @AdemolaM</p>
+                                     </div>
+                                 </div>
+                                 <div class="content-footer ">
+                                     <a href="https://twitter.com/Adem0la_jr">
+                                         <i class="fab fa-twitter fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="https://www.instagram.com/">
+                                         <i class="fab fa-instagram fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="https://www.linkedin.com/in/ademola-madelewi-9441a8102/">
+                                         <i class="fab fa-linkedin fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="https://www.facebook.com/">
+                                         <i class="fab fa-facebook fa-2x social-icons"></i>
+                                     </a>
+                                 </div>
+                            </div>  
+                        </div>
 
-	<div class="container content4">
-		<div class="container newsletter">
-		  <div class="row">
-		    <div class="col img2">
-		      <img src="https://res.cloudinary.com/ros4eva/image/upload/v1571850647/newsletter_ftzcuh.png" class="img-fluid">
-		    </div>
-		    <div class="col">
-		    	<div align="center">
-		    		<h5>NEWSLETTER</h5>
-		    		<h3>SUBSCRIBE</h3>
-		      <form>
-		      	<input type="email" name="email" placeholder="name@email.com">
-		      	<br>
-		      	<input type="checkbox" name="">
-		      	<small>Send me Promotional Offers</small>
-		      	<br>
-		      	<input type="submit" name="" value="Sign Up">
-		      </form>
-		  	</div>
-		    </div>
-		  </div>
-		</div>
-	</div>
+                        <div class="col the-col">
+                            <div class="all-users side">
+                                <div class="user-image">
+                                     <div class="user-image-box-5"></div>
+                                 </div>
+                                 <div class="content-part back text-center">
+                                     <div class="user-info">
+                                         <h3>Prosper Ndubueze </h3>
+                                         <p>Front-End Developer</p>
+                                     </div>
+                                     <div class="user-content"><b>File and text comparison page frontend</b>
+                                      <br>
+                                      <br>
+                                         <p class="text-center pt-5">SlackUsername : @Ros4eva</p>
+                                     </div>
+                                 </div>
+                                 <div class="content-footer ">
+                                     <a href="https://twitter.com/rosesopuruchi" target="_blank">
+                                         <i class="fab fa-twitter fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="https://www.instagram.com/prospersopuruchi/" target="_blank">
+                                         <i class="fab fa-instagram fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="https://www.linkedin.com/in/prosper-sopuruchi-ndubueze-338209122" target="_blank">
+                                         <i class="fab fa-linkedin fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="https://www.facebook.com/prosper.sopuruchi/" target="_blank">
+                                         <i class="fab fa-facebook fa-2x social-icons"></i>
+                                     </a>
+                                 </div>
+                            </div>  
+                         </div>
+                        <div class="col the-col">
+                            <div class="all-users side">
+                                <div class="user-image">
+                                     <div class="user-image-box-6"></div>
+                                 </div>
+                                 <div class="content-part back text-center">
+                                     <div class="user-info">
+                                         <h3>Akpan Dominic Gabriel</h3>
+                                         <p>UI/UX Design</p>
+                                     </div>
+                                     <div class="user-content"><b>I coordinated the design team and designed the home page. </b>
+                                         <p class="text-center pt-5">SlackUsername : @Pa Dom</p>
+                                     </div>
+                                 </div>
+                                 <div class="content-footer ">
+                                     <a href="https://twitter.com/drmusic001?s=09">
+                                         <i class="fab fa-twitter fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="https://www.instagram.com/">
+                                         <i class="fab fa-instagram fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="https://www.linkedin.com/in/dominic-akpan-540560196">
+                                         <i class="fab fa-linkedin fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="https://www.facebook.com/akpan.dominic">
+                                         <i class="fab fa-facebook fa-2x social-icons"></i>
+                                     </a>
+                                 </div>
+                            </div>  
+                        </div>
+                        <div class="col the-col">
+                            <div class="all-users side">
+                                <div class="user-image">
+                                     <div class="user-image-box-7"></div>
+                                 </div>
+                                 <div class="content-part back text-center">
+                                     <div class="user-info">
+                                         <h3>Kingsley Umujeyan</h3>
+                                         <p>Front-End Developer</p>
+                                     </div>
+                                     <div class="user-content"><b>Team Page</b>
+                                      <br>
+                                      <br>
+                                         <p class="text-center pt-5">SlackUsername : @kuic</p>
+                                     </div>
+                                 </div>
+                                 <div class="content-footer ">
+                                     <a href="https://twitter.com/kuicpet">
+                                         <i class="fab fa-twitter fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="https://www.instagram.com/">
+                                         <i class="fab fa-instagram fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="https://www.linkedin.com/in/kingsley-umujeyan-17858a75/">
+                                         <i class="fab fa-linkedin fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="https://web.facebook.com/umujeyan.kingsley">
+                                         <i class="fab fa-facebook fa-2x social-icons"></i>
+                                     </a>
+                                 </div>
+                            </div>  
+                        </div>
 
-	<footer>
+                        <div class="col the-col">
+                            <div class="all-users side">
+                                <div class="user-image">
+                                     <div class="user-image-box-17"></div>
+                                 </div>
+                                 <div class="content-part back text-center">
+                                     <div class="user-info">
+                                         <h3>Onasanya Tunde</h3>
+                                         <p>Front-End Developer</p>
+                                     </div>
+                                     <div class="user-content"><b>Worked on the API endpoint that converts the files uploaded to plain text.</b>
+                                         <p class="text-center pt-5">SlackUsername : @Rammy</p>
+                                     </div>
+                                 </div>
+                                 <div class="content-footer ">
+                                     <a href="https://twiiter.com/simply_rammy">
+                                         <i class="fab fa-twitter fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="https://www.instagram.com/simply_rammy">
+                                         <i class="fab fa-instagram fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="https://www.linkedin.com/in/onasanya-tunde/">
+                                         <i class="fab fa-linkedin fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="https://facebook.com/onasanyatunde">
+                                         <i class="fab fa-facebook fa-2x social-icons"></i>
+                                     </a>
+                                 </div>
+                            </div>  
+                        </div>
+                        <div class="col the-col">
+                            <div class="all-users side">
+                                <div class="user-image">
+                                     <div class="user-image-box-16"></div>
+                                 </div>
+                                 <div class="content-part back text-center">
+                                     <div class="user-info">
+                                         <h3>Sydney J. Ekpo</h3>
+                                         <p>Devops</p>
+                                     </div>
+                                     <div class="user-content"><b>Configured Server block - docufix.ga</b>
+                                         <p class="text-center pt-5">SlackUsername : @Sydney</p>
+                                     </div>
+                                 </div>
+                                 <div class="content-footer ">
+                                     <a href="https://twitter.com/rejreign" target="_blank">
+                                         <i class="fab fa-twitter fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="https://www.instagram.com/sjekp0_" target="_blank">
+                                         <i class="fab fa-instagram fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="https://www.linkedin.com/pub/sydney-ekpo/82/671/707" target="_blank">
+                                         <i class="fab fa-linkedin fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="https://www.facebook.com/reliz.ekpo.jnr" target="_blank">
+                                         <i class="fab fa-facebook fa-2x social-icons"></i>
+                                     </a>
+                                 </div>
+                            </div>  
+                        </div>                     
+                        <div class="col the-col">
+                            <div class="all-users side">
+                                <div class="user-image">
+                                     <div class="user-image-box-8"></div>
+                                 </div>
+                                 <div class="content-part back text-center">
+                                     <div class="user-info">
+                                         <h3>Chidiebere Chukwudi</h3>
+                                         <p>Back-End Developer</p>
+                                     </div>
+                                     <div class="user-content"><b>Php script for file comparison</b>
+                                         <p class="text-center pt-5">SlackUsername : @jovial</p>
+                                     </div>
+                                 </div>
+                                 <div class="content-footer ">
+                                     <a href="https://twitter.com/chidideveloper">
+                                         <i class="fab fa-twitter fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="https://www.instagram.com/">
+                                         <i class="fab fa-instagram fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="https://www.linkedin.com/">
+                                         <i class="fab fa-linkedin fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="https://m.facebook.com/">
+                                         <i class="fab fa-facebook fa-2x social-icons"></i>
+                                     </a>
+                                 </div>
+                            </div>  
+                        </div>
+
+                        <div class="col the-col">
+                            <div class="all-users side">
+                                <div class="user-image">
+                                     <div class="user-image-box-19"></div>
+                                 </div>
+                                 <div class="content-part back text-center">
+                                     <div class="user-info">
+                                         <h3>Ayo Onamusi</h3>
+                                         <p>Front-End</p>
+                                     </div>
+                                     <div class="user-content"><b>Home page</b>
+                                         <p class="text-center pt-5">SlackUsername : @Ayo-Onams</p>
+                                     </div>
+                                 </div>
+                                 <div class="content-footer ">
+                                     <a href="" target="_blank">
+                                         <i class="fab fa-twitter fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="" target="_blank">
+                                         <i class="fab fa-instagram fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="" target="_blank">
+                                         <i class="fab fa-linkedin fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="" target="_blank">
+                                         <i class="fab fa-facebook fa-2x social-icons"></i>
+                                     </a>
+                                 </div>
+                            </div>  
+                        </div>
+
+                        <div class="col the-col">
+                            <div class="all-users side">
+                                <div class="user-image">
+                                     <div class="user-image-box-20"></div>
+                                 </div>
+                                 <div class="content-part back text-center">
+                                     <div class="user-info">
+                                         <h3>Omotoso Yusuf</h3>
+                                         <p>Front-End</p>
+                                     </div>
+                                     <div class="user-content"><b>Linked pages</b>
+                                         <p class="text-center pt-5">SlackUsername : @OmotosoYusuf  </p>
+                                     </div>
+                                 </div>
+                                 <div class="content-footer ">
+                                     <a href="https://twitter.com/OmotosoYusuf" target="_blank">
+                                         <i class="fab fa-twitter fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="" target="_blank">
+                                         <i class="fab fa-instagram fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="https://www.linkedIn.com/OmotosoYusuf " target="_blank">
+                                         <i class="fab fa-linkedin fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="" target="_blank">
+                                         <i class="fab fa-facebook fa-2x social-icons"></i>
+                                     </a>
+                                 </div>
+                            </div>  
+                        </div>
+
+                        <div class="col the-col">
+                            <div class="all-users side">
+                                <div class="user-image">
+                                     <div class="user-image-box-21"></div>
+                                 </div>
+                                 <div class="content-part back text-center">
+                                     <div class="user-info">
+                                         <h3>Yusuf Ismaila</h3>
+                                         <p>Front-End</p>
+                                     </div>
+                                     <div class="user-content"><b>Header & Footer - Index.html</b>
+                                         <p class="text-center pt-5">SlackUsername : @YUSUF</p>
+                                     </div>
+                                 </div>
+                                 <div class="content-footer ">
+                                     <a href="https://twitter.com/yusufIsmail1" target="_blank">
+                                         <i class="fab fa-twitter fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="" target="_blank">
+                                         <i class="fab fa-instagram fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="https://linkedin.com/in/yusuf-ismail-59706089" target="_blank">
+                                         <i class="fab fa-linkedin fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="" target="_blank">
+                                         <i class="fab fa-facebook fa-2x social-icons"></i>
+                                     </a>
+                                 </div>
+                            </div>  
+                        </div>
+
+                        <div class="col the-col">
+                            <div class="all-users side">
+                                <div class="user-image">
+                                     <div class="user-image-box-22"></div>
+                                 </div>
+                                 <div class="content-part back text-center">
+                                     <div class="user-info">
+                                         <h3>Samson Emeje</h3>
+                                         <p>Front-End</p>
+                                     </div>
+                                     <div class="user-content"><b>Document Analysis Page</b>
+                                         <p class="text-center pt-5">SlackUsername : @Genghis Khan</p>
+                                     </div>
+                                 </div>
+                                 <div class="content-footer ">
+                                     <a href="https://twitter.com/S_Mabeni" target="_blank">
+                                         <i class="fab fa-twitter fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="https://www.instagram.com/mabeni808/" target="_blank">
+                                         <i class="fab fa-instagram fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="https://www.linkedin.com/in/samson-emeje/" target="_blank">
+                                         <i class="fab fa-linkedin fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="https://mobile.facebook.com/samemeje" target="_blank">
+                                         <i class="fab fa-facebook fa-2x social-icons"></i>
+                                     </a>
+                                 </div>
+                            </div>  
+                        </div>
+
+                        <div class="col the-col">
+                            <div class="all-users side">
+                                <div class="user-image">
+                                     <div class="user-image-box-23"></div>
+                                 </div>
+                                 <div class="content-part back text-center">
+                                     <div class="user-info">
+                                         <h3>Ogidiagba Henry Oghenetejiri</h3>
+                                         <p>Front-End</p>
+                                     </div>
+                                     <div class="user-content"><b>Team Page</b>
+                                         <p class="text-center pt-5">SlackUsername : @Henry Teejay</p>
+                                     </div>
+                                 </div>
+                                 <div class="content-footer ">
+                                     <a href="https://twitter.com/henry_teejay" target="_blank">
+                                         <i class="fab fa-twitter fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="https://www.instagram.com/henry_teejay/?hl=en" target="_blank">
+                                         <i class="fab fa-instagram fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="https://www.linkedin.com/in/henry-ogidiagba-a77721191/" target="_blank">
+                                         <i class="fab fa-linkedin fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="https://web.facebook.com/henry.teejay1" target="_blank">
+                                         <i class="fab fa-facebook fa-2x social-icons"></i>
+                                     </a>
+                                 </div>
+                            </div>  
+                        </div>
+
+                        <div class="col the-col">
+                            <div class="all-users side">
+                                <div class="user-image">
+                                     <div class="user-image-box-24"></div>
+                                 </div>
+                                 <div class="content-part back text-center">
+                                     <div class="user-info">
+                                         <h3>Osunkunle Olanrewaju</h3>
+                                         <p>Front-End</p>
+                                     </div>
+                                     <div class="user-content"><b>Text Comparison Page</b>
+                                      <br><br>
+                                         <p class="text-center pt-5">SlackUsername : @lario </p>
+                                     </div>
+                                 </div>
+                                 <div class="content-footer ">
+                                     <a href="https://twitter.com/lario_lee0" target="_blank">
+                                         <i class="fab fa-twitter fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="https://www.instagram.com/lario_lee/?hl=en" target="_blank">
+                                         <i class="fab fa-instagram fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="https://www.linkedin.com/in/osunkunle-olanrewaju-841307129/" target="_blank">
+                                         <i class="fab fa-linkedin fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="https://web.facebook.com/larioscophobia" target="_blank">
+                                         <i class="fab fa-facebook fa-2x social-icons"></i>
+                                     </a>
+                                 </div>
+                            </div>  
+                        </div>
+
+                        <div class="col the-col">
+                            <div class="all-users side">
+                                <div class="user-image">
+                                     <div class="user-image-box-74"></div>
+                                 </div>
+                                 <div class="content-part back text-center">
+                                     <div class="user-info">
+                                         <h3>Christian Ani</h3>
+                                         <p>Front-End</p>
+                                     </div>
+                                     <div class="user-content"><b>Team Page</b>
+                                      <br><br>
+                                         <p class="text-center pt-5">SlackUsername : @anikriz</p>
+                                     </div>
+                                 </div>
+                                 <div class="content-footer ">
+                                     <a href="https://twitter.com/anikriz99" target="_blank">
+                                         <i class="fab fa-twitter fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="https://www.instagram.com/ani_kriz/" target="_blank">
+                                         <i class="fab fa-instagram fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="https://www.linkedin.com/in/anikriz/" target="_blank">
+                                         <i class="fab fa-linkedin fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="https://web.facebook.com/anikrizz" target="_blank">
+                                         <i class="fab fa-facebook fa-2x social-icons"></i>
+                                     </a>
+                                 </div>
+                            </div>  
+                        </div>
+
+                        <div class="col the-col">
+                            <div class="all-users side">
+                                <div class="user-image">
+                                     <div class="user-image-box-14"></div>
+                                 </div>
+                                 <div class="content-part back text-center">
+                                     <div class="user-info">
+                                         <h3>Idris</h3>
+                                         <p>Front-End</p>
+                                     </div>
+                                     <div class="user-content"><b>About us page</b>
+                                      <br>
+                                      <br>
+                                         <p class="text-center pt-5">SlackUsername : @Aboogeeky </p>
+                                     </div>
+                                 </div>
+                                 <div class="content-footer ">
+                                     <a href="http://www.Twitter.com/aboogeeky" target="_blank">
+                                         <i class="fab fa-twitter fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="" target="_blank">
+                                         <i class="fab fa-instagram fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="" target="_blank">
+                                         <i class="fab fa-linkedin fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="" target="_blank">
+                                         <i class="fab fa-facebook fa-2x social-icons"></i>
+                                     </a>
+                                 </div>
+                            </div>  
+                        </div>
+
+                        <div class="col the-col">
+                            <div class="all-users side">
+                                <div class="user-image">
+                                     <div class="user-image-box-9"></div>
+                                 </div>
+                                 <div class="content-part back text-center">
+                                     <div class="user-info">
+                                         <h3>Godwin Ikott</h3>
+                                         <p>Front-End Developer</p>
+                                     </div>
+                                     <div class="user-content"><b>Home Page</b>
+                                         <p class="text-center pt-5">SlackUsername : @Geedee</p>
+                                     </div>
+                                 </div>
+                                 <div class="content-footer ">
+                                     <a href="http://www.twitter.com/geedeewain">
+                                         <i class="fab fa-twitter fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="http://www.instagram.com/geedeewain">
+                                         <i class="fab fa-instagram fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="http://www.linkedin.com/godwinikott">
+                                         <i class="fab fa-linkedin fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="https://m.facebook.com/olawaleesa">
+                                         <i class="fab fa-facebook fa-2x social-icons"></i>
+                                     </a>
+                                 </div>
+                            </div>  
+                        </div>
+                        <div class="col the-col">
+                            <div class="all-users side">
+                                <div class="user-image">
+                                     <div class="user-image-box-10"></div>
+                                 </div>
+                                 <div class="content-part back text-center">
+                                     <div class="user-info">
+                                         <h3>Amodu Ola-adewale</h3>
+                                         <p>Front-End Developer</p>
+                                     </div>
+                                     <div class="user-content"><b>About page</b>
+                                         <p class="text-center pt-5">SlackUsername : @sidebone</p>
+                                     </div>
+                                 </div>
+                                 <div class="content-footer ">
+                                     <a href="https://twitter.com/I_Am_Amodu/status/1162042614167810050?s=08">
+                                         <i class="fab fa-twitter fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="https://www.instagram.com/?hl=en/">
+                                         <i class="fab fa-instagram fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="https://www.linkedin.com/">
+                                         <i class="fab fa-linkedin fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="https://m.facebook.com/?hrc=1&refsrc=http%3A%2F%2Fwww.google.com%2F&_rdr">
+                                         <i class="fab fa-facebook fa-2x social-icons"></i>
+                                     </a>
+                                 </div>
+                            </div>  
+                        </div>
+                        <div class="col the-col">
+                            <div class="all-users side">
+                                <div class="user-image">
+                                     <div class="user-image-box-11"></div>
+                                 </div>
+                                 <div class="content-part back text-center">
+                                     <div class="user-info">
+                                         <h3>Patience Akpan</h3>
+                                         <p>Front-End Developer</p>
+                                     </div>
+                                     <div class="user-content"><b>File upload page</b>
+                                         <p class="text-center pt-5">SlackUsername : @peshie</p>
+                                     </div>
+                                 </div>
+                                 <div class="content-footer ">
+                                     <a href="https://mobile.twitter.com/peshie01">
+                                         <i class="fab fa-twitter fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="https://www.instagram.com/peshie01/?hl=en">
+                                         <i class="fab fa-instagram fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="https://www.linkedin.com/in/patience-akpan-1442b510a">
+                                         <i class="fab fa-linkedin fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="https://m.facebook.com/patchizzy">
+                                         <i class="fab fa-facebook fa-2x social-icons"></i>
+                                     </a>
+                                 </div>
+                            </div>  
+                        </div> 
+                        <div class="col the-col">
+                            <div class="all-users side">
+                                <div class="user-image">
+                                     <div class="user-image-box-12"></div>
+                                 </div>
+                                 <div class="content-part back text-center">
+                                     <div class="user-info">
+                                         <h3>Emmanuel Oaikhenan</h3>
+                                         <p>DevOps</p>
+                                     </div>
+                                     <div class="user-content"><b>Installed and setup NGINX for webserver</b>
+                                         <p class="text-center pt-5">SlackUsername : @emma_odia</p>
+                                     </div>
+                                 </div>
+                                 <div class="content-footer ">
+                                     <a href="https://twitter.com/">
+                                         <i class="fab fa-twitter fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="https://www.instagram.com/">
+                                         <i class="fab fa-instagram fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="https://www.linkedin.com/">
+                                         <i class="fab fa-linkedin fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="https://www.facebook.com/">
+                                         <i class="fab fa-facebook fa-2x social-icons"></i>
+                                     </a>
+                                 </div>
+                            </div>  
+                        </div>
+
+                        <div class="col the-col">
+                            <div class="all-users side">
+                                <div class="user-image">
+                                     <div class="user-image-box-13"></div>
+                                 </div>
+                                 <div class="content-part back text-center">
+                                     <div class="user-info">
+                                         <h3>Abdulwasiu Adewale Balogun</h3>
+                                         <p>Front-End</p>
+                                     </div>
+                                     <div class="user-content"><b>Home page</b>
+                                         <p class="text-center pt-5">SlackUsername : @AbdulwasiuBalogun</p>
+                                     </div>
+                                 </div>
+                                 <div class="content-footer ">
+                                     <a href="https://twitter.com/truty_112" target="_blank">
+                                         <i class="fab fa-twitter fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="https://www.instagram.com/truty22/" target="_blank">
+                                         <i class="fab fa-instagram fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="" target="_blank">
+                                         <i class="fab fa-linkedin fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="https://web.facebook.com/abdulwasi.balogun" target="_blank">
+                                         <i class="fab fa-facebook fa-2x social-icons"></i>
+                                     </a>
+                                 </div>
+                            </div>  
+                        </div>
+
+                        <div class="col the-col">
+                            <div class="all-users side">
+                                <div class="user-image">
+                                     <div class="user-image-box-18"></div>
+                                 </div>
+                                 <div class="content-part back text-center">
+                                     <div class="user-info">
+                                         <h3>Adenike Salau</h3>
+                                         <p>Front-End</p>
+                                     </div>
+                                     <div class="user-content"><b>Text Comparison page</b>
+                                      <br><br>
+                                         <p class="text-center pt-5">SlackUsername : @Ademiade</p>
+                                     </div>
+                                 </div>
+                                 <div class="content-footer ">
+                                     <a href="https://twitter.com/_AdemiAde" target="_blank">
+                                         <i class="fab fa-twitter fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="https://www.instagram.com/ademi64/" target="_blank">
+                                         <i class="fab fa-instagram fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="https://www.linkedin.com/in/adenike-salau-118a55164" target="_blank">
+                                         <i class="fab fa-linkedin fa-2x social-icons"></i>
+                                     </a>
+                                     <a href="" target="_blank">
+                                         <i class="fab fa-facebook fa-2x social-icons"></i>
+                                     </a>
+                                 </div>
+                            </div>  
+                        </div>
+
+                        <div class="col the-col">
+                          <div class="all-users side">
+                              <div class="user-image">
+                                   <div class="generic-image-circle user-image-box-25"></div>
+                               </div>
+                               <div class="content-part back text-center">
+                                   <div class="user-info">
+                                       <h3>Okoye Moses Ebuka</h3>
+                                       <p>Front-end</p>
+                                   </div>
+                                   <div class="user-content"><b>Text Comparison Page</b>
+                                       <p class="text-center pt-5">SlackUsername : @gentlebukan</p>
+                                   </div>
+                               </div>
+                               <div class="content-footer ">
+                                   <a href="https://twitter.com/Bukan_moses">
+                                       <i class="fab fa-twitter fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="https://instagram.com/Bukan_moses">
+                                       <i class="fab fa-instagram fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="https://www.linkedin.com/in/okoye-moses-ebuka-a417b614b/">
+                                       <i class="fab fa-linkedin fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="https://www.facebook.com/okoye.moses.14">
+                                       <i class="fab fa-facebook fa-2x social-icons"></i>
+                                   </a>
+                               </div>
+                          </div>  
+                       </div>
+
+
+                       <div class="col the-col">
+                          <div class="all-users side">
+                              <div class="user-image">
+                                   <div class="generic-image-circle user-image-box-26"></div>
+                               </div>
+                               <div class="content-part back text-center">
+                                   <div class="user-info">
+                                       <h3>Habeeb Awoyemi</h3>
+                                       <p>Front-end</p>
+                                   </div>
+                                   <div class="user-content"><b>Landing Page</b>
+                                       <p class="text-center pt-5">SlackUsername : @habeeb_ability</p>
+                                   </div>
+                               </div>
+                               <div class="content-footer ">
+                                   <a href="https://twitter.com/habeebability">
+                                       <i class="fab fa-twitter fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="https://www.instagram.com/habeebability/">
+                                       <i class="fab fa-instagram fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="https://www.linkedin.com/in/awoyemi-habeeb-795937172/">
+                                       <i class="fab fa-linkedin fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="https://facebook.com/habeeb.ability">
+                                       <i class="fab fa-facebook fa-2x social-icons"></i>
+                                   </a>
+                               </div>
+                          </div>  
+                       </div>
+
+
+                       <div class="col the-col">
+                          <div class="all-users side">
+                              <div class="user-image">
+                                   <div class="generic-image-circle user-image-box-27"></div>
+                               </div>
+                               <div class="content-part back text-center">
+                                   <div class="user-info">
+                                       <h3>Hafizah Muhyideen</h3>
+                                       <p>Front-end</p>
+                                   </div>
+                                   <div class="user-content"><b>Footer</b>
+                                       <p class="text-center pt-5">SlackUsername : @hafizaaah</p>
+                                   </div>
+                               </div>
+                               <div class="content-footer ">
+                                   <a href="https://www.twitter.com/strictyfiza">
+                                       <i class="fab fa-twitter fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="https://www.instagram.com/ha_fizaah_">
+                                       <i class="fab fa-instagram fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="#">
+                                       <i class="fab fa-linkedin fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="http://www.facebook.com/hafizah.muhyideen7">
+                                       <i class="fab fa-facebook fa-2x social-icons"></i>
+                                   </a>
+                               </div>
+                          </div>  
+                       </div>
+
+
+                       <div class="col the-col">
+                          <div class="all-users side">
+                              <div class="user-image">
+                                   <div class="generic-image-circle user-image-box-28"></div>
+                               </div>
+                               <div class="content-part back text-center">
+                                   <div class="user-info">
+                                       <h3>Abraham Harold</h3>
+                                       <p>Front-end</p>
+                                   </div>
+                                   <div class="user-content"><b>Team Comparison Page</b>
+                                       <p class="text-center pt-5">SlackUsername : @Haroldfr3shboss</p>
+                                   </div>
+                               </div>
+                               <div class="content-footer ">
+                                   <a href="https://www.twitter.com/haroldfr3shboss">
+                                       <i class="fab fa-twitter fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="https://www.instagram.com/haroldfr3shboss/">
+                                       <i class="fab fa-instagram fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="https://www.linkedin.com/in/abraham-harold-pmec-0ab799b3/">
+                                       <i class="fab fa-linkedin fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="https://m.facebook.com/haroldfr3shboss">
+                                       <i class="fab fa-facebook fa-2x social-icons"></i>
+                                   </a>
+                               </div>
+                          </div>  
+                       </div>
+
+
+                       <div class="col the-col">
+                          <div class="all-users side">
+                              <div class="user-image">
+                                   <div class="generic-image-circle user-image-box-29"></div>
+                               </div>
+                               <div class="content-part back text-center">
+                                   <div class="user-info">
+                                       <h3>IGOBO JOSHUA F</h3>
+                                       <p>Front-end</p>
+                                   </div>
+                                   <div class="user-content"><b>Footer</b>
+                                       <p class="text-center pt-5">SlackUsername : @IGOBO</p>
+                                   </div>
+                               </div>
+                               <div class="content-footer ">
+                                   <a href="https://www.twitter.com/igobojoshua">
+                                       <i class="fab fa-twitter fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="https://instagram.com/joshua10043">
+                                       <i class="fab fa-instagram fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="https://www.linkedin.com/in/igobo-joshua-f-219072167">
+                                       <i class="fab fa-linkedin fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="https://www.facebook.com/igobo.joshua">
+                                       <i class="fab fa-facebook fa-2x social-icons"></i>
+                                   </a>
+                               </div>
+                          </div>  
+                       </div>
+
+
+                       <div class="col the-col">
+                          <div class="all-users side">
+                              <div class="user-image">
+                                   <div class="generic-image-circle user-image-box-30"></div>
+                               </div>
+                               <div class="content-part back text-center">
+                                   <div class="user-info">
+                                       <h3>Iwuoha Chimezie Solomon</h3>
+                                       <p>Front-end/Mobile</p>
+                                   </div>
+                                   <div class="user-content"><b>About Us Page</b>
+                                       <p class="text-center pt-5">SlackUsername : @iwuoha chimezie solomon</p>
+                                   </div>
+                               </div>
+                               <div class="content-footer ">
+                                   <a href="https://twitter.com/6e3c25b935fd489">
+                                       <i class="fab fa-twitter fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="https://www.instagram.com/chimezie.solomon/">
+                                       <i class="fab fa-instagram fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="https://www.linkedin.com/in/chimezie-solomon-iwuoha-tos-33699415b/">
+                                       <i class="fab fa-linkedin fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="https://www.facebook.com/chimezie.solomon1">
+                                       <i class="fab fa-facebook fa-2x social-icons"></i>
+                                   </a>
+                               </div>
+                          </div>  
+                       </div>
+
+
+                       <div class="col the-col">
+                          <div class="all-users side">
+                              <div class="user-image">
+                                   <div class="generic-image-circle user-image-box-31"></div>
+                               </div>
+                               <div class="content-part back text-center">
+                                   <div class="user-info">
+                                       <h3>Joshua Odejide</h3>
+                                       <p>Front-end</p>
+                                   </div>
+                                   <div class="user-content"><b>Upload Page</b>
+                                       <p class="text-center pt-5">SlackUsername : @Joshua Odjide</p>
+                                   </div>
+                               </div>
+                               <div class="content-footer ">
+                                   <a href="https://mobile.twitter.com/JOdejide">
+                                       <i class="fab fa-twitter fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="https://www.instagram.com/sir_novo/">
+                                       <i class="fab fa-instagram fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="#">
+                                       <i class="fab fa-linkedin fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="https://m.facebook.com/joshua.odejide?ref=bookmarks">
+                                       <i class="fab fa-facebook fa-2x social-icons"></i>
+                                   </a>
+                               </div>
+                          </div>  
+                       </div>
+
+
+                       <div class="col the-col">
+                          <div class="all-users side">
+                              <div class="user-image">
+                                   <div class="generic-image-circle user-image-box-33"></div>
+                               </div>
+                               <div class="content-part back text-center">
+                                   <div class="user-info">
+                                       <h3>Ndajem Nora </h3>
+                                       <p>Front-end</p>
+                                   </div>
+                                   <div class="user-content"><b>Homepage</b>
+                                       <p class="text-center pt-5">SlackUsername : @kingz</p>
+                                   </div>
+                               </div>
+                               <div class="content-footer ">
+                                   <a href="#">
+                                       <i class="fab fa-twitter fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="#">
+                                       <i class="fab fa-instagram fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="https://www.linkedin.com/in/nora-ndajem-a699aa98">
+                                       <i class="fab fa-linkedin fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="https://www.facebook.com/nora.king.5209">
+                                       <i class="fab fa-facebook fa-2x social-icons"></i>
+                                   </a>
+                               </div>
+                          </div>  
+                       </div>
+
+
+                       <div class="col the-col">
+                          <div class="all-users side">
+                              <div class="user-image">
+                                   <div class="generic-image-circle user-image-box-35"></div>
+                               </div>
+                               <div class="content-part back text-center">
+                                   <div class="user-info">
+                                       <h3>Bisiriyu Daniel</h3>
+                                       <p>Front-End Developer</p>
+                                   </div>
+                                   <div class="user-content"><b>About us page</b>
+                                       <p class="text-center pt-5">SlackUsername : @leye</p>
+                                   </div>
+                               </div>
+                               <div class="content-footer ">
+                                   <a href="https://twitter.com/ola_leye_">
+                                       <i class="fab fa-twitter fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="https://www.instagram.com/danielbisiriyu/?hl=en">
+                                       <i class="fab fa-instagram fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="#">
+                                       <i class="fab fa-linkedin fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="#">
+                                       <i class="fab fa-facebook fa-2x social-icons"></i>
+                                   </a>
+                               </div>
+                          </div>  
+                       </div>
+
+
+                       <div class="col the-col">
+                          <div class="all-users side">
+                              <div class="user-image">
+                                   <div class="generic-image-circle user-image-box-36"></div>
+                               </div>
+                               <div class="content-part back text-center">
+                                   <div class="user-info">
+                                       <h3>Amodu Ola-adewale</h3>
+                                       <p>Front-End</p>
+                                   </div>
+                                   <div class="user-content"><b>About page</b>
+                                       <p class="text-center pt-5">SlackUsername : @sidebone</p>
+                                   </div>
+                               </div>
+                               <div class="content-footer ">
+                                   <a href="https://twitter.com/I_Am_Amodu/status/1162042614167810050?s=08">
+                                       <i class="fab fa-twitter fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="https://www.instagram.com/?hl=en">
+                                       <i class="fab fa-instagram fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="https://www.linkedin.com/">
+                                       <i class="fab fa-linkedin fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="https://m.facebook.com/?hrc=1&refsrc=http%3A%2F%2Fwww.google.com%2F&_rdr">
+                                       <i class="fab fa-facebook fa-2x social-icons"></i>
+                                   </a>
+                               </div>
+                          </div>  
+                       </div>
+
+
+                       <div class="col the-col">
+                          <div class="all-users side">
+                              <div class="user-image">
+                                   <div class="generic-image-circle user-image-box-37"></div>
+                               </div>
+                               <div class="content-part back text-center">
+                                   <div class="user-info">
+                                       <h3>Adaeze Imegwu</h3>
+                                       <p>Front-End</p>
+                                   </div>
+                                   <div class="user-content"><b>About Page</b>
+                                       <p class="text-center pt-5">SlackUsername : @ladyboss123</p>
+                                   </div>
+                               </div>
+                               <div class="content-footer ">
+                                   <a href="https://twitter.com/adaeze123_">
+                                       <i class="fab fa-twitter fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="https://www.instagram.com/adaeze123_/">
+                                       <i class="fab fa-instagram fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="https://www.linkedin.com/in/adaeze-imegwu-10526330/">
+                                       <i class="fab fa-linkedin fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="https://web.facebook.com/adaeze.nwachukwu.imegwu16">
+                                       <i class="fab fa-facebook fa-2x social-icons"></i>
+                                   </a>
+                               </div>
+                          </div>  
+                       </div>
+
+
+                       <div class="col the-col">
+                          <div class="all-users side">
+                              <div class="user-image">
+                                   <div class="generic-image-circle user-image-box-38"></div>
+                               </div>
+                               <div class="content-part back text-center">
+                                   <div class="user-info">
+                                       <h3>Omeokwe Asobie</h3>
+                                       <p>Front-End</p>
+                                   </div>
+                                   <div class="user-content"><b>Update content on homepage</b>
+                                       <p class="text-center pt-5">SlackUsername : @Asobank</p>
+                                   </div>
+                               </div>
+                               <div class="content-footer ">
+                                   <a href="#">
+                                       <i class="fab fa-twitter fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="#">
+                                       <i class="fab fa-instagram fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="#">
+                                       <i class="fab fa-linkedin fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="#">
+                                       <i class="fab fa-facebook fa-2x social-icons"></i>
+                                   </a>
+                               </div>
+                          </div>  
+                       </div>
+
+
+                       <div class="col the-col">
+                          <div class="all-users side">
+                              <div class="user-image">
+                                   <div class="generic-image-circle user-image-box-39"></div>
+                               </div>
+                               <div class="content-part back text-center">
+                                   <div class="user-info">
+                                       <h3>Olasumbo Afolabi</h3>
+                                       <p>Front-End</p>
+                                   </div>
+                                   <div class="user-content"><b>File Upload page</b>
+                                       <p class="text-center pt-5">SlackUsername : @Coded_Savage</p>
+                                   </div>
+                               </div>
+                               <div class="content-footer ">
+                                   <a href="#">
+                                       <i class="fab fa-twitter fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="#">
+                                       <i class="fab fa-instagram fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="#">
+                                       <i class="fab fa-linkedin fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="https://mobile.facebook.com/olasumbo.afolabi.18?ref=wizard">
+                                       <i class="fab fa-facebook fa-2x social-icons"></i>
+                                   </a>
+                               </div>
+                          </div>  
+                       </div>
+
+
+                       <div class="col the-col">
+                          <div class="all-users side">
+                              <div class="user-image">
+                                   <div class="generic-image-circle user-image-box-40"></div>
+                               </div>
+                               <div class="content-part back text-center">
+                                   <div class="user-info">
+                                       <h3>Abiodun Olushola</h3>
+                                       <p>Front-End</p>
+                                   </div>
+                                   <div class="user-content"><b>About Us</b>
+                                       <p class="text-center pt-5">SlackUsername : @eshjay</p>
+                                   </div>
+                               </div>
+                               <div class="content-footer ">
+                                   <a href="https://twitter.com/holushola">
+                                       <i class="fab fa-twitter fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="#">
+                                       <i class="fab fa-instagram fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="https://linkedin.com/in/Abiodun2050">
+                                       <i class="fab fa-linkedin fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="https://Facebook.com/eshjaylee">
+                                       <i class="fab fa-facebook fa-2x social-icons"></i>
+                                   </a>
+                               </div>
+                          </div>  
+                       </div>
+
+
+                       <div class="col the-col">
+                          <div class="all-users side">
+                              <div class="user-image">
+                                   <div class="generic-image-circle user-image-box-41"></div>
+                               </div>
+                               <div class="content-part back text-center">
+                                   <div class="user-info">
+                                       <h3>Etok Blessing</h3>
+                                       <p>Front-End</p>
+                                   </div>
+                                   <div class="user-content"><b>Document analysis footer</b>
+                                       <p class="text-center pt-5">SlackUsername : @Edi</p>
+                                   </div>
+                               </div>
+                               <div class="content-footer ">
+                                   <a href="https://mobile.twitter.com/session/new">
+                                       <i class="fab fa-twitter fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="https://www.instagram.com/p/B1Umx1uFP2C/?igshid=94ytkwyg1t4t">
+                                       <i class="fab fa-instagram fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="https://www.linkedin.com/feed/">
+                                       <i class="fab fa-linkedin fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="https://free.facebook.com/?hrc=1&refsrc=http%3A%2F%2Ffree.facebook.com%2F&_rdr">
+                                       <i class="fab fa-facebook fa-2x social-icons"></i>
+                                   </a>
+                               </div>
+                          </div>  
+                       </div>
+
+
+                       <div class="col the-col">
+                          <div class="all-users side">
+                              <div class="user-image">
+                                   <div class="generic-image-circle user-image-box-42"></div>
+                               </div>
+                               <div class="content-part back text-center">
+                                   <div class="user-info">
+                                       <h3>Soares Dolapo Paul</h3>
+                                       <p>Front-End</p>
+                                   </div>
+                                   <div class="user-content"><b>About us Page</b>
+                                       <p class="text-center pt-5">SlackUsername : @Soares Dolapo Paul</p>
+                                   </div>
+                               </div>
+                               <div class="content-footer ">
+                                   <a href="#">
+                                       <i class="fab fa-twitter fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="#">
+                                       <i class="fab fa-instagram fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="#">
+                                       <i class="fab fa-linkedin fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="#">
+                                       <i class="fab fa-facebook fa-2x social-icons"></i>
+                                   </a>
+                               </div>
+                          </div>  
+                       </div>
+
+
+                       <div class="col the-col">
+                          <div class="all-users side">
+                              <div class="user-image">
+                                   <div class="generic-image-circle user-image-box-43"></div>
+                               </div>
+                               <div class="content-part back text-center">
+                                   <div class="user-info">
+                                       <h3>Salawu AbdulMalik Adewale</h3>
+                                       <p>Front-End</p>
+                                   </div>
+                                   <div class="user-content"><b>SEO optimization and some few coding</b>
+                                       <p class="text-center pt-5">SlackUsername : @saintmalik</p>
+                                   </div>
+                               </div>
+                               <div class="content-footer ">
+                                   <a href="https://twitter.com/saintmalik_">
+                                       <i class="fab fa-twitter fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="https://instagram.com/iamsaintmalik_">
+                                       <i class="fab fa-instagram fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="https://www.linkedin.com/in/saintmalik">
+                                       <i class="fab fa-linkedin fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="https://facebook.com/salawu.malik16">
+                                       <i class="fab fa-facebook fa-2x social-icons"></i>
+                                   </a>
+                               </div>
+                          </div>  
+                       </div>
+
+
+                       <div class="col the-col">
+                          <div class="all-users side">
+                              <div class="user-image">
+                                   <div class="generic-image-circle user-image-box-44"></div>
+                               </div>
+                               <div class="content-part back text-center">
+                                   <div class="user-info">
+                                       <h3>Chiegang Sape Bulcard Brandone</h3>
+                                       <p>Frontend developer</p>
+                                   </div>
+                                   <div class="user-content"><b>I worked on the footer</b>
+                                       <p class="text-center pt-5">SlackUsername : @Brandone_Sape</p>
+                                   </div>
+                               </div>
+                               <div class="content-footer ">
+                                   <a href="https://mobile.twitter.com/tjrsape">
+                                       <i class="fab fa-twitter fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="#">
+                                       <i class="fab fa-instagram fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="#">
+                                       <i class="fab fa-linkedin fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="#">
+                                       <i class="fab fa-facebook fa-2x social-icons"></i>
+                                   </a>
+                               </div>
+                          </div>  
+                       </div>
+
+
+                       <div class="col the-col">
+                          <div class="all-users side">
+                              <div class="user-image">
+                                   <div class="generic-image-circle user-image-box-45"></div>
+                               </div>
+                               <div class="content-part back text-center">
+                                   <div class="user-info">
+                                       <h3>Michelle Nwachukwu </h3>
+                                       <p>Frontend</p>
+                                   </div>
+                                   <div class="user-content"><b>Document Analysis Page </b>
+                                       <p class="text-center pt-5">SlackUsername : @Michelle Nwachukwu </p>
+                                   </div>
+                               </div>
+                               <div class="content-footer ">
+                                   <a href="https://mobile.twitter.com/Nanyabooks">
+                                       <i class="fab fa-twitter fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="https://www.instagram.com/_miichey/">
+                                       <i class="fab fa-instagram fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="https://www.linkedin.com/in/michelle-nwachukwu-b95775176">
+                                       <i class="fab fa-linkedin fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="#">
+                                       <i class="fab fa-facebook fa-2x social-icons"></i>
+                                   </a>
+                               </div>
+                          </div>  
+                       </div>
+
+
+                       <div class="col the-col">
+                          <div class="all-users side">
+                              <div class="user-image">
+                                   <div class="generic-image-circle user-image-box-46"></div>
+                               </div>
+                               <div class="content-part back text-center">
+                                   <div class="user-info">
+                                       <h3>Emmanuel Chigozie Ihejirika</h3>
+                                       <p>Frontend</p>
+                                   </div>
+                                   <div class="user-content"><b>Document Analysis</b>
+                                       <p class="text-center pt-5">SlackUsername : @Dev Chibris</p>
+                                   </div>
+                               </div>
+                               <div class="content-footer ">
+                                   <a href="https://twitter.com/ihejirika07">
+                                       <i class="fab fa-twitter fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="#">
+                                       <i class="fab fa-instagram fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="#">
+                                       <i class="fab fa-linkedin fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="#">
+                                       <i class="fab fa-facebook fa-2x social-icons"></i>
+                                   </a>
+                               </div>
+                          </div>  
+                       </div>
+
+
+                       <div class="col the-col">
+                          <div class="all-users side">
+                              <div class="user-image">
+                                   <div class="generic-image-circle user-image-box-47"></div>
+                               </div>
+                               <div class="content-part back text-center">
+                                   <div class="user-info">
+                                       <h3>Onyeme Michael</h3>
+                                       <p>Frontend</p>
+                                   </div>
+                                   <div class="user-content"><b>File upload page and update index.html</b>
+                                       <p class="text-center pt-5">SlackUsername : @Mykel</p>
+                                   </div>
+                               </div>
+                               <div class="content-footer ">
+                                   <a href="https://twitter.com/MichaelOnyeme?s=08">
+                                       <i class="fab fa-twitter fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="https://www.instagram.com/onyememichael/">
+                                       <i class="fab fa-instagram fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="https://www.linkedin.com/in/onyeme-michael-6b1589196/">
+                                       <i class="fab fa-linkedin fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="https://m.facebook.com/onyeme.michael.7">
+                                       <i class="fab fa-facebook fa-2x social-icons"></i>
+                                   </a>
+                               </div>
+                          </div>  
+                       </div>
+
+
+                       <div class="col the-col">
+                          <div class="all-users side">
+                              <div class="user-image">
+                                   <div class="generic-image-circle user-image-box-48"></div>
+                               </div>
+                               <div class="content-part back text-center">
+                                   <div class="user-info">
+                                       <h3>Emeka Oluwaseun Jonas</h3>
+                                       <p>Frontend</p>
+                                   </div>
+                                   <div class="user-content"><b>Team Page</b>
+                                       <p class="text-center pt-5">SlackUsername : @Ecstasy</p>
+                                   </div>
+                               </div>
+                               <div class="content-footer ">
+                                   <a href="https://mobile.twitter.com/emeka_jns">
+                                       <i class="fab fa-twitter fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="https://www.instagram.com/emyjonas/">
+                                       <i class="fab fa-instagram fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="https://www.linkedin.com/in/emeka-jonas-47740193">
+                                       <i class="fab fa-linkedin fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="https://m.facebook.com/digitaljonasemmie">
+                                       <i class="fab fa-facebook fa-2x social-icons"></i>
+                                   </a>
+                               </div>
+                          </div>  
+                       </div>
+
+
+                       <div class="col the-col">
+                          <div class="all-users side">
+                              <div class="user-image">
+                                   <div class="generic-image-circle user-image-box-49"></div>
+                               </div>
+                               <div class="content-part back text-center">
+                                   <div class="user-info">
+                                       <h3>Oko-Ose Onolunose Hannah</h3>
+                                       <p>Frontend</p>
+                                   </div>
+                                   <div class="user-content"><b>Data Analysis</b>
+                                       <p class="text-center pt-5">SlackUsername : @Onolunose</p>
+                                   </div>
+                               </div>
+                               <div class="content-footer ">
+                                   <a href="https://twitter.com/ono_hannah">
+                                       <i class="fab fa-twitter fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="#">
+                                       <i class="fab fa-instagram fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="#">
+                                       <i class="fab fa-linkedin fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="#">
+                                       <i class="fab fa-facebook fa-2x social-icons"></i>
+                                   </a>
+                               </div>
+                          </div>  
+                       </div>
+
+
+                       <div class="col the-col">
+                          <div class="all-users side">
+                              <div class="user-image">
+                                   <div class="generic-image-circle user-image-box-50"></div>
+                               </div>
+                               <div class="content-part back text-center">
+                                   <div class="user-info">
+                                       <h3>Tomisin Ajayi</h3>
+                                       <p>Frontend</p>
+                                   </div>
+                                   <div class="user-content"><b>Document Analysis Page</b>
+                                       <p class="text-center pt-5">SlackUsername : @tomisinAjayi</p>
+                                   </div>
+                               </div>
+                               <div class="content-footer ">
+                                   <a href="https://twitter.com/tomiajayi_">
+                                       <i class="fab fa-twitter fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="#">
+                                       <i class="fab fa-instagram fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="#">
+                                       <i class="fab fa-linkedin fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="#">
+                                       <i class="fab fa-facebook fa-2x social-icons"></i>
+                                   </a>
+                               </div>
+                          </div>  
+                       </div>
+
+
+                       <div class="col the-col">
+                          <div class="all-users side">
+                              <div class="user-image">
+                                   <div class="generic-image-circle user-image-box-51"></div>
+                               </div>
+                               <div class="content-part back text-center">
+                                   <div class="user-info">
+                                       <h3>David Enoch Aji</h3>
+                                       <p>Frontend</p>
+                                   </div>
+                                   <div class="user-content"><b>Team Page</b>
+                                       <p class="text-center pt-5">SlackUsername : @Ajiva</p>
+                                   </div>
+                               </div>
+                               <div class="content-footer ">
+                                   <a href="https://twitter.com/daveaji">
+                                       <i class="fab fa-twitter fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="https://www.instagram.com/ajiva_D/">
+                                       <i class="fab fa-instagram fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="https://www.linkedin.com/in/david-aji-386197164/">
+                                       <i class="fab fa-linkedin fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="#">
+                                       <i class="fab fa-facebook fa-2x social-icons"></i>
+                                   </a>
+                               </div>
+                          </div>  
+                       </div>
+
+
+                       <div class="col the-col">
+                          <div class="all-users side">
+                              <div class="user-image">
+                                   <div class="generic-image-circle user-image-box-52"></div>
+                               </div>
+                               <div class="content-part back text-center">
+                                   <div class="user-info">
+                                       <h3>Yusuf Adeyemo</h3>
+                                       <p>Frontend</p>
+                                   </div>
+                                   <div class="user-content"><b>File Upload Page</b>
+                                       <p class="text-center pt-5">SlackUsername : @Cypher</p>
+                                   </div>
+                               </div>
+                               <div class="content-footer ">
+                                   <a href="https://twitter.com/marshaladex">
+                                       <i class="fab fa-twitter fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="https://www.instagram.com/marshaladex/?hl=en">
+                                       <i class="fab fa-instagram fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="https://www.linkedin.com/in/yusuf-adeyemo-b3476a13a/">
+                                       <i class="fab fa-linkedin fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="https://www.facebook.com/Marshaladex">
+                                       <i class="fab fa-facebook fa-2x social-icons"></i>
+                                   </a>
+                               </div>
+                          </div>  
+                       </div>
+
+
+                       <div class="col the-col">
+                          <div class="all-users side">
+                              <div class="user-image">
+                                   <div class="generic-image-circle user-image-box-53"></div>
+                               </div>
+                               <div class="content-part back text-center">
+                                   <div class="user-info">
+                                       <h3>Tolulope David</h3>
+                                       <p>Backend</p>
+                                   </div>
+                                   <div class="user-content"><b>Text comparison page</b>
+                                       <p class="text-center pt-5">SlackUsername : @Tolulope_David</p>
+                                   </div>
+                               </div>
+                               <div class="content-footer ">
+                                   <a href="https://mobile.twitter.com/toluwa_david">
+                                       <i class="fab fa-twitter fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="#">
+                                       <i class="fab fa-instagram fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="https://www.linkedin.com/in/tolulope-david-7a2077195">
+                                       <i class="fab fa-linkedin fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="https://m.facebook.com/?_rdr">
+                                       <i class="fab fa-facebook fa-2x social-icons"></i>
+                                   </a>
+                               </div>
+                          </div>  
+                       </div>
+
+
+                       <div class="col the-col">
+                          <div class="all-users side">
+                              <div class="user-image">
+                                   <div class="generic-image-circle user-image-box-54"></div>
+                               </div>
+                               <div class="content-part back text-center">
+                                   <div class="user-info">
+                                       <h3>Okonye Tochi</h3>
+                                       <p>Frontend</p>
+                                   </div>
+                                   <div class="user-content"><b>Analysis page footer</b>
+                                       <p class="text-center pt-5">SlackUsername : @Tochi</p>
+                                   </div>
+                               </div>
+                               <div class="content-footer ">
+                                   <a href="https://mobile.twitter.com/Okonyetochi">
+                                       <i class="fab fa-twitter fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="https://www.instagram.com/okonyetochi">
+                                       <i class="fab fa-instagram fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="https://www.linkedin.com/in/okonyetochi">
+                                       <i class="fab fa-linkedin fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="#">
+                                       <i class="fab fa-facebook fa-2x social-icons"></i>
+                                   </a>
+                               </div>
+                          </div>  
+                       </div>
+
+
+                       <div class="col the-col">
+                          <div class="all-users side">
+                              <div class="user-image">
+                                   <div class="generic-image-circle user-image-box-55"></div>
+                               </div>
+                               <div class="content-part back text-center">
+                                   <div class="user-info">
+                                       <h3>Precious Akams</h3>
+                                       <p>FrontEnd</p>
+                                   </div>
+                                   <div class="user-content"><b>Navigation bar</b>
+                                       <p class="text-center pt-5">SlackUsername : @precious de wonder woman</p>
+                                   </div>
+                               </div>
+                               <div class="content-footer ">
+                                   <a href="https://twitter.com/precious_akams">
+                                       <i class="fab fa-twitter fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="https://instagram.com/preciousakams">
+                                       <i class="fab fa-instagram fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="https://www.linkedin.com/in/onyeagoziri-akams-8290a884">
+                                       <i class="fab fa-linkedin fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="https://web.facebook.com/precious.akams">
+                                       <i class="fab fa-facebook fa-2x social-icons"></i>
+                                   </a>
+                               </div>
+                          </div>  
+                       </div>
+
+
+                       <div class="col the-col">
+                          <div class="all-users side">
+                              <div class="user-image">
+                                   <div class="generic-image-circle user-image-box-56"></div>
+                               </div>
+                               <div class="content-part back text-center">
+                                   <div class="user-info">
+                                       <h3>Bankole Adejuwon</h3>
+                                       <p>FrontEnd</p>
+                                   </div>
+                                   <div class="user-content"><b>Team page</b>
+                                       <p class="text-center pt-5">SlackUsername : @ositubanky</p>
+                                   </div>
+                               </div>
+                               <div class="content-footer ">
+                                   <a href="#">
+                                       <i class="fab fa-twitter fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="https://www.instagram.com/adejuwonbankole/">
+                                       <i class="fab fa-instagram fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="#">
+                                       <i class="fab fa-linkedin fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="https://m.facebook.com/?hrc=1&refsrc=http%3A%2F%2Fh.facebook.com%2Fhr%2Fr&_rdr">
+                                       <i class="fab fa-facebook fa-2x social-icons"></i>
+                                   </a>
+                               </div>
+                          </div>  
+                       </div>
+
+
+                       <div class="col the-col">
+                          <div class="all-users side">
+                              <div class="user-image">
+                                   <div class="generic-image-circle user-image-box-57"></div>
+                               </div>
+                               <div class="content-part back text-center">
+                                   <div class="user-info">
+                                       <h3>Saudat Salawudeen</h3>
+                                       <p>FrontEnd</p>
+                                   </div>
+                                   <div class="user-content"><b>I review the codes and upload images to cloudinary for efficiency</b>
+                                       <p class="text-center pt-5">SlackUsername : @Omobola</p>
+                                   </div>
+                               </div>
+                               <div class="content-footer ">
+                                   <a href="#">
+                                       <i class="fab fa-twitter fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="#">
+                                       <i class="fab fa-instagram fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="#">
+                                       <i class="fab fa-linkedin fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="#">
+                                       <i class="fab fa-facebook fa-2x social-icons"></i>
+                                   </a>
+                               </div>
+                          </div>  
+                       </div>
+
+
+                       <div class="col the-col">
+                          <div class="all-users side">
+                              <div class="user-image">
+                                   <div class="generic-image-circle user-image-box-58"></div>
+                               </div>
+                               <div class="content-part back text-center">
+                                   <div class="user-info">
+                                       <h3>Abdulrahman Yusuf</h3>
+                                       <p>FrontEnd</p>
+                                   </div>
+                                   <div class="user-content"><b>Navbar</b>
+                                       <p class="text-center pt-5">SlackUsername : @Young-Einstein</p>
+                                   </div>
+                               </div>
+                               <div class="content-footer ">
+                                   <a href="https://twitter.com/zaydabdulrahman">
+                                       <i class="fab fa-twitter fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="#">
+                                       <i class="fab fa-instagram fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="https://www.linkedin.com/in/abdulrahman-yusuf-a44463176">
+                                       <i class="fab fa-linkedin fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="https://facebook.com/damilola.yusuf.96">
+                                       <i class="fab fa-facebook fa-2x social-icons"></i>
+                                   </a>
+                               </div>
+                          </div>  
+                       </div>
+
+
+                       <div class="col the-col">
+                          <div class="all-users side">
+                              <div class="user-image">
+                                   <div class="generic-image-circle user-image-box-59"></div>
+                               </div>
+                               <div class="content-part back text-center">
+                                   <div class="user-info">
+                                       <h3>Miracle Alex</h3>
+                                       <p>FrontEnd</p>
+                                   </div>
+                                   <div class="user-content"><b>About Us page</b>
+                                       <p class="text-center pt-5">SlackUsername : @Miracle</p>
+                                   </div>
+                               </div>
+                               <div class="content-footer ">
+                                   <a href="https://twitter.com/mirakul_1">
+                                       <i class="fab fa-twitter fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="https://www.instagram.com/mirakul_1/">
+                                       <i class="fab fa-instagram fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="https://linkedin.com/in/mirakul1">
+                                       <i class="fab fa-linkedin fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="https://www.facebook.com/mirakuul/">
+                                       <i class="fab fa-facebook fa-2x social-icons"></i>
+                                   </a>
+                               </div>
+                          </div>  
+                       </div>
+
+
+                       <div class="col the-col">
+                          <div class="all-users side">
+                              <div class="user-image">
+                                   <div class="generic-image-circle user-image-box-60"></div>
+                               </div>
+                               <div class="content-part back text-center">
+                                   <div class="user-info">
+                                       <h3>Tosan Lodge</h3>
+                                       <p>FrontEnd</p>
+                                   </div>
+                                   <div class="user-content"><b>About Us page</b>
+                                       <p class="text-center pt-5">SlackUsername : @TosanLodge</p>
+                                   </div>
+                               </div>
+                               <div class="content-footer ">
+                                   <a href="https://twitter.com/lodgendury?s=09">
+                                       <i class="fab fa-twitter fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="#">
+                                       <i class="fab fa-instagram fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="https://www.linkedin.com/in/tosan-lodge-084b20125">
+                                       <i class="fab fa-linkedin fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="#">
+                                       <i class="fab fa-facebook fa-2x social-icons"></i>
+                                   </a>
+                               </div>
+                          </div>  
+                       </div>
+
+
+                       <div class="col the-col">
+                          <div class="all-users side">
+                              <div class="user-image">
+                                   <div class="generic-image-circle user-image-box-61"></div>
+                               </div>
+                               <div class="content-part back text-center">
+                                   <div class="user-info">
+                                       <h3>Abdullahi Luqman Olanrewaju</h3>
+                                       <p>FrontEnd</p>
+                                   </div>
+                                   <div class="user-content"><b>About Us Page</b>
+                                       <p class="text-center pt-5">SlackUsername : @Luqmonac</p>
+                                   </div>
+                               </div>
+                               <div class="content-footer ">
+                                   <a href="https://twitter.com/luqmonac56">
+                                       <i class="fab fa-twitter fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="https://www.instagram.com/luqmonac_/">
+                                       <i class="fab fa-instagram fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="https://www.linkedin.com/in/luqman-abdullahi-54b1b118b/">
+                                       <i class="fab fa-linkedin fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="https://www.facebook.com/harbdullahi.luqmorn">
+                                       <i class="fab fa-facebook fa-2x social-icons"></i>
+                                   </a>
+                               </div>
+                          </div>  
+                       </div>
+
+
+                       <div class="col the-col">
+                          <div class="all-users side">
+                              <div class="user-image">
+                                   <div class="generic-image-circle user-image-box-62"></div>
+                               </div>
+                               <div class="content-part back text-center">
+                                   <div class="user-info">
+                                       <h3>Abraham Harold</h3>
+                                       <p>FrontEnd</p>
+                                   </div>
+                                   <div class="user-content"><b>Team Comparison page</b>
+                                       <p class="text-center pt-5">SlackUsername : @Haroldfr3shboss</p>
+                                   </div>
+                               </div>
+                               <div class="content-footer ">
+                                   <a href="https://www.twitter.com/haroldfr3shboss">
+                                       <i class="fab fa-twitter fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="https://www.instagram.com/haroldfr3shboss/">
+                                       <i class="fab fa-instagram fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="https://www.linkedin.com/in/abraham-harold-pmec-0ab799b3/">
+                                       <i class="fab fa-linkedin fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="https://m.facebook.com/haroldfr3shboss">
+                                       <i class="fab fa-facebook fa-2x social-icons"></i>
+                                   </a>
+                               </div>
+                          </div>  
+                       </div>
+
+
+                       <div class="col the-col">
+                          <div class="all-users side">
+                              <div class="user-image">
+                                   <div class="generic-image-circle user-image-box-63"></div>
+                               </div>
+                               <div class="content-part back text-center">
+                                   <div class="user-info">
+                                       <h3>Adekunte Tolulope</h3>
+                                       <p>FrontEnd</p>
+                                   </div>
+                                   <div class="user-content"><b>Image link Url, Header and Footer Update</b>
+                                       <p class="text-center pt-5">SlackUsername : @adtrex</p>
+                                   </div>
+                               </div>
+                               <div class="content-footer ">
+                                   <a href="https://twitter.com/AdtrexOfficial">
+                                       <i class="fab fa-twitter fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="https://www.instagram.com/official_adekunte123/">
+                                       <i class="fab fa-instagram fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="https://www.linkedin.com/in/tolulope-adekunte-8a2891185/">
+                                       <i class="fab fa-linkedin fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="https://web.facebook.com/Adtrex.Official">
+                                       <i class="fab fa-facebook fa-2x social-icons"></i>
+                                   </a>
+                               </div>
+                          </div>  
+                       </div>
+
+
+                       <div class="col the-col">
+                          <div class="all-users side">
+                              <div class="user-image">
+                                   <div class="generic-image-circle user-image-box-65"></div>
+                               </div>
+                               <div class="content-part back text-center">
+                                   <div class="user-info">
+                                       <h3>Segun Olanitori</h3>
+                                       <p>FrontEnd</p>
+                                   </div>
+                                   <div class="user-content"><b>Team Page</b>
+                                       <p class="text-center pt-5">SlackUsername : @SegunOS</p>
+                                   </div>
+                               </div>
+                               <div class="content-footer ">
+                                   <a href="https://twitter.com/segun_os">
+                                       <i class="fab fa-twitter fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="https://instagram.com/segun_os">
+                                       <i class="fab fa-instagram fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="#">
+                                       <i class="fab fa-linkedin fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="#">
+                                       <i class="fab fa-facebook fa-2x social-icons"></i>
+                                   </a>
+                               </div>
+                          </div>  
+                       </div>
+
+
+                       <div class="col the-col">
+                          <div class="all-users side">
+                              <div class="user-image">
+                                   <div class="generic-image-circle user-image-box-66"></div>
+                               </div>
+                               <div class="content-part back text-center">
+                                   <div class="user-info">
+                                       <h3>Idowu Festus Temiloluwa</h3>
+                                       <p>FrontEnd</p>
+                                   </div>
+                                   <div class="user-content"><b>Document Analysis Page</b>
+                                       <p class="text-center pt-5">SlackUsername : @Nobledev</p>
+                                   </div>
+                               </div>
+                               <div class="content-footer ">
+                                   <a href="https://twitter.com/Mcnobledev">
+                                       <i class="fab fa-twitter fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="https://www.instagram.com/temiloluwafestus/">
+                                       <i class="fab fa-instagram fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="https://www.linkedin.com/in/festus-idowu-8269b3159/">
+                                       <i class="fab fa-linkedin fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="https://www.facebook.com/temiloluwa.festus">
+                                       <i class="fab fa-facebook fa-2x social-icons"></i>
+                                   </a>
+                               </div>
+                          </div>  
+                       </div>
+
+
+                       <div class="col the-col">
+                          <div class="all-users side">
+                              <div class="user-image">
+                                   <div class="generic-image-circle user-image-box-67"></div>
+                               </div>
+                               <div class="content-part back text-center">
+                                   <div class="user-info">
+                                       <h3>Henry Adeyemi</h3>
+                                       <p>FrontEnd</p>
+                                   </div>
+                                   <div class="user-content"><b>Header and Footer fix</b>
+                                       <p class="text-center pt-5">SlackUsername : @yugach</p>
+                                   </div>
+                               </div>
+                               <div class="content-footer ">
+                                   <a href="https://twitter.com/yugach?p=s">
+                                       <i class="fab fa-twitter fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="https://instagram.com/oluwayugach/">
+                                       <i class="fab fa-instagram fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="https://www.linkedin.com/in/adeyemi-henry-1b9413158">
+                                       <i class="fab fa-linkedin fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="https://facebook.com/adeyemi.henry1">
+                                       <i class="fab fa-facebook fa-2x social-icons"></i>
+                                   </a>
+                               </div>
+                          </div>  
+                       </div>
+
+
+                       <div class="col the-col">
+                          <div class="all-users side">
+                              <div class="user-image">
+                                   <div class="generic-image-circle user-image-box-68"></div>
+                               </div>
+                               <div class="content-part back text-center">
+                                   <div class="user-info">
+                                       <h3>Chibueze Arinze</h3>
+                                       <p>FrontEnd</p>
+                                   </div>
+                                   <div class="user-content"><b>Linking Pages</b>
+                                       <p class="text-center pt-5">SlackUsername : @TheCavemann</p>
+                                   </div>
+                               </div>
+                               <div class="content-footer ">
+                                   <a href="https://twitter.com/The_Cavemann">
+                                       <i class="fab fa-twitter fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="https://www.instagram.com/_arinzee/">
+                                       <i class="fab fa-instagram fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="https://www.linkedin.com/in/arinze-chibueze-876127188/">
+                                       <i class="fab fa-linkedin fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="#">
+                                       <i class="fab fa-facebook fa-2x social-icons"></i>
+                                   </a>
+                               </div>
+                          </div>  
+                       </div>
+
+
+                       <div class="col the-col">
+                          <div class="all-users side">
+                              <div class="user-image">
+                                   <div class="generic-image-circle user-image-box-69"></div>
+                               </div>
+                               <div class="content-part back text-center">
+                                   <div class="user-info">
+                                       <h3>Martini Mabifa</h3>
+                                       <p>FrontEnd</p>
+                                   </div>
+                                   <div class="user-content"><b>About Page</b>
+                                       <p class="text-center pt-5">SlackUsername : @Martini Mabifa</p>
+                                   </div>
+                               </div>
+                               <div class="content-footer ">
+                                   <a href="https://twitter.com/MartiniDeen">
+                                       <i class="fab fa-twitter fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="https://www.instagram.com/martinideen/?hl=en">
+                                       <i class="fab fa-instagram fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="#">
+                                       <i class="fab fa-linkedin fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="https://www.facebook.com/martini.mabifa?ref=bookmarks">
+                                       <i class="fab fa-facebook fa-2x social-icons"></i>
+                                   </a>
+                               </div>
+                          </div>  
+                       </div>
+
+
+                       <div class="col the-col">
+                          <div class="all-users side">
+                              <div class="user-image">
+                                   <div class="generic-image-circle user-image-box-71"></div>
+                               </div>
+                               <div class="content-part back text-center">
+                                   <div class="user-info">
+                                       <h3>Oluwadamilare Alonge</h3>
+                                       <p>FrontEnd</p>
+                                   </div>
+                                   <div class="user-content"><b>Team page</b>
+                                       <p class="text-center pt-5">SlackUsername : @Maphorbs</p>
+                                   </div>
+                               </div>
+                               <div class="content-footer ">
+                                   <a href="https://mobile.twitter.com/Dreman3082">
+                                       <i class="fab fa-twitter fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="https://www.instagram.com/dare3082/">
+                                       <i class="fab fa-instagram fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="https://www.linkedin.com/in/oluwadamilare-alonge-b989b812b">
+                                       <i class="fab fa-linkedin fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="https://m.facebook.com/damilare.alonge1">
+                                       <i class="fab fa-facebook fa-2x social-icons"></i>
+                                   </a>
+                               </div>
+                          </div>  
+                       </div>
+
+
+                       <div class="col the-col">
+                          <div class="all-users side">
+                              <div class="user-image">
+                                   <div class="generic-image-circle user-image-box-72"></div>
+                               </div>
+                               <div class="content-part back text-center">
+                                   <div class="user-info">
+                                       <h3>David Chinweike</h3>
+                                       <p>FrontEnd</p>
+                                   </div>
+                                   <div class="user-content"><b>Comparison Algorithm</b>
+                                       <p class="text-center pt-5">SlackUsername : @Dave</p>
+                                   </div>
+                               </div>
+                               <div class="content-footer ">
+                                   <a href="https://mobile.twitter.com/lil_Dave1379">
+                                       <i class="fab fa-twitter fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="#">
+                                       <i class="fab fa-instagram fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="https://www.linkedin.com/in/dave-chinweike-7b448418b">
+                                       <i class="fab fa-linkedin fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="https://m.facebook.com/dave.chinweike.3">
+                                       <i class="fab fa-facebook fa-2x social-icons"></i>
+                                   </a>
+                               </div>
+                          </div>  
+                       </div>
+
+
+                       <div class="col the-col">
+                          <div class="all-users side">
+                              <div class="user-image">
+                                   <div class="generic-image-circle user-image-box-73"></div>
+                               </div>
+                               <div class="content-part back text-center">
+                                   <div class="user-info">
+                                       <h3>AbdulRahman Abu</h3>
+                                       <p>FrontEnd</p>
+                                   </div>
+                                   <div class="user-content"><b>Document Analysis Page</b>
+                                       <p class="text-center pt-5">SlackUsername : @AbdulRahmanAbu</p>
+                                   </div>
+                               </div>
+                               <div class="content-footer ">
+                                   <a href="https://twitter.com/jtabdulrahman">
+                                       <i class="fab fa-twitter fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="#">
+                                       <i class="fab fa-instagram fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="https://www.linkedin.com/in/abdulrahman-abu/">
+                                       <i class="fab fa-linkedin fa-2x social-icons"></i>
+                                   </a>
+                                   <a href="#">
+                                       <i class="fab fa-facebook fa-2x social-icons"></i>
+                                   </a>
+                               </div>
+                          </div>  
+                       </div>
+
+                        
+                         
+                        
+                        
+                    </div> 
+                </div>
+            </div>
+        </section>
+        </main>
+ 
+     <footer>
 	    <div class="section-one">
 	      <section>
 	        <h4>DOCUFIX</h4>
@@ -224,14 +2972,16 @@
 	          &copy; 2019 Copyright: Docufix
 	      </section>
 	    </div>
-  </footer>
-		
-	<div>
-		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-      <script src="https://kit.fontawesome.com/7967e81f77.js" crossorigin="anonymous"></script>
-	</div>
+	  </footer>
+        
+       
 
+        <script src="https://kit.fontawesome.com/85682eb992.js" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  
 </body>
 </html>

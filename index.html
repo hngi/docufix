@@ -7,6 +7,8 @@
         <meta name="robots" content="index, follow">
         <meta name="googlebot" content="index, follow" />
         <meta name="google" content="translate" />
+        <meta name="theme-color" content="#333" />
+        <link rel="manifest" href="manifest.json" />
         <link rel="icon" type="image/png" href="https://res.cloudinary.com/ros4eva/image/upload/v1571538580/favicon_elbl53.png"/>
         
         <link rel="stylesheet" type="text/css" href="https://dl.dropbox.com/s/v5nuo2k9pvuoogf/rose.css">
@@ -25,6 +27,9 @@
     </head>
 
     <style type="text/css">
+    body {
+      overflow-x: hidden;
+    }
         .features {
             line-height: 2;
         }
@@ -49,6 +54,62 @@
    }
   
  }
+
+ @keyframes right {
+  from {
+    transform: translateX(50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes left {
+  from {
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes top {
+  from {
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes bottom {
+  from {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes pop {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
  
     </style>
     <body style="background-color:  #fff; font-family: Ubuntu;">
@@ -78,6 +139,9 @@
                             <a class="nav-link  text-light" href="about_us.html">About Us</a>
                         </li>
                         <li class="nav-item">
+                          <a class="nav-link  text-light" href="Why Use Docufix.html">Why Use Docufix?</a>
+                      </li>
+                        <li class="nav-item">
                             <a class="nav-link  text-light" href="teampage.html">Team</a>
                         </li>
                         <li class="nav-item">
@@ -90,7 +154,7 @@
         </header>
         <div class="container mt-5">
             <div class="row align-items-center mt-5" style="min-height: 80vh">
-                <div class="col-md-7">
+                <div class="col-md-7" id="left-content">
                     <h2 style="font-weight:bold;">
 
 
@@ -118,7 +182,7 @@
                     >Check for Duplicates</a
                 >
                 </div>
-                <div class="col-md-5">
+                <div class="col-md-5" id="right-content">
                     <img
                         src="https://res.cloudinary.com/mercyinyang/image/upload/v1571224753/Docufix/images/undraw_collecting_fjjl_1_hokax9.svg"
                         alt=""
@@ -139,23 +203,23 @@
                 </h3>
                 <div class="row">
                     <div class="col-md-4 mb-5 text-center">
-                        <h4 class="font-weight-bold text-center">Plagiarism Checker</h4>
+                        <h4 class="font-weight-bold text-center headin">Plagiarism Checker</h4>
                         <!-- src="https://res.cloudinary.com/mercyinyang/image/upload/v1571224752/Docufix/images/IMG-20191016-WA0000_zlay8q.jpg" -->
                             <!-- alt="" -->
                             <!-- style="height: 150px; width:100%;border-radius: 10px;" -->
                         <img
                             src="https://res.cloudinary.com/tolulopedavid/image/upload/v1571517948/docufix/pla_iu8wue.png"
                             alt="plagiarism image"
-                            style="height: 100px; margin: 0 auto;"
+                            style="height: 100px; margin: 0 auto;" class="img"
                             
                         />
-                        <p style="text-align: justify;line-height: 1.5rem;padding-top: 20px;">Plagiarism checker detects plagiarism in your text and checks for other writing issues.
+                        <p style="text-align: justify;line-height: 1.5rem;padding-top: 20px;" class="paragraph">Plagiarism checker detects plagiarism in your text and checks for other writing issues.
                             Our plagiarism checker flags specific sentences and provides reference information about the source, calculates an overall originality score for your document, and offers advanced writing feedback and corrections across several dimensions.
                         </p>
                     </div>
                     <div class="col-md-4 mb-5 text-center">
 
-                        <h4 class="font-weight-bold  text-center">Avoid Word Duplicates</h4>
+                        <h4 class="font-weight-bold  text-center headin">Avoid Word Duplicates</h4>
                             <!--   src="https://res.cloudinary.com/mercyinyang/image/upload/v1571224752/Docufix/images/IMG-20191016-WA0000_zlay8q.jpg"
                             alt=""
                             style="height: 150px; width:100%;border-radius: 10px;" -->
@@ -163,24 +227,25 @@
                            src="https://res.cloudinary.com/tolulopedavid/image/upload/v1571517948/docufix/dupl_ef0tj0.png"
                             alt="text duplication image"
                             style="height: 100px; margin: 0 auto;"
+                            class="img"
                         />
-                        <p style="text-align: justify;line-height: 1.5rem;padding-top: 20px;">
+                        <p style="text-align: justify;line-height: 1.5rem;padding-top: 20px;" class="paragraph">
                            One of the main problem in document is that most of the words that are duplicated also appear in the previous line, which makes it difficult to achieve your goal. If you'd want to remove all duplicated words, then it wasn't that difficult by using our tool, all duplicated file will be reviewed.
                         </p>
                     </div>
 
                     
                     <div class="col-md-4 mb-5 text-center">
-                        <h4 class="font-weight-bold  text-center">File Comparisons</h4>
+                        <h4 class="font-weight-bold  text-center headin">File Comparisons</h4>
                              <!-- src="https://res.cloudinary.com/mercyinyang/image/upload/v1571224752/Docufix/images/IMG-20191016-WA0000_zlay8q.jpg"
                             alt=""
                             style="height: 150px; width:100%;border-radius: 10px;" -->
                         <img
                             src="https://res.cloudinary.com/tolulopedavid/image/upload/v1571517958/docufix/comp_xjwqsh.png"
                             alt="text comparison image"
-                            style="height: 100px; margin: 0 auto; "
+                            style="height: 100px; margin: 0 auto; " class="img"
                         />
-                        <p style="text-align: justify;line-height: 1.5rem;padding-top: 20px;">It helps you compare both files and folders, that generate differences in a visual text format which is easy to manage and understand. Comparing hundreds of files manually is a tedious task and virtually impossible. There are high chances that you would miss out on something.<!--  You might also want to double check with the files if there have been any changes made by hackers! The smartest thing to do here would be to use our file comparison tool to compare files effectively, while you save time. -->
+                        <p style="text-align: justify;line-height: 1.5rem;padding-top: 20px;" class="paragraph">It helps you compare both files and folders, that generate differences in a visual text format which is easy to manage and understand. Comparing hundreds of files manually is a tedious task and virtually impossible. There are high chances that you would miss out on something.<!--  You might also want to double check with the files if there have been any changes made by hackers! The smartest thing to do here would be to use our file comparison tool to compare files effectively, while you save time. -->
                         </p>
                     </div>
                 </div>
@@ -190,7 +255,7 @@
           <div style="background: #C4C4C4;">
           <div class="container text-center text-md-left">
       
-            <div class="row text-center text-md-left mt-3 pb-3">
+            <div class="row text-center text-md-left mt-3 pb-3 bottom">
       
               <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
                 <h6 class="text-uppercase mb-4 font-weight-bold">Docufix</h6>
@@ -205,7 +270,13 @@
                   <a href="about_us.html" style="color:black">About Us</a>
                 </p>
                 <p>
+                  <a href="Why Use Docufix.html" style="color:black">Why Use Docufix?</a>
+                </p>
+                <p>
                   <a href="teampage.html" style="color:black">Our Team</a>
+                </p>
+                  <p>
+                  <a href="feedback.html" style="color:black">Share Your Feedback</a>
                 </p>
               </div>
               <!-- Grid column -->
@@ -269,10 +340,28 @@
           </div>
       </div>
         </footer>
-      
+      <script src="app.js"></script>
       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
       <script src="https://kit.fontawesome.com/7967e81f77.js" crossorigin="anonymous"></script>
+      <script src="/daveScroll.js"></script>
+      <script>
+        const leftContent = document.querySelector('#left-content');
+        const rightContent = document.querySelector('#right-content');
+        const paragraphs = document.querySelectorAll('.paragraph');
+        const headings = document.querySelectorAll('.headin');
+        const images = document.querySelectorAll('.img');
+        const footerContent = document.querySelector('.bottom');
+
+
+        scroll(leftContent, 'left');
+        scroll(rightContent, 'right');
+        scroll(footerContent, 'left');
+
+        paragraphs.forEach(pg => scroll(pg, 'bottom'));
+        images.forEach(img => scroll(img, 'pop'));
+        headings.forEach(h => scroll(h, 'pop'));
+      </script>
     </body>
 </html>

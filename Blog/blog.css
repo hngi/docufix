@@ -1,0 +1,248 @@
+
+* {
+  box-sizing: border-box;
+}
+
+/* Add a gray background color with some padding */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    background: #E5E5E5;
+}
+
+/* Header/Blog Title */
+.header {
+  padding: 5px 20px;
+  font-size: 20px;
+  letter-spacing: 2px;
+  background: white;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: #141460; 
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  .navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  .subnav {
+    float: left;
+    overflow: hidden;
+  }
+  
+  .subnav .subnavbtn {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+  
+  .navbar a:hover, .subnav:hover .subnavbtn {
+      transition: all 0.6s;
+    background-color: #4747AD;
+  }
+  
+  .subnav-content {
+    display: none;
+    position: absolute;
+    left: 0;
+    background-color: #8000ff;
+    width: 100%;
+    z-index: 1;
+  }
+  
+  .subnav-content a {
+    float: left;
+    color: white;
+    text-decoration: none;
+  }
+  
+  .subnav-content a:hover {
+    background-color: #eee;
+    color: black;
+  }
+  
+  .subnav:hover .subnav-content {
+    display: block;
+  }
+
+.row {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  padding-left: 20px;
+}
+
+/* Fake image */
+/*.fakeimg {*/
+/*  background-color: #aaa;*/
+/*  width: 100%;*/
+/*  padding: 20px;*/
+/*}*/
+
+.b {
+    display: flex;
+    justify-content: space-between;
+}
+
+.b-img {
+    width: 50%;
+}
+
+.b-post {
+    padding-left: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+   background-color: white;
+   padding: 20px;
+   margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    font-size: 17px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+li:last-child {
+    border-bottom: none;
+}
+
+li a {
+    text-decoration: none;
+    color: black;
+}
+
+li a:hover {
+    text-decoration: none;
+    color: #8000ff;
+    transition: all 0.6s;
+}
+
+.page {
+    text-align: center;
+    margin: 20px auto;
+}
+
+.pagination {
+  text-align: center;
+  display: inline-block;
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  border: 1px solid #ddd;
+}
+
+.pagination a.active {
+  background-color: #141460;
+  color: white;
+  border: 1px solid #141460;
+}
+
+.pagination a:hover:not(.active) {background-color: #ddd;}
+
+.pagination a:first-child {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.pagination a:last-child {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+/* Footer */
+.footer {
+  background: #003152;
+  margin-top: 20px;
+  color: white;
+}
+
+.footer-text {
+    padding: 20px 40px 10px;
+}
+
+.last-footer-container {
+    border-top: 1px solid white;
+}
+
+.last-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.fab {
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+  
+  .b {
+      flex-direction: column;
+  }
+  
+  .b-img {
+    width: 100%;
+  }
+  
+  .b-post {
+    padding-left: 0px;
+  }
+}

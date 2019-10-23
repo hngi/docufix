@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Plaster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+    <title>Feedback Form</title>
+</head>
+<style>
+    body{
+        font-family: 'Ubuntu', sans-serif;
+    }
+
+    .navbar-navy{
+        font-family: 'Poppins', sans-serif;
+        background: #141460;
+    }
+
+    .navbar-brand{
+        font-family: 'Plaster', sans-serif;
+        font-size: 2.5rem;
+    }
+
+    
+    .mw-90{
+        max-width: 90%;
+        margin:auto;
+    }
+
+    .text-red{color:#FF0000;}
+
+    .feedback-form{
+        padding:4rem 6rem;
+        border:6px solid #3D9BDA;
+        border-radius: 30px;
+        border-top-width: 15px;
+        border-bottom-width: 15px;
+        max-width: 70%;
+        margin:auto;
+        margin-bottom: 4rem;
+    }
+
+    .feedback-form label{
+        font-size: 1.5rem;
+    }
+
+    .feedback-form .f-input{
+        border-color:#979292;
+        min-height: 60px;
+    }
+
+    .feedback-form .f-text-area{
+        min-height: 230px;
+    }
+
+    .feedback-form .f-btn{
+        width: 100%;
+        font-size: 1.6rem;
+        background: #3D9BDA;
+        border-radius: 9px;
+        padding: .85rem 0;
+        font-weight: bold;
+        margin-top: 2rem;
+    }
+
+    #footer {
+    	background-color: #003152;
+    }
+
+    .footer-info-row{
+        padding: 3rem 4rem;
+    }
+
+    .footer-help-info{
+        margin:1.2rem 0;
+        max-width: 400px;
+    }
+    .copyright-row{
+        padding: 1.5rem 4rem;
+        border-top: 1px solid #fff;
+        font-size: 1.3rem;
+    }
+
+    .copyright-row .icon a{
+        font-size: 1.8rem;
+        padding-left: 1rem;
+    }
+
+    @media (min-width: 1100px){
+        .navbar-navy{
+            padding:1.5rem 4rem 1.5rem  4rem;
+        }
+    }
+
+    @media(max-width: 900px){
+        .copyright-row{
+            flex-direction: column;
+        }
+
+        .copyright-row .col{
+            text-align: center !important;
+        }
+
+        .feedback-form{
+            max-width: 100%;
+            padding: 4rem 2rem;
+        }
+
+        .footer-info-row{
+          flex-direction: column; 
+        }
+
+        .footer-info-row .col{
+          text-align: left !important;
+        }
+
+        .feedback-form label {
+          font-size: 1.1rem;
+      }
+    }
+
+
+</style>
+<body>
+
+     <nav class="navbar navbar-expand-lg navbar-dark navbar-navy mb-4">
+      <a class="navbar-brand text-light" href="#">DOCUFIX</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link text-light" href="about.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="team.html">Team</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link text-light dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Tools
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Another action</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li>  
+          <li class="nav-item dropdown">
+            <a class="nav-link text-light dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Support
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Another action</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li> 
+          <li class="nav-item active">
+            <a class="nav-link text-light" href="about.html">Donate</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container-fluid mw-90">
+        <div class="row">
+            <h3 class="font-weight-bold">Share your experience with us</h3>
+        </div>
+
+        <div class="row form-row mt-5">
+            <div class="col form-col">
+             <form class="feedback-form">
+              <div class="form-group">
+                <label for="email">Your Email</label>
+                <input type="email" class="form-control f-input" id="email" aria-describedby="emailHelp">
+              </div>
+              <div class="form-group">
+                <label for="suggestion">Your Suggestion/Feedback</label>
+                <textarea class="form-control f-input f-text-area" id="suggestion"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary f-btn">Submit Feedback</button>
+            </form>
+          </div>  
+        </div>
+
+    </div>
+
+
+    <div class="container-fluid" id="footer">
+    <div class="row justify-col-between d-flex footer-info-row">
+        <div class="col text-light">
+                <h4 class="font-weight-bold">DOCUFIX</h4>
+                <p class="footer-help-info">We help you arrange, sort and put your files and data in order for easy management</p>
+                <p class="text-red">This app was built by HNGi6 interns</p>
+            </div>
+            <div class="col text-right">
+                 <p><a href="about.html" class="font-weight-bold text-light ">About Us</a></p>
+                  <p><a href="team.html" class="font-weight-bold text-light">Our Team</a></p>
+                   <p><a href="feedback.html" class="font-weight-bold text-light">Feedback</a></p>
+                    <p><a href="privacy.html" class="font-weight-bold text-light">Privacy Policy</a></p>
+            </div>
+    </div>
+
+     <div class="row justify-col-between d-flex copyright-row">
+        	<div class="col text-light">
+        		<p>&copy; 2019 Copyright: Docufix </p>
+        	</div>
+        	
+        	<div class="col text-right icon">
+        		<a href="facebook.com/docufix" class="text-light fa fa-facebook-square"></a>
+				<a href="twitter.com/docufix" class="text-light fa fa-twitter"></a>
+                <a href="google.com/docufix" class="text-light fa fa-google-plus"></a>
+				<a href="twitter.com/docufix" class="text-light fa fa-linkedin-square"></a>
+        	</div>
+       </div>
+   </div>
+</body>
+</html>

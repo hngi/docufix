@@ -33,8 +33,41 @@
             margin-top: 10px;
         }
         .active a{
-   color: grey !important;
- }
+           color: grey !important;
+        }
+
+        .text-wrapper {
+          /* background-color: #3D9BDA; */
+          background: -moz-linear-gradient(141deg, rgba(61,155,218,1) 0%, rgba(0,128,128,1) 100%); /* ff3.6+ */
+          background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, rgba(0,128,128,1)), color-stop(100%, rgba(61,155,218,1))); /* safari4+,chrome */
+          background: -webkit-linear-gradient(141deg, rgba(61,155,218,1) 0%, rgba(0,128,128,1) 100%); /* safari5.1+,chrome10+ */
+          background: -o-linear-gradient(141deg, rgba(61,155,218,1) 0%, rgba(0,128,128,1) 100%); /* opera 11.10+ */
+          background: -ms-linear-gradient(141deg, rgba(61,155,218,1) 0%, rgba(0,128,128,1) 100%); /* ie10+ */
+          background: linear-gradient(309deg, rgba(61,155,218,1) 0%, rgba(0,128,128,1) 100%); /* w3c */
+          padding:  52px 58px;
+          margin-bottom: 20px;
+          color: #fff;
+        }
+
+        #get-started {
+          background-color: #141460;
+          color: #fff;
+          border-radius: 49px;
+          width: 142px;
+          height: 50px;
+          font-size: 19px;
+          font-weight: bold;
+          margin-bottom: 20px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-decoration: none !important;
+        }
+
+        #get-started:hover {
+          text-decoration: none;
+          background-color: #3D9BDA;
+        }
  
  /* .navbar{
    position:fixed;
@@ -93,7 +126,7 @@
                     </h2>
                    
                       
-
+                  <div class="text-wrapper">
                     <p >
                         This privacy policy has been compiled to show the information we collect, how we make use of it,
                          user choices as to how we make use of such information provided, how we treat your personal data and protect your privacy when you use our services. 
@@ -128,15 +161,10 @@
                     <p>
                     Please contact us with any questions regarding the <b>Docufix Privacy Policy</b> by email: info@docufix.com
                     </p>
-
-                     <a
-
-                        href="fileUpload.html"
-
-                        class="btn  p-2  btn-outline-dark"
-                        style="font-weight: bold;margin-bottom:20px;"
-                        >Get Started</a
-                    > 
+                  </div>
+                     <a href="fileUpload.html" id="get-started">
+                      Get Started
+                    </a> 
                 </div>
                 
             </div>

@@ -508,13 +508,37 @@
                       <div id="page"></div> 
                     <div contenteditable="true" id="textareaDifferences" style="border:none;min-height:100%; width: 100%;overflow: scroll; box-shadow: 0px 0px 4px 1px grey;"></div>
                 </div>
+             <button   onclick ="document.getElementById('id02').style.display='block'"
+                        class="btn-dark mt-2 mb-5" style="padding: 7px 14px;"><i class="fas fa-cloud-download-alt"></i>Download <strong>HERE</strong></button>
+                        
+                    <!---MODAL FOR SAVE AS-->
+
+
+
             
-                <button id="btn-export" onclick="exportHTML();" class="btn-dark mt-2 mb-5" style="padding: 7px 14px;"><i class="fas fa-cloud-download-alt"></i> Download as word
-                    doc</button>
-                    <button id="cmd" class="btn-dark mt-2 mb-5" style="padding: 7px 14px;"><i class="fas fa-cloud-download-alt"></i>Download as PDF</button>
+                    <div class="w3-container">
+                      <div id="id02" class="w3-modal">
+                        <div class="w3-modal-content" style="border-radius: 4px;">
+                          <div class="w3-container">
+                            <span onclick="document.getElementById('id02').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                            <br/>
+                              <br/>
+
+                            <input type = "text"placeholder="Please Specify Document Name..." id = "saveAs" required></input>
+                            <button id="btn-export" onclick="exportHTML();" class="btn-dark mt-2 mb-5" style="padding: 7px 14px;"><i class="fas fa-cloud-download-alt"></i> Download as word
+                                doc</button>
+                                <button id="cmd" class="btn-dark mt-2 mb-5" style="padding: 7px 14px;"><i class="fas fa-cloud-download-alt"></i>Download as PDF</button>
+                        
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+
             
 
             </div>
+
+            <!--END OF MODAL-->
             <div align="right" class="shareBtn" id="shareBtn">
                 <h4>Helpful? Please Share With Your Friends On:</h4>
                 <button class="twtShare" data-js="twitter-share"><i class="fab fa-twitter"></i> Twitter</button>
@@ -1255,7 +1279,9 @@
         
         
         <script>
+            
             function exportHTML(){
+               
                var header = "<html xmlns:o='urn:schemas-microsoft-com:office:office' "+
                     "xmlns:w='urn:schemas-microsoft-com:office:word' "+
                     "xmlns='http://www.w3.org/TR/REC-html40'>"+
@@ -1265,10 +1291,12 @@
                var sourceHTML = header + document.getElementById("textareaDifferences").innerHTML+footer;
                
                var source = 'data:application/vnd.ms-word;charset=utf-8,' + encodeURIComponent(sourceHTML);
+               var fileName = document.getElementById('saveAs').value
+               console.log(fileName + " is working")
                var fileDownload = document.createElement("a");
                document.body.appendChild(fileDownload);
                fileDownload.href = source;
-               fileDownload.download = 'docufix' + new Date() + '.doc';
+               fileDownload.download = fileName + " " + '.doc';
                fileDownload.click();
                document.body.removeChild(fileDownload);
             }

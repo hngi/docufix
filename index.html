@@ -28,10 +28,13 @@
 
     <style type="text/css">
     body {
+      padding-top: 105px;
       overflow-x: hidden;
     }
+    
         .features {
             line-height: 2;
+            
         }
 
         .features img {
@@ -41,13 +44,89 @@
         .active a{
    color: grey !important;
  }
- /* .navbar{
-   position:fixed;
+ .col-md-4 {
+  background: #FDFBFF;
+box-shadow: 0px 8px 4px rgba(0, 0, 0, 0.25);
+border-radius: 67px;
+ }
+ .container-fluid{
+  background: linear-gradient(230.90deg, #D7B1F6 -15.75%, #404CB7 87.3%);
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+ }
+ 
+ .b1{
+   padding-top: 5%;
+   padding-left: 35%;
+   padding-bottom: 10%;
+   
+
+ }
+ .b2{
+   padding-top: 5%;
+   padding-bottom: 10%;
+ }
+ .btn1 {
+   background-color: #141460;
+   color: white;
+   border-radius: 49px;
+   padding:10px;
+ }
+ .btn2{
+  background-color: #141460;
+   color: white;
+   border-radius: 49px;
+   padding:10px;
+ }
+  .navbar{
+   position: fixed;
    width:100%;
    top:0;
    z-index:1;
- } */
+ } 
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: rgb(17, 7, 7);
+  padding: 10px 16px;
+  background-color: inherit;
+  font-family: inherit; 
+  margin: 0; 
+  color: white;
+}
 
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+/* end of dropdown */
  @media only screen and (max-width: 767px) {
    .col-md-7{
      margin-top: 2em;
@@ -114,10 +193,10 @@
     </style>
     <body style="background-color:  #fff; font-family: Ubuntu;">
         <header>
-          <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: black">
+          <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color:#141460">
             <div class="container">
                 <a class="navbar-brand" href="index.html" style="font-weight: bold;font-size: 1.5em;"
-                    >DOCUFIX</a
+                    ><img src="https://res.cloudinary.com/wonderwoman/image/upload/v1571772578/docufix/LOGO.png"> </a
                 >
                 <button
                     class="navbar-toggler border-0"
@@ -134,15 +213,36 @@
                     <ul
                         class="navbar-nav ml-auto"
                         style="font-weight: bold;"
-                    >
+                    ></ul>
                         <li class="nav-item">
                             <a class="nav-link  text-light" href="about_us.html">About Us</a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link  text-light" href="Why Use Docufix.html">Why Use Docufix?</a>
-                      </li>
-                        <li class="nav-item">
                             <a class="nav-link  text-light" href="teampage.html">Team</a>
+                        </li>
+                        <li>
+                          <div class="dropdown">
+                            <button class="dropbtn">Tools
+                              <i class="fa fa-caret-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                              <a href="#">Link 1</a>
+                              <a href="#">Link 2</a>
+                              <a href="#">Link 3</a>
+                            </div>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="dropdown">
+                            <button class="dropbtn">Support
+                              <i class="fa fa-caret-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                              <a href="#">Link 1</a>
+                              <a href="#">Link 2</a>
+                              <a href="#">Link 3</a>
+                            </div>
+                          </div>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link  text-light" href="https://hng.tech/" target="_blank">Donate</a>
@@ -152,44 +252,23 @@
             </div>
         </nav>
         </header>
-        <div class="container mt-5">
-            <div class="row align-items-center mt-5" style="min-height: 80vh">
-                <div class="col-md-7" id="left-content">
-                    <h2 style="font-weight:bold;">
-
-
-                        Document Comparison Solution
-                    </h2>
-                    <p>
-                        Compare document content and find out the differences
-                        contained in each of the files without stress
-                    </p>
-                    <a
-                        href="fileUpload.html"
-
-                        class="btn  p-2  btn-outline-dark"
-                        style="font-weight: bold;"
-                        >Compare Files</a
-                    >
-
-                    <a
-
-                    href="fileDelimiter.html"
-
-                    class="btn  p-2  btn-outline-dark"
-                    style="font-weight: bold;"
-                    >Check for Duplicates</a
-                >
-                </div>
-                <div class="col-md-5" id="right-content">
-                    <img
-                        src="https://res.cloudinary.com/mercyinyang/image/upload/v1571224753/Docufix/images/undraw_collecting_fjjl_1_hokax9.svg"
-                        alt=""
-                        style="width: 100%; height:400px;"
-                    />
-                </div>
-            </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12"> <img class="img-fluid" src="https://res.cloudinary.com/wonderwoman/image/upload/v1571789359/docufix/Screen_Shot_2019-10-23_at_1.06.27_AM_nx1m8r.png"> </div>
+      </div> 
+      <div class="row">
+          <div class="col-6 b1">
+         <button class="btn1">Compare Files</button> </div>
+         <div class="col-6 b2">
+            <button class="btn2">Check For Duplicates</button> </div>
         </div>
+      </div>
+        </div>
+      
+        </div>
+      
+        <div class="container mt-5">
+         
 
         <div style="background-color:  #fff">
             <div class="container features">
@@ -207,7 +286,7 @@
                             <!-- alt="" -->
                             <!-- style="height: 150px; width:100%;border-radius: 10px;" -->
                         <img
-                            src="https://res.cloudinary.com/tolulopedavid/image/upload/v1571517948/docufix/pla_iu8wue.png"
+                            src="https://res.cloudinary.com/wonderwoman/image/upload/v1571786901/docufix/plagiarismchecker.png"
                             alt="plagiarism image"
                             style="height: 100px; margin: 0 auto;" class="img"
                             
@@ -223,7 +302,7 @@
                             alt=""
                             style="height: 150px; width:100%;border-radius: 10px;" -->
                         <img
-                           src="https://res.cloudinary.com/tolulopedavid/image/upload/v1571517948/docufix/dupl_ef0tj0.png"
+                           src="https://res.cloudinary.com/wonderwoman/image/upload/v1571787045/docufix/avoidWordDup.png"
                             alt="text duplication image"
                             style="height: 100px; margin: 0 auto;"
                             class="img"
@@ -240,7 +319,7 @@
                             alt=""
                             style="height: 150px; width:100%;border-radius: 10px;" -->
                         <img
-                            src="https://res.cloudinary.com/tolulopedavid/image/upload/v1571517958/docufix/comp_xjwqsh.png"
+                            src="https://res.cloudinary.com/wonderwoman/image/upload/v1571787146/docufix/fileComparism.png"
                             alt="text comparison image"
                             style="height: 100px; margin: 0 auto; " class="img"
                         />
@@ -250,32 +329,29 @@
                 </div>
             </div>
         </div>
-        <footer class="page-footer font-small mdb-color pt-4" style="background: #C4C4C4;">
-          <div style="background: #C4C4C4;">
+        <footer class="page-footer font-small mdb-color pt-4" style="background:#003152;">
+          <div style="background: #003152; color: white;">
           <div class="container text-center text-md-left">
       
             <div class="row text-center text-md-left mt-3 pb-3 bottom">
       
-              <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+              <div class="col-md-6 col-lg-6 col-xl-6 mx-auto mt-6">
                 <h6 class="text-uppercase mb-4 font-weight-bold">Docufix</h6>
                 <p>We help you arrange, sort, compare and extract information from different file formats</p>
-                <p>This App Was Built By HNGi6 Interns</p>
+                <p style="color: red;">This App Was Built By HNGi6 Interns</p>
               </div>
       
               <hr class="w-100 clearfix d-md-none">
       
               <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
                 <p>
-                  <a href="about_us.html" style="color:black">About Us</a>
+                  <a href="about_us.html" style="color:white">About Us</a>
                 </p>
                 <p>
-                  <a href="Why Use Docufix.html" style="color:black">Why Use Docufix?</a>
-                </p>
-                <p>
-                  <a href="teampage.html" style="color:black">Our Team</a>
+                  <a href="teampage.html" style="color:white">Our Team</a>
                 </p>
                   <p>
-                  <a href="feedback.html" style="color:black">Share Your Feedback</a>
+                  <a href="feedback.html" style="color:white">Feedback</a>
                 </p>
               </div>
               <!-- Grid column -->
@@ -284,11 +360,11 @@
       
               <!-- Grid column -->
               <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
-                <p>
+                <!-- <p>
                   <a href="index.html" style="color:black">Home Page</a>
                 </p>
-                <p>
-                  <a href="privacy.html" style="color:black">Privacy Policy</a>
+                <p> -->
+                  <a href="privacy.html" style="color:white">Privacy Policy</a>
                 </p>
               </div>
       
@@ -302,7 +378,7 @@
       
                 <p class="text-center text-md-left">© 2019 Copyright:
                   <a href="index.html">
-                    <strong style="color:black"> Docufix</strong>
+                    <strong style="color:white"> Docufix</strong>
                   </a>
                 </p>
       

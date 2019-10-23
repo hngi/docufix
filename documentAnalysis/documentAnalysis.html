@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/7967e81f77.js" crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin"> -->
+    <!-- <link rel="stylesheet" 
+  href="https://fonts.googleapis.com/css?family=Ubuntu"> -->
+    <title>Document Analysis</title>
+</head>
+<body>
+    <style>
+
+        .active{
+            float: left;
+        }
+        .navbar{
+            background-color:#000000;
+            overflow: hidden;
+        }
+        .others {
+            float: right;
+        }
+        .navbar a{
+            display: block;
+            color: #FFFEFE;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+
+        }
+        .navbar a:hover{
+            background: #ddd;
+
+        }
+        .navbar .icon {
+            display: none;
+        }
+        @media screen and (max-width: 600px){
+            .navbar a:not(first-child) {display: none;}
+            .navbar a.icon {
+                float: right;
+                display: block;
+            }
+        }
+        @media screen and (max-width: 600px) {
+            .navbar.responsive {position: relative;}
+            .navbar.responsive .icon {
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+        }
+        .navbar.responsive a {
+            float: none;
+            display: block;
+            text-align: left;
+        }
+
+
+
+    </style>
+    <div class="navbar" id="myNavbar">
+        <a href="#" class="active"><img src="DOCUFIX.png"> </a>
+        <a href="#" class="others">About Us</a>
+        <a href="#" class="others">Team</a>
+        <a href="#" class="others">Sponsors</a>
+        <a href="javascript:void(0);" class="icon" onclick="navbarFunction()"> <i class="fas fa-bars"></i></a>
+    </div>
+    <script>
+        function navbarFunction() {
+            var x = document.getElementById("myNavbar");
+            if (x.className === "myNavbar") {
+                x.className += "responsive";
+            }
+            else{
+                x.className = "navbar";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -130,8 +130,11 @@
         textarea{
             width: 100% !important;
         } */
+        a{
+            color: white;
+        }
         .active1 {
-            border-bottom: 3px solid black;
+            color: black;
         }
         textarea{
             width: 100% !important;
@@ -314,65 +317,77 @@
             </nav>
         </header>
         <div class="container mt-5" style="min-height: 100vh">
-            <h3 class="pt-5 font-weight-bold">Compare Two Documents</h3>
-            <h2 class="text-center mt-5">
-                <span
-                    ><a
-                        href="#"
-                        id="fileBtn"
-                        class="active1 pb-1"
-                        style="text-decoration: none; color:black; margin-right: 10px;"
-                        ><img class="top-icons" src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571193844/samples/figma%20career-list/lario/xisa8mltboqmepbzjqks.png">File</a
-                    ></span
-                >
-                |<span
-                    ><a
-                        href="#"
-                        id="textBtn"
-                        style="text-decoration: none; color:black; margin-left: 10px"
-                        ><img class="top-icons" src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571193193/samples/figma%20career-list/lario/slpij76xxh4f7bpixbr5.png">Text
-                    </a></span
-                >
-            </h2>
+            <h3 class="mt-5 pt-5">Upload files to Compare documents</h3>
+             <h2 class="text-center text-light p-3 mt-5 " style="background-color:rgba(61, 155, 218, 0.4);">
+                        <span class="text-light mr-md-5 pr-md-5 active1"
+                            ><a
+                                href="#"
+                                id="fileBtn"
+                                class="active1 pb-1"
+                                style="text-decoration: none; margin-right: 10px;"
+                                ><img class="top-icons" src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571193844/samples/figma%20career-list/lario/xisa8mltboqmepbzjqks.png">File</a
+                            ></span
+                        ><span class="text-light ml-md-5 pl-md-5"
+                            ><a
+                                href="#"
+                                id="textBtn"
+                                style="text-decoration: none; margin-left: 10px"
+                                ><img class="top-icons" src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571193193/samples/figma%20career-list/lario/slpij76xxh4f7bpixbr5.png">Text
+                            </a></span
+                        >
+                    </h2>
             <div id="file" >
                 <div class="text-center mt-5">
                     <form class="mb-5" id="uploadForm" method="POST" enctype="multipart/form-data">
-                        <div class="row padding">
-                                <div class="custom-file col-md-6 margin">
-                                    <label for="upload1" id="label1" class="text-left mr-md-5 custom-file-label"
-                                        >First Document:</label
-                                    >
-                                    <input
-                                    id="upload1" 
-                                    type="file" 
-                                    name="file1" 
-                                accept=""
-                                class="custom-file-input"
-                                        style="border: 0;background-color: transparent;" required
-                                    />
-                                    <div id="button3" class="p-3"></div>
-                                    <div class="invalid-feedback">
-                                        No Images Allowed
-                                      </div>
+                        <div class="row mt-5">
+                            <div class="col-md-6">
+                                <div class="">
+                                    <div class="card card-body  pb-5" style="background-color:rgba(61, 155, 218, 0.4);">
+                                        <div class=" mx-auto bg-light" style="border-radius: 50%;height: 100%; width: 20%" ><img src="https://res.cloudinary.com/ademolamadelewi/image/upload/v1571838569/Vector1_d9algx.svg" class="p-2" width="100%"></div>
+                                        
+        
+                                        <p class="font-weight-bold" >Upload file here</p>
+                                            <div class="custom-file col-md-8 mx-auto" style="color: #0C105F">
+                                                <label for="upload1" id="label1" class="text-left mr-md-5 custom-file-label"
+                                                style="border: 1px solid #0C105F; "></label
+                                                >
+                                                <input
+                                                id="upload1" 
+                                                type="file" 
+                                                name="file1" 
+                                            accept=""
+                                            class="custom-file-input"
+                                                    style="border: 0;background-color:rgba(61, 155, 218, 0.4);" required
+                                                />
+                                                <div class="invalid-feedback pb-5">
+                                                    No Images Allowed
+                                                  </div>
+                                            </div></div>
                                 </div>
-                                <div class="custom-file col-md-6">
-                                    <label for="upload2" id="label2" class="text-left mr-md-5 custom-file-label"
-                                        >Second Document:</label
-                                    >
-                                    <input
-                                    id="upload2" for="secondDocument" type="file" name="file2" accept="" class="custom-file-input"
-                                        style="border: 0;background-color: transparent;" required
-                                    />
-                                    <div id="button4" class="p-3"></div>
-                                    <div class="invalid-feedback">
-                                        No Images Allowed
-                                      </div>
+                            </div>
+                            <div class="col-md-6 mt-5 mt-md-0">
+                                <div class="pb-5">
+                                        <div class="card card-body pb-5" style="background-color:rgba(61, 155, 218, 0.4);">
+                                                <div class=" mx-auto bg-light" style="border-radius: 50%;height: 100%; width: 20%" ><img src="https://res.cloudinary.com/ademolamadelewi/image/upload/v1571838569/Vector1_d9algx.svg" class="p-2" width="100%"></div>
+                                                    <p class="font-weight-bold">Upload file here</p>
+                                                <div class="custom-file col-md-8 mx-auto">
+                                                    <label for="upload2" id="label2" class="text-left mr-md-5 custom-file-label"
+                                                        style="border: 1px solid #0C105F"></label
+                                                    >
+                                                    <input
+                                                    id="upload2" for="secondDocument" type="file" name="file2" accept="" class="custom-file-input"
+                                                        style="border: 0;background-color: transparent;" required
+                                                    />
+                                                    <div class="invalid-feedback pb-5">
+                                                        No Images Allowed
+                                                      </div>
+                                                </div></div>
                                 </div>
-
+                            </div>
                         </div>
-                        <div class="form-group mt-5">
-                                <button id="uploadBtn" type="submit" value="submit" class="btn btn-dark mt-3 "
-                                    ><i class="fas fa-cloud-upload-alt"></i> upload</button>
+                        <div class="form-group">
+                                <button style="background-color: #3D9BDA;color: white;" id="uploadBtn" type="submit" value="submit" class="btn text-light"
+                                    ><img src="https://res.cloudinary.com/ademolamadelewi/image/upload/v1571838568/Vector_wq7kd7.svg" alt="" height="16px" width="16px"> upload</button>
                             </div>
                     </form>
                 </div>
@@ -389,13 +404,13 @@
                 <div class="row mt-5">
                     <div class="col-md-5">
                         <div class="card">
-                            <div class="card-header bg-dark text-light">
+                            <div class="card-header text-light"  style="background-color:rgba(51, 138, 196, 0.4);">
                                 <img class="white-txt" src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571194266/samples/figma%20career-list/lario/ct8pi1qsjgonxsa7zdyn.png">Text
                             </div>
-                            <div class="card-body">
+                            <div class="card-body"  style="background-color:rgba(61, 155, 218, 0.4);">
                                 <textarea
                                     placeholder="Write your text here" class="" id="textareaBefore" cols="" rows="10"
-                                    style="border: 0;border-right:2px solid #444;border-left:2px solid #444;"
+                                    style="border: 0;"
                                 ></textarea>
                             </div>
                         </div>
@@ -403,21 +418,21 @@
                     <div class="col-md-2 text-center mt-5 mb-5" > <img style="padding-top: 50%;" id="compare-txt" class="align-middle" src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571193103/samples/figma%20career-list/lario/hyu5pvtsmqxymfx5ohwi.png"></div>
                     <div class="col-md-5">
                         <div class="card">
-                            <div class="card-header bg-dark text-light">
+                            <div class="card-header text-light"  style="background-color:rgba(51, 138, 196, 0.4);">
                                 <img class="white-txt" src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571194266/samples/figma%20career-list/lario/ct8pi1qsjgonxsa7zdyn.png"> Text
                             </div>
-                            <div class="card-body">
+                            <div class="card-body"  style="background-color:rgba(61, 155, 218, 0.4);">
                                 <textarea
                                     placeholder="Write your text here" class="input-txt"
                                      id="textareaAfter" cols="" rows="10"
-                                    style="border: 0;border-right:2px solid #444;border-left:2px solid #444;"
+                                    style="border: 0;"
                                 ></textarea>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="text-center m-5" >
-                    <button value="compare" class="btn btn-dark font-weight-bold"
+                    <button value="compare" class="btn font-weight-bold text-light"  style="background-color:rgba(51, 138, 196, 0.4);"
                           type="submit" onclick="buttonCompareClicked();"> <img class="compare-img" src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571193103/samples/figma%20career-list/lario/butfaguuckar9dl0i1ug.png" width="23" height="23" style="margin-right: 10px;">Compare</button
                     >
                 </div>
@@ -600,7 +615,7 @@
                 </div>
             </div> -->
         </div>
- <footer class="page-footer font-small mdb-color pt-4" style="background: #C4C4C4;">
+ <footer class="page-footer font-small mdb-color pt-4 mt-4" style="background: #C4C4C4;">
 
         <div class="container text-center text-md-left">
 

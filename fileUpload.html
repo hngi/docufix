@@ -21,7 +21,10 @@
         />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
         <link rel="stylesheet" type="text/css" href="wysiwyg.css">
+        
         <title>Docufix</title>
+        <script type="text/javascript" src="https://www.dropbox.com/static/api/2/dropins.js" id="dropboxjs" data-app-key="
+        7r74mdmmdg00d52"></script>
     </head>
     <style>
     /* #file-text{
@@ -150,7 +153,16 @@
             .padding{
             padding-left: 1.5em;
             padding-right: 1.5em;
-        }
+            }
+            #modal-header {
+                padding: 0px;
+            }
+            #modal-header h2{
+                font-size: 20px;
+            }
+            #modal-content {
+                padding: 0px;
+            }
         }
         .active a{
     color: grey !important;
@@ -197,6 +209,32 @@
      margin-top:5%;
  } */
  
+ .w3-modal-content{
+     padding: 0px;
+     background-color: rgb(253, 252, 252);
+     border-radius: 10px;
+ }
+ 
+ #modal-header {
+     text-align: center;
+     padding: 20px 0px 20px 0px;
+ }
+ #modal-content {
+     padding: 0px 5% 20px 5%;
+ }
+    li{
+        line-height: 30px;
+    }
+#important{
+    color: red;
+    text-align: center;
+    font-weight: 500;
+    font-size: 30px;
+}
+.space{
+    padding: 4px 8px;
+}
+
 
     </style>
        
@@ -204,30 +242,34 @@
 
 <div class="w3-container">
   <div id="id01" class="w3-modal">
-    <div class="w3-modal-content" style="border-radius: 4px;">
-      <div class="w3-container">
+    <div class="w3-modal-content">
         <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
         
-        <h2 style="font-weight: bolder;">NOTE:</h2>
-        <p>Docufix only supports file formats like .csv, .json, .xml .txt .pdf and .docx for <strong>uploading</strong></p>
-        <p>If you must compare documents from any other format, aside the above formats mentioned, <br> please make use of the text option, then <strong> copy</strong> and <strong> paste</strong> into the text-box.</strong></p>
-        <p>Your compared data gives you result in percentage %</p>
-        <p>You can choose to download compared documents as .doc or pdf file formats</p>
-        <p>This App has an inbuilt words formatting editor</p>
-        <p>Compared texts are <strong>editable,</strong> this means you can edit your work for correction after comparing.</p>
-<strong style = "color: red">IMPORTANT!!!</strong>
-<ul>The following activities would not be efficiently carried out on mobile phone except for larger screen sizes:
+        <div id="modal-header"><h2>BEFORE GETTING STARTED</h2></div>
 
-<li>Comparing od documents</li>
-<li>Formatting of compared document</li>
+        <div id="modal-content" >
+            <ul>
+                <li class="modal-list">Docufix only supports file formats like .csv, .json, .xml .txt .pdf and .docx for       <strong>uploading</strong></li>
+                <li class="modal-list">To compare documents aside from the ones mentioned above, make use of the text option, then <strong> copy</strong> and <strong> paste</strong> into the text-box.</strong></li>
+                <li class="modal-list">Result of the documents compared is given in percentage %</li>
+                <li><span style = "background-color: red" class="space"> RED HIGHLIGHT</span> Means the texts in second text input that are not found in the first text input</li>
+                <li><span style = "background-color: yellow" class="space"> YELLOW HIGHLIGHT</span> Means the texts in first text input that are not found in the second text input</li>
+                <li><strong> PLAIN TEXT</strong>  Means text found in both tex inputs</li>
+                <li>Compared documents can be downloaded as .docs and pdf files</li>
+                <li>Compared texts are <strong>editable,</strong> this means you can edit your work for correction after comparing.</li>
+            </ul>
+    
+            <h1 id="important">IMPORTANT!!!</h1>
+            <ul>The following activities would not be efficiently carried out on mobile phone except for larger screen sizes:
+    
+            <li>Comparing of documents</li>
+            <li>Formatting of compared document</li>
+        </ul>
+        </div>
+        
 
 
-</ul>
-<ul>Also note the meaning of the highlighted outputs:
-    <li><span style = "background-color: red"> RED HIGHLIGHT</span> Means the texts in second text input that are not found in the first text input</li>
-    <li><span style = "background-color: yellow"> YELLOW HIGHLIGHT</span> Means the texts in first text input that are not found in the second text input</li>
-    <li>PLAIN TEXT Means text found in both tex inputs</li>
-</ul>
+
     </div>
     </div>
   </div>
@@ -256,6 +298,9 @@
                         >
                             <li class="nav-item ">
                                 <a class="nav-link text-light" href="about_us.html">About Us</a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link text-light" href="Why Use Docufix.html">Why Use Docufix?</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link  text-light" href="teampage.html">Team</a>
@@ -305,6 +350,7 @@
                                 class="custom-file-input"
                                         style="border: 0;background-color: transparent;" required
                                     />
+                                    <div id="button3" class="p-3"></div>
                                     <div class="invalid-feedback">
                                         No Images Allowed
                                       </div>
@@ -317,6 +363,7 @@
                                     id="upload2" for="secondDocument" type="file" name="file2" accept="" class="custom-file-input"
                                         style="border: 0;background-color: transparent;" required
                                     />
+                                    <div id="button4" class="p-3"></div>
                                     <div class="invalid-feedback">
                                         No Images Allowed
                                       </div>
@@ -468,13 +515,37 @@
                       <div id="page"></div> 
                     <div contenteditable="true" id="textareaDifferences" style="border:none;min-height:100%; width: 100%;overflow: scroll; box-shadow: 0px 0px 4px 1px grey;"></div>
                 </div>
+             <button   onclick ="document.getElementById('id02').style.display='block'"
+                        class="btn-dark mt-2 mb-5" style="padding: 7px 14px;"><i class="fas fa-cloud-download-alt"></i>Download <strong>HERE</strong></button>
+                        
+                    <!---MODAL FOR SAVE AS-->
+
+
+
             
-                <button id="btn-export" onclick="exportHTML();" class="btn-dark mt-2 mb-5" style="padding: 7px 14px;"><i class="fas fa-cloud-download-alt"></i> Download as word
-                    doc</button>
-                    <button id="cmd" class="btn-dark mt-2 mb-5" style="padding: 7px 14px;"><i class="fas fa-cloud-download-alt"></i>Download as PDF</button>
+                    <div class="w3-container">
+                      <div id="id02" class="w3-modal">
+                        <div class="w3-modal-content" style="border-radius: 4px;">
+                          <div class="w3-container">
+                            <span onclick="document.getElementById('id02').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                            <br/>
+                              <br/>
+
+                            <input type = "text"placeholder="Please Specify Document Name..." id = "saveAs" required></input>
+                            <button id="btn-export" onclick="exportHTML();" class="btn-dark mt-2 mb-5" style="padding: 7px 14px;"><i class="fas fa-cloud-download-alt"></i> Download as word
+                                doc</button>
+                                <button id="cmd" class="btn-dark mt-2 mb-5" style="padding: 7px 14px;"><i class="fas fa-cloud-download-alt"></i>Download as PDF</button>
+                        
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+
             
 
             </div>
+
+            <!--END OF MODAL-->
             <div align="right" class="shareBtn" id="shareBtn">
                 <h4>Helpful? Please Share With Your Friends On:</h4>
                 <button class="twtShare" data-js="twitter-share"><i class="fab fa-twitter"></i> Twitter</button>
@@ -546,6 +617,9 @@
             <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
               <p>
                 <a href="about_us.html" style="color:black;">About Us</a>
+              </p>
+              <p>
+                <a href="Why Use Docufix.html" style="color:black;">Why Use Docufix?</a>
               </p>
               <p>
                 <a href="teampage.html" style="color:black;">Our Team</a>
@@ -1212,7 +1286,9 @@
         
         
         <script>
+            
             function exportHTML(){
+               
                var header = "<html xmlns:o='urn:schemas-microsoft-com:office:office' "+
                     "xmlns:w='urn:schemas-microsoft-com:office:word' "+
                     "xmlns='http://www.w3.org/TR/REC-html40'>"+
@@ -1222,10 +1298,12 @@
                var sourceHTML = header + document.getElementById("textareaDifferences").innerHTML+footer;
                
                var source = 'data:application/vnd.ms-word;charset=utf-8,' + encodeURIComponent(sourceHTML);
+               var fileName = document.getElementById('saveAs').value
+               console.log(fileName + " is working")
                var fileDownload = document.createElement("a");
                document.body.appendChild(fileDownload);
                fileDownload.href = source;
-               fileDownload.download = 'docufix' + new Date() + '.doc';
+               fileDownload.download = fileName + " " + '.doc';
                fileDownload.click();
                document.body.removeChild(fileDownload);
             }
@@ -1270,6 +1348,42 @@
                     label.textContent =  e.target.files[0].name;
                 }
             });
+    </script>
+    <script>
+        
+
+options1 = {
+        success: function(files){
+            var upload1 = document.getElementById("upload1");
+            var label = document.getElementById("label1");
+            upload1.value =  files[0].link;
+            label.textContent = files[0].name;
+        },
+        cancel: function(){
+                 console.log("error")
+        },
+        linkType: "preview",
+        multiselect: false,
+
+};
+var button = Dropbox.createChooseButton(options1);
+document.getElementById("button3").appendChild(button);
+options2 = {
+        success: function(files){
+            var upload2 = document.getElementById("upload2");
+            var label = document.getElementById("label2");
+            upload2.value =  files[0].link;
+            label.textContent = files[0].name;
+        },
+        cancel: function(){
+                 console.log("error")
+        },
+        linkType: "preview",
+        multiselect: false,
+
+};
+var button = Dropbox.createChooseButton(options2);
+document.getElementById("button4").appendChild(button);
     </script>
       
     </body>

@@ -6,6 +6,7 @@
         <title>Docufix | Team</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/png" href="https://res.cloudinary.com/ros4eva/image/upload/v1571538580/favicon_elbl53.png"/>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Ubuntu|Pacifico&display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -18,12 +19,18 @@
                width: 75%;
            }
        }
+       .fixed-top{
+         position:fixed;
+       }
+       .main{
+         margin-top:100px;
+       }
     </style>    
     </head>
     <body>
        <!--Header-->
        <header>
-        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: black">
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: black">
           <div class="container">
               <a class="navbar-brand" href="index.html" style="font-weight: bold;font-size: 1.5em;"
                   >DOCUFIX</a
@@ -48,10 +55,13 @@
                           <a class="nav-link  text-light" href="about_us.html">About Us</a>
                       </li>
                       <li class="nav-item">
+                        <a class="nav-link  text-light" href="Why Use Docufix.html">Why Use Docufix?</a>
+                    </li>
+                      <li class="nav-item">
                           <a class="nav-link  text-light" href="teampage.html">Team</a>
                       </li>
                       <li class="nav-item">
-                          <a class="nav-link  text-light" href="https://hng.tech/" target="_blank">Sponsors</a>
+                          <a class="nav-link  text-light" href="https://hng.tech/" target="_blank">Donate</a>
                       </li>
                   </ul>
               </div>
@@ -59,7 +69,7 @@
       </nav>
       </header>
        <!--Main-->
-       <main>
+       <main class='main'>
             <section class="container">
                     <div class="content-title">
                             <h3 class="text-center mt-4">Meet Our Team</h3>

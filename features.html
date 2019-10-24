@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+        <link rel="icon" type="image/png" href="https://res.cloudinary.com/thecavemann/image/upload/v1571839870/logo_g4kuoa.png"/>
+        <style>
+            body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+}
+
+.container h2 {
+    text-align: center;
+    font-size: 64px;
+}
+
+.feature-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+img {
+    width: 100%;
+}
+
+.col {
+    background-color: #FDFBFF;
+    flex-grow: 1;
+    width: 25%;
+    margin: 15px 2%;
+    padding: 40px 40px 20px;
+    border-radius: 67px;
+    box-shadow: 0px 8px 4px rgba(0, 0, 0, 0.25);
+}
+
+.col h3 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+img {
+    margin: 15px auto;
+}
+
+@media screen and (max-width: 850px) {
+     .col {
+        width: 45%;
+        margin-bottom: 30px;
+     }
+}
+
+@media (max-width: 500px) {
+    .col {
+        width: 100%;
+        margin-bottom: 10px;
+     }
+     
+     .container h2 {
+        font-size: 54px;
+    }
+}
+
+
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h2>Our Features</h2>
+            <div class="feature-container">
+                <div class="checker col">
+                    <h3>Plagiarism Checker</h3>
+                    <img src="https://res.cloudinary.com/theonlybakare/image/upload/v1571799407/features/checker_whwu3r.png" alt="Checker" />
+                    <p>Plagiarism checker detects plagiarism in your text and checks for other writing issues. Our plagiarism checker flags specfic sentences and provides reference information about the source, calculates and overall orginality score for your document. We have you covered.</p>
+                </div>
+                
+                <div class="word col">
+                    <h3>Aviod Word Duplicate</h3>
+                    <img src="https://res.cloudinary.com/theonlybakare/image/upload/v1571799407/features/word_fr2zwf.png" alt="Word Duplicate" />
+                    <p>One of the main problem in document is that most of the word that are duplicated also appear in the previous line, which makes it difficult to achieve your goal. If you'd want to remove all duplicated words, then it isn't that difficult by using our tool, all duplicated file will be reviewed.</p>
+                </div>
+                
+                <div class="file col">
+                    <h3>File Comaparison</h3>
+                    <img src="https://res.cloudinary.com/theonlybakare/image/upload/v1571799407/features/file_ue6olp.png" alt="File" />
+                    <p>We help you compare file and texts, and generate differences in a visual text format which is easy to manage and understand. Comapring hundreds of files can be a tedious task, there are high chances you would miss out on something. Here we make that easy for you.</p>
+                </div>
+            </div>
+        </div>
+        </body>
+        </html>

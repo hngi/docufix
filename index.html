@@ -235,7 +235,7 @@
 	<script>
         const url = 'https://docufixmail.herokuapp.com/add-user';
         async function handleSubmit() {
-          const Email = document.querySelector('#email').value;
+          let Email = document.querySelector('#email').value;
           console.log({Email})
           axios.post(url, { Email })
           .then(function (response) {

@@ -172,14 +172,14 @@
 		    <div class="col">
 		    	<div align="center">
 		    		<h5>NEWSLETTER</h5>
-		    		<h3>SUBSCRIBE</h3>
+		    		<h3 id='Sub'>SUBSCRIBE</h3>
 		      <div>
 		      	<input type="email" id='email' name="Email" placeholder="email">
 		      	<br>
 		      	<input type="checkbox" name="">
 		      	<small>Send me Promotional Offers</small>
 		      	<br>
-		      	<input id='button' type="submit" name="" value="Sign Up">
+		      	<a href="#"><button id='button' type="submit">Sign Up</button></a>
 			  </div>
 		  	</div>
 		    </div>
@@ -233,6 +233,7 @@
       <script src="https://kit.fontawesome.com/7967e81f77.js" crossorigin="anonymous"></script>
 	</div>
 	<script>
+		
         const url = 'https://docufixmail.herokuapp.com/add-user';
         async function handleSubmit() {
           let Email = document.querySelector('#email').value;
@@ -244,9 +245,10 @@
           .catch(function (error) {
           console.log(error);
           });
-		  
         }
+
         document.querySelector('#button').addEventListener('click',handleSubmit);
+
     </script>
 </body>
 </html>

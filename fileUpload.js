@@ -210,7 +210,7 @@ function getCookie(name) {
           
               return xhr;
             },
-              url: "http://127.0.0.1:8000/upload/url/",
+              url: "https://docufix.pythonanywhere.com/upload/url/",
               type: "POST",
               data: formData,
               beforeSend: function(xhr, settings) {

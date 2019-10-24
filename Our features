@@ -1,101 +1,182 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
-        <style>
-            body {
-    padding: 0;
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-}
 
-* {
-    box-sizing: border-box;
-}
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
 
-.container {
-    width: 90%;
-    margin: auto;
-}
+    <!-- Bootstrap core CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
 
-.container h2 {
-    text-align: center;
-    font-size: 64px;
-}
+    <!-- custom css for newsletter-->
+    <link rel="stylesheet" href="http://newsleta.000webhostapp.com/newsletter.css" />
 
-.feature-container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
+    <!-- Google imported font for pacifico -->
 
-img {
-    width: 100%;
-}
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet" />
 
-.col {
-    background-color: #FDFBFF;
-    flex-grow: 1;
-    width: 25%;
-    margin: 15px 2%;
-    padding: 40px 40px 20px;
-    border-radius: 67px;
-    box-shadow: 0px 8px 4px rgba(0, 0, 0, 0.25);
-}
+    <!-- Font awesome icon -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
 
-.col h3 {
-    font-size: 20px;
-    font-weight: bold;
-}
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+        }
 
-img {
-    margin: 15px auto;
-}
+        * {
+            box-sizing: border-box;
+        }
 
-@media screen and (max-width: 850px) {
-     .col {
-        width: 45%;
-        margin-bottom: 30px;
-     }
-}
+        .container {
+            width: 90%;
+            margin: auto;
+        }
 
-@media (max-width: 500px) {
-    .col {
-        width: 100%;
-        margin-bottom: 10px;
-     }
-     
-     .container h2 {
-        font-size: 54px;
-    }
-}
+        .container h2 {
+            text-align: center;
+            font-size: 64px;
+        }
 
+        .feature-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
 
-        </style>
-    </head>
-    <body>
-        <div class="container">
-            <h2>Our Features</h2>
-            <div class="feature-container">
-                <div class="checker col">
-                    <h3>Plagiarism Checker</h3>
-                    <img src="https://res.cloudinary.com/theonlybakare/image/upload/v1571799407/features/checker_whwu3r.png" alt="Checker" />
-                    <p>Plagiarism checker detects plagiarism in your text and checks for other writing issues. Our plagiarism checker flags specfic sentences and provides reference information about the source, calculates and overall orginality score for your document. We have you covered.</p>
-                </div>
-                
-                <div class="word col">
-                    <h3>Aviod Word Duplicate</h3>
-                    <img src="https://res.cloudinary.com/theonlybakare/image/upload/v1571799407/features/word_fr2zwf.png" alt="Word Duplicate" />
-                    <p>One of the main problem in document is that most of the word that are duplicated also appear in the previous line, which makes it difficult to achieve your goal. If you'd want to remove all duplicated words, then it isn't that difficult by using our tool, all duplicated file will be reviewed.</p>
-                </div>
-                
-                <div class="file col">
-                    <h3>File Comaparison</h3>
-                    <img src="https://res.cloudinary.com/theonlybakare/image/upload/v1571799407/features/file_ue6olp.png" alt="File" />
-                    <p>We help you compare file and texts, and generate differences in a visual text format which is easy to manage and understand. Comapring hundreds of files can be a tedious task, there are high chances you would miss out on something. Here we make that easy for you.</p>
-                </div>
+        img {
+            width: 100%;
+        }
+
+        .col {
+            background-color: #FDFBFF;
+            flex-grow: 1;
+            width: 25%;
+            margin: 15px 2%;
+            padding: 40px 40px 20px;
+            border-radius: 67px;
+            box-shadow: 0px 8px 4px rgba(0, 0, 0, 0.25);
+        }
+
+        .col h3 {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        img {
+            margin: 15px auto;
+        }
+
+        @media screen and (max-width: 850px) {
+            .col {
+                width: 45%;
+                margin-bottom: 30px;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .col {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+
+            .container h2 {
+                font-size: 54px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Our Features</h2>
+        <div class="feature-container">
+            <div class="checker col">
+                <h3>Plagiarism Checker</h3>
+                <img src="https://res.cloudinary.com/theonlybakare/image/upload/v1571799407/features/checker_whwu3r.png"
+                    alt="Checker"/>
+                <p>Plagiarism checker detects plagiarism in your text and checks for other writing issues. Our
+                    plagiarism checker flags specfic sentences and provides reference information about the source,
+                    calculates and overall orginality score for your document. We have you covered.</p>
+            </div>
+
+            <div class="word col">
+                <h3>Aviod Word Duplicate</h3>
+                <img src="https://res.cloudinary.com/theonlybakare/image/upload/v1571799407/features/word_fr2zwf.png"
+                    alt="Word Duplicate" />
+                <p>One of the main problem in document is that most of the word that are duplicated also appear in the
+                    previous line, which makes it difficult to achieve your goal. If you'd want to remove all duplicated
+                    words, then it isn't that difficult by using our tool, all duplicated file will be reviewed.</p>
+            </div>
+
+            <div class="file col">
+                <h3>File Comaparison</h3>
+                <img src="https://res.cloudinary.com/theonlybakare/image/upload/v1571799407/features/file_ue6olp.png"
+                    alt="File" />
+                <p>We help you compare file and texts, and generate differences in a visual text format which is easy to
+                    manage and understand. Comapring hundreds of files can be a tedious task, there are high chances you
+                    would miss out on something. Here we make that easy for you.</p>
             </div>
         </div>
-        </body>
-        </html>
+    </div>
+
+     <!-- what people think goes into this div -->
+    <div class="container">
+     
+    </div>
+     <!-- start of newsletter section -->
+    <div class="container">
+        <div class="row newsletter-wrapper">
+             <!-- start of newsletter image -->
+            <div class="col-sm">
+                <div class="container">
+                    <div class="">
+                    <img class=" responsive" src="https://newsleta.000webhostapp.com/newsletter.png" alt="mailing-list">
+                </div>
+                </div>
+            </div>
+             <!-- start of newsletter signup -->
+            <div class="col-sm">
+                <div class="container" style="margin-top: 4rem; margin-bottom: -1rem;">
+                    <h5 class="text-center m-3" style="font: black; font-weight: bold;"> NEWSLETTER </h5>
+                </div>
+                <section class="text-center  mt-4">
+                    <div class="container p-1 ">
+                        <h1 style="color: floralwhite;">SUBSCRIBE</h1>
+                        <form class="form-group" action="newsletter_action.php" method="Post">
+                            <input class="form-control mt-3 text-center" type="email" name="email"
+                                placeholder="name@email.com" required />
+                            <div class="input-group-prepend mt-1 pt-3">
+                                <input type="checkbox" aria-label="Checkbox for following text input"
+                                    style="border:1px solid;">
+                                <p class="text-center"
+                                    style="padding-left: 1rem; margin-top: -0.5rem; font-family: 'Ubuntu', sans-serif;">
+                                    Send me
+                                    promotional offer</p>
+                            </div>
+                            <button type="button" class="btn btn-lg btn-primary mt-4 newsBtn" name="submit">SIGN
+                                UP</button>
+                        </form>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+     <!-- end of newsletter section -->
+
+    <!-- Bootstrap core JavaScript -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
+

@@ -173,14 +173,14 @@
 		    	<div align="center">
 		    		<h5>NEWSLETTER</h5>
 		    		<h3>SUBSCRIBE</h3>
-		      <form>
+		      <div>
 		      	<input type="email" id='email' name="Email" placeholder="email">
 		      	<br>
 		      	<input type="checkbox" name="">
 		      	<small>Send me Promotional Offers</small>
 		      	<br>
 		      	<input id='button' type="submit" name="" value="Sign Up">
-			  </form>
+			  </div>
 		  	</div>
 		    </div>
 		  </div>
@@ -234,8 +234,7 @@
 	</div>
 	<script>
         const url = 'https://docufixmail.herokuapp.com/add-user';
-        async function handleSubmit(e) {
-			e.preventDefault()
+        async function handleSubmit() {
           let Email = document.querySelector('#email').value;
           console.log({Email})
           axios.post(url, { Email })

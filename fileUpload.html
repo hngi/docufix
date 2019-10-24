@@ -249,6 +249,17 @@
   .space {
     padding: 4px 8px;
   }
+
+  .reset-btn1, .reset-btn2 {
+    font-size: 13.8px;
+    border: 0.5px solid rgb(255, 255, 255);
+    padding-top: 0.5px;
+    padding-bottom: 1px;  
+}
+  .reset-btn1:hover, .reset-btn2:hover {
+    background: rgb(150, 199, 231);
+}
+
 </style>
 
 <body style="background-color:  white; font-family: Ubuntu;"
@@ -440,10 +451,13 @@
             <div class="card-header text-light" style="background-color:rgba(51, 138, 196, 0.4);">
               <img class="white-txt"
                 src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571194266/samples/figma%20career-list/lario/ct8pi1qsjgonxsa7zdyn.png">Text
-            </div>
+                <button type="button"  class="btn btn-sm text-light reset-btn1" style="float:right; " >Clear</button>
+              </div>
             <div class="card-body" style="background-color:rgba(61, 155, 218, 0.4);">
-              <textarea placeholder="Write your text here" class="" id="textareaBefore" cols="" rows="10"
-                style="border: 0;"></textarea>
+              <form action=" " method="post" id="mytextBefore" >
+              <textarea placeholder="Write your text here" name="txtarea" class="" id="textareaBefore" cols="" rows="10"
+                style="border: 0;" required></textarea>
+              </form>
             </div>
           </div>
         </div>
@@ -456,11 +470,14 @@
             <div class="card-header text-light" style="background-color:rgba(51, 138, 196, 0.4);">
               <img class="white-txt"
                 src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571194266/samples/figma%20career-list/lario/ct8pi1qsjgonxsa7zdyn.png">
-              Text
+              Text 
+              <button type="button" class="btn btn-sm text-light reset-btn2" style="float:right;">Clear</button>
             </div>
             <div class="card-body" style="background-color:rgba(61, 155, 218, 0.4);">
-              <textarea placeholder="Write your text here" class="input-txt" id="textareaAfter" cols="" rows="10"
-                style="border: 0;"></textarea>
+              <form  action=" " method="post" id="mytextAfter" >
+              <textarea placeholder="Write your text here" name="txtarea" class="input-txt" id="textareaAfter" cols="" rows="10"
+                style="border: 0;" required></textarea>
+              </form>
             </div>
           </div>
         </div>
@@ -727,6 +744,22 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.debug.js"></script>
   <script src="jsPDF.js"></script>
   <script type="text/javascript">
+
+
+ //clear TextArea
+
+ $(document).ready(function(){
+                    $(".reset-btn1").click(function(){
+                        $("#mytextBefore").trigger("reset");
+                    });
+                });
+            
+            $(document).ready(function(){
+                    $(".reset-btn2").click(function(){
+                        $("#mytextAfter").trigger("reset");
+                    });
+                }); 
+
 
     // events
 

@@ -8,8 +8,8 @@
         <meta name="googlebot" content="index, follow" />
         <meta name="google" content="translate" />
         <meta name="theme-color" content="#333" />
-        <link rel="manifest" href="manifest.json" />
-		
+		<link rel="manifest" href="manifest.json" />
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 		<link rel="icon" type="image/png" href="https://res.cloudinary.com/thecavemann/image/upload/v1571839870/logo_g4kuoa.png"/>
         
         <link rel="stylesheet" type="text/css" href="https://dl.dropbox.com/s/v5nuo2k9pvuoogf/rose.css">
@@ -173,14 +173,14 @@
 		    	<div align="center">
 		    		<h5>NEWSLETTER</h5>
 		    		<h3>SUBSCRIBE</h3>
-		      <form>
-		      	<input type="email" name="email" placeholder="name@email.com">
+		      <div>
+		      	<input type="email" id='email' name="Email" placeholder="email">
 		      	<br>
 		      	<input type="checkbox" name="">
 		      	<small>Send me Promotional Offers</small>
 		      	<br>
-		      	<input type="submit" name="" value="Sign Up">
-		      </form>
+		      	<input id='button' type="submit" name="" value="Sign Up">
+			  </div>
 		  	</div>
 		    </div>
 		  </div>
@@ -232,6 +232,20 @@
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
       <script src="https://kit.fontawesome.com/7967e81f77.js" crossorigin="anonymous"></script>
 	</div>
-
+	<script>
+        const url = 'https://docufixmail.herokuapp.com/add-user';
+        async function handleSubmit() {
+          const Email = document.querySelector('#email').value;
+          console.log({Email})
+          axios.post(url, { Email })
+          .then(function (response) {
+          console.log(response);
+          })
+          .catch(function (error) {
+          console.log(error);
+          });
+        }
+        document.querySelector('#button').addEventListener('click',handleSubmit);
+    </script>
 </body>
 </html>

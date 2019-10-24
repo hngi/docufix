@@ -234,7 +234,8 @@
 	</div>
 	<script>
         const url = 'https://docufixmail.herokuapp.com/add-user';
-        async function handleSubmit() {
+        async function handleSubmit(e) {
+			e.preventDefault()
           let Email = document.querySelector('#email').value;
           console.log({Email})
           axios.post(url, { Email })
@@ -244,9 +245,7 @@
           .catch(function (error) {
           console.log(error);
           });
-		  el=document.querySelector('#email')
-		  el.reset();
-		  console.log(el);
+		  
         }
         document.querySelector('#button').addEventListener('click',handleSubmit);
     </script>

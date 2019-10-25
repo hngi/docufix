@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="https://res.cloudinary.com/thecavemann/image/upload/v1571839870/logo_g4kuoa.png"/>
+    <title>DOCUFIX</title>
+    <style>
+   
+   * {
+       box-sizing: border-box;
+   }
+   
+   body {
+       padding: 0;
+       margin: 0;
+   }
+   
+   footer{
+       font-family: 'Ubuntu';
+       background-color: #003152;
+       font-style: normal;
+       padding-top: 25px;
+       
+       color: white;
+   }
+   hr {
+    color: white;
+    text-decoration: none;
+   }
+   h1 {
+    font-weight: bold;
+   }
+   .socials{
+    list-style: none;
+    display: inline-flex;
+    padding-left: 700px;
+   }
+   
+   .fa {
+    font-size: 30px;
+    margin: 15px;
+    color: white;
+   }
+   
+   .foot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 80px;
+   }
+   
+   .title {
+    font-size: 28px;
+    color: white;
+   }
+   
+   .copy {
+    color: white;
+    font-size: 18px;
+    color: red;
+   }
+   .link {
+    list-style: none;
+    float: right;
+    padding-left: 800px;
+   }
+   .link a {
+    padding-top: 25px;
+   }
+   a {
+    color: white;
+    text-decoration: none;
+    float: right;
+   }
+   .foot1 {
+    display: inline-flex;
+    font-size: 20px;
+   }
+  
+   
+.header {
+  overflow: hidden;
+  background: #141460;
+  padding: 20px;
+}
+
+.header a{
+  float: left;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  border-radius: 4px;
+  color: #FFFFFF;;
+  font-family: Poppins;
+  font-style: normal;
+  font-size: 22px;
+  line-height: 33px;
+  cursor: pointer;
+  width: 156px;
+
+
+}
+
+
+.header a.logo {
+  font-family: Plaster;
+  font-style: normal;
+  font-weight: normal;
+
+}
+
+.header a:hover {
+  background-color: #4747AD;
+  color: white;
+}
+
+.header-right {
+  float: right;
+
+}
+
+/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .header-right {
+    float: none;
+  }
+}
+ @media screen and (max-width: 500px) {
+       .link1 {
+         flex-direction: column;
+          display: block;
+           float: none;
+           width: 100%;
+           text-align: center;
+       }
+     .socials, .foot, .link {
+        padding-left: 0px;
+         padding-top: 0px;
+         text-align: center;
+       }
+     .link {
+         flex-direction: column;
+           padding-left: 120px;
+         float: left;
+         text-align: center;
+     }
+     .foot1 { 
+        flex-direction: column;
+         text-align: center;
+         float: none;
+         display: block;
+         width: 100%;
+     }
+   }
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn1:hover {
+  background-color: #4747AD;
+}
+.dropbtn, .dropbtn1 {
+  background: #141460;
+  border: none;
+  color: white;
+  font-size: 22px;
+  font-family: Poppins;
+  font-style: normal;
+  line-height: 33px;
+  cursor: pointer;
+  border-radius: 4px;
+  text-decoration: none;
+  margin-left: 10px;
+  width: 156px;
+  padding: 4px;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown, .dropdown1{
+  
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content, .dropdown-content1 {
+  z-index: 1px;
+  position: absolute;
+  display: none;
+  background-color: #141460;
+  
+}
+
+/* Links inside the dropdown */
+.dropdown-content a, .dropdown-content1 a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  float: none;
+}
+.fa-caret-down {
+  font-size: 20px;
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;} 
+    </style>
+</head>
+<body>
+  <div class="header">
+    <img src="https://res.cloudinary.com/sape123/image/upload/c_scale,w_178/v1571775208/Group_248logo_omlzj8.png"></a>
+    <div class="header-right">
+      <a class="active" href="#home">About Us</a>
+      <a href="#contact">Team</a>
+      <div class="dropdown">
+          <button onclick="myFunction()" class="dropbtn">Tools<i class="fa fa-caret-down"></i></button>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="#">Compare files</a>
+            <a href="#">Check for duplicates</a> 
+          </div>
+      </div> 
+      <div class="dropdown1">
+          <button onclick="myFunction1()" class="dropbtn1">Support<i class="fa fa-caret-down"></i></button>
+          <div id="myDropdown1" class="dropdown-content1">
+            <a href="#">FAQ</a>
+            <a href="#">Feedback</a>
+            <a href="#">User Guide</a>
+          </div>
+      </div>
+      <a href="donation.html">Donate</a>
+    </div>
+
+</div> 
+    <footer>
+      <div class="foot">
+        <div class="foot1">
+            <div>
+              <h1 class="title">DOCUFIX</h1>
+              <p>we help you arrange sort and <br>put your files and data in order<br>for easy management</p><br>
+              <p class="copy">proudly built by HNGi6 interns</p>
+            </div>
+          <div>
+            <ul class="link">
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Our Team</a></li>
+              <li><a href="#">Feed back</a></li>
+              <li><a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <hr> 
+      <div style="display: inline-flex;" class="foot">
+        <p style="font-size: 25px;">©2019 Copyright: Docufix</p>
+            <div class="link1">
+                <ul class="socials">
+                    <li><a href="https://www.facebook.com"><i class="fa fa-facebook-square"></i></a></li>
+                    <li><a href="https://www.twitter.com"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="https://www.google.com"><i class="fa fa-google-plus"></i></a></li>
+                    <li><a href="https://www.linkedin.com"><i class="fa fa-linkedin-square"></i></a></li>
+                </ul>
+            </div>
+          </div>
+         
+    </footer>
+    <script type="text/javascript">
+      /* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+    </script>
+  <script type="text/javascript">
+    // second dropdown 
+function myFunction1() {
+  document.getElementById("myDropdown1").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn1')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content1");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+  </script>
+</body>
+</html>

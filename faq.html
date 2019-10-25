@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link rel="icon" type="image/png" href="https://res.cloudinary.com/thecavemann/image/upload/v1571839870/logo_g4kuoa.png"/>
+
+		<!-- <link rel="stylesheet" type="text/css" href="https://dl.dropbox.com/s/v5nuo2k9pvuoogf/rose.css"> -->
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+			integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+			crossorigin="anonymous"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css?family=Roboto:400,900&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="/nav-footer.css">
+		<title>Docufix</title>
+		<meta name="description" content="Docufix HNG Intership Project" />
+		<style>
+			body {
+				font-family: "Roboto", sans-serif;
+			}
+			h1 {
+				font-weight: 900;
+				font-size: 50px;
+			}
+			.empty-bg {
+				background-image: url("https://res.cloudinary.com/ajiva/image/upload/v1571782949/docufix/docufix-faq.jpg");
+				background-size: 100% 100%;
+				background-repeat: no-repeat;
+				height: 60vh;
+			}
+			.blue-line {
+				background-color: #3d9bda;
+				height: 10px;
+			}
+			.card,
+			.card-header {
+				background-color: #ffffff;
+				border-left: none;
+				border-right: none;
+			}
+			button,
+			.btn:focus {
+				outline: none !important;
+				box-shadow: none;
+			}
+			.faq-sec:focus {
+				border-left: 4px solid #141460 !important;
+				outline: none;
+			}
+			.faq-sec:focus i {
+				color: #141460;
+			}
+			.card-header i {
+				font-size: 20px;
+			}
+			.fa-smile,
+			.fa-frown {
+				color: #ffc10e;
+				font-size: 40px;
+			}
+			.social-icons{
+				width:50px;
+				height:50px;
+				border-radius: 50%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				font-size:30px;
+			}
+			.facebook{
+				background-color: #4b69b0;
+				color:#ffffff;
+			}
+			.youtube{
+				background-color:#e83f3a ;
+				color:#ffffff;
+			}
+			.linkedin{
+				background-color: #0678b6;
+				color:#ffffff;
+			}
+			.twitter{
+				background-color: #37b1e1;
+				color:#ffffff;
+			}
+
+			#end {
+				margin-bottom: 1.5rem;
+			}
+		</style>
+		<script type="text/javascript" src ="//widget.instabot.io/jsapi/rokoInstabot.js" crossorigin>
+		apiKey: "vXj90M2ifAvu8fS739jFKepTXtES72ur59sGR5TPK9c="
+		</script>
+	</head>
+	<body>
+			<nav class="navbar navbar-expand-lg navbar-light bg-light" id="nav">
+					<a class="navbar-brand" href="index.html" id="logo">
+						<svg width="321" height="100" viewBox="0 0 321 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M37.5171 38.9927C37.5171 45.4559 35.673 50.4062 31.9849 53.8438C28.3146 57.2812 23.0062 59 16.0596 59H4.94141V19.7373H17.2681C23.6776 19.7373 28.6548 21.4292 32.1997 24.813C35.7446 28.1968 37.5171 32.9233 37.5171 38.9927ZM28.8696 39.2075C28.8696 30.7749 25.1457 26.5586 17.6978 26.5586H13.2666V52.125H16.8384C24.8592 52.125 28.8696 47.8192 28.8696 39.2075ZM86.7915 39.3149C86.7915 45.814 85.1802 50.8091 81.9575 54.3003C78.7349 57.7915 74.1157 59.5371 68.1001 59.5371C62.0845 59.5371 57.4653 57.7915 54.2427 54.3003C51.02 50.8091 49.4087 45.7961 49.4087 39.2612C49.4087 32.7264 51.02 27.7402 54.2427 24.3027C57.4832 20.8473 62.1203 19.1196 68.1538 19.1196C74.1873 19.1196 78.7975 20.8563 81.9844 24.3296C85.1891 27.8029 86.7915 32.798 86.7915 39.3149ZM58.1367 39.3149C58.1367 43.7013 58.9692 47.0046 60.6343 49.2246C62.2993 51.4447 64.7879 52.5547 68.1001 52.5547C74.7424 52.5547 78.0635 48.1414 78.0635 39.3149C78.0635 30.4705 74.7603 26.0483 68.1538 26.0483C64.8416 26.0483 62.3441 27.1673 60.6611 29.4053C58.9782 31.6253 58.1367 34.9285 58.1367 39.3149ZM117.106 26.1021C113.973 26.1021 111.547 27.2837 109.828 29.647C108.109 31.9924 107.25 35.2687 107.25 39.4761C107.25 48.231 110.535 52.6084 117.106 52.6084C119.863 52.6084 123.202 51.9191 127.123 50.5405V57.5229C123.9 58.8657 120.302 59.5371 116.327 59.5371C110.616 59.5371 106.247 57.8094 103.222 54.354C100.196 50.8807 98.6831 45.9035 98.6831 39.4224C98.6831 35.3403 99.4261 31.7686 100.912 28.707C102.398 25.6276 104.529 23.2733 107.304 21.644C110.097 19.9969 113.364 19.1733 117.106 19.1733C120.919 19.1733 124.751 20.0954 128.6 21.9395L125.915 28.707C124.446 28.0088 122.969 27.4001 121.483 26.8809C119.997 26.3617 118.538 26.1021 117.106 26.1021ZM172.96 19.7373V45.1426C172.96 48.043 172.306 50.5853 171 52.7695C169.71 54.9538 167.84 56.6278 165.387 57.7915C162.934 58.9552 160.034 59.5371 156.686 59.5371C151.637 59.5371 147.716 58.248 144.923 55.6699C142.13 53.0739 140.733 49.529 140.733 45.0352V19.7373H149.032V43.7729C149.032 46.7987 149.64 49.0187 150.858 50.4331C152.075 51.8475 154.09 52.5547 156.9 52.5547C159.622 52.5547 161.591 51.8475 162.809 50.4331C164.044 49.0008 164.662 46.7629 164.662 43.7192V19.7373H172.96ZM196.265 59H188.074V19.7373H210.579V26.5586H196.265V36.6831H209.585V43.4775H196.265V59ZM223.76 59V19.7373H232.085V59H223.76Z" fill="white"/>
+							<path d="M267.093 12.1182L268.688 10.689C269.728 9.75781 269.508 8.2006 268.254 7.5265L256.171 1.02961C252.999 -0.672068 248.963 -0.227882 246.357 2.11339C243.744 4.45278 243.248 8.06934 245.147 10.908L252.397 21.734C253.151 22.8589 254.897 23.0539 255.927 22.1229L257.524 20.6937L269.729 31.6137L279.288 23.0471L267.093 12.1182Z" fill="white"/>
+							<path d="M319.462 8.04977C318.8 6.80386 316.94 6.49363 315.832 7.49103L309.996 12.7205C309.141 13.4865 307.661 13.4865 306.806 12.7205C305.927 11.9328 305.927 10.6497 306.806 9.86195L312.642 4.63253C313.74 3.64888 313.424 1.97968 312.018 1.37916C305.989 -1.20294 298.767 -0.0915298 294.044 4.14481C289.706 8.02982 288.305 13.8041 290.332 18.9032L265.094 41.5186C259.408 39.7023 252.962 40.9579 248.624 44.845C243.899 49.0794 242.658 55.5525 245.538 60.9517C246.209 62.2146 248.073 62.4914 249.168 61.5104L255.004 56.281C255.885 55.4953 257.317 55.4933 258.194 56.283C259.073 57.0664 259.079 58.3421 258.194 59.1395L252.358 64.3689C251.26 65.3526 251.576 67.0218 252.982 67.6223C255.147 68.5499 257.467 69 259.771 69C263.877 69 267.929 67.5688 270.953 64.8564C275.293 60.9714 276.692 55.1971 274.665 50.098L299.904 27.4829C305.588 29.2971 312.036 28.0435 316.376 24.1565C321.101 19.922 322.342 13.449 319.462 8.04977Z" fill="white"/>
+							<path d="M317.67 51.9063C310.012 45.0694 305.814 42.3531 296.837 36.0972L284.079 47.5306C290.389 54.7891 294.21 59.4707 301.376 65.8947C303.72 67.9951 306.835 68.975 309.9 68.975C312.149 68.975 314.37 68.4965 316.236 67.2944C318.956 65.5374 320.67 62.8309 320.937 59.8718C321.203 56.9087 320.014 54.0066 317.67 51.9063ZM311.172 60.2011C310.274 60.9343 308.875 60.8639 308.016 60.0941L299.082 52.0884C298.223 51.3186 298.144 50.0646 298.962 49.2598C299.836 48.4008 301.32 48.3775 302.227 49.1897L311.25 57.2756C312.157 58.0881 312.131 59.4185 311.172 60.2011Z" fill="white"/>
+						</svg>
+					</a>
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" id="btn">
+						<span><i class="fa fa-bars" aria-hidden="true" id="toggle"></i></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarNavDropdown">
+						<ul class="navbar-nav">
+							<li class="nav-item active">
+								<a class="nav-link" href="about_us.html">About Us<span class="sr-only">(current)</span></a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="teampage.html">Team</a>
+							</li>
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									Tools
+								</a>
+								<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+									<a class="dropdown-item" href="fileUpload.html">Compare files</a>
+									<a class="dropdown-item" href="fileDelimiter.html">Check for duplicates</a>
+								</div>
+							</li>
+							<li class="nav-item dropdown">
+									<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+										Support
+									</a>
+									<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+										<a class="dropdown-item" href="faq.html">FAQ</a>
+										<a class="dropdown-item" href="use.html">Why use Docufix</a>
+										<a class="dropdown-item" href="feedback.html">Feedback</a>
+										<a class="dropdown-item" href="privacy.html">Privacy policy</a>
+										<a class="dropdown-item" href="t&c.html">Terms and conditions</a>
+									</div>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="donation.html" target="_blank">Donate</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="Blog/blog-index.html" target="_blank">Blog</a>
+								</li>
+						</ul>
+					</div>
+				</nav>
+		<main>
+			<section class="empty-bg"></section>
+			<div class="blue-line"></div>
+			<h1 class="my-3 ml-5">Frequently Asked Question</h1>
+			<section>
+				<div class="container">
+					<div class="accordion" id="accordionExample">
+						<div
+							class="card"
+							data-toggle="collapse"
+							data-target="#collapseOne"
+							aria-expanded="true"
+							aria-controls="collapseOne"
+						>
+							<div class="card-header faq-sec" id="headingOne" tabindex="1">
+								<h2 class="mb-0">
+									<button class="btn" type="button">
+										<i class="fas fa-caret-right"></i> Question 1
+									</button>
+								</h2>
+							</div>
+
+							<div
+								id="collapseOne"
+								class="collapse"
+								aria-labelledby="headingOne"
+								data-parent="#accordionExample"
+							>
+								<div class="card-body">
+									Anim pariatur cliche reprehenderit, enim eiusmod high life
+									accusamus terry richardson ad squid. 3 wolf moon officia aute,
+									non cupidatat skateboard dolor brunch. Food truck quinoa
+									nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua
+									put a bird on it squid single-origin coffee nulla assumenda
+									shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore
+									wes anderson cred nesciunt sapiente ea proident. Ad vegan
+									excepteur butcher vice lomo. Leggings occaecat craft beer
+									farm-to-table, raw denim aesthetic synth nesciunt you probably
+									haven't heard of them accusamus labore sustainable VHS.
+								</div>
+							</div>
+						</div>
+						<div
+						class="card"
+						data-toggle="collapse"
+						data-target="#collapseTwo"
+						aria-expanded="true"
+						aria-controls="collapseTwo"
+					>
+						<div class="card-header faq-sec" id="headingTwo" tabindex="1">
+							<h2 class="mb-0">
+								<button class="btn" type="button">
+									<i class="fas fa-caret-right"></i> Question 2
+								</button>
+							</h2>
+						</div>
+
+						<div
+							id="collapseTwo"
+							class="collapse"
+							aria-labelledby="headingTwo"
+							data-parent="#accordionExample"
+						>
+							<div class="card-body">
+								Anim pariatur cliche reprehenderit, enim eiusmod high life
+								accusamus terry richardson ad squid. 3 wolf moon officia aute,
+								non cupidatat skateboard dolor brunch. Food truck quinoa
+								nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua
+								put a bird on it squid single-origin coffee nulla assumenda
+								shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore
+								wes anderson cred nesciunt sapiente ea proident. Ad vegan
+								excepteur butcher vice lomo. Leggings occaecat craft beer
+								farm-to-table, raw denim aesthetic synth nesciunt you probably
+								haven't heard of them accusamus labore sustainable VHS.
+							</div>
+						</div>
+					</div>
+						<div
+							class="card"
+							data-toggle="collapse"
+							data-target="#collapseThree"
+							aria-expanded="false"
+							aria-controls="collapseThree"
+						>
+							<div class="card-header faq-sec" id="headingThree" tabindex="1">
+								<h2 class="mb-0">
+									<button class="btn collapsed" type="button">
+										<i class="fas fa-caret-right"></i> Question 3
+									</button>
+								</h2>
+							</div>
+							<div
+								id="collapseThree"
+								class="collapse"
+								aria-labelledby="headingThree"
+								data-parent="#accordionExample"
+							>
+								<div class="card-body">
+									Anim pariatur cliche reprehenderit, enim eiusmod high life
+									accusamus terry richardson ad squid. 3 wolf moon officia aute,
+									non cupidatat skateboard dolor brunch. Food truck quinoa
+									nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua
+									put a bird on it squid single-origin coffee nulla assumenda
+									shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore
+									wes anderson cred nesciunt sapiente ea proident. Ad vegan
+									excepteur butcher vice lomo. Leggings occaecat craft beer
+									farm-to-table, raw denim aesthetic synth nesciunt you probably
+									haven't heard of them accusamus labore sustainable VHS.
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section>
+				<div class="container mt-5" id="end">
+					<div class="row">
+						<div class="col-sm-12 col-md-6">
+							<p>Was this page helpful?</p>
+							<div class="d-flex">
+								<div class="d-flex align-items-center"
+									><i class="fas fa-smile"></i> <p class="my-0 ml-3">Yes</p></div
+								>
+								<div class="d-flex align-items-center ml-5"
+									><i class="fas fa-frown"></i> <p class="my-0 ml-3">No</p></div
+								>
+							</div>
+						</div>
+						<div class="col-sm-12 col-md-6">
+							<p class="text-center">Share this page</p>
+						<div class="container">
+								<div class="d-flex justify-content-around">
+										<a href=""><span class="social-icons facebook"><i class="fab fa-facebook-f"></i></span></a>
+										<a href=""><span class="social-icons youtube"><i class="fab fa-youtube"></i></span>
+										</a>
+										<a href=""><span class="social-icons linkedin"><i class="fab fa-linkedin-in"></i></span></a>
+										<a href=""><span class="social-icons twitter"><i class="fab fa-twitter"></i></span></a>
+								</div>
+						</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer>
+				<div class="section-one">
+					<section>
+						<h4>DOCUFIX</h4>
+						<p>We help you arrange, sort, compare and extract information from different file formats</p>
+			
+						<p class="text-two">This app was built by <a href="https://hng.tech/" target="_blank">HNGi6</a> interns</p>
+					</section>
+					<section>
+						<ul>
+							<li><a href="about_us.html">About us</a></li>
+							<li><a href="teampage.html">Our Team</a></li>
+							<li><a href="feedback.html">Feedback</a></li>
+							<li><a href="privacy.html">Privacy policy</a></li>
+						</ul>
+					</section>
+				</div>
+				<div class="footer-line"></div>
+				<div class="section-two">
+					<section class="icons">
+						<a href="#">
+							<i class="fab fa-facebook-f" aria-hidden="true"></i>
+						</a>
+						<a href="#">
+							<i class="fab fa-twitter" aria-hidden="true"></i>
+						</a>
+						<a href="#">
+							<i class="fab fa-google-plus-g" aria-hidden="true"></i>
+						</a>
+						<a href="#">
+							<i class="fab fa-linkedin" aria-hidden="true"></i>
+						</a>
+					</section>
+					<section class="copy">
+							&copy; 2019 Copyright: Docufix
+					</section>
+				</div>
+			</footer>
+		<script
+			src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+			integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+			integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+			integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+			crossorigin="anonymous"
+		></script>
+		<script src="https://kit.fontawesome.com/7967e81f77.js" crossorigin="anonymous"></script>
+	</body>
+</html>

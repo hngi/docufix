@@ -3,42 +3,42 @@
     "short_name": "Docufix",
     "icons": [
       {
-        "src": "https://res.cloudinary.com/thecavemann/image/upload/v1571839870/logo_g4kuoa.png",
+        "src": "https://res.cloudinary.com/olaleye247/image/upload/v1572011533/72logo_bjb7ry.png",
         "sizes": "72x72",
         "type": "image/png"
       },
       {
-        "src": "https://res.cloudinary.com/thecavemann/image/upload/v1571839870/logo_g4kuoa.png",
+        "src": "https://res.cloudinary.com/olaleye247/image/upload/v1572011905/96logo_xdebhi.png",
         "sizes": "96x96",
         "type": "image/png"
       },
       {
-        "src": "https://res.cloudinary.com/thecavemann/image/upload/v1571839870/logo_g4kuoa.png",
+        "src": "https://res.cloudinary.com/olaleye247/image/upload/v1572011532/128logo_j4qwpa.png",
         "sizes": "128x128",
         "type": "image/png"
       },
       {
-        "src": "https://res.cloudinary.com/thecavemann/image/upload/v1571839870/logo_g4kuoa.png",
+        "src": "https://res.cloudinary.com/olaleye247/image/upload/v1572011898/144logo_l6zdoh.png",
         "sizes": "144x144",
         "type": "image/png"
       },
       {
-        "src": "https://res.cloudinary.com/thecavemann/image/upload/v1571839870/logo_g4kuoa.png",
+        "src": "https://res.cloudinary.com/olaleye247/image/upload/v1572011532/152logo_wk5oxo.png",
         "sizes": "152x152",
         "type": "image/png"
       },
       {
-        "src": "https://res.cloudinary.com/thecavemann/image/upload/v1571839870/logo_g4kuoa.png",
+        "src": "https://res.cloudinary.com/olaleye247/image/upload/v1572011532/192logo_cqeag5.png",
         "sizes": "192x192",
         "type": "image/png"
       },
       {
-        "src": "https://res.cloudinary.com/thecavemann/image/upload/v1571839870/logo_g4kuoa.png",
+        "src": "https://res.cloudinary.com/olaleye247/image/upload/v1572011532/384logo_tswx6a.png",
         "sizes": "384x384",
         "type": "image/png"
       },
       {
-        "src": "https://res.cloudinary.com/thecavemann/image/upload/v1571839870/logo_g4kuoa.png",
+        "src": "https://res.cloudinary.com/olaleye247/image/upload/v1572011532/logo_uhfzyi.png",
         "sizes": "512x512",
         "type": "image/png"
       }

@@ -30,14 +30,182 @@
   		<link 
   			rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"
   		/>
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
         <title>Docufix | Compare Files</title>
         <meta name="description" content="Docufix HNG Intership Project" />
         <script type="text/javascript" src ="//widget.instabot.io/jsapi/rokoInstabot.js" crossorigin>
 		apiKey: "vXj90M2ifAvu8fS739jFKepTXtES72ur59sGR5TPK9c="
 		</script>
+		<style>
+                        
+            * {
+                box-sizing: border-box;
+            }
+            
+            body {
+                margin: 0;
+                padding: 0;
+            }
+            
+            .image {
+                width: 100%;
+            }
+            
+            .header-img {
+                width: 100%;
+            }
+            
+            .header-text {
+                font-size: 60px;
+                line-height: 75px !important;
+                margin: 30px 0px 25px 48px;
+                font-family: 'Roboto', sans-serif;
+            }
+            
+            .collapsible {
+                background-color: transparent;
+                color: black;
+                cursor: pointer;
+                padding: 25px;
+                width: 100%;
+                border-top: 1px solid blue;
+                border-left: none;
+                border-right: none;
+                border-bottom: none;
+                text-align: left;
+                outline: none !important;
+                font-size: 25px;
+                line-height: 40px;
+                font-family: 'Roboto', sans-serif;
+            }
+            
+            .last {
+                border-bottom: 1px solid blue;
+            }
+            
+            .active, .collapsible:hover {
+                border-left: 8px solid #141460;
+            }
+            
+            .content {
+              padding: 0 18px;
+              display: none;
+              overflow: hidden;
+              background-color: transparent;
+            }
+            
+            .question-container {
+                width: 70%;
+                margin: 20px auto;
+            }
+            
+            .network {
+                width: 70%;
+                margin: 50px auto 60px;
+                display: flex;
+                justify-content: space-between;
+            }
+            
+            .emoji {
+                width: 25%;
+                text-align: center;
+            }
+            
+            .socials {
+                width: 50%;
+                border-left: 1px solid blue;
+                padding-left: 70px;
+                text-align: center;
+            }
+            
+            .emoji-img {
+                display: flex;
+                justify-content: space-between;
+            }
+            
+            .emo {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            
+            .emo h4 {
+                margin-left: 5px;
+            }
+            
+            .emojis {
+                width: 84px;
+                height: 84px;
+            }
+            
+            .soc {
+                width: 50px;
+                height: 50px;
+                border-radius: 100%;
+                margin-right: 30px;
+            }
+            
+            .emojis,
+            .soc {
+                cursor: pointer;
+            }
+            
+            @media (max-width: 1152px) {
+                    .emo h4 {
+                        margin-left: 3px;
+                    }
+                    
+                    .soc {
+                        margin-right: 5px;
+                    }
+            }
+            
+            @media (max-width: 923px) {
+                    .socials {
+                        padding-left: 30px;
+                    }
+            }
+            
+            @media (max-width: 752px) {
+                    .network {
+                        flex-direction: column;
+                    }
+                    
+                    .socials {
+                        border: none;
+                        width: 100%;
+                    }
+                    
+                    .soc {
+                        margin-right: 30px;
+                    }
+                    
+                    .emoji {
+                        width: 50%;
+                        margin: 0px auto 10px;
+                    }
+                    
+                    .question-container {
+                        width: 85%;
+                    }
+                    
+                    .header-text {
+                        font-size: 40px;
+                        line-height: 60px;
+                    }
+            }
+            
+            @media (max-width: 518px) {
+                    
+                    .soc {
+                        margin-right: 20px;
+                    }
+            }
+        </style>
     </head>
 <body>
-	<header>
+    <header>
 		<div>
 			<nav class="navbar navbar-expand-lg navbar-light bg-light" id="nav">
 		    <a class="navbar-brand" href="index.html" id="logo">
@@ -90,81 +258,69 @@
 		  </nav>
 		</div>
 	</header>
-	<div style="background: linear-gradient(230.94deg, #D7B1F6 -15.75%, #404CB7 87.3%); padding-bottom: 40px;">
-		<div class="container">
-		  <div class="row">
-		    <div class="col content1" >
-		      <h2>Document Comparison <br>Solution</h2>
-		      <img src="https://res.cloudinary.com/ros4eva/image/upload/v1571850647/Group35_oixima.png" class="img-fluid img4mobile">
-		      <span >Compare documents content and find out the differences in each content of the files without much stress</span>
-		    </div>
-		    <div class="col content-img">
-		      <img src="https://res.cloudinary.com/ros4eva/image/upload/v1571850647/Group35_oixima.png" class="img-fluid">
-		    </div>
-		</div>
-	    <div class="row">
-		    <div class="col navigation-links" align="center" >
-		      <a href="fileUpload.html">Compare Files</a><a href="fileDelimiter.html">Check For Duplicates</a>
-		    </div>
-		  </div>
-		 </div>
-	</div>
-
-	<div class="container content2" align="center">
-		<h2>Our Features</h2>
-		<div class="container features-cont">
-		  <div class="row">
-		    <div class="col">
-		      <div class="container border">
-		      	<h4>Plagiarism Checker</h4>
-		      	<img src="https://res.cloudinary.com/ros4eva/image/upload/v1571850647/feature1_vjffqi.png" width="165" height="165">
-		      	<p>Plagiarism checker detects plagiarism in your text and checks for other writing issues. Our plagiarism checker flags specific sentences and provides reference information about the source, calculates an overall originality score for your document. So you don’t need to worry we have you covered.</p>
-		      </div>
-		    </div>
-		    <div class="col">
-		      <div class="container border">
-		      	<h4>Avoid Word Duplicates</h4>
-		      	<img src="https://res.cloudinary.com/ros4eva/image/upload/v1571850646/feature2_d0tfpm.png" width="165" height="165">
-		      	<p>One of the main problem in document is that most of the words that are duplicated also appear in the previous line, which makes it difficult to achieve your goal. If you'd want to remove all duplicated words, then it wasn't that difficult by using our tool, all duplicated file will be reviewed.</p>
-		      </div>
-		      
-		    </div>
-		    <div class="col">
-		      <div class="container border">
-		      	<h4>File Comparison</h4>
-		      	<img src="https://res.cloudinary.com/ros4eva/image/upload/v1571850646/feature3_ozmb0n.png" width="165" height="165">
-		      	<p>We help you compare files and texts, and generate differences in a visual text format which is easy to manage and understand. Comparing hundreds of files can be a tedious task, there are high chances that you would miss out on something. Here we make that easy for you.</p>
-		      </div>
-		    </div>
-		  </div>
-		</div>
-	</div>
 	
-	<div class="container content4">
-		<div class="container newsletter">
-		  <div class="row">
-		    <div class="col img2" align="center">
-		      <img src="https://res.cloudinary.com/ros4eva/image/upload/v1572022559/imageedit_19_6799104496_nxtyvo.png" >
-		    </div>
-		    <div class="col">
-		    	<div align="center">
-		    		<h5>NEWSLETTER</h5>
-		    		<h3 id='Sub'>SUBSCRIBE</h3>
-		      <div align="center">
-		      	<input type="email" id='email' name="Email" placeholder="johndoe@email.com">
-		      	<br>
-		      	<br>
-		      	<input type="checkbox" name="">
-		      	<small>Send me Promotional Offers</small>
-		      	<br>
-		      	<input id='button' type="submit">
-			  </div>
-		  	</div>
-		    </div>
-		  </div>
-		</div>
-	</div>
-
+	<div class="image">
+            <img src="https://res.cloudinary.com/theonlybakare/image/upload/v1572007196/FAQ/image_cidmos.png" class="header-img" alt="img" />
+        </div>
+        <h3 class="header-text">Frequently Asked Question</h3>
+        <div class="question-container">
+            <button type="button" class="collapsible">Question 1</button>
+            <div class="content">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+            <button type="button" class="collapsible">Question 1</button>
+            <div class="content">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+            <button type="button" class="collapsible">Question 1</button>
+            <div class="content">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+            <button type="button" class="collapsible">Question 1</button>
+            <div class="content">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+            <button type="button" class="collapsible">Question 1</button>
+            <div class="content">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+            <button type="button" class="collapsible">Question 1</button>
+            <div class="content">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+            <button type="button" class="collapsible">Question 1</button>
+            <div class="content">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+            <button type="button" class="collapsible last">Question 1</button>
+            <div class="content">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+        </div>
+        
+        <div class="network">
+            <div class="emoji">
+                <h4>Was this page Helpful?</h4>
+                <div class="emoji-img">
+                    <div class="emo">
+                        <img class="emojis" src="https://res.cloudinary.com/theonlybakare/image/upload/v1572007119/FAQ/happy_vp3qip.png" alt="HAPPY" />
+                        <h4>Yes</h4>
+                    </div>
+                    <div class="emo">
+                        <img class="emojis" src="https://res.cloudinary.com/theonlybakare/image/upload/v1572007117/FAQ/sad_iodtpe.png" alt="SAD" />
+                        <h4>No</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="socials">
+                <h4>Share this page</h4>
+                <img class="soc" src="https://res.cloudinary.com/theonlybakare/image/upload/v1572007124/FAQ/twitter_vxvzt6.png" alt="twitter" />
+                <img class="soc" src="https://res.cloudinary.com/theonlybakare/image/upload/v1572007118/FAQ/instagram_dvzgux.png" alt="instagram" />
+                <img class="soc" src="https://res.cloudinary.com/theonlybakare/image/upload/v1572007128/FAQ/google-plus_rlghd6.png" alt="Google" />
+                <img class="soc" src="https://res.cloudinary.com/theonlybakare/image/upload/v1572007122/FAQ/linked_zufdc6.png" alt="LinkedIn" />
+            </div>
+        </div>
+	
 	<footer>
 	    <div class="section-one">
 	      <section>
@@ -203,30 +359,26 @@
 	      </section>
 	    </div>
   </footer>
-		
-	<div>
+  <div>
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
       <script src="https://kit.fontawesome.com/7967e81f77.js" crossorigin="anonymous"></script>
 	</div>
 	<script>
-		
-        const url = 'https://docufixmail.herokuapp.com/add-user';
-        async function handleSubmit() {
-          let Email = document.querySelector('#email').value;
-          console.log({Email})
-          axios.post(url, { Email })
-          .then(function (response) {
-          console.log(response);
-          })
-          .catch(function (error) {
-          console.log(error);
-          });
-        }
-
-        document.querySelector('#button').addEventListener('click',handleSubmit);
-
-    </script>
-</body>
+            var coll = document.getElementsByClassName("collapsible");
+            var i;
+            
+            for (i = 0; i < coll.length; i++) {
+              coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                  content.style.display = "none";
+                } else {
+                  content.style.display = "block";
+                }
+              });
+            }
+        </script>
 </html>

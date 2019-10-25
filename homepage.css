@@ -1,0 +1,318 @@
+* {
+	font-family: "ubuntu";
+	box-sizing: border-box;
+
+}
+
+.content1, .content-img, .navigation-links {
+	margin-top: 25px;
+}
+
+.content1 h2 {
+	margin-bottom: 50px;
+	font-weight: bolder;
+	color: white;
+	letter-spacing: 2;
+}
+
+.content1 span {
+	color: white;
+	font-size: 18px;
+}
+
+.navigation-links a {
+	color: white;
+	margin: 10px;
+	border: 1px solid #141460;
+	border-radius: 49px;
+	background-color: #141460;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	padding: 14px 12px 14px 12px;
+	font-size: 14px;
+	font-weight: bold;
+	text-decoration: none;
+
+}
+
+.img4mobile {
+	display: none;
+}
+
+.navigation-links a:hover {
+	color: white;
+	text-decoration: none;
+}
+
+.content2 .border{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.content2 h2 {
+	color: #141460;
+	font-weight: bolder;
+	margin: 30px;
+}
+
+.features-cont {
+	margin-top: 20px;
+}
+
+.features-cont p {
+	text-align: left;
+	line-height: 2;
+}
+
+.features-cont h4{
+	font-weight: bold;
+}
+
+.features-cont img {
+	margin-top: 12px;
+}
+
+.features-cont .border {
+	margin-bottom: 10px;
+	background: #FDFBFF;
+	box-shadow: 0px 8px 4px rgba(0, 0, 0, 0.25);
+	border: 1px solid black;
+	border-radius: 50px;
+	padding: 20px;
+
+}
+
+.content3 {
+	background: url(https://res.cloudinary.com/ros4eva/image/upload/v1571850649/image6_p03dun.png) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding: 30px;
+    margin-top: 20px; 
+}
+
+.content3 h2 {
+	font-weight: bolder;
+	color: white;
+	margin-bottom: 10px;
+}
+
+.content4 {
+	padding: 10px 15px;
+	margin: 20px;
+
+}
+
+.content4 h3 {
+	font-weight: bolder;
+	color: white;
+}
+
+.newsletter {
+	background-color: #3D9BDA;
+	border-radius: 5px;
+	padding: 40px;
+}
+
+.content4 h5 {
+	font-weight: bold;
+	color: black;
+}
+
+.content4 input[type=email] {
+	padding: 8px 12px;
+	width: 60%;
+	border: none;
+	border-radius: 5px;
+	margin-top: 15px;
+	margin-top: 10px;
+}
+
+.content4 input::placeholder {
+	text-align: center;
+}
+
+.content4 input[type=submit] {
+	border: none;
+	border-radius: 30px;
+	background-color: #141460;
+	color: white;
+	font-size: 15px;
+	padding: 8px 10px;
+	width: 30%;
+	margin-top: 15px;
+}
+
+@media screen and (max-width: 500px) {
+	.navigation-links a {
+	color: white;
+	margin: 10px;
+	border: 1px solid #141460;
+	border-radius: 40px;
+	padding: 10px 8px;
+	font-size: 10px;
+
+	}
+
+	.content4 .img2 {
+		display: none;
+	}
+
+	.content-img {
+		display: none;
+	}
+
+	.img4mobile {
+		display: block;
+		margin-bottom: 12px;
+	}
+}
+
+/* Header and Footer CSS Starts Here*/
+
+svg {
+    width: 200px;
+    height: 50px;
+  }
+
+  footer a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  #nav,
+  .dropdown-menu {
+    background: #141460 !important;
+    color: #fff !important;
+    font-weight: 300;
+  }
+
+  #nav li:hover {
+    background:  #6130d4 !important;
+  }
+
+  .dropdown-menu a:hover {
+    background:  #6130d4 !important;
+  }
+
+  #nav li a {
+    color: #ffffff !important;
+  }
+
+  nav ul {
+      margin-left: 1.7rem;
+  }
+
+  footer {
+    background: #003152;
+    color: #fff;
+    position: relative;
+    text-align: center;
+    font-family: Helvetica;
+  }
+
+  .section-one {
+    padding: 1rem;
+  }
+
+  footer li {
+    padding: 0.5rem;
+  }
+
+  footer ul {
+    margin-right: 1rem;
+  }
+
+  .section-one section {
+    margin: 2rem 0;
+  }
+
+  .section-one h4 {
+    padding: 0.5rem 0;
+  }
+
+  .section-one .text-two {
+    padding: 0.5rem 0;
+  }
+
+  .section-one .text-two {
+    color: red;
+    text-decoration: none;
+  }
+
+
+
+  .section-two .icons {
+    padding: 0.5rem 0;
+  }
+
+  .icons a {
+    padding: 0 0.5rem;
+    text-decoration: none;
+    color: #fff;
+  }
+
+  footer ul li {
+    list-style: none;
+  }
+
+  .footer-line {
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    margin: 1rem 0;
+  }
+
+  #btn span i {
+    color: #fff;
+  }
+
+  @media (min-width: 1000px) {
+    .collapse {
+      display: flex;
+      justify-content:flex-end;
+   }
+   li {
+        padding: 0 0.5rem;
+      }
+
+    ul {
+      margin-right: 3rem;
+    }
+
+    
+
+    #logo {
+      margin-left: 1.5rem;
+    }
+
+    .section-one,
+    .section-two {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 4rem;
+      padding-right: 3rem;
+    }
+
+
+    footer ul {
+      text-align: right;
+    }
+
+    .section-two {
+      flex-flow: row-reverse;
+    }
+
+    .section-one {
+      margin-bottom: 1rem;
+    }
+
+    .section-one h4 {
+      padding: 2rem 0;
+    }
+
+    footer {
+      text-align: left;
+    }
+
+
+  }

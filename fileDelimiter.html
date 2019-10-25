@@ -6,7 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <meta name="theme-color" content="#333" />
         <link rel="manifest" href="manifest.json" />
-        <link rel="icon" type="image/png" href="https://res.cloudinary.com/ros4eva/image/upload/v1571538580/favicon_elbl53.png"/>
+        <link rel="icon" type="image/png" href="https://res.cloudinary.com/thecavemann/image/upload/v1571839870/logo_g4kuoa.png"/>
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <link rel="stylesheet" type="text/css" href="https://dl.dropbox.com/s/v5nuo2k9pvuoogf/rose.css">
         <link
@@ -23,6 +23,9 @@
         <link rel="stylesheet" type="text/css" href="wysiwyg.css">
         <link rel="stylesheet" href="/nav-footer.css">
         <title>Docufix</title>
+        <script type="text/javascript" src ="//widget.instabot.io/jsapi/rokoInstabot.js" crossorigin>
+        apiKey: "vXj90M2ifAvu8fS739jFKepTXtES72ur59sGR5TPK9c="
+        </script>
     </head>
     <style>
     /* #file-text{
@@ -128,9 +131,14 @@
         textarea{
             width: 100% !important;
         } */
-        .active1 {
-            border-bottom: 3px solid black;
-        }
+        a {
+    color: white;
+  }
+
+  .active1 {
+    color: black;
+  }
+
         textarea{
             width: 100% !important;
         }
@@ -270,7 +278,7 @@
                                 </div>
                               </li>
                               <li class="nav-item">
-                                <a class="nav-link" href="https://hng.tech/" target="_blank">Donate</a>
+                                <a class="nav-link" href="donation.html" target="_blank">Donate</a>
                               </li>
                               <li class="nav-item">
                                 <a class="nav-link" href="Blog/blog-index.html" target="_blank">Blog</a>
@@ -280,60 +288,54 @@
                       </nav>
         </header>
         <div class="container mt-5" style="min-height: 100vh">
-            <h3 class="pt-5 font-weight-bold">Remove Duplicates from Documents</h3>
-            <h2 class="text-center mt-5">
-                <span
-                    ><a
-                        href="#"
-                        id="fileBtn"
-                        class="active1 pb-1"
-                        style="text-decoration: none; color:black; margin-right: 10px;"
-                        ><img class="top-icons" src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571193844/samples/figma%20career-list/lario/xisa8mltboqmepbzjqks.png">File</a
-                    ></span
-                >
-                |<span
-                    ><a
-                        href="#"
-                        id="textBtn"
-                        style="text-decoration: none; color:black; margin-left: 10px"
-                        ><img class="top-icons" src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571193193/samples/figma%20career-list/lario/slpij76xxh4f7bpixbr5.png">Text
-                    </a></span
-                >
-            </h2>
-            <div id="file" >
+            <h3 class=" font-weight-bold">Remove Duplicates from Documents</h3>
+            <h2 class="text-center text-light p-3 mt-5 " style="background-color:rgba(61, 155, 218, 0.4);">
+                <span class="text-light mr-md-5 pr-md-5 active1"><a href="#" id="fileBtn" class="active1 pb-1"
+                    style="text-decoration: none; margin-right: 10px;"><img class="top-icons"
+                      src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571193844/samples/figma%20career-list/lario/xisa8mltboqmepbzjqks.png">File</a></span><span
+                  class="text-light ml-md-5 pl-md-5"><a href="#" id="textBtn"
+                    style="text-decoration: none; margin-left: 10px"><img class="top-icons"
+                      src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571193193/samples/figma%20career-list/lario/slpij76xxh4f7bpixbr5.png">Text
+                  </a></span>
+              </h2>
+            <div id="file" class="">
                 <div class="text-center mt-5">
                     <form class="mb-5" id="uploadForm" method="POST" enctype="multipart/form-data">
-                        <div class="row padding">
-                                <div class="custom-file col-md-6 margin">
+                        <div class="row mt-5">
+                            <div class="col-md-6">
+                              <div class="">
+                                <div class="card card-body  pb-5" style="background-color:rgba(61, 155, 218, 0.4);">
+                                  <div class=" mx-auto bg-light" style="border-radius: 50%;height: 100%; width: 20%"><img
+                                      src="https://res.cloudinary.com/ademolamadelewi/image/upload/v1571838569/Vector1_d9algx.svg"
+                                      class="p-2" width="100%"></div>
+                
+                
+                                  <p class="font-weight-bold">Upload file here</p>
+                                  <div class="custom-file col-md-12 mx-auto" style="color: #0C105F">
                                     <label for="upload1" id="label1" class="text-left mr-md-5 custom-file-label"
-                                        >Document:</label
-                                    >
-                                    <input
-                                    id="upload1" 
-                                    type="file" 
-                                    name="file1" 
-                                accept=""
-                                class="custom-file-input"
-                                        style="border: 0;background-color: transparent;" required
-                                    />
-                                    <div class="invalid-feedback">
-                                        No Images Allowed
-                                      </div>
+                                      style="border: 1px solid #0C105F; "></label>
+                                    <input id="upload1" type="file" name="file1" accept="" class="custom-file-input"
+                                      style="border: 0;background-color:rgba(61, 155, 218, 0.4);" required />
+                                    <div class="invalid-feedback pb-5">
+                                      No Images Allowed
+                                    </div>
+                                  </div>
                                 </div>
-                                <div class="custom-file col-md-6">
+                              </div>
+                            </div>
+                            <div class="custom-file col-md-6 my-auto">
                                   
-                                    <input
-                                    id="delimiter" for="delimiter" type="text" name="delimiter" accept="" class="form-control"
-                                        style="" required placeholder="delimiter"
-                                    />
-                                    <div class="invalid-feedback">
-                                        No Images Allowed
-                                      </div>
-                                </div>
-
-                        </div>
-                        <div class="form-group mt-5">
-                                <button id="uploadBtn" type="submit" value="submit" class="btn btn-dark mt-3 "
+                                <input
+                                id="delimiter" for="delimiter" type="text" name="delimiter" accept="" class="form-control  mt-3 mt-md-0 mb-3 mb-md-0"
+                                style="border: 1px solid #0C105F; " required placeholder="delimiter"
+                                />
+                                <div class="invalid-feedback">
+                                    No Images Allowed
+                                  </div>
+                            </div>
+                          </div>
+                        <div class="form-group">
+                                <button style="background-color: #3D9BDA;color: white;" id="uploadBtn" type="submit" value="submit" class="btn mt-5"
                                 onclick="buttonCompareClicked();" ><i class="fas fa-cloud-upload-alt"></i> upload</button>
                             </div>
                     </form>
@@ -351,13 +353,13 @@
                 <div class="row mt-5">
                     <div class="col-md-5">
                         <div class="card">
-                            <div class="card-header bg-dark text-light">
+                            <div class="card-header text-light"  style="background-color:rgba(51, 138, 196, 0.4);">
                                 <img class="white-txt" src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571194266/samples/figma%20career-list/lario/ct8pi1qsjgonxsa7zdyn.png">Text
                             </div>
-                            <div class="card-body">
+                            <div class="card-body" style="background-color:rgba(61, 155, 218, 0.4);">
                                 <textarea
                                     placeholder="Write your text here" class="" id="textareaBefore" cols="" rows="10"
-                                    style="border: 0;border-right:2px solid #444;border-left:2px solid #444;"
+                                    style="border: 0;"
                                 ></textarea>
                             </div>
                         </div>
@@ -379,7 +381,7 @@
                     </div>
                 </div>-->
                 <div class="text-center m-5" >
-                    <button  id="removeDuplicate" value="compare" class="btn btn-dark font-weight-bold"
+                    <button style="background-color:rgba(61, 155, 218, 0.4);color: white"  id="removeDuplicate" value="compare" class="btn font-weight-bold"
                           type="submit"> <img class="compare-img" src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571193103/samples/figma%20career-list/lario/butfaguuckar9dl0i1ug.png" width="23" height="23" style="margin-right: 10px;">Remove Duplicates</button
                     >
                 </div>
@@ -444,7 +446,7 @@
                     
             
                       <div id="page"></div> 
-                      <textarea class="form-control" id="textareaDifferences" rows="10"></textarea>
+                      <textarea style="border: 1px solid #0C105F;" class="form-control ml-5 ml-md-0 mb-4 mb-md-0" id="textareaDifferences" rows="10"></textarea>
                     <!-- <div contenteditable="true" id="textareaDifferences" style="border:none;min-height:100%; width: 100%;overflow: scroll; box-shadow: 0px 0px 4px 1px grey;"></div> -->
                 </div>
             
@@ -458,6 +460,7 @@
                 <button class="fbShare" data-js="facebook-share"><a href="mailto:info@example.com?&subject=&body=http://docufix.ga Hey! I just compared my files for similarities on Docufix"><i class="fas fa-envelope"></i> Email</a></button>
             </div>
 
+        </div>
         </div>
         <footer>
                 <div class="section-one">

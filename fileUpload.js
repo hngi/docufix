@@ -3,34 +3,6 @@
     return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
 }
 
-// $.ajax({
-//   xhr: function() {
-//     var xhr = new window.XMLHttpRequest();
-
-//     xhr.upload.addEventListener("progress", function(evt) {
-//       if (evt.lengthComputable) {
-//         var percentComplete = evt.loaded / evt.total;
-//         percentComplete = parseInt(percentComplete * 100);
-//         console.log(percentComplete);
-
-//         if (percentComplete === 100) {
-
-//         }
-
-//       }
-//     }, false);
-
-//     return xhr;
-//   },
-//   url: posturlfile,
-//   type: "POST",
-//   data: JSON.stringify(fileuploaddata),
-//   contentType: "application/json",
-//   dataType: "json",
-//   success: function(result) {
-//     console.log(result);
-//   }
-// });
 
 function preloader(){
     let textfieldarea = $("#text");
@@ -86,9 +58,24 @@ function getCookie(name) {
     return cookieValue;
 }
 
-    $('#uploadForm').submit(function(e) {
-        var csrftoken = jQuery("[name=csrfmiddlewaretoken]").val();
+  $("#uploadUrlBtn").click(function(e){
 
+    e.preventDefault();
+    $("#uploadForm").attr("style", "display: none")
+    $('#uploadUrlForm').attr("style", "display: block")
+  })
+
+  $("#uploadFilesBtn").click(function(e){
+    e.preventDefault();
+    $("#uploadForm").attr("style", "display: block")
+    $('#uploadUrlForm').attr("style", "display: none")
+
+  })
+
+
+
+   $('#uploadForm').submit(function(e) {
+        var csrftoken = jQuery("[name=csrfmiddlewaretoken]").val();
         var bar = $('.bar');
         var progress = $('.progess')
         var percent = $('.progress-bar');
@@ -168,6 +155,115 @@ function getCookie(name) {
             })
         }
     })
+
+
+
+    $('#uploadUrlForm').submit(function(e) {
+      var csrftoken = jQuery("[name=csrfmiddlewaretoken]").val();
+      var bar = $('.bar');
+      var progress = $('.progess')
+      var percent = $('.progress-bar');
+      var status = $('#status');
+      $(".progress").attr("style", "display: block" );
+  
+        e.preventDefault();
+
+        if(  ($('#url1').val() == '') || ($('#url2').val() == '' ) ){
+          console.log('One of the input file is missing')
+          // console.log(response)
+          toastr.error('One of the input file is missing')
+
+        }else{ 
+      
+          $form = $(this)
+          var formData = new FormData(this);
+          console.log(formData);
+          formData.append('url1', $('#url1').val());
+          formData.append('url2', $('#url2').val());
+          console.log($('#url1').val());
+          
+          console.log(formData);
+
+          console.log($("#percentageS"));
+          $("#text").attr("style", "display: block" );
+      
+          $.ajax({
+            xhr: function() {
+              var xhr = new window.XMLHttpRequest();
+          
+              xhr.upload.addEventListener("progress", function(evt) {
+                if (evt.lengthComputable) {
+                  var percentComplete = evt.loaded / evt.total;
+                  percentComplete = parseInt(percentComplete * 100);
+                  var percentVal = '0%';
+                  percent.width(`${percentComplete}%`);
+                  percent.text(`${percentComplete}%`);
+                  console.log(percentComplete);
+          
+                  if (percentComplete === 100) {
+                    percent.text('Upload Completed');
+          
+                  }
+          
+                }
+              }, false);
+          
+              return xhr;
+            },
+              url: "https://docufix.pythonanywhere.com/upload/url/",
+              type: "POST",
+              data: formData,
+              beforeSend: function(xhr, settings) {
+                  if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+                      xhr.setRequestHeader("X-CSRFToken", csrftoken);
+                  }
+              },
+              success: function(response){
+                  console.log('success');
+                  console.log(response);
+                  $(".progress").attr("style", "display: none " );
+                  progress.remove()
+                  $('#textareaBefore').val(response.file1)
+                  $('#textareaAfter').val(response.file2)
+                  toastr.success("Content Loaded Successfully");
+                  
+              },
+              error: function(response){
+                  // console.log(response)
+                  toastr.error(response.responseJSON);
+                  console.log("Error Occured");
+                  $(".progress").attr("style", "display: none " );
+                  
+              },
+              cache: false,
+              contentType: false,
+              processData: false
+              
+          })
+      }
+  })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         
        
     

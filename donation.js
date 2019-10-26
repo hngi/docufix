@@ -1,4 +1,4 @@
-const API_publicKey = "FLWPUBK-358ad41bc9c42ebc5cc903e2474d9829-X";
+const API_publicKey = "FLWPUBK-8e718cdac8be88c4af3b60794051604b-X";
 
 function payWithRave() {
     const email = document.getElementById('email').value;

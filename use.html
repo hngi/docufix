@@ -44,7 +44,29 @@
    }
    body{
      background: #DDE8E8;
+     overflow-x: hidden;
    }
+
+   @keyframes left {
+				from {
+					transform: translateX(-50%);
+					opacity: 0;
+				}
+				to {
+					transform: translateX(0);
+					opacity: 1;
+				}
+			}
+			@keyframes right {
+				from {
+					transform: translateX(50%);
+					opacity: 0;
+				}
+				to {
+					transform: translateX(0);
+					opacity: 1;
+				}
+			}
     
   </style>
 </head>
@@ -108,13 +130,15 @@
      
         <div class="col-12 mt-1 clear-fix">
            
-            <img src="https://res.cloudinary.com/chidiebere/image/upload/v1572006936/ques.png"  width="400px" class="img-fluid float-sm-right float-none mr-sm-3 mx-auto ">
-            <h4 class=" abt_headingtext-uppercase abt_heading mt-2"><strong>Why Use Docufix?</strong></h4>
-          <p style="text-align: justify;">Docufix is one of the leading application for teachers, students, publishers,
-            and universities who need to detect any form of plagiarism in their content, essay or document and to
-            compare large amount of files.
-            We have great amount of tools and software for comparing files and plagiarism services available at our
-            finger tips at any time. But the question is what makes Docufix UNIQUE from others?</p>
+            <img src="https://res.cloudinary.com/chidiebere/image/upload/v1572006936/ques.png"  width="400px" class="img-fluid float-sm-right float-none mr-sm-3 mx-auto right">
+            <div class="left">
+                <h4 class=" abt_headingtext-uppercase abt_heading mt-2"><strong>Why Use Docufix?</strong></h4>
+                <p style="text-align: justify;">Docufix is one of the leading application for teachers, students, publishers,
+                  and universities who need to detect any form of plagiarism in their content, essay or document and to
+                  compare large amount of files.
+                  We have great amount of tools and software for comparing files and plagiarism services available at our
+                  finger tips at any time. But the question is what makes Docufix UNIQUE from others?</p>
+            </div>
         </div>
         <br>
       </div>
@@ -123,17 +147,19 @@
         <div class="col-12 mt-5 ">
         <div class="tara clear-fix" >
     
-          <img src="https://res.cloudinary.com/chidiebere/image/upload/v1572006906/file.png" width="400px" class="img-fluid float-sm-left float-none  mr-sm-3 mx-auto ">
-          <h4 class="bara "><strong>Features: Comparing, Duplicates and Plagiarism Checker</strong></h4>
-          <p style="text-align:justify;">Unlike other applications which just compare files or check the plagiarism, <a
-              href="index.html" class="text-primary">Docufix</a> works both for comparing large amount of files and as a
-            plagiarism checker. It can be extremely tedious trying to compare
-            large amount of files or documents without missing some important things that you should have taken note of,
-            or trying to check if any words in your document has been duplicated it could be missed by mere glancing or
-            reading
-            through or you want to know the level of similarities between documents? All these questions or problem have
-            a common answer DOCUFIX. With Docufix you can achieve all these without looking for another application to
-            do the other.</p>
+          <img src="https://res.cloudinary.com/chidiebere/image/upload/v1572006906/file.png" width="400px" class="img-fluid float-sm-left float-none  mr-sm-3 mx-auto left">
+          <div class="right">
+            <h4 class="bara "><strong>Features: Comparing, Duplicates and Plagiarism Checker</strong></h4>
+            <p style="text-align:justify;">Unlike other applications which just compare files or check the plagiarism, <a
+                href="index.html" class="text-primary">Docufix</a> works both for comparing large amount of files and as a
+              plagiarism checker. It can be extremely tedious trying to compare
+              large amount of files or documents without missing some important things that you should have taken note of,
+              or trying to check if any words in your document has been duplicated it could be missed by mere glancing or
+              reading
+              through or you want to know the level of similarities between documents? All these questions or problem have
+              a common answer DOCUFIX. With Docufix you can achieve all these without looking for another application to
+              do the other.</p>
+        </div>
         </div>
       </div>.
       
@@ -143,15 +169,17 @@
         <div class="row mt-4 suru">
         <div class="mara col-12 clear-fix">
            
-            <img src="https://res.cloudinary.com/chidiebere/image/upload/v1572007049/free.png" width="400px" class="img-fluid float-sm-right float-none mr-sm-3 mx-auto ">
-       
+            <img src="https://res.cloudinary.com/chidiebere/image/upload/v1572007049/free.png" width="400px" class="img-fluid float-sm-right float-none mr-sm-3 mx-auto right">
+          
+          <div class="left">
             <h4 class="fara"><strong>Free Version</strong></h4>
-          <p style="text-align: justify;">If you look through its obvious that most reliable softwares or applications
-            for plagiarism are paid for, you can't get that quality you desire without paying an amount
-            for it. What make Docufix UNIQUE among others is the fact that you can get that same outstanding quality
-            without any form of payment. You can compare your files, check for duplicates and also access the plagiarism
-            checker without any form of payment.
-            Hurray!!!!</p>
+            <p style="text-align: justify;">If you look through its obvious that most reliable softwares or applications
+              for plagiarism are paid for, you can't get that quality you desire without paying an amount
+              for it. What make Docufix UNIQUE among others is the fact that you can get that same outstanding quality
+              without any form of payment. You can compare your files, check for duplicates and also access the plagiarism
+              checker without any form of payment.
+              Hurray!!!!</p>
+          </div>
           </div>
         </div>
      
@@ -159,40 +187,49 @@
         <div class="row mt-4 suru">
         <div class="sara col-12 clear-fix">
         
-          <img src="https://res.cloudinary.com/chidiebere/image/upload/v1572006938/stud.png" width="400px" class="img-fluid float-sm-left float-none mr-sm-3 mx-auto ">
-          <h4><strong>Docufix For Students</strong></h4>
-          <p style="text-align: justify;">Docufix is designed for students to make school work easier. Sometimes school
-            work, assignments or projects could be assigned last minute and must be delivered. With <a href="index.html"
-              class="text-primary"> Docufix</a>, it would be easier to know if your work meets the standard
-            and correction of any error is certain. Whether you are in college, high school, or masters, Docufix has you
-            covered, ensures the honesty in your work and the originality of your work Unquestionable.</p>
+          <img src="https://res.cloudinary.com/chidiebere/image/upload/v1572006938/stud.png" width="400px" class="img-fluid float-sm-left float-none mr-sm-3 mx-auto left">
+          <div class="right">
+              <h4><strong>Docufix For Students</strong></h4>
+              <p style="text-align: justify;">Docufix is designed for students to make school work easier. Sometimes school
+                work, assignments or projects could be assigned last minute and must be delivered. With <a href="index.html"
+                  class="text-primary"> Docufix</a>, it would be easier to know if your work meets the standard
+                and correction of any error is certain. Whether you are in college, high school, or masters, Docufix has you
+                covered, ensures the honesty in your work and the originality of your work Unquestionable.</p>
+          </div>
+
         </div>
       </div>
         <br>
         <div class="row mt-4 suru">
         <div class="dara col-12 clear-fix">
          
-          <img src="https://res.cloudinary.com/chidiebere/image/upload/v1572007024/tea.png" width="400px" class="img-fluid float-sm-right float-none  mr-sm-3 mx-auto ">
-          <h4 class="cara"><strong>Docufix For Teachers</strong></h4>
-          <p style="text-align: justify;">As a professor or teacher, Sometimes it could be tedious sinking in deadlines
-            without no help. Moving at this rate it could be easy to overlook your students who have definitely borrowed
-            more than words from an online source in other to meet up with deadlines.
-            This is where <a href="index.html" class="text-primary">Docufix</a> comes in. Our service covers busy
-            academic schedules and last minute work in other to ensure all assigments, documents or school related work
-            is plagiarism, error and duplicate free.</p>
+          <img src="https://res.cloudinary.com/chidiebere/image/upload/v1572007024/tea.png" width="400px" class="img-fluid float-sm-right float-none  mr-sm-3 mx-auto right">
+          <div class="left">
+              <h4 class="cara"><strong>Docufix For Teachers</strong></h4>
+              <p style="text-align: justify;">As a professor or teacher, Sometimes it could be tedious sinking in deadlines
+                without no help. Moving at this rate it could be easy to overlook your students who have definitely borrowed
+                more than words from an online source in other to meet up with deadlines.
+                This is where <a href="index.html" class="text-primary">Docufix</a> comes in. Our service covers busy
+                academic schedules and last minute work in other to ensure all assigments, documents or school related work
+                is plagiarism, error and duplicate free.</p>
+          </div>
+
         </div>
       </div>
         <br>
         <div class="row">
         <div class="zara col-12 clear-fix">
         
-          <img src="https://res.cloudinary.com/chidiebere/image/upload/v1572006950/uni.png" width="450px" class="img-fluid float-sm-left float-none  mr-sm-3 mx-auto ">
-          <h4 class="vara"><strong>Docufix For Universities</strong></h4>
-          <p style="text-align: justify;">Our Application is able to compare school work against other files or document
-            and brings the result instantly and in percentage. With <a href="index.html"
-              class="text-primary">Docufix</a> it is easy for any faculty member to compare large amount of files,
-            student project,
-            and academic journals to avoid duplicates, errors and ensure content originality.</p>
+          <img src="https://res.cloudinary.com/chidiebere/image/upload/v1572006950/uni.png" width="450px" class="img-fluid float-sm-left float-none  mr-sm-3 mx-auto left">
+          <div class="right">
+              <h4 class="vara"><strong>Docufix For Universities</strong></h4>
+              <p style="text-align: justify;">Our Application is able to compare school work against other files or document
+                and brings the result instantly and in percentage. With <a href="index.html"
+                  class="text-primary">Docufix</a> it is easy for any faculty member to compare large amount of files,
+                student project,
+                and academic journals to avoid duplicates, errors and ensure content originality.</p>
+          </div>
+
         </div>
     </div>
         <br>
@@ -203,13 +240,13 @@
 
       <footer>
         <div class="section-one">
-          <section>
+          <section class="left">
             <h4>DOCUFIX</h4>
             <p>We help you arrange, sort, compare and extract information from different file formats</p>
       
             <p class="text-two">This app was built by <a href="https://hng.tech/" target="_blank">HNGi6</a> interns</p>
           </section>
-          <section>
+          <section class="right">
             <ul>
               <li><a href="about_us.html">About us</a></li>
               <li><a href="teampage.html">Our Team</a></li>
@@ -242,6 +279,7 @@
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> 
+  <script src="/daveScroll.js"></script>
   <script type="text/javascript">
     /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
@@ -282,6 +320,12 @@ toggle between hiding and showing the dropdown content */
         }
       }
     }
+
+    const left = document.querySelectorAll('.left');
+    const right = document.querySelectorAll('.right');
+
+    left.forEach(x => scroll(x, 'left'));
+    right.forEach(x => scroll(x, 'right'));
   </script>
 </body>
 

@@ -123,6 +123,38 @@
     .imgm {
       display: none;
     }
+
+    @keyframes left {
+				from {
+					transform: translateX(-50%);
+					opacity: 0;
+				}
+				to {
+					transform: translateX(0);
+					opacity: 1;
+				}
+			}
+			@keyframes right {
+				from {
+					transform: translateX(50%);
+					opacity: 0;
+				}
+				to {
+					transform: translateX(0);
+					opacity: 1;
+				}
+			}
+
+      @keyframes pop {
+        from {
+          transform: scale(0);
+          opacity: 0;
+        }
+        to {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
     
     #more {
       display: none;
@@ -283,17 +315,17 @@ padding-left:0.3em;
     </div>
   </header>
       
-    <div class="container-fluid" style="line-height: 40px;">
+    <div class="container-fluid div" style="line-height: 40px;">
         <div class="row mt-4 onyeishi"  >
          <div class="col-12 mt-5 clear-fix">  <h1 class="text-uppercase abt_heading"><strong>Step BY STEP USER GUIDE</strong></h1>
             
           
-                <h2>What is Docufix?</h2>
+                <h2 class="h2">What is Docufix?</h2>
                 <img src="https://res.cloudinary.com/ros4eva/image/upload/v1571541145/Webp.net-resizeimage_1_imfetk.png" class="img-fluid imgit">
 
 
                 <!--img src="https://res.cloudinary.com/ros4eva/image/upload/v1571541145/Webp.net-resizeimage_1_imfetk.png" class="img-fluid float-right imgis"-->
-                <a href="index.html">Docufix</a> is one of the most innovatiive Technology of our age! Built solidly with the latest Technical tools for files and data management. This Magnificent tool was built by the most intellectual young Coders from <a href="https://hng.tech/interns">HNGi6 Internship</a> 
+                <p><a href="index.html">Docufix</a> is one of the most innovatiive Technology of our age! Built solidly with the latest Technical tools for files and data management. This Magnificent tool was built by the most intellectual young Coders from <a href="https://hng.tech/interns">HNGi6 Internship</a>
                 <br>
                 Docufix is a very powerful tool and this user guide will walk you through all the magic this product can do! 
                 <br>
@@ -304,7 +336,7 @@ padding-left:0.3em;
                 .JSON
                 .CSV
                 .XML
-                <br>
+                <br></p>
 
 
 
@@ -448,13 +480,13 @@ padding-left:0.3em;
 
   <footer>
     <div class="section-one">
-      <section>
+      <section class="left">
         <h4>DOCUFIX</h4>
         <p>We help you arrange, sort, compare and extract information from different file formats</p>
   
         <p class="text-two">This app was built by <a href="https://hng.tech/" target="_blank">HNGi6</a> interns</p>
       </section>
-      <section>
+      <section class="right">
         <ul>
           <li><a href="about_us.html">About us</a></li>
           <li><a href="teampage.html">Our Team</a></li>
@@ -489,4 +521,27 @@ padding-left:0.3em;
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="/daveScroll.js"></script>
+        <script>
+            const left = document.querySelector('.left');
+            const right = document.querySelector('.right');
+            const text = document.querySelector('.div h1');
+            const head2 = document.querySelector('.h2');
+            const img = document.querySelectorAll('.div img');
+            const head = document.querySelectorAll('.div h4');
+            const text2 = document.querySelectorAll('.div br');
+            const anchor = document.querySelectorAll('.div p');
+
+            img.forEach(x => scroll(x, 'pop'));
+            head.forEach(x => scroll(x, 'left'));
+            text2.forEach(x => scroll(x, 'right'));
+            anchor.forEach(x => scroll(x, 'left'));
+
+
+
+            scroll(left, 'left');
+            scroll(right, 'right');
+            scroll(text, 'left');
+            scroll(head2, 'left');
+        </script>
         </body>

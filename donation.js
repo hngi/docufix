@@ -21,8 +21,8 @@ function payWithRave() {
         customer_lastname: lastname,
         amount: amount,
         customer_phone: phone,
-        currency: "NGN",
-        country: "NG",
+        currency: "USD",
+        country: "United States",
         txref: "rave-123456",
         onclose: function() {},
         callback: function(response) {

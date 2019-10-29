@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<script type="text/javascript" src ="//widget.instabot.io/jsapi/rokoInstabot.js" crossorigin>
+	apiKey: "vXj90M2ifAvu8fS739jFKepTXtES72ur59sGR5TPK9c="
+</script>
     <meta charset="UTF-8">
     <link rel="icon" type="image/png" href="https://res.cloudinary.com/thecavemann/image/upload/v1571839870/logo_g4kuoa.png"/>
         
@@ -32,6 +35,38 @@
             padding: 0;
             background-color: #DDE8E8;
         }
+
+				@keyframes bottom {
+				from {
+					transform: translateY(50%);
+					opacity: 0;
+				}
+				to {
+					transform: translateY(0);
+					opacity: 1;
+				}
+			}
+
+			@keyframes left {
+				from {
+					transform: translateX(-50%);
+					opacity: 0;
+				}
+				to {
+					transform: translateX(0);
+					opacity: 1;
+				}
+			}
+			@keyframes right {
+				from {
+					transform: translateX(50%);
+					opacity: 0;
+				}
+				to {
+					transform: translateX(0);
+					opacity: 1;
+				}
+			}
 
 
 
@@ -197,6 +232,14 @@
                 
         .content-box {
 		    padding: 60px 0 60px 0;
+		}
+
+		.the-col,
+		.line,
+		.left,
+		.head,
+		.right {
+			opacity: 0;
 		}
 
 		.content-title h3 {
@@ -633,8 +676,9 @@
 
 </head>
 <body>
-<header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light" id="nav">
+	<header>
+		<div>
+			<nav class="navbar navbar-expand-lg navbar-light bg-light" id="nav">
 		    <a class="navbar-brand" href="index.html" id="logo">
 		      <svg width="321" height="100" viewBox="0 0 321 100" fill="none" xmlns="http://www.w3.org/2000/svg">
 		        <path d="M37.5171 38.9927C37.5171 45.4559 35.673 50.4062 31.9849 53.8438C28.3146 57.2812 23.0062 59 16.0596 59H4.94141V19.7373H17.2681C23.6776 19.7373 28.6548 21.4292 32.1997 24.813C35.7446 28.1968 37.5171 32.9233 37.5171 38.9927ZM28.8696 39.2075C28.8696 30.7749 25.1457 26.5586 17.6978 26.5586H13.2666V52.125H16.8384C24.8592 52.125 28.8696 47.8192 28.8696 39.2075ZM86.7915 39.3149C86.7915 45.814 85.1802 50.8091 81.9575 54.3003C78.7349 57.7915 74.1157 59.5371 68.1001 59.5371C62.0845 59.5371 57.4653 57.7915 54.2427 54.3003C51.02 50.8091 49.4087 45.7961 49.4087 39.2612C49.4087 32.7264 51.02 27.7402 54.2427 24.3027C57.4832 20.8473 62.1203 19.1196 68.1538 19.1196C74.1873 19.1196 78.7975 20.8563 81.9844 24.3296C85.1891 27.8029 86.7915 32.798 86.7915 39.3149ZM58.1367 39.3149C58.1367 43.7013 58.9692 47.0046 60.6343 49.2246C62.2993 51.4447 64.7879 52.5547 68.1001 52.5547C74.7424 52.5547 78.0635 48.1414 78.0635 39.3149C78.0635 30.4705 74.7603 26.0483 68.1538 26.0483C64.8416 26.0483 62.3441 27.1673 60.6611 29.4053C58.9782 31.6253 58.1367 34.9285 58.1367 39.3149ZM117.106 26.1021C113.973 26.1021 111.547 27.2837 109.828 29.647C108.109 31.9924 107.25 35.2687 107.25 39.4761C107.25 48.231 110.535 52.6084 117.106 52.6084C119.863 52.6084 123.202 51.9191 127.123 50.5405V57.5229C123.9 58.8657 120.302 59.5371 116.327 59.5371C110.616 59.5371 106.247 57.8094 103.222 54.354C100.196 50.8807 98.6831 45.9035 98.6831 39.4224C98.6831 35.3403 99.4261 31.7686 100.912 28.707C102.398 25.6276 104.529 23.2733 107.304 21.644C110.097 19.9969 113.364 19.1733 117.106 19.1733C120.919 19.1733 124.751 20.0954 128.6 21.9395L125.915 28.707C124.446 28.0088 122.969 27.4001 121.483 26.8809C119.997 26.3617 118.538 26.1021 117.106 26.1021ZM172.96 19.7373V45.1426C172.96 48.043 172.306 50.5853 171 52.7695C169.71 54.9538 167.84 56.6278 165.387 57.7915C162.934 58.9552 160.034 59.5371 156.686 59.5371C151.637 59.5371 147.716 58.248 144.923 55.6699C142.13 53.0739 140.733 49.529 140.733 45.0352V19.7373H149.032V43.7729C149.032 46.7987 149.64 49.0187 150.858 50.4331C152.075 51.8475 154.09 52.5547 156.9 52.5547C159.622 52.5547 161.591 51.8475 162.809 50.4331C164.044 49.0008 164.662 46.7629 164.662 43.7192V19.7373H172.96ZM196.265 59H188.074V19.7373H210.579V26.5586H196.265V36.6831H209.585V43.4775H196.265V59ZM223.76 59V19.7373H232.085V59H223.76Z" fill="white"/>
@@ -659,8 +703,8 @@
 		            Tools
 		          </a>
 		          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-		            <a class="dropdown-item" href="fileupload.html">Compare files</a>
-		            <a class="dropdown-item" href="filedelimiter.html">Check for duplicates</a>
+		            <a class="dropdown-item" href="fileUpload.html">Compare files</a>
+		            <a class="dropdown-item" href="fileDelimiter.html">Check for duplicates</a>
 		          </div>
 		        </li>
 		        <li class="nav-item dropdown">
@@ -669,28 +713,29 @@
 		            </a>
 		            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 		              <a class="dropdown-item" href="faq.html">FAQ</a>
+		              <a class="dropdown-item" href="userguide.html">User guide</a>
 		              <a class="dropdown-item" href="use.html">Why use Docufix</a>
 		              <a class="dropdown-item" href="feedback.html">Feedback</a>
 		              <a class="dropdown-item" href="privacy.html">Privacy policy</a>
+		              <a class="dropdown-item" href="t&c.html">Terms & Conditions</a>
 		            </div>
 		          </li>
 		          <li class="nav-item">
 		            <a class="nav-link" href="donation.html" target="_blank">Donate</a>
 		          </li>
-		          <li class="nav-item">
-		            <a class="nav-link" href="Blog/blog-index.html" target="_blank">Blog</a>
-		          </li>
+		          
 		      </ul>
 		    </div>
 		  </nav>
-      </header>
+		</div>
+	</header>
     <main>     
      <!--  TEAM -->
      <section id="team">
             <div class="content-box">
                 <div class="content-title">
-                    <h3>Meet Our Team</h3>
-                    <div class="content-title-underline"></div>
+                    <h3 class="head">Meet Our Team</h3>
+          <div class="content-title-underline line"></div>
                 </div>
                 <div class="container">
                    <div class="row">
@@ -748,10 +793,10 @@
                                      <a href="http://www.instagram.com/geedeewain">
                                          <i class="fab fa-instagram fa-2x social-icons"></i>
                                      </a>
-                                     <a href="http://www.linkedin.com/godwinikott">
+                                     <a href="http://www.linkedin.com/godwin-ikott-81079aaa">
                                          <i class="fab fa-linkedin fa-2x social-icons"></i>
                                      </a>
-                                     <a href="https://m.facebook.com/olawaleesa">
+                                     <a href="https://m.facebook.com/geedeewain">
                                          <i class="fab fa-facebook fa-2x social-icons"></i>
                                      </a>
                                  </div>
@@ -1001,44 +1046,44 @@
         </section>
         </main>
  
-     <footer>
-	    <div class="section-one">
-	      <section>
-	        <h4>DOCUFIX</h4>
-	        <p>We help you arrange, sort, compare and extract information from different file formats</p>
-	  
-	        <p class="text-two">This app was built by <a href="https://hng.tech/" target="_blank">HNGi6</a> interns</p>
-	      </section>
-	      <section>
-	        <ul>
-	          <li><a href="about_us.html">About us</a></li>
-	          <li><a href="teampage.html">Our Team</a></li>
-	          <li><a href="feedback.html">Feedback</a></li>
-	          <li><a href="privacy.html">Privacy policy</a></li>
-	        </ul>
-	      </section>
-	    </div>
-	    <div class="footer-line"></div>
-	    <div class="section-two">
-	      <section class="icons">
-	        <a href="#">
-	          <i class="fab fa-facebook-f" aria-hidden="true"></i>
-	        </a>
-	        <a href="#">
-	          <i class="fab fa-twitter" aria-hidden="true"></i>
-	        </a>
-	        <a href="#">
-	          <i class="fab fa-google-plus-g" aria-hidden="true"></i>
-	        </a>
-	        <a href="#">
-	          <i class="fab fa-linkedin" aria-hidden="true"></i>
-	        </a>
-	      </section>
-	      <section class="copy">
-	          &copy; 2019 Copyright: Docufix
-	      </section>
-	    </div>
-	  </footer>
+				<footer>
+						<div class="section-one">
+							<section class="left">
+								<h4>DOCUFIX</h4>
+								<p>We help you arrange, sort, compare and extract information from different file formats</p>
+				
+								<p class="text-two">This app was built by <a href="https://hng.tech/" target="_blank">HNGi6</a> interns</p>
+							</section>
+							<section class="right">
+								<ul>
+									<li><a href="about_us.html">About us</a></li>
+									<li><a href="teampage.html">Our Team</a></li>
+									<li><a href="feedback.html">Feedback</a></li>
+									<li><a href="privacy.html">Privacy policy</a></li>
+								</ul>
+							</section>
+						</div>
+						<div class="footer-line"></div>
+						<div class="section-two">
+							<section class="icons">
+								<a href="#">
+									<i class="fab fa-facebook-f" aria-hidden="true"></i>
+								</a>
+								<a href="#">
+									<i class="fab fa-twitter" aria-hidden="true"></i>
+								</a>
+								<a href="#">
+									<i class="fab fa-google-plus-g" aria-hidden="true"></i>
+								</a>
+								<a href="#">
+									<i class="fab fa-linkedin" aria-hidden="true"></i>
+								</a>
+							</section>
+							<section class="copy">
+								&copy; 2019 Copyright: Docufix
+							</section>
+						</div>
+					</footer>
         
        
 
@@ -1047,7 +1092,21 @@
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-        <script src="paging.js"></script>
+				<script src="paging.js"></script>
+				<script src="/daveScroll.js"></script>
+				<script>
+					const cards = document.querySelectorAll('.the-col');
+					const heading = document.querySelector('.head');
+					const line = document.querySelector('.line');
+					const leftCtn = document.querySelector('.left');
+					const rightCtn = document.querySelector('.right');
+			
+					scroll(heading, 'left');
+					scroll(line, 'right');
+					scroll(leftCtn, 'left');
+					scroll(rightCtn, 'right');
+					cards.forEach(card => scroll(card, 'bottom'));
+				</script>
   
 </body>
 </html>

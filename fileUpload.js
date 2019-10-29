@@ -142,7 +142,8 @@ function getCookie(name) {
                     toastr.success("Content Loaded Successfully");
                     
                 },
-                error: function(){
+                error: function(response){
+                    console.log(response)
                     toastr.error("An Error Occured");
                     console.log("Error Occured");
                     $(".progress").attr("style", "display: none " );

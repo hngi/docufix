@@ -19,6 +19,7 @@
             href="https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap"
             rel="stylesheet"
         />
+        
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
         <link rel="stylesheet" type="text/css" href="wysiwyg.css">
         <link rel="stylesheet" href="/nav-footer.css">
@@ -131,6 +132,9 @@
         textarea{
             width: 100% !important;
         } */
+        body{
+            font-family: Ubuntu,sans-serif;
+        }
         a {
     color: white;
   }
@@ -195,6 +199,20 @@
 
 .shareBtn {
     display: none;
+}
+.rstbtn{
+    width: 80px;
+    border: none;
+    color: #ffffff;
+    background-color: gray;
+    height: 30px;
+    border-radius: 4px;
+}
+.rstbtn:hover,.rstbtn:active{
+    background-color: #333333;
+}
+.rvmbtn:active{
+    background-color:#3D9BDA !important;
 }
 /* .navbar{
    position:fixed;
@@ -382,10 +400,13 @@
                     </div>
                 </div>-->
                 <div class="text-center m-5" >
-                    <button style="background-color:rgba(61, 155, 218, 0.4);color: white"  id="removeDuplicate" value="compare" class="btn font-weight-bold"
-                          type="submit"> <img class="compare-img" src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571193103/samples/figma%20career-list/lario/butfaguuckar9dl0i1ug.png" width="23" height="23" style="margin-right: 10px;">Remove Duplicates</button
+                    <button style="background-color:rgba(61, 155, 218, 0.4);color: white"  id="removeDuplicate" value="compare" class="btn font-weight-bold rvmbtn"
+                          type="submit" onclick="getConfirmation()"><img class="compare-img" src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571193103/samples/figma%20career-list/lario/butfaguuckar9dl0i1ug.png" width="23" height="23" style="margin-right: 10px;">Remove Duplicates</button
                     >
+                    <input type="button" name="clearText" id="clearText" value="Reset" class="rstbtn" data-toggle="button" aria-pressed="true" >
                 </div>
+
+      
                 <div>
                         <!--<table class="table table-striped">
                                 <thead>
@@ -501,11 +522,14 @@
                   </section>
                 </div>
               </footer>
+              <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
        <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
        <script src="https://kit.fontawesome.com/7967e81f77.js" crossorigin="anonymous"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
        <script>
+           
             document
                 .getElementById("fileBtn")
                 .addEventListener("click", showFile);
@@ -519,12 +543,40 @@
                 document.getElementById("fileBtn").classList.add("active1");
                 document.getElementById("textBtn").classList.remove("active1");
             }
+            function getConfirmation(){
+
+                var retVal = confirm("Do You want to remove Duplicates?");
+                if(retVal == true){
+                    return  true;
+                }else{
+                    return false;
+                }
+            }
+            document.getElementById("clearText").addEventListener("click", function () {
+		    document.getElementById("textareaBefore").value = "";
+		    document.getElementById("textareaDifferences").value = "";
+		    document.getElementById("textareaBefore").focus();
+	        });	
+	
+	        var textBox = document.getElementById("newCode");
+	        textBox.onfocus = function() {
+		    textBox.select();
+		    textBox.onmouseup = function() {
+			textBox.onmouseup = null;
+			return false;
+		    };
+	       };
+	
+        
             function showtext() {
                 document.getElementById("text").style.display = "block";
                 document.getElementById("file").style.display = "none";
                 document.getElementById("fileBtn").classList.remove("active1");
                 document.getElementById("textBtn").classList.add("active1");
+
             }
+            
+      
         </script>
         <script src="fileDelimiter.js"></script>
         <script src = "wysiwyg.js"></script>

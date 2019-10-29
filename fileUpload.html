@@ -259,10 +259,10 @@
 </style>
 
 <body style="background-color:  white; font-family: Ubuntu;"
-  onload="document.getElementById('id01').style.display='block'">
+  onload="view()">
 
-  <div class="w3-container">
-    <div id="id01" class="w3-modal">
+  <div class="w3-container" >
+    <div id="id01" class="w3-modal" >
       <div class="w3-modal-content">
         <span onclick="document.getElementById('id01').style.display='none'"
           class="w3-button w3-display-topright">&times;</span>
@@ -295,6 +295,10 @@
             <li>Comparing of documents</li>
             <li>Formatting of compared document</li>
           </ul>
+          <div class="form-group">
+            <label for="modalSetting" class="font-weight-bold"><input type="checkbox" name="modal" id="modalSetting" onchange="visibility()"> Check this box to stop getting this alert</label>
+            
+          </div>
         </div>
 
 
@@ -775,6 +779,8 @@
   <script src="https://kit.fontawesome.com/7967e81f77.js" crossorigin="anonymous"></script>
   <script src = "jsTXT.js"></script>
   <script>
+      
+     
     document
       .getElementById("fileBtn")
       .addEventListener("click", showFile);
@@ -1426,6 +1432,39 @@
     };
     var button = Dropbox.createChooseButton(options2);
     document.getElementById("button4").appendChild(button);
+
+    function visibility(){
+     let val = document.getElementById("modalSetting").value;
+     let value = localStorage.getItem('user');
+     check = true;
+     document.getElementById("id01").checked = true; 
+      setTimeout(() => {
+        
+      document.getElementById("id01").style.display = "none";
+
+      }, 2000);
+      localStorage.setItem('value', check);
+      
+    }
+     function view(){
+    let value = localStorage.getItem('value');
+    let val = document.getElementById("modalSetting");
+    if(value !== null){
+      val.checked = value;
+      if(val.checked = value){
+      document.getElementById("id01").style.display = "none";
+    } else{
+      document.getElementById("id01").style.display = "block";
+    }
+    } else{
+      document.getElementById("id01").style.display = "block";
+    }
+    
+    
+    
+     
+   
+}
   </script>
 
 </body>

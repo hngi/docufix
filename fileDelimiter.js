@@ -102,6 +102,7 @@ function getCookie(name) {
     $('#removeDuplicate').on('click', function (e) {
       document.getElementById("shareBtn").style.display = "block"
         e.preventDefault();
+        
         let separators = [];
         let firstString = $('#textareaBefore').val()
         let delimiter = $('#delimiter').val()
@@ -110,12 +111,14 @@ function getCookie(name) {
 
     // console.log(secondStringSet);
     let firstStringSet = new Set(firstString.split(delimiter))
-    console.log(firstStringSet)
+    
+    //console.log(firstStringSet)
 
     let firstStringArray = [...firstStringSet]
     $('#textareaAfter').val(firstStringArray);
     $("#textareaDifferences").val(firstStringArray);
     $("#textareaDifferences").html(firstStringArray);
+        }
 
     
     // let secondStringArray = secondString.split(new RegExp(separators.join('|'), 'g'))
@@ -143,6 +146,6 @@ function getCookie(name) {
 
     
 
-})
+)
 
 

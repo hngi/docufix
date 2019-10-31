@@ -5,15 +5,16 @@ function payWithRave() {
     const firstname = document.getElementById('firstname').value;
     const lastname = document.getElementById('lastname').value;
     const phone = document.getElementById('phone').value;
-    const amounts = document.getElementsByName('amount');
-    let amount_value;
-    for(var i = 0; i < amounts.length; i++){
-        if(amounts[i].checked){
-            amount_value = amounts[i].value;
-        }
-    }
+    // const amounts = document.getElementsByName('amount');
+    const amount = 10;    
+    // let amount_value;
+    // for(var i = 0; i < amounts.length; i++){
+    //     if(amounts[i].checked){
+    //         amount_value = amounts[i].value;
+    //     }
+    // }
 
-    const amount = amount_value || Number(document.getElementById('amount').value);
+    // const amount = amount_value || Number(document.getElementById('amount').value);
     var x = getpaidSetup({
         PBFPubKey: API_publicKey,
         customer_email: email,

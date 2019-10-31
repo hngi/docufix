@@ -256,7 +256,7 @@ if(isset($_POST['submit'])){
 
                
 
-                <p class="Already-acc">Already have an account?&nbsp;&nbsp; <a href="login.html"><span>Sign in</span></a></p>
+                <p class="Already-acc">Already have an account?&nbsp;&nbsp; <a href="login.php"><span>Sign in</span></a></p>
             </form>
             <span class="error"></span>
         </section>

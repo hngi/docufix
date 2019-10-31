@@ -1323,6 +1323,16 @@
           document.getElementById('added').textContent = `${added} `;
           document.getElementById('deleted').textContent = `${removed} `;
           console.log(difference, similarity);
+
+          ttF.dif = difference
+          ttF.sim = similarity
+          ttF.ad = added
+          ttF.rm = removed
+
+          localStorage.setItem("DIFFERENCE", ttF.dif);
+          localStorage.setItem("SIMILARITY", ttF.sim);
+          localStorage.setItem("ADDED", ttF.ad);
+          localStorage.setItem("REMOVED", ttF.rm);
         }
         return returnValue;
       }

@@ -4,7 +4,9 @@
 	<script type="text/javascript" src ="//widget.instabot.io/jsapi/rokoInstabot.js" crossorigin>
 	apiKey: "vXj90M2ifAvu8fS739jFKepTXtES72ur59sGR5TPK9c="
 </script>
-    <meta charset="UTF-8">
+	<meta charset="UTF-8">
+	<meta name="theme-color" content="#333" />
+	<link rel="manifest" href="manifest.json" />
     <link rel="icon" type="image/png" href="https://res.cloudinary.com/thecavemann/image/upload/v1571839870/logo_g4kuoa.png"/>
         
         <link rel="stylesheet" type="text/css" href="https://dl.dropbox.com/s/v5nuo2k9pvuoogf/rose.css">
@@ -35,6 +37,38 @@
             padding: 0;
             background-color: #DDE8E8;
         }
+
+				@keyframes bottom {
+				from {
+					transform: translateY(50%);
+					opacity: 0;
+				}
+				to {
+					transform: translateY(0);
+					opacity: 1;
+				}
+			}
+
+			@keyframes left {
+				from {
+					transform: translateX(-50%);
+					opacity: 0;
+				}
+				to {
+					transform: translateX(0);
+					opacity: 1;
+				}
+			}
+			@keyframes right {
+				from {
+					transform: translateX(50%);
+					opacity: 0;
+				}
+				to {
+					transform: translateX(0);
+					opacity: 1;
+				}
+			}
 
 
 
@@ -617,6 +651,14 @@
 			cursor: pointer;
 		}
 
+		.the-col,
+		.line,
+		.left,
+		.head,
+		.right {
+			opacity: 0;
+		}
+
 
 		.page-item.active .page-link {
 		    color: #fff;
@@ -681,7 +723,7 @@
 		            </div>
 		          </li>
 		          <li class="nav-item">
-		            <a class="nav-link" href="donation.html" target="_blank">Donate</a>
+		            <a class="nav-link" href="upgrade.html" target="_blank">Upgrade</a>
 		          </li>
 		          
 		      </ul>
@@ -694,8 +736,8 @@
      <section id="team">
             <div class="content-box">
                 <div class="content-title">
-                    <h3>Meet Our Team</h3>
-                    <div class="content-title-underline"></div>
+                    <h3 class="head">Meet Our Team</h3>
+          <div class="content-title-underline line"></div>
                 </div>
                 <div class="container">
                    <div class="row">
@@ -1014,53 +1056,67 @@
         </section>
         </main>
  
-     <footer>
-	    <div class="section-one">
-	      <section>
-	        <h4>DOCUFIX</h4>
-	        <p>We help you arrange, sort, compare and extract information from different file formats</p>
-	  
-	        <p class="text-two">This app was built by <a href="https://hng.tech/" target="_blank">HNGi6</a> interns</p>
-	      </section>
-	      <section>
-	        <ul>
-	          <li><a href="about_us.html">About us</a></li>
-	          <li><a href="teampage.html">Our Team</a></li>
-	          <li><a href="feedback.html">Feedback</a></li>
-	          <li><a href="privacy.html">Privacy policy</a></li>
-	        </ul>
-	      </section>
-	    </div>
-	    <div class="footer-line"></div>
-	    <div class="section-two">
-	      <section class="icons">
-	        <a href="#">
-	          <i class="fab fa-facebook-f" aria-hidden="true"></i>
-	        </a>
-	        <a href="#">
-	          <i class="fab fa-twitter" aria-hidden="true"></i>
-	        </a>
-	        <a href="#">
-	          <i class="fab fa-google-plus-g" aria-hidden="true"></i>
-	        </a>
-	        <a href="#">
-	          <i class="fab fa-linkedin" aria-hidden="true"></i>
-	        </a>
-	      </section>
-	      <section class="copy">
-	          &copy; 2019 Copyright: Docufix
-	      </section>
-	    </div>
-	  </footer>
+				<footer>
+						<div class="section-one">
+							<section class="left">
+								<h4>DOCUFIX</h4>
+								<p>We help you arrange, sort, compare and extract information from different file formats</p>
+				
+								<p class="text-two">This app was built by <a href="https://hng.tech/" target="_blank">HNGi6</a> interns</p>
+							</section>
+							<section class="right">
+								<ul>
+									<li><a href="about_us.html">About us</a></li>
+									<li><a href="teampage.html">Our Team</a></li>
+									<li><a href="feedback.html">Feedback</a></li>
+									<li><a href="privacy.html">Privacy policy</a></li>
+								</ul>
+							</section>
+						</div>
+						<div class="footer-line"></div>
+						<div class="section-two">
+							<section class="icons">
+								<a href="#">
+									<i class="fab fa-facebook-f" aria-hidden="true"></i>
+								</a>
+								<a href="#">
+									<i class="fab fa-twitter" aria-hidden="true"></i>
+								</a>
+								<a href="#">
+									<i class="fab fa-google-plus-g" aria-hidden="true"></i>
+								</a>
+								<a href="#">
+									<i class="fab fa-linkedin" aria-hidden="true"></i>
+								</a>
+							</section>
+							<section class="copy">
+								&copy; 2019 Copyright: Docufix
+							</section>
+						</div>
+					</footer>
         
        
-
+		<script src="app.js"></script>
         <script src="https://kit.fontawesome.com/85682eb992.js" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-        <script src="paging.js"></script>
+				<script src="paging.js"></script>
+				<script src="/daveScroll.js"></script>
+				<script>
+					const cards = document.querySelectorAll('.the-col');
+					const heading = document.querySelector('.head');
+					const line = document.querySelector('.line');
+					const leftCtn = document.querySelector('.left');
+					const rightCtn = document.querySelector('.right');
+			
+					scroll(heading, 'left');
+					scroll(line, 'right');
+					scroll(leftCtn, 'left');
+					scroll(rightCtn, 'right');
+					cards.forEach(card => scroll(card, 'bottom'));
+				</script>
   
 </body>
 </html>

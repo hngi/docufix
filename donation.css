@@ -25,7 +25,7 @@
   transform: translate(-50%, -50%);
   /*max-height: 90%;*/
   overflow: auto;
-  background: rgb(74, 60, 103);
+  background: rgb(92, 4, 221);
   padding: 20px;
   box-shadow: 0 1px 5px rgba(0,0,0,0.7);
   text-align: center;
@@ -74,3 +74,45 @@
 .modal .close_modal:hover {
   opacity: 0.9;
 }
+
+#header-xx {
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+#signup-btn {
+  background-color: lightgrey;
+}
+
+#signup-btn:hover {
+  background-color: rgb(239, 239, 239);
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  #uptopro-card {
+    padding-top: 21px;
+    margin-top: 21px;
+  }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) { 
+  #uptopro-card {
+    padding-top: 21px;
+    margin-top: 21px;
+  }
+ }
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) { 
+  #uptopro-card {
+    padding-top: 21px;
+    margin-top: 21px;
+  }
+ }
+
+/* Large devices (desktops, less than 1200px) */
+/* @media (max-width: 1199.98px) { 
+
+ } */

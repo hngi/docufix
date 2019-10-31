@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Plaster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+    <title>User Profile</title>
+
+    <style type="text/css">
+        .profile-body{
+            background: #2d2d89;
+        }
+        .profile-box{
+            background:#F8F9FA;
+            border-radius: 8px;
+            padding:1.5rem 3.5rem;
+        }
+
+        .profile-box .navbar{
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 3rem;
+        }
+
+        .rounded-img{
+            border-radius: 50%;
+        }
+
+        .s-rounded-img{
+            border-radius: 8px;
+        }
+
+        .mx-90{
+            max-width: 90%;
+        }
+
+        .mw-40{
+            max-width: 40px;
+        }
+
+        .logo-img{
+            max-width: 200px;
+            filter: brightness(0);
+        }
+
+        .profile-body .navbar .nav-item{
+            font-weight: bold;
+        }
+
+        .shaded-black{
+            color: #565d62
+        }
+
+        .userprofile-location{
+            font-size: 1rem;
+            color: #838383;
+            padding-left: 1.2rem;
+        }
+
+        .medium-text{
+            font-size: .9rem;
+            font-weight: 500;
+        }
+
+        .medium-purple-text{
+            color: #2d2d89;
+            font-weight: bold;
+            font-size: .9rem;
+        }
+
+        .small-spaced-text{
+            color: #918888;
+            font-size: .7rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            padding:2rem 0;
+        }
+
+        .userprofile-date span{
+            display: flex;
+            font-size: 1rem;
+            letter-spacing: 0;
+            color: #2d2d89;
+        }
+
+        .prof-btn{
+            background: #e3e4fd;
+            color: #2d2d89;
+            padding: .4rem .7rem;
+            font-size: .85rem;
+            font-weight: 500;
+            border-radius: 0;
+            transition:all .8s;
+        }
+
+        .prof-btn .fa{
+            padding-right: .3rem;
+        }
+
+        .prof-btn:hover{
+            background: #bec0f4
+        }
+
+        .prof-about-title{
+            border-bottom: 2px solid #bec0f4;
+            padding: 3rem 0 1rem 0;
+            margin-bottom: 2rem;
+
+        }
+
+        .font-nine{
+            font-size: .9rem;
+        }
+
+        .contact-info{
+            max-width: 500px;
+        }
+
+        .profile-info-bloc{
+            padding:1.5rem 0;
+        }
+
+        @media (max-width: 1100px){
+            .userprofile-col{
+                flex: 1 !important;
+                max-width: 100% !important;
+            }
+
+
+            .contact-info p{
+                flex-direction: column;
+            }
+
+            .p-bloc-btn{
+                display: block;
+                margin:1rem 0;
+            }
+
+            .logo-img{
+                max-width: 80px;
+            }
+
+            a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  #nav,
+  .dropdown-menu {
+    background: #141460 !important;
+    color: #fff !important;
+    font-weight: 300;
+  }
+
+  #nav li:hover {
+    background:  #6130d4 !important;
+  }
+
+  .dropdown-menu a:hover {
+    background:  #6130d4 !important;
+  }
+
+  #nav li a {
+    color: #ffffff !important;
+  }
+
+  nav ul {
+      margin-left: 1.7rem;
+  }
+
+  footer {
+    background: #003152;
+    color: #fff;
+    position: relative;
+    text-align: center;
+    font-family: Helvetica;
+  }
+
+  .section-one {
+    padding: 1rem;
+  }
+
+  footer li {
+    padding: 0.5rem;
+  }
+
+  footer ul {
+    margin-right: 1rem;
+  }
+
+  .section-one section {
+    margin: 2rem 0;
+  }
+
+  .section-one h4 {
+    padding: 0.5rem 0;
+  }
+
+  .section-one .text-two {
+    padding: 0.5rem 0;
+  }
+
+  .section-one .text-two {
+    color: red;
+    text-decoration: none;
+  }
+
+
+
+  .section-two .icons {
+    padding: 0.5rem 0;
+  }
+
+  .icons a {
+    padding: 0 0.5rem;
+    text-decoration: none;
+    color: #fff;
+  }
+
+  footer ul li {
+    list-style: none;
+  }
+
+  .footer-line {
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    margin: 1rem 0;
+  }
+
+  #btn span i {
+    color: #fff;
+  }
+
+  @media (min-width: 1000px) {
+    .collapse {
+      display: flex;
+      justify-content:flex-end;
+   }
+   li {
+        padding: 0 0.5rem;
+      }
+
+    ul {
+      margin-right: 3rem;
+    }
+
+    
+
+    #logo {
+      margin-left: 1.5rem;
+    }
+
+    .section-one,
+    .section-two {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 4rem;
+      padding-right: 3rem;
+    }
+
+
+    footer ul {
+      text-align: right;
+    }
+
+    .section-two {
+      flex-flow: row-reverse;
+    }
+
+    .section-one {
+      margin-bottom: 1rem;
+    }
+
+    .section-one h4 {
+      padding: 2rem 0;
+    }
+
+    footer {
+      text-align: left;
+    }
+
+        }
+
+        
+
+    </style>
+</head>
+
+<body class="profile-body"> 
+  <div class="container-fluid profile-box my-5 mx-90 mx-auto">  
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="index.html"><img src="logo.png" alt="logo" class="logo-img img-fluid"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Dashboard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Logout</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/dashboard"><img src="https://avatars0.githubusercontent.com/u/13081285?v=4" alt="profile-picture" class="img-fluid profile-pic rounded-img mw-40"></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="row">
+        <div class="col-3 pr-3 userprofile-col">
+            <img src="https://avatars0.githubusercontent.com/u/13081285?v=4" alt="profile-picture" class="img-fluid profile-pic s-rounded-img">
+
+            <div class = "profile-info-bloc">
+            <p class="small-spaced-text">Profile Information</p>
+            <h5>Subscription <button class="btn prof-btn mr-2 p-bloc-btn">Basic Plan</button></h5>
+            <p class="m-0 font-nine">Duration Forever</p>
+            <p class="font-nine">Limit: 20mb/month upload</p>
+            </div>
+
+            <div class = "profile-info-bloc">
+            <h5>Total Documents Analyzed</h5>
+             <button class="btn prof-btn mr-2 mt-4">3</button>
+            </div>
+
+            <div class = "profile-info-bloc">
+            <h5 class="mb-4">Recently Analyzed Documents</h5>
+
+            <button class="btn prof-btn mb-4 mr-2 d-block">Document Title 1</button>
+            <button class="btn prof-btn mb-4 mr-2 d-block">Document Title 2</button>
+            <button class="btn prof-btn mb-4 mr-2 d-block">Document Title 3</button>
+           </div>
+            
+        </div>
+        <div class="col-9 pl-5 userprofile-col">
+            <h4 class="userprofile-name shaded-black">Mr Xyluz <span class="userprofile-location"><i class="fa fa-map-marker" aria-hidden="true"></i> Lagos, NG</span></h4>
+            <p class="userprofile-plan medium-purple-text">Basic User</p>
+            <p class="userprofile-date small-spaced-text">Date Registered <span>29th October, 2019</span></p>
+            <button class="userprofile-changeplan btn prof-btn p-bloc-btn mr-2"><i class="fa fa-pencil" aria-hidden="true"></i> Change Plan</button>
+            <button class="userprofile-changeplan btn prof-btn p-bloc-btn"><i class="fa fa-envelope" aria-hidden="true"></i> Send Inquiry</button>
+
+             <h6 class="shaded-black prof-about-title"><i class="fa fa-user" aria-hidden="true"></i> About</h6>
+            <p class="small-spaced-text p-0">CONTACT INFORMATION</p>
+            <div class="contact-info">
+            <p class="d-flex justify-content-between medium-text">Phone Number <span class="medium-purple-text">08034143461</span></p>
+            <p class="d-flex justify-content-between medium-text">Address <span class="medium-purple-text">Some Address in Nigeria</span></p>
+            <p class="d-flex justify-content-between medium-text">Email <span class="medium-purple-text">marvellousmikez@gmail.com</span></p>
+
+
+            <p class="small-spaced-text p-0 mt-5">BASIC INFORMATION</p>
+            <p class="d-flex justify-content-between medium-text">Birthday <span class="medium-purple-text">25th December 2019</span></p>
+            <p class="d-flex justify-content-between medium-text">Address <span class="medium-purple-text">Some Address in Nigeria</span></p>
+           </div>
+
+        </div>
+    </div> 
+</div>
+        <footer>
+            <div class="section-one">
+              <section>
+                <h4>DOCUFIX</h4>
+                <p>We help you arrange, sort, compare and extract information from different file formats</p>
+          
+                <p class="text-two">This app was built by <a href="https://hng.tech/" target="_blank">HNGi6</a> interns</p>
+              </section>
+              <section>
+                <ul>
+                  <li><a href="about_us.html">About us</a></li>
+                  <li><a href="feedback.html">Feedback</a></li>
+                  <li><a href="privacy.html">Privacy policy</a></li>
+                  <li><a href="t&c.html">Terms of service</a></li>
+                </ul>
+              </section>
+            </div>
+            <div class="footer-line"></div>
+            <div class="section-two">
+              <section class="icons">
+                <a href="https://twitter.com/hnginternship">
+                  <i class="fab fa-twitter" aria-hidden="true"></i>
+                </a>
+              </section>
+              <section class="copy">
+                  &copy; 2019 Copyright: Docufix
+              </section>
+            </div>
+          </footer>
+          <script src="app.js"></script>
+          <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+          <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
+</html>

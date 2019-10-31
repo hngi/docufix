@@ -3,7 +3,7 @@
 
  define ("DB_USER", "root"); // set database user
 
- define ("DB_PASS",""); // set database password
+ define ("DB_PASS","7uy6*IU&"); // set database password
 
  define ("DB_NAME","docufix"); // set database name
 

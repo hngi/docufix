@@ -225,9 +225,17 @@
 		            </div>
 		          </li>
 		          <li class="nav-item">
-		            <a class="nav-link" href="donation.html" target="_blank">Donate</a>
+		            <a class="nav-link" href="donation.html" target="_blank">Pricing</a>
 		          </li>
-		          
+				  
+				  <li class="nav-item">
+		            <a class="nav-link" href="signup.php" target="_blank">Sign Up</a>
+				  </li>
+				  
+				  <li class="nav-item">
+		            <a class="nav-link" href="login.php" target="_blank">Sign In</a>
+				  </li>
+
 		      </ul>
 		    </div>
 		  </nav>

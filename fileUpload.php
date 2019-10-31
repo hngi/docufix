@@ -644,8 +644,8 @@
       if(isset($_SESSION ['loggedin']))  {
 
       
-  echo "<button onclick="document.getElementById('id02').style.display='block'" class="btn-dark mt-2 mb-5" style="padding: 7px 14px;">;
-  <i class="fas fa-cloud-download-alt"></i>Download <strong>HERE</strong></button>";
+  echo '<button onclick="document.getElementById("id02").style.display="block"" class="btn-dark mt-2 mb-5" style="padding: 7px 14px;">;
+  <i class="fas fa-cloud-download-alt"></i>Download <strong>HERE</strong></button>';
       }
       else {
       echo '<a class="btn-dark mt-2 mb-5" style="padding: 7px 14px;" href="login.php">Log in to download</a>';

@@ -1,3 +1,78 @@
+<?php
+include('connect.php');
+
+$message = '';
+    
+if(isset($_POST['submit'])){
+        $userFirstName = mysqli_escape_string($conn, $_POST ['firstname']);
+        $userLastName = mysqli_escape_string($conn, $_POST ['lastname']);
+        $userEmail = mysqli_escape_string($conn, $_POST['email']);
+        $userNewPassword = mysqli_escape_string($conn, $_POST['password']);
+        $userVerifyPassword = mysqli_escape_string($conn, $_POST['verify_password']);
+       
+        if(empty($userFirstName) || empty($userLastName) || empty($userEmail) || empty($userNewPassword) || empty($userVerifyPassword)){
+            die ("All fields are Required");
+            }
+            if ( strlen ( $userFirstName ) < 2 || strlen ( $userFirstName ) > 50) {
+                $message = '<div class="alert alert-danger" role="alert">First name must be between 1 and 55 characters</div>';
+                echo $message;
+                }
+                if ( strlen ( $userLastName ) < 2 || strlen ( $userLastName ) > 50) {
+                $message = '<div class="alert alert-danger" role="alert">Last name must be between 1 and 55 characters</div>';
+                echo $message;
+                }
+                if ( strlen ( $userEmail ) < 2 || strlen( $userEmail ) > 250) {
+                $message = '<div class="alert alert-danger" role="alert">Email must be between 1 and 254 characters</div>';
+                echo $message;
+                }
+                if ( strlen ( $userNewPassword ) < 8) {
+                $message = '<div class="alert alert-danger" role="alert">Password should be at least 8 characters long</div>';
+                echo $message;
+                }
+                if($userNewPassword === $userVerifyPassword){
+                    $userNewPassword = password_hash($userNewPassword, PASSWORD_DEFAULT);
+                }
+                else{
+                    die ("Error: Password does not match". "<br>");
+                }
+
+
+
+
+                $sql = "SELECT email FROM users WHERE email = '$userEmail' ";
+                $result = mysqli_query($conn, $sql);
+                if (mysqli_num_rows($result) > 0) {
+                  die('email address exists');
+                   }
+                else { 
+
+                    $sql = "INSERT INTO users(firstname, lastname, email, password)
+                    VALUES('$userFirstName', 
+                            '$userLastName',
+                            '$userEmail',
+                            '$userNewPassword'       )";
+                           
+                           $result = mysqli_query($conn , $sql);
+                    if($result){
+                                    $message .= '<div class="alert alert-success" role="alert">
+                                    Record Saved Successfully <button class="btn"><a href = "login.php">Home</a></button></div>';
+                                            echo ($message);
+
+                    }
+                    else{
+                        $message .= '<div class="alert alert-danger" role="alert">
+                        Record not Saved ' . mysqli_error($conn) . '<button class="btn"><a href = "index.html">Home</a></button>
+                        </div>';
+                    
+                    }
+
+                }
+
+
+    }
+ ?>
+
+
 <!DOCTYPE html>
     <html lang="en">
 
@@ -148,16 +223,22 @@
         <section class="container login-section ">
 
             <h3 class="text-center signUP">Signup</h3>
-            <form class="form-align" method="POST">
+            <form class="form-align" method="POST" action="">
                 <div class="form-group col-md-4 ">
-                    <input type="text" class="form-control" id="name" name="name" placeholder="Full Name" pattern="[a-zA-Z]{1,}" data-toggle="tooltip" data-placement="bottom" title="Enter Your Full Name" required><span class="error"></span>
+                    <input type="text" class="form-control" id="name" name="firstname" placeholder="First Name" pattern="[a-zA-Z]{1,}" data-toggle="tooltip" data-placement="bottom" title="Enter Your First Name" required><span class="error"></span>
                 </div>
-                <div class="form-group col-md-4">
+
+                <div class="form-group col-md-4 ">
+                    <input type="text" class="form-control" id="name" name="lastname" placeholder="Last Name" pattern="[a-zA-Z]{1,}" data-toggle="tooltip" data-placement="bottom" title="Enter Your Last Name" required><span class="error"></span>
+                </div>
+              
+                <!-- <div class="form-group col-md-4">
                     <input type="text" class="form-control" aria-describedby="usernameHelp" placeholder="Your username" id="username" name="username" pattern="[0-9a-zA-Z]{3,}" data-toggle="tooltip" data-placement="bottom" 
                     title="Enter username (must be more than 3 character)" required><span class="error"> </span>
-                </div>
+                </div> -->
+
                 <div class="form-group col-md-4 ">
-                    <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Your email address" id="emailAddress" name="emailAddress"  data-toggle="tooltip" data-placement="bottom" title="Please enter a valid Email Address" required><span class="error"></span>
+                    <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Your email address" id="emailAddress" name="email"  data-toggle="tooltip" data-placement="bottom" title="Please enter a valid Email Address" required><span class="error"></span>
                 </div>
 
                 <div class="form-group col-md-4">
@@ -168,10 +249,10 @@
                     </small>  <span class=""></span>
                 </div>
                 <div class="form-group col-md-4">
-                    <input type="password" class="form-control" name="confirmPassword" id="confirmPassword" placeholder="Confirm password" data-toggle="tooltip" data-placement="bottom" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+                    <input type="password" class="form-control" name="verify_password" id="confirmPassword" placeholder="Confirm password" data-toggle="tooltip" data-placement="bottom" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
                     title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required><span class="error"></span>
                 </div>
-                <button id="submitData" type="submit" class="btn btn-primary login-btn">Create Account</button>
+                <input id="submitData" name="submit" type="submit" class="btn btn-primary login-btn" value = "Create Account"/>  
 
                
 

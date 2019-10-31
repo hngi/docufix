@@ -358,6 +358,9 @@
   </header>
   <div class="container mt-5" style="min-height: 100vh">
     <div class="btn btn-secondary btn-sm float-right bg-secondary" style="cursor: pointer"  onclick="instruction()">Instructions</div>
+
+    <div class="btn btn-secondary btn-sm float-left bg-secondary" style="cursor: pointer" onclick="showOldResults()">Show Old Results</div><br>
+    <div id="result"></div>
     <div>
     <h3 class="mt-5 pt-5">Upload files to Compare documents</h3>
     <h2 class="text-center text-light p-3 mt-5 " style="background-color:rgba(61, 155, 218, 0.4);">
@@ -795,7 +798,26 @@
   <script src="jsPDF.js"></script>
   <script type="text/javascript">
 
-    // events
+    const ttF = {
+      sim: '',
+      dif: '',
+      ad: '',
+      rm: ''
+    }
+
+    function showOldResults () {
+      if (
+        localStorage.getItem('DIFFERENCE') === null || 
+        localStorage.getItem('SIMILARITY') === null ||
+        localStorage.getItem('ADDED') === null ||
+        localStorage.getItem('REMOVED') === null
+        ) {
+        return document.getElementById('result').innerHTML = `<br><div>You do not any have result yet</div>`
+      } else {
+
+        return document.getElementById("result").innerHTML = `<br><div style="margin-top: 10px;"><h4>Result From The Last Document You Compared.</h4><table class="table"><tr><th># </th><th>Result</th></tr><tr><th>DIFFERENCE: </th><td> ${localStorage.getItem("DIFFERENCE")}</td></tr><tr><th>SIMILARITY: </th> <td>${localStorage.getItem("SIMILARITY")}</td></tr><tr><th>CHARACTERS ADDED: </th><td>${localStorage.getItem("ADDED")}</td></tr><tr><th>CHARACTERS DELETED: </th><td>${localStorage.getItem("REMOVED")}</td></tr></table></div>`;
+      }
+    }
 
     function buttonCompareClicked() {
       var textBefore = document.getElementById("textareaBefore").value;

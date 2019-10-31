@@ -1,3 +1,48 @@
+<?php
+include('connect.php');
+session_start();
+
+$message = ''; 
+if(isset($_POST['submit'])){
+    // userEmail and userPassword sent from form 
+    
+    $userEmail = mysqli_real_escape_string($conn,$_POST['email']);
+    $userPassword = mysqli_real_escape_string($conn,$_POST['password']);    
+
+
+    $sql1 = "Select * from users where email = '$userEmail'";
+    $query = mysqli_query($conn, $sql1) or die(mysql_error());
+    $result = mysqli_fetch_assoc($query);
+    $count = mysqli_num_rows($query);
+    if ($count === 1 ) {
+
+            if (password_verify($userPassword, $result["password"])) {
+
+                $_SESSION['login_user'] = $userEmail;
+                $_SESSION['loggedin'] = true;
+                $_SESSION['name'] = $result['firstname'];
+                $_SESSION['login_id'] = $result['id'];
+                header("location: index.php");
+            }
+            else { 
+                     $message = '<p class="text-warning">Invalid login credentials</p>';
+                     echo $message;
+            }
+        } 
+        else {
+        $message = '<p class="text-warning">Invalid login credentials</p>';
+       echo $message;
+    }
+}
+
+?>
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -154,7 +199,7 @@
         <h3 class=" welcome text-center spacing">Welcome Back!</h3>
         <form class="" method="POST">
             <div class="form-group col-md-4 ">
-                <input type="email" name="username" id="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email address" required><span class="error"></span>
+                <input type="email" name="email" id="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email address" required><span class="error"></span>
             </div>
 
             <div class="form-group col-md-4">
@@ -165,10 +210,10 @@
                 <a href="">Forgot Password?</a>
             </div>
             <br>
-            <button type="submit" class="btn btn-primary login-btn">Login</button>
-
+            <!-- <button type="submit" class="btn btn-primary login-btn">Login</button> -->
+            <input id="submitData" name="submit" type="submit" class="btn btn-primary login-btn" value = "Login"/>
     
-            <p class="Already-acc">New to Docufix?&nbsp;&nbsp;<span><a href="signup.html"> Sign Up</span></a></p>
+            <p class="Already-acc">New to Docufix?&nbsp;&nbsp;<span><a href="signup.php"> Sign Up</span></a></p>
 
         </form>
 

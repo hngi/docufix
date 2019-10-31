@@ -74,3 +74,45 @@
 .modal .close_modal:hover {
   opacity: 0.9;
 }
+
+#header-xx {
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+#signup-btn {
+  background-color: lightgrey;
+}
+
+#signup-btn:hover {
+  background-color: rgb(239, 239, 239);
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  #uptopro-card {
+    padding-top: 21px;
+    margin-top: 21px;
+  }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) { 
+  #uptopro-card {
+    padding-top: 21px;
+    margin-top: 21px;
+  }
+ }
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) { 
+  #uptopro-card {
+    padding-top: 21px;
+    margin-top: 21px;
+  }
+ }
+
+/* Large devices (desktops, less than 1200px) */
+/* @media (max-width: 1199.98px) { 
+
+ } */
